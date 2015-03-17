@@ -1,0 +1,1109 @@
+[ 2015-03-17T12:39:53+08:00 ] 0.0.0.0 /thinkphp3.1/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.047386s ]
+SQL: SELECT * FROM `xm_jobs`  [ RunTime:0.000338s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010762s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000481s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000401s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000290s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001910s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000550s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2015-03-17T12:39:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006799s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000357s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000351s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000220s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001577s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000490s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2015-03-17T12:41:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002330s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007688s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000350s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000360s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000254s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000430s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001647s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000454s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2015-03-17T12:43:36+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007130s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000436s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000418s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000283s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001877s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000589s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2015-03-17T12:43:39+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 48 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 54 行.
+
+[ 2015-03-17T12:45:01+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001173s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 48 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 54 行.
+
+[ 2015-03-17T12:45:30+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 48 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 54 行.
+
+[ 2015-03-17T12:55:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:55:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:56:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:56:19+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:56:25+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:57:10+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:57:12+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:57:36+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:57:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:57:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:58:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:58:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:58:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010390s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000662s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000635s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000347s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002543s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000627s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2015-03-17T12:59:01+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:59:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T12:59:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001184s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001368s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T13:00:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+NOTIC: [2] preg_match() expects parameter 2 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 55 行.
+
+[ 2015-03-17T13:00:53+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:04:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:05:09+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:05:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009653s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000420s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000423s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000312s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001915s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000535s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2015-03-17T13:05:33+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:06:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011836s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000872s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000692s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000558s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000824s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003407s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000770s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2015-03-17T13:07:26+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:08:17+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:08:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:08:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008874s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000488s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000457s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000330s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002154s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001435s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001600s ]
+
+[ 2015-03-17T13:08:44+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:08:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:08:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:08:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008882s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000351s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000331s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000212s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001534s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000513s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000604s ]
+
+[ 2015-03-17T13:08:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:10:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007404s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000413s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000456s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000284s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001893s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000576s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000675s ]
+
+[ 2015-03-17T13:10:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:11:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:11:42+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:11:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:13:39+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:13:46+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001214s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007659s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000407s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000435s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000309s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001922s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000557s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2015-03-17T13:13:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:15:36+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.053251s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 26 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.006680s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T13:18:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [2] preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '^' found D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 56 行.
+
+[ 2015-03-17T13:18:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:23:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010368s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000448s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000420s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000286s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001890s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000531s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2015-03-17T13:23:44+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:24:00+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:25:10+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007243s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000404s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000392s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000316s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001858s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000536s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2015-03-17T13:25:13+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+NOTIC: [8] Undefined index: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:25:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002192s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007784s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000399s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000508s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000425s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002163s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000588s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2015-03-17T13:25:52+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+NOTIC: [8] Undefined index: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 49 行.
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:27:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+NOTIC: [8] Undefined index: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 47 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 50 行.
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:28:07+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+NOTIC: [8] Undefined index: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 47 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 51 行.
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:35:26+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007319s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000436s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000420s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000283s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002010s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000600s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2015-03-17T13:35:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:35:48+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.131462s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 26 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000180s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T13:36:30+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005144s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 26 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 27 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000158s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T13:36:45+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-17T13:51:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009332s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009453s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000463s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000445s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000302s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001970s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000564s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2015-03-17T13:51:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007841s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000414s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000395s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000312s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001935s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000926s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001052s ]
+
+[ 2015-03-17T13:52:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001188s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006690s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000425s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001142s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000774s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004057s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001097s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2015-03-17T13:53:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011898s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000680s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000434s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000297s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000504s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002214s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000533s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2015-03-17T13:53:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012235s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000354s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000331s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000220s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001557s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000490s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2015-03-17T13:57:48+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010057s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000425s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000407s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000289s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001838s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000559s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2015-03-17T13:58:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009422s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000691s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000741s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000491s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000908s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003232s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000878s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2015-03-17T13:59:46+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006511s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000412s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000802s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000658s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002783s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000500s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2015-03-17T14:00:32+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001275s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009876s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000413s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000865s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000343s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000557s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002468s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000532s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2015-03-17T14:00:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007348s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000439s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000397s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000288s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001835s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000813s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000930s ]
+
+[ 2015-03-17T14:04:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008309s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000416s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000423s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000286s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001832s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000527s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2015-03-17T14:05:34+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008796s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000448s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000397s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000311s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000472s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001868s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000579s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2015-03-17T14:05:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007250s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000463s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000404s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000314s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001904s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000741s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001350s ]
+
+[ 2015-03-17T14:06:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007308s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000383s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000372s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000244s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001721s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000526s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2015-03-17T14:06:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006962s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000398s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000564s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000831s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003792s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001623s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001885s ]
+
+[ 2015-03-17T14:09:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010564s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000482s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000461s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000289s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002008s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000558s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2015-03-17T14:14:45+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005272s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 29 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000200s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T14:15:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005065s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 29 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000178s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T14:16:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005896s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000175s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T14:18:43+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005009s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000178s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T14:19:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004988s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000196s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T14:20:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012526s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000933s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000848s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000536s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003568s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000640s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2015-03-17T14:20:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005369s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000219s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T14:20:46+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004959s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000176s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T14:20:51+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004962s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 30 行.
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+NOTIC: [2] md5() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 31 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1   [ RunTime:0.000184s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND passwd= ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email= AND passwd= ) LIMIT 1  
+
+[ 2015-03-17T14:21:53+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008447s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000473s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000449s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000324s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002055s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000598s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2015-03-17T14:33:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008340s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000487s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000415s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000311s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001950s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000627s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2015-03-17T14:33:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008459s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000495s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000447s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000318s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002070s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000626s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2015-03-17T14:33:48+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+
