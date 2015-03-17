@@ -9,7 +9,6 @@ class LoginAction extends Action{
 	private $username;
 	private $passwd;
 	private $id;
-	private $pwdmem;
 
 	public function index(){
 		$this->display();
@@ -66,18 +65,6 @@ class LoginAction extends Action{
 		if($this->isPost()){
 			$this->passwd = $this->_post('passwd');
 			return $this->passwd;
-		}else{
-			return 1;
-		}
-	}
-	private function getPwdmem(){
-		if($this->isPost()){
-			$this->pwdmem = $this->_post('pwdmem');
-			if($this->pwdmen == 'true'){
-				$this->pwdmem = true; 
-			}else{
-				$this->pwdmem = false;
-			}
 		}else{
 			return 1;
 		}
