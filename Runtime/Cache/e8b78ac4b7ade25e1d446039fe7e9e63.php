@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">小蜜蜂兼职</a>
+      <a class="navbar-brand" href="index.php">小蜜蜂兼职</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -47,23 +47,25 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="register.html">注册</a></li>
-        <li><a href="<?php echo U('Login/index');?>">登录</a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $dropdown = <<<THINK
+      	<li class="dropdown">
+          <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">发布兼职</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="$logoutUrl">注销</a></li>
           </ul>
-        </li> --><!--/.dropdown-->
+        </li><!--/.dropdown-->
+THINK;
+ if(session('?uid')){ echo $dropdown; }elseif(session('?oid')){ echo $dropdown; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+        	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<!--======导航条结束======-->
+<!--======导航条结束======--->
 <!--container-->
 <!--banner-->
 <div class="container" id="banner">
@@ -135,8 +137,9 @@
 				    <div role="tabpanel" class="tab-pane active" id="newest">
 				    	<!-- 兼职列表 -->
 					  <ul class="list-group">
-						<?php if(is_array($arr_job)): $i = 0; $__LIST__ = $arr_job;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="#" class="list-group-item"><?php echo ($job["title"]); ?>
-					    	<?php if(time()-strtotime($job['ctime']) <= 1800): ?><span class="label label-danger">New</span><?php endif; ?>
+						<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($job["jid"]); ?>" class="list-group-item"><?php echo ($job["title"]); ?>
+					    	
+					    	<?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
 						    <span class="my-partjob-address">
 						    	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["address"]); ?></span>
 						    <span class="my-partjob-money">
@@ -155,21 +158,7 @@
 				   
 				    <nav>
 					  <ul class="pagination">
-					    <li>
-					      <a href="#" aria-label="Previous">
-					        <span aria-hidden="true">&laquo;</span>
-					      </a>
-					    </li>
-					    <li><a href="#">1</a></li>
-					    <li><a href="#">2</a></li>
-					    <li><a href="#">3</a></li>
-					    <li><a href="#">4</a></li>
-					    <li><a href="#">5</a></li>
-					    <li>
-					      <a href="#" aria-label="Next">
-					        <span aria-hidden="true">&raquo;</span>
-					      </a>
-					    </li>
+					    <?php echo ($page); ?>
 					  </ul>
 					</nav>
 

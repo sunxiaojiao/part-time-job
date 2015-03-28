@@ -21,49 +21,7 @@
 </style>
 </head>
 <body>
-<!--======导航条======-->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">小蜜蜂兼职</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class=""><a href="#">切换城市 [烟台]</a></li>
-      </ul>
-
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="输入关键词">
-        </div>
-        <button type="submit" class="btn btn-default">搜索</button>
-      </form>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="register.html">注册</a></li>
-        <li><a href="{:U('Login/index')}">登录</a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> --><!--/.dropdown-->
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<!--======导航条结束======-->
+<include file="./Tpl/bootstrap/public/header.html" />
 <!--container-->
 <!--banner-->
 <div class="container" id="banner">
@@ -135,9 +93,10 @@
 				    <div role="tabpanel" class="tab-pane active" id="newest">
 				    	<!-- 兼职列表 -->
 					  <ul class="list-group">
-						<volist name="arr_job" id="job">
-					    <a href="#" class="list-group-item">{$job.title}
-					    	<if condition="time()-strtotime($job['ctime']) elt 1800">
+						<volist name="list" id="job">
+					    <a href="{:U('JobsInfo/index')}&jid={$job.jid}" class="list-group-item">{$job.title}
+					    	{//新增的一个小时内，显示new，3600为一个小时}
+					    	<if condition="time()-$job['ctime'] elt 3600">
 						    <span class="label label-danger">New</span>
 							</if>
 						    <span class="my-partjob-address">
@@ -159,21 +118,7 @@
 				   
 				    <nav>
 					  <ul class="pagination">
-					    <li>
-					      <a href="#" aria-label="Previous">
-					        <span aria-hidden="true">&laquo;</span>
-					      </a>
-					    </li>
-					    <li><a href="#">1</a></li>
-					    <li><a href="#">2</a></li>
-					    <li><a href="#">3</a></li>
-					    <li><a href="#">4</a></li>
-					    <li><a href="#">5</a></li>
-					    <li>
-					      <a href="#" aria-label="Next">
-					        <span aria-hidden="true">&raquo;</span>
-					      </a>
-					    </li>
+					    {$page}
 					  </ul>
 					</nav>
 

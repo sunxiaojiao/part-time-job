@@ -9,12 +9,13 @@
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
 <script src="./__GROUP__/js/jquery.min.js"></script>
 <script src="./__GROUP__/js/bootstrap.min.js"></script>
-
 <style type="text/css">
-  .red{color:#F00;}
   .panel-body{position: relative;}
-  #login{position: absolute; right:16px; bottom: 16px;}
-  #verify>input{display:inline;width:216px;}
+  .my-perinfo{margin-left:26px;}
+  .my-perinfo>p>span{margin-right:18px;}
+  .my-perimg{border:1px solid #EEE;}
+  .my-jobhead>p{position: absolute; top:10px; right:10px;}
+  .my-jobhead>p>span{/*position: absolute;*/ margin-left: 10px;}
 </style>
 </head>
 <body>
@@ -63,39 +64,58 @@ THINK;
   </div><!-- /.container-fluid -->
 </nav>
 <!--======导航条结束======--->
+<!--container-->
 <div class="container">
-<div class="row">
-<div class="col-md-8"></div>
-<div class="col-md-4">
-  <div class="panel panel-default">
-  <div class="panel-heading">登录</div>
-  <div class="panel-body">
-    <form id="login-form">
-      <div class="form-group">
-        <input type="type" id="email" class="form-control" placeholder="登录邮箱" />
+  <div class="row">
+    <!--left-->
+    <div class="col-md-8">
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="my-jobhead">
+            <h3><?php echo ($title); ?></h3>
+            <p><span>兼职类型：其他</span><span>发布时间：<?php echo (date("m月d日 h:i",$ctime)); ?></span></p>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <input type="password" id="passwd" class="form-control" placeholder="密码" />
+      <!--信息统计字段 具体还需要参考其他大型人才网站-->
+      <div class="panel panel-default">
+        <div class="panel-heading">详细信息</div>
+        <div class="panel-body">
+          <h3 class="">兼职描述</h3>
+          <hr />
+          <p><?php echo ($detail); ?> </p>
+          <h3></h3>
+          <hr />
+          <p>联系人：<?php echo ($lead); ?></p>
+          <p>联系电话：{}</p>
+          <h3>评价</h3>
+          <hr />
+          <p>好不好好不好好不好好不好好不好好不好好不好好不好</p>
+          <form action="" method="post" class="">
+            <div class="form-group">
+              <label for="pingjia">评价:</label>
+              <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">评价</button>
+          </form>
+          <hr />
+          <button type="button" class="btn btn-primary btn-lg">申请此兼职</button>
+        </div>
       </div>
-      <div class="form-group" id="verify">
-        <img src="__APP__/Login/vCode" />
-        <input type="text" class="form-control" placeholder="验证码" />
-        <button class="btn btn-default" type="button">刷新</button>
+    </div>
+    <!--right-->
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">关于小蜜蜂</div>
+        <div class="panel-body">
+          <img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+        </div>
       </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="pwdmem" value="1">三天内免登录
-        </label>
-        <span class="red warninfo"></span>
-      </div>
-      <button type="button" class="btn btn-default" id="login">登录</button>
-    </form>
-  </div>
-  <div class="panel-footer">xiaomifengjob.com</div>
+    </div>
   </div>
 </div>
-</div>
-</div><!--./container-->
+<!--./container-->
 <!--footer-->
 <div class="container">
   <hr />
@@ -104,80 +124,5 @@ THINK;
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
 <!--./footer-->
-<script>
-/**
-*修改指定元素的文本为指定字符串
-*@param element
-*@param str
-*/
-function changText(element,str){
-  $(element).text(str);
-}
-
-//刷新验证码
-$("#verify>button").click(function(){
-  var ver_img = $("#verify>img");
-  ver_img.attr("src","__APP__/Login/vCode?" + new Date().getTime());
-});
-$("#verify>img").click(function(){
-  $(this).attr("src","__APP__/Login/vCode?" + new Date().getTime());
-});
-//按钮点击时触发ajax
-  $("#login").click(function(){
-    //获取字段值
-    var email = $("#email").val();
-    var passwd = $("#passwd").val();
-    var ver_val = $("#verify>input").val();
-    //checkbox判断
-    var pwdmem = $("#pwdmem").is(":checked");
-    pwdmem = pwdmem ? 1 : 0;
-    //检测字段是否为空
-    if( email == "" ){
-      $("#email").focus();
-      changText(".warninfo","请输入邮箱地址");
-      return;
-    }
-    if( passwd == "" ){
-      $("#passwd").focus();
-      changText(".warninfo","请输入密码");
-      return;
-    }
-    //AJAX
-    $.post(
-      "<?php echo U('Login/login');?>",
-      {
-        email:email,
-        passwd:passwd,
-        pwdmem:pwdmem,
-        verify:ver_val
-      },
-      function(data){
-        var str = '11';
-        switch (data){
-          case 0:
-            str = '登录成功';
-            setTimeout(function(){window.location.href = 'index.php';},5000);
-            break;
-          case 2:
-            str = '密码错误';
-            break;
-          case 3:
-            str = '邮箱格式不正确';
-            break;
-          case 4:
-            str = '验证码错误';
-            break;
-          case 5:
-            str =   '用户不存在';
-            break;
-        }
-        console.log(str);
-        changText(".warninfo",str);
-      }
-      );
-  });
-
-  
-</script>
 </body>
 </html>

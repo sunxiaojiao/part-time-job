@@ -31,7 +31,8 @@ class Page {
     // 分页的栏的总页数
     protected $coolPages   ;
     // 分页显示定制
-    protected $config  =    array('header'=>'条记录','prev'=>'上一页','next'=>'下一页','first'=>'第一页','last'=>'最后一页','theme'=>' %totalRow% %header% %nowPage%/%totalPage% 页 %upPage% %downPage% %first%  %prePage%  %linkPage%  %nextPage% %end%');
+    //protected $config  =    array('header'=>'条记录','prev'=>'上一页','next'=>'下一页','first'=>'第一页','last'=>'最后一页','theme'=>' %totalRow% %header% %nowPage%/%totalPage% 页 %upPage% %downPage% %first%  %prePage%  %linkPage%  %nextPage% %end%');
+    protected $config  =    array('header'=>'条记录','prev'=>'上一页','next'=>'下一页','first'=>'第一页','last'=>'最后一页','theme'=>'%upPage%  %linkPage% %downPage% %first%  %prePage%  %nextPage% %end%');
     // 默认分页变量名
     protected $varPage;
 
@@ -97,19 +98,21 @@ class Page {
             $parameter[$p]  =   '__PAGE__';
             $url            =   U('',$parameter);
         }
+        //定义包围a标签的标签
+        $wrap = array('<li>','</li>');
         //上下翻页字符串
         $upRow          =   $this->nowPage-1;
         $downRow        =   $this->nowPage+1;
         if ($upRow>0){
-            $upPage     =   "<a href='".str_replace('__PAGE__',$upRow,$url)."'>".$this->config['prev']."</a>";
+            $upPage     =   $wrap[0]."<a href='".str_replace('__PAGE__',$upRow,$url)."'>".$this->config['prev']."</a>".$wrap[1];
         }else{
-            $upPage     =   '';
+            $upPage     =   $wrap[0].'<a>'. $this->config['prev'].'</a>'.$wrap[1];
         }
 
         if ($downRow <= $this->totalPages){
-            $downPage   =   "<a href='".str_replace('__PAGE__',$downRow,$url)."'>".$this->config['next']."</a>";
+            $downPage   =   $wrap[0]."<a href='".str_replace('__PAGE__',$downRow,$url)."'>".$this->config['next']."</a>".$wrap[1];
         }else{
-            $downPage   =   '';
+            $downPage   =   $wrap[0].'<a>'. $this->config['next'].'</a>'.$wrap[1];;
         }
         // << < > >>
         if($nowCoolPage == 1){
@@ -117,8 +120,8 @@ class Page {
             $prePage    =   '';
         }else{
             $preRow     =   $this->nowPage-$this->rollPage;
-            $prePage    =   "<a href='".str_replace('__PAGE__',$preRow,$url)."' >上".$this->rollPage."页</a>";
-            $theFirst   =   "<a href='".str_replace('__PAGE__',1,$url)."' >".$this->config['first']."</a>";
+            $prePage    =   $wrap[0]."<a href='".str_replace('__PAGE__',$preRow,$url)."' >上".$this->rollPage."页</a>".$wrap[1];
+            $theFirst   =   $wrap[0]."<a href='".str_replace('__PAGE__',1,$url)."' >".$this->config['first']."</a>".$wrap[1];
         }
         if($nowCoolPage == $this->coolPages){
             $nextPage   =   '';
@@ -126,8 +129,8 @@ class Page {
         }else{
             $nextRow    =   $this->nowPage+$this->rollPage;
             $theEndRow  =   $this->totalPages;
-            $nextPage   =   "<a href='".str_replace('__PAGE__',$nextRow,$url)."' >下".$this->rollPage."页</a>";
-            $theEnd     =   "<a href='".str_replace('__PAGE__',$theEndRow,$url)."' >".$this->config['last']."</a>";
+            $nextPage   =   $wrap[0]."<a href='".str_replace('__PAGE__',$nextRow,$url)."' >下".$this->rollPage."页</a>".$wrap[1];
+            $theEnd     =   $wrap[0]."<a href='".str_replace('__PAGE__',$theEndRow,$url)."' >".$this->config['last']."</a>".$wrap[1];
         }
         // 1 2 3 4 5
         $linkPage = "";
@@ -135,13 +138,13 @@ class Page {
             $page       =   ($nowCoolPage-1)*$this->rollPage+$i;
             if($page!=$this->nowPage){
                 if($page<=$this->totalPages){
-                    $linkPage .= "<a href='".str_replace('__PAGE__',$page,$url)."'>".$page."</a>";
+                    $linkPage .= $wrap[0]."<a href='".str_replace('__PAGE__',$page,$url)."'>".$page."</a>".$wrap[1];
                 }else{
                     break;
                 }
             }else{
                 if($this->totalPages != 1){
-                    $linkPage .= "<span class='current'>".$page."</span>";
+                    $linkPage .= '<li class="active">'."<span class='current'>".$page."</span>".$wrap[1];
                 }
             }
         }

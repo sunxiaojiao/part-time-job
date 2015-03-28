@@ -1,0 +1,131 @@
+[ 2015-03-22T10:28:45+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005112s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 37 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='062af77ea3850e6078c64c71ff142b2e' ) LIMIT 1   [ RunTime:0.015937s ]
+NOTIC: [8] Undefined variable: email D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 40 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email=Array ) LIMIT 1   [ RunTime:0.000218s ]
+ERR: 1054:Unknown column 'Array' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xm_users` WHERE ( email=Array ) LIMIT 1  
+
+[ 2015-03-22T10:29:07+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-22T10:29:19+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-22T10:29:40+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.006482s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 37 行.
+SQL: SELECT * FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='794a9d029bcc684366709f1fa5274814' ) LIMIT 1   [ RunTime:0.000848s ]
+
+[ 2015-03-22T12:18:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?a=UserInfo
+ERR: 非法操作:UserInfo
+
+[ 2015-03-22T12:18:40+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?a=UserInfo
+ERR: 非法操作:UserInfo
+
+[ 2015-03-22T13:39:09+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgsInfo
+ERR: 无法加载模块:OrgsInfo
+
+[ 2015-03-22T13:42:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo
+ERR: 模板不存在[D:/wamp/www/ThinkPHP3.1/Tpl/bootstrap/OrgInfo/index.html]
+
+[ 2015-03-22T14:30:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo
+NOTIC: 建议使用I方法替代_get
+ERR: 模板不存在[D:/wamp/www/ThinkPHP3.1/Tpl/bootstrap/JobsInfo/index.html]
+
+[ 2015-03-22T14:33:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T14:34:24+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T14:34:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T14:35:03+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:35:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Index&a=JobsInfo
+ERR: 非法操作:JobsInfo
+
+[ 2015-03-22T21:36:38+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:36:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:37:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:41:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:42:34+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:43:25+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=6
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:43:33+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:44:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:44:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=5
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:44:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T21:44:33+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=4
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T22:15:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-22T22:17:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-22T22:19:23+08:00 ] 0.0.0.0 /thinkphp3.1/index.php
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-22T22:25:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=6
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T22:25:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T22:54:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=6
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T23:19:07+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=6
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T23:19:19+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=5
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-22T23:19:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=6
+NOTIC: 建议使用I方法替代_get
+

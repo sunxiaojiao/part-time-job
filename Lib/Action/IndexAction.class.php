@@ -5,17 +5,29 @@
  *
  */
 class IndexAction extends Action{
-    
+    /**
+     * 
+     * 默认30分钟内添加的显示 NEW 徽章	
+     */
     public function index(){
     	$Jobs = M('Jobs');
-		$arr_jobs=$Jobs->select();
-		if(!$arr_jobs){
-			exit("数据库连接错误");
-		}else{
-			$this->assign('arr_job',$arr_jobs);
-		}
+    	import('ORG.Util.Page');
+    	$count = $Jobs->count();
+    	$Page = new Page($count,10);
+    	
+		$list = $Jobs->order('ctime desc')
+					->limit($Page->firstRow.','.$Page->listRows)
+					->field("jid,title,money,want_peo,current_peo,address,pv,ctime")
+					->select();
+		//设置分页样式
+//		$Page->setConfig('header','条');
+//		$Page->setConfig('prev', '&laquo;');
+//		$Page->setConfig('next', '&raquo;');
+		$show = $Page->show();
+		$this->assign('list',$list);
+		$this->assign('page',$show);
+		$this->display();
 		
-    	$this->display();
     }
 }
 ?>

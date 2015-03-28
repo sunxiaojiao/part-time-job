@@ -14,52 +14,11 @@
   .red{color:#F00;}
   .panel-body{position: relative;}
   #login{position: absolute; right:16px; bottom: 16px;}
+  #verify>input{display:inline;width:216px;}
 </style>
 </head>
 <body>
-	<!--======导航条======-->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">小蜜蜂兼职</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class=""><a href="#">切换城市 [烟台]</a></li>
-      </ul>
-
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="输入关键词">
-        </div>
-        <button type="submit" class="btn btn-default">搜索</button>
-      </form>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">注册</a></li>
-        <li><a href="">登录</a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> --><!--/.dropdown-->
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<!--======导航条结束======-->
+<include file="./Tpl/bootstrap/public/header.html" />
 <div class="container">
 <div class="row">
 <div class="col-md-8"></div>
@@ -74,9 +33,14 @@
       <div class="form-group">
         <input type="password" id="passwd" class="form-control" placeholder="密码" />
       </div>
+      <div class="form-group" id="verify">
+        <img src="__APP__/Login/vCode" />
+        <input type="text" class="form-control" placeholder="验证码" />
+        <button class="btn btn-default" type="button">刷新</button>
+      </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" id="pwdmem" value="1">记住密码
+          <input type="checkbox" id="pwdmem" value="1">三天内免登录
         </label>
         <span class="red warninfo"></span>
       </div>
@@ -97,15 +61,33 @@
 </div>
 <!--./footer-->
 <script>
+/**
+*修改指定元素的文本为指定字符串
+*@param element
+*@param str
+*/
 function changText(element,str){
   $(element).text(str);
 }
+
+//刷新验证码
+$("#verify>button").click(function(){
+  var ver_img = $("#verify>img");
+  ver_img.attr("src","__APP__/Login/vCode?" + new Date().getTime());
+});
+$("#verify>img").click(function(){
+  $(this).attr("src","__APP__/Login/vCode?" + new Date().getTime());
+});
+//按钮点击时触发ajax
   $("#login").click(function(){
+    //获取字段值
     var email = $("#email").val();
     var passwd = $("#passwd").val();
+    var ver_val = $("#verify>input").val();
+    //checkbox判断
     var pwdmem = $("#pwdmem").is(":checked");
-    console.log(pwdmem);
-    //检测空
+    pwdmem = pwdmem ? 1 : 0;
+    //检测字段是否为空
     if( email == "" ){
       $("#email").focus();
       changText(".warninfo","请输入邮箱地址");
@@ -116,16 +98,41 @@ function changText(element,str){
       changText(".warninfo","请输入密码");
       return;
     }
+    //AJAX
     $.post(
       "{:U('Login/login')}",
       {
         email:email,
         passwd:passwd,
-        pwdmem:pwdmem
+        pwdmem:pwdmem,
+        verify:ver_val
       },
-      function(data){console.log(data)}
+      function(data){
+        var str = '11';
+        switch (data){
+          case 0:
+            str = '登录成功';
+            setTimeout(function(){window.location.href = 'index.php';},5000);
+            break;
+          case 2:
+            str = '密码错误';
+            break;
+          case 3:
+            str = '邮箱格式不正确';
+            break;
+          case 4:
+            str = '验证码错误';
+            break;
+          case 5:
+            str =   '用户不存在';
+            break;
+        }
+        console.log(str);
+        changText(".warninfo",str);
+      }
       );
   });
+
   
 </script>
 </body>
