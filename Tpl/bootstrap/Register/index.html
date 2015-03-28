@@ -52,7 +52,7 @@
 		    		</div>
 		    		<div class="form-group">
 		    			<label for="passwd">确认密码：</label>
-		    			<input id="repasswd" type="password" name="repasswd" class="form-control" placeholder="再次输入密码" />
+		    			<input id="repasswd" type="password" name="repasswd" recheck="passwd" errormsg="两次密码不一致" class="form-control" placeholder="再次输入密码" />
 		    		</div>
 		    		<div class="form-group hide">
 		    			<label for="org">组织名称：</label>
@@ -138,12 +138,6 @@ $("#reg-form").Validform();
 $("#reg-goto").click(function(){
 	//获取数据
 	var info = getFromInput("#reg-form");
-	//判断两次密码
-	if (info.passwd != info.repasswd) {
-		alert("两次密码不一样");
-		return;
-	}
-	console.log(info);
 	//ajax传输
 	$.post(
 		"{:U('Register/reg')}",
@@ -174,7 +168,7 @@ $("#email-goto").click(function(){
 });
 //ajax验证验证码
 $("#yzm").blur(function(){
-	$.post(
+	$.post(	
 		"{:U('Register/confirm')}",
 		{
 			yzm:$("#yzm").val()
