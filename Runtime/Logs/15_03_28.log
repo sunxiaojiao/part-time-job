@@ -255,3 +255,27 @@ INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000486s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
 NOTIC: 建议使用I方法替代_post
 
+[ 2015-03-28T23:06:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-28T23:32:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-28T23:32:38+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=reg
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-28T23:32:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=reg
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+NOTIC: 建议使用I方法替代_post
+

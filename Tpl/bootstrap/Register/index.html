@@ -7,10 +7,11 @@
 
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./__GROUP__/css/bootstrapValidator.min.css">
 <script src="./__GROUP__/js/jquery.min.js"></script>
 <script src="./__GROUP__/js/bootstrap.min.js"></script>
 <script src="./__GROUP__/js/common.js"></script>
-<script src="./__GROUP__/js/Validform_v5.3.2_min.js"></script>
+<script src="./__GROUP__/js/bootstrapValidator.min.js"></script>
 <style type="text/css">
 	#email-goto{top:13px;}
 	#email{border-radius:4px;}
@@ -37,7 +38,7 @@
 		    <form method="post" action="/" id="reg-form">
 		    		<div class="form-group input-group">
 		    			<label for="email">邮箱：</label>
-		    			<input id="email" type="text" name="email" class="form-control" placeholder="请输入邮箱" />
+		    			<input id="email" type="text" datatype="e" name="email" class="form-control" placeholder="请输入邮箱" />
 		    			<span class="input-group-btn"> 
 		        			<button class="btn btn-default" id="email-goto" type="button">发送验证邮件</button>
 		      			</span>
@@ -48,11 +49,11 @@
 		    		</div>
 		    		<div class="form-group">
 		    			<label for="passwd">密码：</label>
-		    			<input id="passwd" type="password" name="passwd" class="form-control" placeholder="请输入密码" />
+		    			<input id="passwd" datatype="*" type="password" name="passwd" class="form-control" placeholder="请输入密码" />
 		    		</div>
 		    		<div class="form-group">
 		    			<label for="passwd">确认密码：</label>
-		    			<input id="repasswd" type="password" name="repasswd" recheck="passwd" errormsg="两次密码不一致" class="form-control" placeholder="再次输入密码" />
+		    			<input id="repasswd" datatype="*" type="password" name="repasswd" recheck="passwd" errormsg="两次密码不一致" class="form-control" placeholder="再次输入密码" />
 		    		</div>
 		    		<div class="form-group hide">
 		    			<label for="org">组织名称：</label>
