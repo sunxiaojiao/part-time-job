@@ -7,11 +7,14 @@
 
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="./__GROUP__/css/bootstrapValidator.min.css">
+<link rel="stylesheet" href="./__GROUP__/css/validationEngine.jquery.css" type="text/css"/>
+<!-- <link rel="stylesheet" href="./__GROUP__/css/template.css" type="text/css"/> -->
+
 <script src="./__GROUP__/js/jquery.min.js"></script>
 <script src="./__GROUP__/js/bootstrap.min.js"></script>
 <script src="./__GROUP__/js/common.js"></script>
-<script src="./__GROUP__/js/bootstrapValidator.min.js"></script>
+<script src="./__GROUP__/js/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+<script src="./__GROUP__/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 <style type="text/css">
 	#email-goto{top:13px;}
 	#email{border-radius:4px;}
@@ -19,6 +22,12 @@
 	.red{color: #F00;}
 	.my-warning{float:left;}
 </style>
+<script>
+	jQuery(document).ready(function(){
+		jQuery("#reg-form").validationEngine();
+	});
+            
+</script>
 </head>
 <body>
 <include file="./Tpl/bootstrap/public/header.html" />
@@ -28,32 +37,32 @@
   		<h1>注册<small>小蜜蜂兼职</small></h1>
 	</div>
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-7">
 			<ul class="nav nav-pills" id="select-list">
 			  <li role="presentation" class="active"><a>求职者</a></li>
 			  <li role="presentation"><a>公司或机构组织</a></li>
 			  <li role="presentation"><a>学校</a></li>
 			</ul>
 
-		    <form method="post" action="/" id="reg-form">
+		    <form method="post" action="{:U('Register/reg')}" id="reg-form">
 		    		<div class="form-group input-group">
 		    			<label for="email">邮箱：</label>
-		    			<input id="email" type="text" datatype="e" name="email" class="form-control" placeholder="请输入邮箱" />
+		    			<input id="email" type="text" name="email" class="form-control validate[required,custom[email]] text-input" data-prompt-position="topRight:-70" placeholder="请输入邮箱" />
 		    			<span class="input-group-btn"> 
 		        			<button class="btn btn-default" id="email-goto" type="button">发送验证邮件</button>
 		      			</span>
 		    		</div>
 		    		<div class="form-group">
 		    			<label for="yzm">验证码：<font class="red my-verify"></font></label>
-		    			<input id="yzm" type="text" name="yzm" class="form-control" placeholder="请输入验证码" />
+		    			<input id="yzm" type="text" name="yzm" class="form-control validate[required,ajax[ajaxNameCallPhp]] text-input" data-prompt-position="topRight:-70" placeholder="请输入验证码" />
 		    		</div>
 		    		<div class="form-group">
 		    			<label for="passwd">密码：</label>
-		    			<input id="passwd" datatype="*" type="password" name="passwd" class="form-control" placeholder="请输入密码" />
+		    			<input id="passwd" type="password" name="passwd" class="form-control validate[required] text-input" data-prompt-position="topRight:-70" placeholder="请输入密码" />
 		    		</div>
 		    		<div class="form-group">
 		    			<label for="passwd">确认密码：</label>
-		    			<input id="repasswd" datatype="*" type="password" name="repasswd" recheck="passwd" errormsg="两次密码不一致" class="form-control" placeholder="再次输入密码" />
+		    			<input id="repasswd" type="password" name="repasswd" class="form-control validate[required,equals[passwd]] text-input" data-prompt-position="topRight:-70" placeholder="再次输入密码" />
 		    		</div>
 		    		<div class="form-group hide">
 		    			<label for="org">组织名称：</label>
@@ -70,6 +79,7 @@
 		    		
 		    	</form>
 		</div>
+		<div class="col-md-1"></div>
 		<div class="col-md-4">
 			<div class="panel panel-default">
 				<div class="panel-heading">关于小蜜蜂</div>
@@ -132,29 +142,26 @@ function onConfirmed(flag){
 		$("#email-goto").text("邮箱发送异常");
 	}
 }
-//检测表单，决定客户端是否允许提交表单
-$("#reg-form").Validform();
-
 //Ajax	
 $("#reg-goto").click(function(){
 	//获取数据
 	var info = getFromInput("#reg-form");
 	//ajax传输
-	$.post(
-		"{:U('Register/reg')}",
-		info,
-		function(data){
-			console.log(data);
-			if(data == 10 ){
-				changText($(".my-warning"),"注册成功");
-				window.href = "index.php";
-			}else if(data.substr(0,1) == 0){
-				changText($(".my-warning"),"验证码错误，注册失败");
-			}else{
-				changText($(".my-warning"),"注册失败，请稍后再试");
-			}
-		}
-		);
+	// $.post(
+	// 	"{:U('Register/reg')}",
+	// 	info,
+	// 	function(data){
+	// 		console.log(data);
+	// 		if(data == 10 ){
+	// 			changText($(".my-warning"),"注册成功");
+	// 			window.href = "index.php";
+	// 		}else if(data.substr(0,1) == 0){
+	// 			changText($(".my-warning"),"验证码错误，注册失败");
+	// 		}else{
+	// 			changText($(".my-warning"),"注册失败，请稍后再试");
+	// 		}
+	// 	}
+	// 	);
 });
 $("#email-goto").click(function(){
 	var email = $("#email").val();
@@ -185,5 +192,7 @@ $("#yzm").blur(function(){
 
 	
 });
+//表单验证
+
 </script>
 </body>
