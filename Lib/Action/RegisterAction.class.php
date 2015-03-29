@@ -37,7 +37,6 @@ class RegisterAction extends Action{
 			$data['orgname'] = $this->orgname;
 			$data['org_address'] = $this->address;
 		}
-		print_r($data);
 		//插入数据库
 		if($flag = $reger->data($data)->add()){
 			$this->ajaxReturn(0);

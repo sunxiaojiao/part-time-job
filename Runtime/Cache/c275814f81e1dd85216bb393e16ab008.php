@@ -88,7 +88,7 @@ THINK;
 			  <li role="presentation"><a>学校</a></li>
 			</ul>
 
-		    <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form">
+		    <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form" >
 		    		<div class="form-group input-group">
 		    			<label for="email">邮箱：</label>
 		    			<input id="email" type="text" name="email" class="form-control validate[required,custom[email]] text-input" data-prompt-position="topRight:-70" placeholder="请输入邮箱" />
@@ -108,18 +108,8 @@ THINK;
 		    			<label for="passwd">确认密码：</label>
 		    			<input id="repasswd" type="password" name="repasswd" class="form-control validate[required,equals[passwd]] text-input" data-prompt-position="topRight:-70" placeholder="再次输入密码" />
 		    		</div>
-		    		<div class="form-group hide">
-		    			<label for="org">组织名称：</label>
-		    			<input id="org" type="text" name="org" class="form-control" placeholder="组织机构学校名称" />
-		    		</div>
-		    		<div class="form-group hide">
-		    			<label for="org_address">所在地：</label>
-		    			<input id="org_address" type="text" name="org_address" class="form-control" placeholder="组织机构学校所在地" />
-		    		</div>
-					<div>
-						<p class="my-warning red"></p>
-						<button type="button" class="btn btn-default pull-right" id="reg-goto">提交</button>
-					</div>
+					<button type="submit" class="btn btn-default" id="reg-goto">提交</button>
+					
 		    		
 		    	</form>
 		</div>
@@ -144,23 +134,8 @@ THINK;
 </div>
 <!--end footer-->
 <script type="text/javascript">
-//存储注册类型的变量
-var whatToSelect = 0;
-//绑定事件
-$("#select-list>li").eq(0).click(function(){
-	tabChange(0);
-	inputHideShow(0);
-});
-$("#select-list>li").eq(1).click(function(){
-	tabChange(1);
-	inputHideShow(1);
-});
-$("#select-list>li").eq(2).click(function(){
-	tabChange(2);
-	inputHideShow(2);
-});
 
-function tabChange(arg){
+function tabShow(arg){
 	for(var i=0; i<3; i++){
 		$("#select-list>li").eq(i).removeClass("active");
 	}
@@ -168,16 +143,35 @@ function tabChange(arg){
 	$("#select-list>li").eq(arg).addClass("active");
 	whatToSelect = arg;
 }
-//按注册类型呈现相应表单
-function inputHideShow(arg){
-	if (arg == 0){
-		$("#org").parent().addClass("hide");
-		$("#org_address").parent().addClass("hide");
+
+
+function tabChange(arg){
+	var str = new String('<div class="form-group input-org"><label for="org">组织名称：</label><input id="org" type="text" name="org" class="form-control validate[required] text-input" data-prompt-position="topRight:-70" placeholder="组织机构学校名称" /></div><div class="form-group input-org"><label for="org_address">所在地：</label><input id="org_address" type="text" name="org_address" class="form-control validate[required] text-input" data-prompt-position="topRight:-70" placeholder="组织机构学校所在地" /></div>');
+	if(arg == 0){
+		console.log(0)
+		if($(".input-org")){
+			$(".input-org").remove();
+		}
 	}else{
-		$("#org").parent().removeClass("hide");
-		$("#org_address").parent().removeClass("hide");
+		if($(".input-org").length !=0){
+		}else{
+			$("#reg-goto").before(str);
+		}
 	}
 }
+//绑定事件
+$("#select-list>li").eq(0).click(function(){
+	tabShow(0);
+	tabChange(0);
+});
+$("#select-list>li").eq(1).click(function(){
+	tabShow(1);
+	tabChange(1);
+});
+$("#select-list>li").eq(2).click(function(){
+	tabShow(2);
+	tabChange(2);
+});
 
 function onConfirmed(flag){
 	if(flag == 1){

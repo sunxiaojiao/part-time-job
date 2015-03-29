@@ -364,3 +364,281 @@ INFO: [ view_end ] --START--
 INFO: ShowPageTrace Behavior ::run [ RunTime:0.000719s ]
 INFO: [ view_end ] --END-- [ RunTime:0.000855s ]
 
+[ 2015-03-29T14:40:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T14:40:51+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T14:41:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001305s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T14:41:07+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T14:41:10+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T14:41:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T14:45:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:10:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=sendEmail
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:10:38+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:25:39+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:27:42+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:27:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:27:53+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:32:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:32:32+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:33:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=sendEmail
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:34:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:34:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?fieldId=yzm&fieldValue=Mcx0&_=1427614325307
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005564s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` LIMIT 1   [ RunTime:0.000550s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`address`,`pv`,`ctime` FROM `xm_jobs` ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.013344s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.048210s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048494s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000541s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002102s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000825s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004466s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000636s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2015-03-29T15:34:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:34:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?fieldId=yzm&fieldValue=Mcx0&_=1427614325308
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001049s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`address`,`pv`,`ctime` FROM `xm_jobs` ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.003836s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016277s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000836s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000605s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000370s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000634s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002759s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001490s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001627s ]
+
+[ 2015-03-29T15:35:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?fieldId=yzm&fieldValue=Mcx0&_=1427614325309
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.006028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` LIMIT 1   [ RunTime:0.000336s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`address`,`pv`,`ctime` FROM `xm_jobs` ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.000700s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021255s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021412s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000668s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000411s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000254s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002065s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000482s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2015-03-29T15:35:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:35:23+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=sendEmail
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:35:25+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:35:40+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:35:52+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001319s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:35:52+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?fieldId=yzm&fieldValue=EkSA&_=1427614512508
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005516s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` LIMIT 1   [ RunTime:0.000328s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`address`,`pv`,`ctime` FROM `xm_jobs` ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.000303s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021550s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001015s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001141s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004069s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000988s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001135s ]
+
+[ 2015-03-29T15:35:58+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?fieldId=yzm&fieldValue=EkSA&_=1427614512509
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.006134s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` LIMIT 1   [ RunTime:0.000913s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`address`,`pv`,`ctime` FROM `xm_jobs` ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.000557s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.042353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042535s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001206s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000741s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000970s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004735s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000918s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001071s ]
+
+[ 2015-03-29T15:35:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=reg
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-03-29T15:40:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001236s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005410s ]
+
+[ 2015-03-29T15:41:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001043s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.006534s ]
+
+[ 2015-03-29T15:41:19+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005513s ]
+
+[ 2015-03-29T15:42:00+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005558s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfasd',2,10,'adfads','2000','sdfadlaskd',1427614920,1) [ RunTime:0.317581s ]
+
+[ 2015-03-29T15:42:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=21
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-29T16:02:26+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=21
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-29T16:02:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=21
+NOTIC: 建议使用I方法替代_get
+

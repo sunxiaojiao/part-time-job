@@ -48,30 +48,31 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo U('Register/index');?>">注册</a></li>
-        <li><a href="<?php echo U('Login/index');?>">登录</a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $dropdown = <<<THINK
+      	<li class="dropdown">
+          <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="index.php?m=OrgInfo">个人中心</a></li>
+            <li><a href="index.php?m=PublishJobs">发布兼职</a></li>
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="$logoutUrl">注销</a></li>
           </ul>
-        </li> --><!--/.dropdown-->
+        </li><!--/.dropdown-->
+THINK;
+ if(session('?uid')){ echo $dropdown; }elseif(session('?oid')){ echo $dropdown; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+        	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<!--======导航条结束======-->
+<!--======导航条结束======--->
 <!--container-->
 <div class="container">
   <div class="row">
     <div class="page-header">
         <h1><small>发布新兼职</small></h1>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <form id="jobinfo">
         <div class="form-group">
           <label for="job-name">兼职标题：</label>
@@ -104,6 +105,7 @@
         <button type="button" class="btn btn-primary pull-right" id="publish">提交</button>
       </form>
     </div>
+    <div class="col-md-1"></div>
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">关于小蜜蜂</div>
@@ -147,7 +149,7 @@ function getFromInput(form){
     $.post(
       "<?php echo U('PublishJobs/insert');?>",
       info,
-      function(data){console.log(data)}
+      function(data){}
       );
   });
 </script>

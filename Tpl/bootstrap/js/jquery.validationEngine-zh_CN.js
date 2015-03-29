@@ -155,7 +155,7 @@
 	                    // error
 	                    "alertText": "* 此名称已被其他人使用",
 	                    // speaks by itself
-	                    "alertTextLoad": "* 正在确认名称是否有其他人使用，请稍等。"
+	                    //"alertTextLoad": "* 正在确认，请稍等。"
 	                },
                 "validate2fields": {
                     "alertText": "* 请输入 HELLO"
