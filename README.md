@@ -5,10 +5,10 @@
 <h3>首页</h3>
 <ol>
   <li>首页显示最近兼职列表</li>
-  <li>默认1小时之内的发布的兼职显示<span style="color:#000;background:#F00;display:inline-block;padding:4px  6px">new</span>
+  <li>默认1小时之内的发布的兼职显示<span style="color:#000;background:#F00;display:inline-block;padding:4px  6px">NEW</span>
   </li>
   <li>默认显示20页</li>
-<ol>
+</ol>
 <h3>登录页</h3>
 <h3>注册页</h3>
 <h3>切换城市页</h3>
