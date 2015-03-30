@@ -114,3 +114,212 @@ SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005172s ]
 SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000272s ]
 SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000224s ]
 
+[ 2015-03-30T19:27:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=index
+ERR: 无法加载模块:ChangeCity
+
+[ 2015-03-30T19:28:01+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=index
+ERR: 无法加载模块:ChangeCity
+
+[ 2015-03-30T19:28:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=index
+ERR: 无法加载模块:ChangeCity
+
+[ 2015-03-30T19:50:07+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:50:43+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:50:44+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:04+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:04+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:34+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:34+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:45+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:46+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:46+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:48+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:51:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:52:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:53:38+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:53:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:54:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:54:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:54:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:57:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T19:57:32+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:02:32+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:02:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:08:17+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:09:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:09:17+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:09:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:09:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:09:38+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:11:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:12:42+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:12:43+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:12:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:25:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:26:03+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:27:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=changecity&aid=5
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-30T20:47:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=ChangeCity&aid=5
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001167s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007617s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city`,`area` FROM `xm_address` WHERE ( aid=5 ) LIMIT 1   [ RunTime:0.000289s ]
+
+[ 2015-03-30T20:48:51+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=ChangeCity&aid=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.005142s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city`,`area` FROM `xm_address` WHERE ( aid=2 ) LIMIT 1   [ RunTime:0.000322s ]
+
+[ 2015-03-30T20:48:53+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=ChangeCity&aid=5
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.005114s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city`,`area` FROM `xm_address` WHERE ( aid=5 ) LIMIT 1   [ RunTime:0.000274s ]
+
+[ 2015-03-30T20:49:42+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=ChangeCity&aid=4
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.004990s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city`,`area` FROM `xm_address` WHERE ( aid=4 ) LIMIT 1   [ RunTime:0.000294s ]
+
+[ 2015-03-30T20:49:45+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=ChangeCity&aid=5
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.004554s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city`,`area` FROM `xm_address` WHERE ( aid=5 ) LIMIT 1   [ RunTime:0.000275s ]
+

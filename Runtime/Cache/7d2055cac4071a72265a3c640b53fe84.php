@@ -18,6 +18,10 @@
 .my-partjob-people{left:330px;}
 .my-partjob-money{left:450px;}
 .my-partjob-address{left:200px;}
+.my-select-address{display: inline-block;}
+  .my-select-address>select{width:auto;display: inline-block;}
+.my-zimu{display: block; padding:4px 6px 4px 32px; margin-bottom: 6px;}
+.my-addr-list a{ display: inline-block; padding:4px 6px; margin:1px 20px 20px; outline: 1px solid #EEE; cursor: pointer;}
 </style>
 </head>
 <body>
@@ -36,7 +40,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [烟台]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("city");?><strong>·</strong><?php echo session("area");?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search">
@@ -79,19 +83,19 @@ THINK;
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="./__GROUP__/images/1.jpg" alt="...">
+      <img src="./images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="./__GROUP__/images/1.jpg" alt="...">
+      <img src="./images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="./__GROUP__/images/1.jpg" alt="...">
+      <img src="./images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
@@ -109,80 +113,76 @@ THINK;
   </a>
 </div>
 </div>
-
+<!--container-->
 <div class="container">
-	<div class="row">
-		<div class="col-md-8">
-			<div class="panel panel-default">
-				<div class="panel-heading">兼职</div>
-				<div class="panel-body">
-					<!-- Nav tabs -->
-				  <ul class="nav nav-tabs" role="tablist">
-				    <li role="presentation" class="active"><a href="#newest" aria-controls="newset" role="tab" data-toggle="tab">最近兼职工作</a></li>
-				    <li role="presentation"><a href="#assort" aria-controls="assort" role="tab" data-toggle="tab">分类查找</a></li>
-				    <li role="presentation"><a href="#resume" aria-controls="resume" role="tab" data-toggle="tab">求职简历</a></li>
-				    
-					<div class="input-group">
-				      <input type="text" class="form-control" placeholder="输入关键词，搜索兼职信息">
-				      <span class="input-group-btn">
-				        <button class="btn btn-default" type="button">搜索</button>
-				      </span>
-				    </div><!-- /input-group -->
-				    
-				  </ul>
-
-				  
-				  <div class="tab-content">
-				    <div role="tabpanel" class="tab-pane active" id="newest">
-				    	<!-- 兼职列表 -->
-					  <ul class="list-group">
-						<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($job["jid"]); ?>" class="list-group-item"><?php echo ($job["title"]); ?>
-					    	
-					    	<?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
-						    <span class="my-partjob-address">
-						    	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["address"]); ?></span>
-						    <span class="my-partjob-money">
-						    	<span class="glyphicon glyphicon-yen" aria-hidden="true"></span><?php echo ($job["money"]); ?>
-						    </span>
-						    <span class="my-partjob-people"></span><?php echo ($job["current_peo"]); ?>/<?php echo ($job["want_peo"]); ?>
-						    <span class="my-explor">
-						    	<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><?php echo ($job["pv"]); ?>
-						    </span>
-					    </a><?php endforeach; endif; else: echo "" ;endif; ?>
-					  </ul>
-					  <!--./兼职列表-->
-				    </div>
-				    <div role="tabpanel" class="tab-pane" id="assort">分类查找</div>
-				    <div role="tabpanel" class="tab-pane" id="resume">求职简历</div>
-				   
-				    <nav>
-					  <ul class="pagination">
-					    <?php echo ($page); ?>
-					  </ul>
-					</nav>
-
-				  </div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="panel panel-default">
-				<div class="panel-heading">关于小蜜蜂</div>
-				<div class="panel-body">
-					<img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="row">
+    <div class="col-md-4">
+      <form action="" method="get" class="">
+        <div class="form-group">
+              <label for="username">居住地：</label>
+              <div class="my-select-address">
+                <select name="" id="" class="form-control">
+                  <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><option value=""><?php echo ($addr["province"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+                <select name="" id="" class="form-control">
+                  <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><option value=""><?php echo ($addr["city"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+                <select name="" id="" class="form-control">
+                  <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><option value=""><?php echo ($addr["area"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+              </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8">
+     <div class="input-group">
+      <input type="text" class="form-control" placeholder="搜索城市">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">搜索</button>
+      </span>
+      </div><!-- /input-group --> 
+    </div>
+  </div>
+  <hr />
+  <div class="panel panel-default">
+    <div class="panel-body">
+      按首字母进行查找
+    </div>
+    <ul class="list-group addr-list">
+      <li class="list-group-item my-addr-list">
+        <span class="bg-primary my-zimu">烟台</span>
+        <ul>
+          <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><a data-aid="<?php echo ($addr["aid"]); ?>"><?php echo ($addr["area"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+      </li>
+    </ul>
+    
+  </div>
 </div>
-<!--end container-->
+<!--./container-->
 <!--footer-->
 <div class="container">
-	<hr />
-	<p class="text-center">小蜜蜂兼职</p>
-	<p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-	<p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+  <hr />
+  <p class="text-center">小蜜蜂兼职</p>
+  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
 <!--footer-end-->
+<script type="text/javascript">
+  $(".addr-list a").click(function(){
+    var aid = $(this).attr("data-aid");
+    //ajax
+    $.ajax({
+      url:"<?php echo U('ChangeCity/ChangeCity');?>",
+      data:{aid:aid},
+      contentType:'text/json',
+      success:function(data){
+        alert(data.info);
+        location.href="<?php echo U('ChangeCity/index');?>";
+      }
+    });
+  });
+  //下拉框选择地点
+</script>
 </body>
 </html>
