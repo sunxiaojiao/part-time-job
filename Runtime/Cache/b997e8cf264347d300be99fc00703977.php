@@ -48,11 +48,11 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $dropdown = <<<THINK
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="index.php?m=OrgInfo">个人中心</a></li>' : '<li><a href="index.php?m=OrgInfo">个人中心</a></li>'; $dropdown = <<<THINK
       	<li class="dropdown">
           <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="index.php?m=OrgInfo">个人中心</a></li>
+            $info
             <li><a href="index.php?m=PublishJobs">发布兼职</a></li>
             <li class="divider"></li>
             <li><a href="$logoutUrl">注销</a></li>
@@ -149,7 +149,14 @@ function getFromInput(form){
     $.post(
       "<?php echo U('PublishJobs/insert');?>",
       info,
-      function(data){}
+      function(data){
+        if(data.status){
+          alert("发布成功");
+          location.href="<?php echo U('PublishJobs/index');?>";
+        }else{
+          alert(data.info);
+        }
+      }
       );
   });
 </script>

@@ -17,13 +17,13 @@ class PublishJobsAction extends Action{
 		if($info = $Job->create()){
 			$Job->pub_oid = $this->oid;
 			if($Job->add()){
-				echo 1;
+				$this->ajaxReturn(1,"发布成功",1);
 			}else{
-				echo 0;
+				$this->ajaxReturn(0,"发布失败",0);
 			}
-			dump($info);
+			//dump($info);
 		}else{
-			echo $Job->getError();
+			$this->ajaxReturn(0,$Job->getError(),0);
 		}
 	}
 	private function getOid(){

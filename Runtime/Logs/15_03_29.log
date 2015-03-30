@@ -642,3 +642,9 @@ NOTIC: 建议使用I方法替代_get
 [ 2015-03-29T16:02:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=21
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-03-29T17:37:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=21
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-03-29T17:38:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=12
+NOTIC: 建议使用I方法替代_get
+

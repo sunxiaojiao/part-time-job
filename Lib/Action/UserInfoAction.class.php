@@ -14,7 +14,7 @@ class UserInfoAction extends Action{
 	 */
 	private function read(){
 		//检测用户登录
-		if(empty(session('uid'))){
+		if(!session("?uid")){
 			return 3;
 		}else{
 			$this->uid = session('uid');

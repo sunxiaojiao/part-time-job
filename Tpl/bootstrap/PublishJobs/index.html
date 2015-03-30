@@ -106,7 +106,14 @@ function getFromInput(form){
     $.post(
       "{:U('PublishJobs/insert')}",
       info,
-      function(data){}
+      function(data){
+        if(data.status){
+          alert("发布成功");
+          location.href="{:U('PublishJobs/index')}";
+        }else{
+          alert(data.info);
+        }
+      }
       );
   });
 </script>
