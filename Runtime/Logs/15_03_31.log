@@ -1,0 +1,12 @@
+[ 2015-03-31T17:31:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo&undefined=&username=&sex=&age=&province=&city=&area=&school=&phone=&email=&qq=&exp=
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.196428s ]
+
+[ 2015-03-31T17:31:53+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo&undefined=&username=&sex=&age=&province=&city=&area=&school=&phone=&email=&qq=&exp=
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005567s ]
+
