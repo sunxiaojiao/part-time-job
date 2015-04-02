@@ -27,6 +27,8 @@ class UserCenterAction extends Action{
 		
 		dump($this->data);
 		session("userData",$this->data);
+		//显示工作申请信息
+		$this->jobApplyed();
 		$this->display();
 	}
 	//更改用户信息
@@ -74,6 +76,15 @@ class UserCenterAction extends Action{
 	//显示干过的兼职
 	private function jobLists(){
 		
+	}
+	private function jobApplyed(){
+		$Apply = M('Apply');
+		$where = "app_uid=".session('uid');
+		$field = "xm_jobs.jid AS jid,xm_jobs.title AS title,xm_apply.ctime AS ctime";
+		$join = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
+		$data = $Apply->where($where)->join($join)->field($field)->select();
+		$this->assign("apply",$data);
+		dump($Apply->getLastSql());
 	}
 }
 

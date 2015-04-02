@@ -124,6 +124,13 @@
         </div>
         <button type="button" class="btn btn-primary"id="goto-info">修改</button>
       </form>
+      <div class="panel">
+      	<ul>
+      	<volist name="apply" id="apply">
+      		<a href="{:U('JobsInfo/index')}&jid={$apply.jid}">{$apply.title}{$apply.ctime|date="m-d",###}</a>
+      	</volist>
+      	</ul>
+      </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">

@@ -34,7 +34,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("city");?><strong>·</strong><?php echo session("area");?>]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search">
@@ -99,7 +99,7 @@ THINK;
             <button type="submit" class="btn btn-default">评价</button>
           </form>
           <hr />
-          <button type="button" class="btn btn-primary btn-lg">申请此兼职</button>
+          <button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
         </div>
       </div>
     </div>
@@ -122,6 +122,16 @@ THINK;
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
+<script type="text/javascript">
+  $("#goto-apply").click(function(){
+    $.ajax({
+      url:"<?php echo U('ApplyJob/apply');?>",
+      success:function(data){
+        alert(data.info);
+      }
+    });
+  });
+</script>
 <!--./footer-->
 </body>
 </html>

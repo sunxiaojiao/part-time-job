@@ -812,3 +812,138 @@ SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007312s ]
 NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
 SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:5:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";i:3;s:1:\"4\";i:4;s:1:\"5\";}' WHERE ( uid = '1' ) [ RunTime:0.107575s ]
 
+[ 2015-04-02T21:16:56+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ChangeCity&a=ChangeCity&aid=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017789s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.004703s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city`,`area` FROM `xm_address` WHERE ( aid=2 ) LIMIT 1   [ RunTime:0.021257s ]
+
+[ 2015-04-02T21:32:44+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:32:51+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:33:56+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-02T21:34:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:37:48+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:45:58+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:46:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:47:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:47:23+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:47:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:48:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:48:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:48:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+
+[ 2015-04-02T21:48:51+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004840s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004726s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000236s ]
+
+[ 2015-04-02T21:49:01+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=25
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:49:04+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004692s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`ctime`) VALUES (25,1427982544) [ RunTime:0.109615s ]
+
+[ 2015-04-02T21:49:40+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004562s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`ctime`) VALUES (1,25,1427982580) [ RunTime:0.084444s ]
+
+[ 2015-04-02T21:53:07+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004871s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000333s ]
+
+[ 2015-04-02T21:53:10+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005170s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000290s ]
+
+[ 2015-04-02T21:53:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=22
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T21:53:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004863s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=22 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`ctime`) VALUES (1,22,1427982801) [ RunTime:0.110906s ]
+
+[ 2015-04-02T21:53:23+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004586s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=22 ) LIMIT 1   [ RunTime:0.000297s ]
+
+[ 2015-04-02T22:14:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=22
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T22:16:45+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.005540s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004974s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:5:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";i:3;s:1:\"4\";i:4;s:1:\"5\";}' WHERE ( uid = '1' ) [ RunTime:0.117364s ]
+
+[ 2015-04-02T22:21:58+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=22
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T22:24:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=22
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-02T22:24:16+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=22
+NOTIC: 建议使用I方法替代_get
+

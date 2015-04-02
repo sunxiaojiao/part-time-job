@@ -40,7 +40,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("city");?><strong>·</strong><?php echo session("area");?>]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search">
@@ -122,13 +122,13 @@ THINK;
               <label for="username">居住地：</label>
               <div class="my-select-address">
                 <select name="" id="" class="form-control">
-                  <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><option value=""><?php echo ($addr["province"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                  <option value=""><?php echo ($addr["province"]); ?></option>
                 </select>
                 <select name="" id="" class="form-control">
-                  <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><option value=""><?php echo ($addr["city"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                  <option value=""><?php echo ($addr["city"]); ?></option>
                 </select>
                 <select name="" id="" class="form-control">
-                  <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><option value=""><?php echo ($addr["area"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                  <option value=""><?php echo ($addr["area"]); ?></option>
                 </select>
               </div>
         </div>
@@ -159,7 +159,7 @@ THINK;
     
   </div>
 </div>
-<!--./container-->
+<!--./container--> 
 <!--footer-->
 <div class="container">
   <hr />

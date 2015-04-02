@@ -3,6 +3,7 @@ class JobsInfoAction extends Action{
 	private $jid;
 	public function index(){
 		$this->assignIt();
+		session("jid",$this->jid);
 		$this->display();
 	}
 	/**
@@ -11,7 +12,7 @@ class JobsInfoAction extends Action{
 	 * @return $list：查询成功返回数组
 	 */
 	private function read(){
-		$this->jid =  $this->getJid();
+		$this->jid =  $this->_get('jid');
 		$Users = M('Jobs');
 		$list = $Users->where("jid=".$this->jid)->limit(1)->select();
 		if($list){
@@ -29,15 +30,12 @@ class JobsInfoAction extends Action{
 	 * 模板赋值
 	 * @param 
 	 */
-	private function assignIt(){
+	private function assignIt(){	
 		if($arr = $this->read()){
 			foreach ($arr as $key=>$value){
 				$this->assign($key,$value);
 			}
 		}
-	}
-	private function getJid(){
-		return $this->_get('jid');
 	}
 }
 ?>
