@@ -32,7 +32,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="#">切换城市 [烟台]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("city");?><strong>·</strong><?php echo session("area");?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search">

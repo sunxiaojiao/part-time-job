@@ -7,6 +7,9 @@ function getFromInput(form){
 	var  list = $(form + " *");
 	var info = new Object();
 	for(var i=0;i<list.length;i++){
+		if(list.eq(i).attr("name") == undefined){
+			continue;
+		}
 		info[list.eq(i).attr("name")] = list.eq(i).val();
 	}
 	return info;
