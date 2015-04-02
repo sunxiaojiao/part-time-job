@@ -19,6 +19,7 @@ class UserCenterAction extends Action{
 		$where = "uid='$uid'";
 		$field = "passwd";
 		$this->data = $User->where($where)->field($field,true)->find();
+		$this->data['intent'] = eval($this->data['intent']);
 		$this->assign("userinfo",$this->data);
 		//兼职意向 类型
 		$Mold =M('Mold');

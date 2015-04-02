@@ -108,15 +108,18 @@
           <label for="intent">求职意向:</label>
           <div>
          <volist name="molds" id="molds">
-          <in name="molds.mid" value="$userinfo.intent">
+			
+          <if condition="in_array($molds['mid'],$userinfo['intent'])">
+
             <label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="{$molds.mid}" checked="true">{$molds.name}
             </label>
             <else />
+            {:dump($userinfo['intent'])}
             <label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="{$molds.mid}">{$molds.name}
             </label>
-           </in>
+           </if>
          </volist>
           </div>
         </div>
