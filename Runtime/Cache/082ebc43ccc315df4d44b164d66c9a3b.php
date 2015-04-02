@@ -14,6 +14,7 @@
   .my-perinfo{margin-left:26px;}
   .my-perinfo>p>span{margin-right:18px;}
   .my-perimg{border:1px solid #EEE;}
+  span.list-intent{margin-right:10px;}
 </style>
 </head>
 <body>
@@ -84,7 +85,9 @@ THINK;
           <hr />
           <p>所在城市：<?php echo ($city); ?></p>
           <p>所在学校：<?php echo ($school); ?></p>
-          <p>求职意向：<?php echo ($intent); ?></p>
+          <p>求职意向：
+            <?php if(is_array($intent)): $i = 0; $__LIST__ = $intent;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$intent): $mod = ($i % 2 );++$i;?><span class="list-intent"><?php echo ($intent["name"]); ?></span><?php endforeach; endif; else: echo "" ;endif; ?>
+          </p>
           <p>工作经验：<?php echo ($exp); ?></p>
           <h3>联系方式</h3>
           <hr />

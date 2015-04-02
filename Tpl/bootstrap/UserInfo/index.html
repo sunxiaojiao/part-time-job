@@ -14,6 +14,7 @@
   .my-perinfo{margin-left:26px;}
   .my-perinfo>p>span{margin-right:18px;}
   .my-perimg{border:1px solid #EEE;}
+  span.list-intent{margin-right:10px;}
 </style>
 </head>
 <body>
@@ -41,7 +42,11 @@
           <hr />
           <p>所在城市：{$city}</p>
           <p>所在学校：{$school}</p>
-          <p>求职意向：{$intent}</p>
+          <p>求职意向：
+            <volist name="intent" id="intent">
+                <span class="list-intent">{$intent.name}</span>
+            </volist>
+          </p>
           <p>工作经验：{$exp}</p>
           <h3>联系方式</h3>
           <hr />

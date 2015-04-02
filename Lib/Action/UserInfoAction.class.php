@@ -20,13 +20,14 @@ class UserInfoAction extends Action{
 			$this->uid = session('uid');
 		}
 		$Users = M('Users');
-		$list = $Users->where("uid=".$this->uid)->limit(1)->select();
+		$list = $Users->where("uid=".$this->uid)->find();
 		if($list){
 			if(is_null($list)){
 				//无记录
 				return 1;
 			}else{
-				return $list[0];
+				$list['intent'];
+				return $list;
 			}
 		}else{
 			return 0;
@@ -51,8 +52,20 @@ class UserInfoAction extends Action{
 			foreach ($arr as $key=>$value){
 				$this->assign($key,$value);
 			}
-			$sex = $sex == null ? '保密' : $sex == 1 ? '男' : '女';
+			$sex = $sex == "" ? '保密' : $sex == 1 ? '男' : '女';
 			$this->assign('sex',$sex);
+			//查询mold表
+			$intent = unserialize($arr['intent']);
+			$Mold = M('Mold');
+			$where = "";
+			foreach ($intent as $key => $value){
+				$where .= "mid=".$value." OR ";
+			}
+			$where = substr($where,0,strlen($where)-4);
+			$intent = $Mold->where($where)->field("name")->select();
+//			dump($intent);
+//			dump($Mold->getLastSql());
+			$this->assign("intent",$intent);
 		}
 	}
 	

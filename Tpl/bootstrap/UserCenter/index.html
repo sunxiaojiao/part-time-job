@@ -109,13 +109,12 @@
           <div>
          <volist name="molds" id="molds">
 			
-          <if condition="in_array($molds['mid'],$userinfo['intent'])">
+          <if condition="in_array($molds['mid'],unserialize($userinfo['intent']))">
 
             <label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="{$molds.mid}" checked="true">{$molds.name}
             </label>
             <else />
-            {:dump($userinfo['intent'])}
             <label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="{$molds.mid}">{$molds.name}
             </label>

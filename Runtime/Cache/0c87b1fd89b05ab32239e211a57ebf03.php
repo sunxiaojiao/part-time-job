@@ -148,11 +148,10 @@ THINK;
         <div class="form-group">
           <label for="intent">求职意向:</label>
           <div>
-         <?php if(is_array($molds)): $i = 0; $__LIST__ = $molds;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array($molds['mid'],$userinfo['intent'])): ?><label class="checkbox-inline">
+         <?php if(is_array($molds)): $i = 0; $__LIST__ = $molds;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array($molds['mid'],unserialize($userinfo['intent']))): ?><label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>" checked="true"><?php echo ($molds["name"]); ?>
             </label>
             <?php else: ?>
-            <?php echo dump($userinfo['intent']);?>
             <label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>"><?php echo ($molds["name"]); ?>
             </label><?php endif; endforeach; endif; else: echo "" ;endif; ?>

@@ -19,12 +19,10 @@ class UserCenterAction extends Action{
 		$where = "uid='$uid'";
 		$field = "passwd";
 		$this->data = $User->where($where)->field($field,true)->find();
-		$this->data['intent'] = eval($this->data['intent']);
 		$this->assign("userinfo",$this->data);
 		//兼职意向 类型
 		$Mold =M('Mold');
 		$molds = $Mold->field("mid,name")->select();
-		dump($molds);
 		$this->assign("molds",$molds);
 		
 		dump($this->data);
@@ -59,11 +57,11 @@ class UserCenterAction extends Action{
 		}
 
 		$User = M('Users');
-		//默认得到intent中的数据为数组，将它将换为json字符串
-		$this->form['intent'] = json_encode($this->_post("intent"));
+		//默认得到intent中的数据为数组，将它将换为可存储字符串
+		$this->form['intent'] = serialize($this->form["intent"]);
 		$where = "uid = '".$this->data['uid']."'";
 		if($User->where($where)->save($this->form)){
-			echo $User->getLastSql();
+			//echo $User->getLastSql();
 			$this->ajaxReturn(1,"更新成功",1);
 		}else{
 			if($User->getError() === ""){

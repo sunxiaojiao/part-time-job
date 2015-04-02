@@ -700,3 +700,115 @@ NOTIC: 建议使用I方法替代_post
 NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
 SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='[\"1\",\"2\",\"\",\"4\",\"\",\"\",\"\",\"8\",\"\",\"10\",\"11\"]' WHERE ( uid = '1' ) [ RunTime:0.115869s ]
 
+[ 2015-04-02T15:09:00+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=sendEmail
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-02T15:09:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-02T15:16:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000758s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.060847s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005230s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.012300s ]
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000278s ]
+
+[ 2015-04-02T15:51:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.004662s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004819s ]
+ERR: Action:form您所请求的方法不存在！
+
+[ 2015-04-02T15:52:36+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.005056s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005026s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:1:{i:0;s:1:\"1\";}' WHERE ( uid = '1' ) [ RunTime:0.135895s ]
+
+[ 2015-04-02T15:52:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.004764s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005421s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:1:{i:0;s:1:\"1\";}' WHERE ( uid = '1' ) [ RunTime:0.027213s ]
+
+[ 2015-04-02T15:56:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.004853s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005057s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:2:{i:0;s:1:\"1\";i:1;s:1:\"2\";}' WHERE ( uid = '1' ) [ RunTime:0.205547s ]
+
+[ 2015-04-02T15:57:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.004876s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005275s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:3:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";}' WHERE ( uid = '1' ) [ RunTime:0.154764s ]
+
+[ 2015-04-02T15:57:34+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.005369s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.033394s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005214s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:3:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";}' WHERE ( uid = '1' ) [ RunTime:0.000305s ]
+
+[ 2015-04-02T15:57:39+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.005587s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005224s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:4:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";i:3;s:1:\"4\";}' WHERE ( uid = '1' ) [ RunTime:0.104892s ]
+
+[ 2015-04-02T17:00:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.005223s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007312s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:5:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";i:3;s:1:\"4\";i:4;s:1:\"5\";}' WHERE ( uid = '1' ) [ RunTime:0.107575s ]
+
