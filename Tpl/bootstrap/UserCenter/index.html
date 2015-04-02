@@ -107,24 +107,17 @@
         <div class="form-group">
           <label for="intent">求职意向:</label>
           <div>
+         <volist name="molds" id="molds">
+          <in name="molds.mid" value="$userinfo.intent">
             <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="1" checked="true">程序员
+              <input type="checkbox" id="" name="intent" value="{$molds.mid}" checked="true">{$molds.name}
             </label>
+            <else />
             <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="2">程序员
+              <input type="checkbox" id="" name="intent" value="{$molds.mid}">{$molds.name}
             </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="3">程序员
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="option1">程序员
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="option1">程序员
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="option1">程序员
-            </label>
+           </in>
+         </volist>
           </div>
         </div>
         <button type="button" class="btn btn-primary"id="goto-info">修改</button>

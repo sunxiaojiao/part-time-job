@@ -148,24 +148,13 @@ THINK;
         <div class="form-group">
           <label for="intent">求职意向:</label>
           <div>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="1" checked="true">程序员
+         <?php if(is_array($molds)): $i = 0; $__LIST__ = $molds;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array(($molds["mid"]), is_array($userinfo["intent"])?$userinfo["intent"]:explode(',',$userinfo["intent"]))): ?><label class="checkbox-inline">
+              <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>" checked="true"><?php echo ($molds["name"]); ?>
             </label>
+            <?php else: ?>
             <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="2">程序员
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="3">程序员
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="option1">程序员
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="option1">程序员
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="option1">程序员
-            </label>
+              <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>"><?php echo ($molds["name"]); ?>
+            </label><?php endif; endforeach; endif; else: echo "" ;endif; ?>
           </div>
         </div>
         <button type="button" class="btn btn-primary"id="goto-info">修改</button>
