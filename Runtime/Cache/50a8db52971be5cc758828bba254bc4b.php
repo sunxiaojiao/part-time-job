@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,11 +26,54 @@
 </style>
 </head>
 <body>
-<include file="./Tpl/bootstrap/public/header.html" />
+<!--======导航条======-->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.php">小蜜蜂兼职</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="输入关键词">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="index.php?m=UserInfo">个人中心</a></li>' : '<li><a href="index.php?m=OrgInfo">个人中心</a></li>'; $dropdown = <<<THINK
+      	<li class="dropdown">
+          <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            $info
+            <li><a href="index.php?m=PublishJobs">发布兼职</a></li>
+            <li class="divider"></li>
+            <li><a href="$logoutUrl">注销</a></li>
+          </ul>
+        </li><!--/.dropdown-->
+THINK;
+ if(session('?uid')){ echo $dropdown; }elseif(session('?oid')){ echo $dropdown; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+        	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!--======导航条结束======--->
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>完善个人信息<small>({$userinfo.email})</small></small></h1>
+      <h1><small>企业信息<small>()</small></small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -51,29 +94,27 @@
       <form method="post" action="" id="edit-info">
         <div class="form-group">
           <label for="username">用户名：</label>
-          <input type="text" id="username" name="username" value='{$userinfo.username}' class="form-control" placeholder="填写用户名" />
+          <input type="text" id="username" name="username" value='<?php echo ($userinfo["username"]); ?>' class="form-control" placeholder="填写用户名" />
         </div>
         <div class="form-group">
           <label>性别：</label>
           <select class="form-control" name="sex">
-          	<if condition="$userinfo.sex eq 1">
-            <option value="1" selected="true">男生</option>
+          	<?php if($userinfo["sex"] == 1): ?><option value="1" selected="true">男生</option>
             <option value="2">女生</option>
             <option value="3">保密</option>
-            <elseif condition="$userinfo.sex eq 2" />
+            <?php elseif($userinfo["sex"] == 2): ?>
             <option value="1">男生</option>
             <option value="2" selected="true">女生</option>
             <option value="3">保密</option>
-            <else />
+            <?php else: ?>
             <option value="1">男生</option>
             <option value="2">女生</option>
-            <option value="3" selected="true">保密</option>
-            </if>
+            <option value="3" selected="true">保密</option><?php endif; ?>
           </select>
         </div>
         <div class="form-group">
           <label for="age">年龄：</label>
-          <input type="text" id="age" name="age" value="{$userinfo.age}" class="form-control" placeholder="填写年龄" />
+          <input type="text" id="age" name="age" value="<?php echo ($userinfo["age"]); ?>" class="form-control" placeholder="填写年龄" />
         </div>
         <div class="form-group">
           <label for="username">居住地：</label>
@@ -91,45 +132,37 @@
         </div>
         <div class="form-group">
           <label for="school">学校：</label>
-          <input type="text" id="school" name="school" class="form-control" value="{$userinfo.school}" placeholder="填写所在学校" />
+          <input type="text" id="school" name="school" class="form-control" value="<?php echo ($userinfo["school"]); ?>" placeholder="填写所在学校" />
         </div>
         <div class="form-group">
           <label for="phone">联系电话：</label>
-          <input type="text" id="phone" name="phone" class="form-control" value="{$userinfo.phone}" placeholder="填写联系电话" />
+          <input type="text" id="phone" name="phone" class="form-control" value="<?php echo ($userinfo["phone"]); ?>" placeholder="填写联系电话" />
         </div>
         <div class="form-group">
           <label for="qq">QQ：</label>
-          <input type="text" id="qq" name="qq" class="form-control" value="{$userinfo.qq}" placeholder="填写联系QQ" />
+          <input type="text" id="qq" name="qq" class="form-control" value="<?php echo ($userinfo["qq"]); ?>" placeholder="填写联系QQ" />
         </div>
           <div class="form-group">
             <label for="exp">基本介绍和工作经验:</label>
-            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="填写个人的简介和工作经验">{$userinfo.exp}</textarea>
+            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="填写个人的简介和工作经验"><?php echo ($userinfo["exp"]); ?></textarea>
           </div>
         <div class="form-group">
           <label for="intent">求职意向:</label>
           <div>
-         <volist name="molds" id="molds">
-			
-          <if condition="in_array($molds['mid'],unserialize($userinfo['intent']))">
-
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="{$molds.mid}" checked="true">{$molds.name}
+         <?php if(is_array($molds)): $i = 0; $__LIST__ = $molds;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array($molds['mid'],unserialize($userinfo['intent']))): ?><label class="checkbox-inline">
+              <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>" checked="true"><?php echo ($molds["name"]); ?>
             </label>
-            <else />
+            <?php else: ?>
             <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="{$molds.mid}">{$molds.name}
-            </label>
-           </if>
-         </volist>
+              <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>"><?php echo ($molds["name"]); ?>
+            </label><?php endif; endforeach; endif; else: echo "" ;endif; ?>
           </div>
         </div>
         <button type="button" class="btn btn-primary"id="goto-info">修改</button>
       </form>
       <div class="panel">
       	<ul>
-      	<volist name="apply" id="apply">
-      		<a href="{:U('JobsInfo/index')}&jid={$apply.jid}">{$apply.title}{$apply.ctime|date="m-d",###}</a>
-      	</volist>
+      	<?php if(is_array($apply)): $i = 0; $__LIST__ = $apply;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($apply["jid"]); ?>"><?php echo ($apply["title"]); echo (date("m-d",$apply["ctime"])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
       	</ul>
       </div>
     </div>
@@ -206,7 +239,7 @@ $("#goto-info").click(function(){
 	console.log(info);
 	//ajax
 	$.ajax({
-		url:'{:U('UserCenter/updateInfo')}',
+		url:'<?php echo U('UserCenter/updateInfo');?>',
 		data:info,
 		type:"POST",
 		success:function(data){

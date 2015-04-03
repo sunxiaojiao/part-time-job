@@ -12,18 +12,41 @@ class OrgCenterAction extends Action{
 		}else{
 			$this->ajaxReturn(0,"获取发布的兼职失败",0);
 		}
+		//dump($publiced_jobs);
+		$org_info = $this->showOrgInfo();
+		if($org_info){
+			$this->assign("orgInfo",$org_info);
+		}else{
+			$this->ajaxReturn(0,"获取企业信息失败",0);
+		}
 		$this->display();
 	}
 	private function showPublicedJob(){
 		$Jobs = M('Jobs');
 		$where = "pub_oid=".session('oid');
 		$field = "";
-		$arr_jobs = $Jobs->where($where)->field($field)->select();
-		if($arr_jobs){
-			return $arr_jobs;
+		$arr2_jobs = $Jobs->where($where)->field($field)->select();
+		if($arr2_jobs){
+			return $arr2_jobs;
+		}else{
+			echo $Jobs->getLastSql();
+			return false;
+		}
+	}
+	private function showOrgInfo(){
+		$Orgs = M('Orgs');
+		$where = "oid=".session('oid');
+		$field = "mid,passwd";
+		$arr2_org = $Orgs->where($where)->field($field,true)->find();
+		if($arr2_org){
+			return $arr2_org;
 		}else{
 			return false;
 		}
+	}
+	//编辑企业信息
+	public function editInfo(){
+		$this->display();
 	}
 }
 ?>

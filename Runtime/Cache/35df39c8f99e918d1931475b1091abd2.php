@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
 <script src="./__GROUP__/js/jquery.min.js"></script>
 <script src="./__GROUP__/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./__GROUP__/js/common.js"></script>
+<script type="text/javascript" src="./__GROUP__/js/fullAvatarEditor.js"></script>
+<script type="text/javascript" src="./__GROUP__/js/swfobject.js"></script>
 <style type="text/css">
   .panel-body{position: relative;}
   .my-perinfo{margin-left:26px;}
@@ -18,11 +21,12 @@
   .my-select-address>select{width:auto;display: inline-block;}
   .my-personimg{width:200px; cursor: pointer;}
   #swfwrapper{width:630px;}
-
+	.d-markup{display: inline-block; padding:4px 6px; background: #EEE; font:18px/24px "微软雅黑,黑体"; margin: 6px 2px;}
+	.d-markup:hover{background: #DDD; color:#111;}
 </style>
 </head>
 <body>
-<!--======导航条======-->
+ <!--======导航条======-->
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -68,55 +72,58 @@ THINK;
 <!--======导航条结束======--->
 <!--container-->
 <div class="container">
+  <div class="page-header">
+      <h1><small>完善机构组织信息</small></h1>
+  </div>
   <div class="row">
-    <div class="page-header">
-        <h1><small>发布新兼职</small></h1>
+    <div class="col-md-8">
+		<!--基本信息-->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				基本信息<a class="pull-right" href="<?php echo U('OrgCenter/editInfo');?>">更改信息</a>
+			</div>
+			<?php if(is_array($orgInfo)): $i = 0; $__LIST__ = $orgInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$orginfo): $mod = ($i % 2 );++$i; if($key != 'headlogo'): ?><span class="d-markup"><?php echo ($orginfo); ?></span><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+		</div>
+		<!--./基本信息-->
+		<!--发布的兼职列表-->
+		<div class="panel panel-default">
+			<div class="panel-heading">发布的兼职</div>
+			<div class="list-group">
+			<?php if(is_array($publicedJobs)): $i = 0; $__LIST__ = $publicedJobs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$jobs): $mod = ($i % 2 );++$i;?><a href="<?php echo U("JobsInfo/index");?>&jid=<?php echo ($jobs["jid"]); ?>" target="_blank" class="list-group-item"><?php echo ($jobs["title"]); ?><span class="badge"><?php echo ($jobs["current_peo"]); ?>/<?php echo ($jobs["want_peo"]); ?></span></a><?php endforeach; endif; else: echo "" ;endif; ?>
+			</div>
+		</div>
+		<!--./发布的兼职列表-->
+
     </div>
-    <div class="col-md-7">
-      <form id="jobinfo">
-        <div class="form-group">
-          <label for="job-name">兼职标题：</label>
-          <input class="form-control" name="title" placeholder="兼职标题"/>
-        </div>
-        <div class="form-group">
-          <label for="job-consumer">联系人：</label>
-          <input class="form-control" name="leader" placeholder="联系人"/>
-        </div>
-        <div class="form-group">
-          <label for="jobn-tel">联系电话：</label>
-          <input class="form-control" name="phone" placeholder="联系电话"/>
-        </div>
-        <div class="form-group">
-          <label for="job-people">需求人数：</label>
-          <input class="form-control" name="want_peo" placeholder="需求人数"/>
-        </div>
-        <div class="form-group">
-          <label for="job-address">工作地点：</label>
-          <input class="form-control" name="address" placeholder="工作地点"/>
-        </div>
-        <div class="form-group">
-          <label for="job-much">工资范围：</label>
-          <input class="form-control" name="money" placeholder="工资范围"/>
-        </div>
-        <div class="form-group">
-          <label for="job-more">工作介绍：</label>
-          <textarea class="form-control" rows="3" name="detail" placeholder="工作介绍"></textarea>
-        </div>
-        <button type="button" class="btn btn-primary pull-right" id="publish">提交</button>
-      </form>
-    </div>
-    <div class="col-md-1"></div>
     <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">关于小蜜蜂</div>
+    	<div class="panel panel-default">
         <div class="panel-body">
-          <img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+          <img src="<?php echo ($orgInfo["headlogo"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+        </div>
+      </div>
+    </div>
+  </div>	
+ <!--./container-->
+ <!--上传头像用model框-->
+<div class="modal fade" id="headimg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">修改头像</h4>
+      </div>
+      <div class="modal-body">
+        <div class="center-block" id="swfwrapper">
+                <p id="swfContainer">
+                    本组件需要安装Flash Player后才可使用，请从
+                    <a href="http://www.adobe.com/go/getflashplayer">这里</a>
+                    下载安装。
+                </p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!--./container-->
 <!--footer-->
 <div class="container">
   <hr />
@@ -126,39 +133,21 @@ THINK;
 </div>
 <!--./footer-->
 <script type="text/javascript">
-/**
-*返回一个对象，将表单中input的name值做属性名，value值做属性值。
-*@param String form CSS selector
-*@return Object
-*/
-function getFromInput(form){
-  var  input_list = $(form + " input");
-  var info = new Object();
-  for(var i=0;i<input_list.length;i++){
-    info[input_list.eq(i).attr("name")] = input_list.eq(i).val();
-  }
-  return info;
-}
+            swfobject.addDomLoadEvent(function () {
+                var swf = new fullAvatarEditor("./swf/fullAvatarEditor.swf", "./swf/expressInstall.swf", "swfContainer", {
+                        id : "swf",
+                        upload_url : "/upload.php?userid=999&username=looselive",
+                        method : "post",
+                        src_url : "./images/person.jpg",
+                        src_upload : 2
+                    },function(){
 
-  $("#publish").click(function(){
-    //获取数据
-    var info = getFromInput("#jobinfo");
-    info['detail'] = $("textarea[name='detail']").val();
-    console.log(info);
-    //ajax
-    $.post(
-      "<?php echo U('PublishJobs/insert');?>",
-      info,
-      function(data){
-        if(data.status){
-          alert("发布成功");
-          location.href="<?php echo U('PublishJobs/index');?>";
-        }else{
-          alert(data.info);
-        }
-      }
-      );
-  });
-</script>
+                    }
+                );
+                document.getElementById("upload").onclick=function(){
+                    swf.call("upload");
+                };
+            });
+        </script>
 </body>
 </html>

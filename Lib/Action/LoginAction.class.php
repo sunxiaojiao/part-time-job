@@ -48,6 +48,8 @@ class LoginAction extends Action{
 				return;
 			}
 			//设置session
+			session('oid',null);
+			session('orgname',null);
 			session('uid',$userInfo['uid']);
 			session('username',$userInfo['username']);
 		//判断此email是否为公司机构
@@ -63,7 +65,9 @@ class LoginAction extends Action{
 				echo 2;
 				return;
 			}
-			session('oid',$oid);
+			session('uid',null);
+			session('username',null);
+			session('oid',$oid['oid']);
 			session('orgname',$orgInfo['orgname']);
 		}else{
 			$flag = 5;
@@ -130,18 +134,5 @@ class LoginAction extends Action{
 		import('ORG.Util.Image');
 		Image::buildImageVerify(4,2,'png',0,32);
 	}
-	//设置session
-	private function setSession(){
-		session('username',$this->username);
-		session('id',$this->id);
-
-		if($this->getPwdmem()){
-			//设置登录持续时间（session文件存储在服务器中，好像会占用不少服务器资源）
-			//设置过期时间为3天
-			Session::setExpire(259200,true);
-				
-		}
-	}
-
 }
 ?>
