@@ -209,3 +209,26 @@ INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000677s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
 SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004843s ]
 
+[ 2015-04-03T22:42:22+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=2
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-03T22:42:23+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+
+[ 2015-04-03T22:42:31+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004986s ]
+
+[ 2015-04-03T22:42:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004886s ]
+
+[ 2015-04-03T22:45:43+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+

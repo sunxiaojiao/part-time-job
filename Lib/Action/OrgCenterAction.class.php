@@ -46,7 +46,23 @@ class OrgCenterAction extends Action{
 	}
 	//编辑企业信息
 	public function editInfo(){
+		$Org = M('Orgs');
+		$where = "oid=".session('oid');
+		$field = "oid,passwd";
+		$arr_info = $Org->field($field,true)->where($where)->find();
+		dump($arr_info);
+		if($arr_info){
+			$this->assign("orgInfo",$arr_info);
+		}else{
+			$this->ajaxReturn(0,"获取信息失败",0);
+		}
 		$this->display();
+	}
+	public function updateInfo(){
+		$Org = M('Orgs');
+		$where = "oid=".session('oid');
+		$data[''] = ;
+		$Org->data($data)->where($where)->save();
 	}
 }
 ?>

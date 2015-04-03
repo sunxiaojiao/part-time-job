@@ -52,7 +52,7 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="index.php?m=UserInfo">个人中心</a></li>' : '<li><a href="index.php?m=OrgInfo">个人中心</a></li>'; $dropdown = <<<THINK
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="index.php?m=UserCenter">个人中心</a></li>' : '<li><a href="index.php?m=OrgCenter">个人中心</a></li>'; $dropdown = <<<THINK
       	<li class="dropdown">
           <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -73,51 +73,13 @@ THINK;
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>企业信息<small>()</small></small></h1>
+      <h1><small>企业信息<small>(<?php echo ($orgInfo["orgname"]); ?>)</small></small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">
-    <!--
-	@param usernmae
-	sex
-	age
-	province
-	city
-	area
-	school
-	phone
-	email
-	qq
-	exp
-	intent
-    -->
       <form method="post" action="" id="edit-info">
         <div class="form-group">
-          <label for="username">用户名：</label>
-          <input type="text" id="username" name="username" value='<?php echo ($userinfo["username"]); ?>' class="form-control" placeholder="填写用户名" />
-        </div>
-        <div class="form-group">
-          <label>性别：</label>
-          <select class="form-control" name="sex">
-          	<?php if($userinfo["sex"] == 1): ?><option value="1" selected="true">男生</option>
-            <option value="2">女生</option>
-            <option value="3">保密</option>
-            <?php elseif($userinfo["sex"] == 2): ?>
-            <option value="1">男生</option>
-            <option value="2" selected="true">女生</option>
-            <option value="3">保密</option>
-            <?php else: ?>
-            <option value="1">男生</option>
-            <option value="2">女生</option>
-            <option value="3" selected="true">保密</option><?php endif; ?>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="age">年龄：</label>
-          <input type="text" id="age" name="age" value="<?php echo ($userinfo["age"]); ?>" class="form-control" placeholder="填写年龄" />
-        </div>
-        <div class="form-group">
-          <label for="username">居住地：</label>
+          <label for="username">所在地：</label>
           <div class="my-select-address">
             <select name="province" id="" class="form-control">
               <option>山东</option>
@@ -130,10 +92,7 @@ THINK;
             </select>
           </div>
         </div>
-        <div class="form-group">
-          <label for="school">学校：</label>
-          <input type="text" id="school" name="school" class="form-control" value="<?php echo ($userinfo["school"]); ?>" placeholder="填写所在学校" />
-        </div>
+
         <div class="form-group">
           <label for="phone">联系电话：</label>
           <input type="text" id="phone" name="phone" class="form-control" value="<?php echo ($userinfo["phone"]); ?>" placeholder="填写联系电话" />
@@ -143,11 +102,11 @@ THINK;
           <input type="text" id="qq" name="qq" class="form-control" value="<?php echo ($userinfo["qq"]); ?>" placeholder="填写联系QQ" />
         </div>
           <div class="form-group">
-            <label for="exp">基本介绍和工作经验:</label>
-            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="填写个人的简介和工作经验"><?php echo ($userinfo["exp"]); ?></textarea>
+            <label for="exp">公司或机构介绍:</label>
+            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="简要介绍"><?php echo ($userinfo["exp"]); ?></textarea>
           </div>
         <div class="form-group">
-          <label for="intent">求职意向:</label>
+          <label for="intent">招聘意向:</label>
           <div>
          <?php if(is_array($molds)): $i = 0; $__LIST__ = $molds;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array($molds['mid'],unserialize($userinfo['intent']))): ?><label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>" checked="true"><?php echo ($molds["name"]); ?>
@@ -169,7 +128,7 @@ THINK;
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-body">
-          <img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+          <img src="<?php echo ($orgInfo["headlogo"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
         </div>
       </div>
     </div>
@@ -239,7 +198,7 @@ $("#goto-info").click(function(){
 	console.log(info);
 	//ajax
 	$.ajax({
-		url:'<?php echo U('UserCenter/updateInfo');?>',
+		url:'<?php echo U('OrgCenter/updateInfo');?>',
 		data:info,
 		type:"POST",
 		success:function(data){
