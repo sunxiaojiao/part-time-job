@@ -1,0 +1,213 @@
+[ 2015-04-04T10:20:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.072948s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.021245s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000218s ]
+
+[ 2015-04-04T10:44:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005303s ]
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Model.class.php 第 907 行.
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com',`passwd`='md5' WHERE ( oid=1 ) [ RunTime:0.134363s ]
+
+[ 2015-04-04T10:45:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004775s ]
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Model.class.php 第 907 行.
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com',`passwd`='md5' WHERE ( oid=1 ) [ RunTime:0.073239s ]
+
+[ 2015-04-04T10:49:36+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005282s ]
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Model.class.php 第 907 行.
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com',`passwd`='md5' WHERE ( oid=1 ) [ RunTime:0.154140s ]
+
+[ 2015-04-04T10:50:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004832s ]
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Model.class.php 第 907 行.
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com',`passwd`='md5' WHERE ( oid=1 ) [ RunTime:0.110579s ]
+
+[ 2015-04-04T10:50:38+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004824s ]
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Model.class.php 第 907 行.
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com',`passwd`='md5' WHERE ( oid=1 ) [ RunTime:0.119299s ]
+
+[ 2015-04-04T10:51:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004743s ]
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Model.class.php 第 907 行.
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com',`passwd`='md5' WHERE ( oid=1 ) [ RunTime:0.098589s ]
+
+[ 2015-04-04T10:51:40+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004872s ]
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Model.class.php 第 907 行.
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com',`passwd`='md5' WHERE ( oid=1 ) [ RunTime:0.107062s ]
+
+[ 2015-04-04T10:52:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004863s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com' WHERE ( oid=1 ) [ RunTime:0.234318s ]
+
+[ 2015-04-04T10:55:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005113s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com' WHERE ( oid=1 ) [ RunTime:0.267490s ]
+
+[ 2015-04-04T10:57:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005280s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com' WHERE ( oid=1 ) [ RunTime:0.129786s ]
+
+[ 2015-04-04T10:57:58+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004553s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com' WHERE ( oid=1 ) [ RunTime:0.083726s ]
+
+[ 2015-04-04T10:58:13+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004754s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com' WHERE ( oid=1 ) [ RunTime:0.161182s ]
+
+[ 2015-04-04T10:58:17+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005286s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com' WHERE ( oid=1 ) [ RunTime:0.151663s ]
+
+[ 2015-04-04T10:58:30+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007234s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.128834s ]
+
+[ 2015-04-04T11:04:01+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005072s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.120278s ]
+
+[ 2015-04-04T11:04:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-04T11:05:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+
+[ 2015-04-04T11:08:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=25
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-04T12:09:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004932s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005021s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000228s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000244s ]
+
+[ 2015-04-04T12:09:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004835s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004736s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000229s ]
+
+[ 2015-04-04T12:09:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004787s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004979s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000353s ]
+
+[ 2015-04-04T12:09:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-04T12:09:56+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005871s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005437s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000389s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000225s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000253s ]
+
+[ 2015-04-04T12:11:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004798s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004573s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000347s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000231s ]
+

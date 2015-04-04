@@ -1,6 +1,7 @@
 <?php
 class OrgCenterAction extends Action{
 	public function index(){
+		header("charset=utf-8");
 		if(!session('?oid')){
 			//抛出错误页面
 			$this->error("企业用户未登录",U("Login/index"));
@@ -14,13 +15,26 @@ class OrgCenterAction extends Action{
 		}
 		//dump($publiced_jobs);
 		$org_info = $this->showOrgInfo();
+		dump($org_info);
 		if($org_info){
 			$this->assign("orgInfo",$org_info);
 		}else{
 			$this->ajaxReturn(0,"获取企业信息失败",0);
 		}
+		//列出申请列表
+		$apply_list = $this->whoApplyed();
+		if($apply_list){
+			
+		}elseif ($apply_list === null){
+			$apply_list['username'] = "无申请人";
+		}else{
+			$apply_list['username'] = "查询失败";
+		}
+		dump($apply_list);
+		$this->assign("applyList",$apply_list);
 		$this->display();
 	}
+	//显示发布的兼职
 	private function showPublicedJob(){
 		$Jobs = M('Jobs');
 		$where = "pub_oid=".session('oid');
@@ -44,7 +58,7 @@ class OrgCenterAction extends Action{
 			return false;
 		}
 	}
-	//编辑企业信息
+	//编辑页面显示企业信息
 	public function editInfo(){
 		$Org = M('Orgs');
 		$where = "oid=".session('oid');
@@ -58,11 +72,43 @@ class OrgCenterAction extends Action{
 		}
 		$this->display();
 	}
+	//更新企业信息
 	public function updateInfo(){
-		$Org = M('Orgs');
+		$Org = D('Orgs');
 		$where = "oid=".session('oid');
-		$data[''] = ;
-		$Org->data($data)->where($where)->save();
+		if(!$Org->create()){
+			$this->ajaxReturn(0,$Org->getError(),0);
+			return;
+		}
+	
+		if($flag = $Org->where($where)->save()){
+			$this->ajaxReturn(1,"更新成功",1);
+		}else{
+			$info = "更新失败";
+			if($flag == 0){
+				$this->ajaxReturn(1,"数据未更新",1);
+				
+			}else{
+				$this->ajaxReturn(1,"更新失败",0);
+			}
+		}
+	}
+	//申请列表
+	public function whoApplyed(){
+		if(!session('?oid')){
+			$this->error("未登录",U('Login/index'));
+			return;
+		}
+		$Apply = M('apply');
+		$where = "app_oid=".session('oid');
+		$field = "xm_users.uid AS uid,xm_users.username AS username,xm_apply.ctime AS ctime,xm_apply.app_jid AS jid";
+		$join = "INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid";
+		$arr2_apply = $Apply->where($where)->join($join)->field($field)->select();
+		if($arr2_apply){
+			$this->assign("applyList",$arr2_apply);
+		}else{
+			return $arr2_apply;
+		}
 	}
 }
 ?>

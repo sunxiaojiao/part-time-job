@@ -78,6 +78,10 @@ THINK;
   <div class="row">
     <div class="col-md-8">
       <form method="post" action="" id="edit-info">
+        <div class="">
+          <label>认证状态：</label><?php if($orgInfo["is_validate"] == 0): ?><span>未认证</span><?php else: ?><span>已认证</span><?php endif; ?>
+          <button class="btn btn-primary"><a href="<?php echo U('OrgCenter/validate');?>">认证</a></button>
+        </div>
         <div class="form-group">
           <label for="username">所在地：</label>
           <div class="my-select-address">
@@ -95,15 +99,15 @@ THINK;
 
         <div class="form-group">
           <label for="phone">联系电话：</label>
-          <input type="text" id="phone" name="phone" class="form-control" value="<?php echo ($userinfo["phone"]); ?>" placeholder="填写联系电话" />
+          <input type="text" id="phone" name="phone" class="form-control" value="<?php echo ($orgInfo["phone"]); ?>" placeholder="填写联系电话" />
         </div>
         <div class="form-group">
-          <label for="qq">QQ：</label>
-          <input type="text" id="qq" name="qq" class="form-control" value="<?php echo ($userinfo["qq"]); ?>" placeholder="填写联系QQ" />
+          <label for="qq">公司网址：</label>
+          <input type="text" id="website" name="website" class="form-control" value="<?php echo ($orgInfo["website"]); ?>" placeholder="公司网址" />
         </div>
           <div class="form-group">
             <label for="exp">公司或机构介绍:</label>
-            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="简要介绍"><?php echo ($userinfo["exp"]); ?></textarea>
+            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="简要介绍"><?php echo ($orgInfo["org_intro"]); ?></textarea>
           </div>
         <div class="form-group">
           <label for="intent">招聘意向:</label>
@@ -202,7 +206,7 @@ $("#goto-info").click(function(){
 		data:info,
 		type:"POST",
 		success:function(data){
-			alert(data);
+			alert(data.info);
 		}
 		});
 });

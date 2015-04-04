@@ -23,6 +23,9 @@
   #swfwrapper{width:630px;}
 	.d-markup{display: inline-block; padding:4px 6px; background: #EEE; font:18px/24px "微软雅黑,黑体"; margin: 6px 2px;}
 	.d-markup:hover{background: #DDD; color:#111;}
+  td.table-field{width:148px;}
+  td.table-field+td{min-width:100px;}
+  .btn-content{position: absolute; right:10px; margin-top: -8px;}
 </style>
 </head>
 <body>
@@ -30,7 +33,7 @@
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>完善机构组织信息</small></h1>
+      <h1><small>{$orgInfo.orgname}</small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -39,13 +42,31 @@
 			<div class="panel-heading">
 				基本信息<a class="pull-right" href="{:U('OrgCenter/editInfo')}">更改信息</a>
 			</div>
-			<volist name="orgInfo" id="orginfo">
-			<if condition="$key neq 'headlogo'">
-			<span class="d-markup">{$orginfo}</span>
-			</if>
-			</volist>
+			<table class="table table-bordered">	
+				<tr>
+					<td class="table-field">公司资质：</td><td><if condition="$orgInfo.is_validate eq 1">已验证<else />未验证</if></td>
+					<td class="table-field">登录邮箱：</td><td>{$orgInfo.email}</td>
+				</tr>
+				<tr>
+					<td class="table-field">客服电话：</td><td>{$orgInfo.phone}</td>
+					<td class="table-field">公司网址：</td><td>{$orgInfo.website}</td>
+				</tr>
+				</tr>
+					<td class="table-field">公司地址：</td><td>{$orgInfo.org_address}</td>
+				</tr>
+			</table>
 		</div>
 		<!--./基本信息-->
+		<!--兼职申请列表-->
+		<div class="panel panel-default ">
+			<div class="panel-heading">申请列表</div>
+			<div class="list-group">
+			<volist name="applyList" id="applyList">
+				<li href="#" class="list-group-item"><a href="{:U('UserInfo/index')}$uid={$applyList.uid}">{$applyList.username}</a><span class="btn-content"><button class="btn btn-success">通过</button><button class="btn btn-danger">拒绝</button></span></li>
+			</volist>
+			</div>
+		</div>
+		<!--./兼职申请列表-->
 		<!--发布的兼职列表-->
 		<div class="panel panel-default">
 			<div class="panel-heading">发布的兼职</div>

@@ -23,6 +23,9 @@
   #swfwrapper{width:630px;}
 	.d-markup{display: inline-block; padding:4px 6px; background: #EEE; font:18px/24px "微软雅黑,黑体"; margin: 6px 2px;}
 	.d-markup:hover{background: #DDD; color:#111;}
+  td.table-field{width:148px;}
+  td.table-field+td{min-width:100px;}
+  .btn-content{position: absolute; right:10px; margin-top: -8px;}
 </style>
 </head>
 <body>
@@ -73,7 +76,7 @@ THINK;
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>完善机构组织信息</small></h1>
+      <h1><small><?php echo ($orgInfo["orgname"]); ?></small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -82,9 +85,29 @@ THINK;
 			<div class="panel-heading">
 				基本信息<a class="pull-right" href="<?php echo U('OrgCenter/editInfo');?>">更改信息</a>
 			</div>
-			<?php if(is_array($orgInfo)): $i = 0; $__LIST__ = $orgInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$orginfo): $mod = ($i % 2 );++$i; if($key != 'headlogo'): ?><span class="d-markup"><?php echo ($orginfo); ?></span><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+			<table class="table table-bordered">	
+				<tr>
+					<td class="table-field">公司资质：</td><td><?php if($orgInfo["is_validate"] == 1): ?>已验证<?php else: ?>未验证<?php endif; ?></td>
+					<td class="table-field">登录邮箱：</td><td><?php echo ($orgInfo["email"]); ?></td>
+				</tr>
+				<tr>
+					<td class="table-field">客服电话：</td><td><?php echo ($orgInfo["phone"]); ?></td>
+					<td class="table-field">公司网址：</td><td><?php echo ($orgInfo["website"]); ?></td>
+				</tr>
+				</tr>
+					<td class="table-field">公司地址：</td><td><?php echo ($orgInfo["org_address"]); ?></td>
+				</tr>
+			</table>
 		</div>
 		<!--./基本信息-->
+		<!--兼职申请列表-->
+		<div class="panel panel-default ">
+			<div class="panel-heading">申请列表</div>
+			<div class="list-group">
+			<?php if(is_array($applyList)): $i = 0; $__LIST__ = $applyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$applyList): $mod = ($i % 2 );++$i;?><li href="#" class="list-group-item"><a href="<?php echo U('UserInfo/index');?>$uid=<?php echo ($applyList["uid"]); ?>"><?php echo ($applyList["username"]); ?></a><span class="btn-content"><button class="btn btn-success">通过</button><button class="btn btn-danger">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+			</div>
+		</div>
+		<!--./兼职申请列表-->
 		<!--发布的兼职列表-->
 		<div class="panel panel-default">
 			<div class="panel-heading">发布的兼职</div>

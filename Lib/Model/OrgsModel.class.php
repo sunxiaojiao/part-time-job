@@ -7,7 +7,7 @@ class OrgsModel extends Model{
 	);
 	//自动完成
 	protected  $_auto = array(
-		array('passwd','md5'),
+		//array('passwd','md5'),
 	);
 	
 }
