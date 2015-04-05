@@ -104,7 +104,9 @@ THINK;
 		<div class="panel panel-default ">
 			<div class="panel-heading">申请列表</div>
 			<div class="list-group">
-			<?php if(is_array($applyList)): $i = 0; $__LIST__ = $applyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$applyList): $mod = ($i % 2 );++$i;?><li href="#" class="list-group-item"><a href="<?php echo U('UserInfo/index');?>$uid=<?php echo ($applyList["uid"]); ?>"><?php echo ($applyList["username"]); ?></a><span class="btn-content"><button class="btn btn-success">通过</button><button class="btn btn-danger">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+			<?php if(isset($applyList['fail_warning'])): ?><li class="list-group-item"><?php echo ($applyList["fail_warning"]); ?></li>
+			<?php else: ?>
+			<?php if(is_array($applyList)): $i = 0; $__LIST__ = $applyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$applyList): $mod = ($i % 2 );++$i;?><li href="#" class="list-group-item"><a href="<?php echo U('UserInfo/index');?>$uid=<?php echo ($applyList["uid"]); ?>"><?php echo ($applyList["username"]); ?></a><span class="btn-content"><button class="btn btn-success">通过</button><button class="btn btn-danger">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
 			</div>
 		</div>
 		<!--./兼职申请列表-->

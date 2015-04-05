@@ -26,9 +26,9 @@ class OrgCenterAction extends Action{
 		if($apply_list){
 			
 		}elseif ($apply_list === null){
-			$apply_list['username'] = "无申请人";
+			$apply_list['fail_warning'] = "无申请人";
 		}else{
-			$apply_list['username'] = "查询失败";
+			$apply_list['fail_warning'] = "查询失败";
 		}
 		dump($apply_list);
 		$this->assign("applyList",$apply_list);
@@ -93,8 +93,8 @@ class OrgCenterAction extends Action{
 			}
 		}
 	}
-	//申请列表
-	public function whoApplyed(){
+	//列出申请列表
+	private function whoApplyed(){
 		if(!session('?oid')){
 			$this->error("未登录",U('Login/index'));
 			return;
@@ -108,6 +108,31 @@ class OrgCenterAction extends Action{
 			$this->assign("applyList",$arr2_apply);
 		}else{
 			return $arr2_apply;
+		}
+	}
+	//是否通过申请人的兼职申请
+	public function isPass(){
+		if(!session('?oid')){
+			$this->error("企业用户未登录",U('Login/index'));
+			return;
+		}
+		
+		if($this->_get('ispass') == 'yes'){
+			$uid = $this->_get('uid');
+			$jid = $this->_get('jid');
+			$aid = $this->_get('aid');
+			$where = "jid=".$jid;
+			$Job = M('jobs');
+			//xm_jobs表 current_peo +1
+			$Job->where($where)->setInc("current_peo",1);
+			//xm_jobs表 crowd_uids新增申请人uid
+			$uids = $Job->field("crowd_uids")->where($where)->find();
+			$uids[] = $uid;
+			$Job->where($where)->setField("crowd_uids",$uids);
+			//xm_apply表中 is_pass 改为2
+			$Apply = M('apply');
+			$Apply->where("aid".$aid)->setField("is_pass, 2);
+		}else{
 		}
 	}
 }

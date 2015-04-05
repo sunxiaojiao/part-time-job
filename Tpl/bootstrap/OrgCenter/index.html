@@ -61,9 +61,14 @@
 		<div class="panel panel-default ">
 			<div class="panel-heading">申请列表</div>
 			<div class="list-group">
+			<if condition="isset($applyList['fail_warning'])">
+			<li class="list-group-item">{$applyList.fail_warning}</li>
+			<else />
 			<volist name="applyList" id="applyList">
 				<li href="#" class="list-group-item"><a href="{:U('UserInfo/index')}$uid={$applyList.uid}">{$applyList.username}</a><span class="btn-content"><button class="btn btn-success">通过</button><button class="btn btn-danger">拒绝</button></span></li>
 			</volist>
+
+			</if>
 			</div>
 		</div>
 		<!--./兼职申请列表-->
