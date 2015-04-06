@@ -65,7 +65,7 @@
 			<li class="list-group-item">{$applyList.fail_warning}</li>
 			<else />
 			<volist name="applyList" id="applyList">
-				<li href="#" class="list-group-item"><a href="{:U('UserInfo/index')}$uid={$applyList.uid}">{$applyList.username}</a><span class="btn-content"><button class="btn btn-success">通过</button><button class="btn btn-danger">拒绝</button></span></li>
+				<li href="#" class="list-group-item"><a href="{:U('UserInfo/index')}&uid={$applyList.uid}">{$applyList.username}</a>申请了<span class="btn-content"><button class="btn btn-success">通过</button><button class="btn btn-danger">拒绝</button></span></li>
 			</volist>
 
 			</if>

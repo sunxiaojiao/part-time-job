@@ -13,12 +13,7 @@ class UserInfoAction extends Action{
 	 * @return $list：查询成功返回数组
 	 */
 	private function read(){
-		//检测用户登录
-		if(!session("?uid")){
-			return 3;
-		}else{
-			$this->uid = session('uid');
-		}
+		$this->uid = $this->_get('uid');
 		$Users = M('Users');
 		$list = $Users->where("uid=".$this->uid)->find();
 		if($list){

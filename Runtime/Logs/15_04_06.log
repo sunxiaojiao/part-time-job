@@ -1,0 +1,250 @@
+[ 2015-04-06T11:06:44+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.008967s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006000s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.005483s ]
+
+[ 2015-04-06T11:07:56+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-06T11:09:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+
+[ 2015-04-06T11:14:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001175s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.006244s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.015066s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000349s ]
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000229s ]
+
+[ 2015-04-06T11:14:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-06T11:14:39+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004983s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004885s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid='session('jid')' ) LIMIT 1   [ RunTime:0.000180s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'jid')' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid='session('jid')' ) LIMIT 1  
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=26 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`ctime`) VALUES (1,26,1428290079) [ RunTime:0.161021s ]
+
+[ 2015-04-06T11:15:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=25
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-06T11:15:31+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004844s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004844s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid='session('jid')' ) LIMIT 1   [ RunTime:0.000180s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'jid')' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid='session('jid')' ) LIMIT 1  
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`ctime`) VALUES (1,25,1428290131) [ RunTime:0.094258s ]
+
+[ 2015-04-06T11:16:36+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001204s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005116s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005153s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid='session('jid')' ) LIMIT 1   [ RunTime:0.000215s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'jid')' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid='session('jid')' ) LIMIT 1  
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000282s ]
+
+[ 2015-04-06T11:16:46+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001190s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004939s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005042s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid='session('jid')' ) LIMIT 1   [ RunTime:0.000178s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'jid')' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid='session('jid')' ) LIMIT 1  
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000275s ]
+
+[ 2015-04-06T11:17:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001198s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004933s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005096s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=\'session('jid')\' ) LIMIT 1   [ RunTime:0.000178s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'session('jid')\' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=\'session('jid')\' ) LIMIT 1  
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000287s ]
+
+[ 2015-04-06T11:17:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005370s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004910s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=session('jid') ) LIMIT 1   [ RunTime:0.000193s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '('jid') ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=session('jid') ) LIMIT 1  
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000302s ]
+
+[ 2015-04-06T11:18:25+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004757s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005408s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000241s ]
+
+[ 2015-04-06T11:18:51+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004770s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004827s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`ctime`) VALUES (1,25,1428290331) [ RunTime:0.190364s ]
+
+[ 2015-04-06T11:21:39+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005041s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005176s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000273s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000235s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 702 行.
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`ctime`) VALUES (1,25,1428290499) [ RunTime:0.243800s ]
+
+[ 2015-04-06T11:22:22+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005356s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005023s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000589s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000428s ]
+
+[ 2015-04-06T11:22:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004998s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004896s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000350s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\Lib\Action\ApplyJobAction.class.php 第 16 行.
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000238s ]
+
+[ 2015-04-06T11:23:01+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005350s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004768s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000300s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\Lib\Action\ApplyJobAction.class.php 第 16 行.
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,25,null,1428290581) [ RunTime:0.000177s ]
+ERR: 1048:Column 'app_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,25,null,1428290581)
+
+[ 2015-04-06T11:23:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005041s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004676s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000285s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\Lib\Action\ApplyJobAction.class.php 第 16 行.
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000238s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,25,null,1428290582) [ RunTime:0.000167s ]
+ERR: 1048:Column 'app_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,25,null,1428290582)
+
+[ 2015-04-06T11:23:31+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005493s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004743s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000283s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\Lib\Action\ApplyJobAction.class.php 第 16 行.
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\Lib\Action\ApplyJobAction.class.php 第 17 行.
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000277s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,25,null,1428290611) [ RunTime:0.000185s ]
+ERR: 1048:Column 'app_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,25,null,1428290611)
+
+[ 2015-04-06T11:24:00+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004922s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004777s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,25,1,1428290640) [ RunTime:0.148415s ]
+
+[ 2015-04-06T11:24:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005079s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005674s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000200s ]
+
+[ 2015-04-06T11:27:56+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserInfo&a=index$uid=1
+ERR: 非法操作:index$uid=1
+
+[ 2015-04-06T12:00:16+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-06T12:02:28+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-06T12:03:03+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001247s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005378s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005320s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000283s ]
+
+[ 2015-04-06T12:03:13+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=25
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-06T12:05:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserInfo&a=index&uid=1
+NOTIC: 建议使用I方法替代_get
+

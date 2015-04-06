@@ -10,6 +10,10 @@ class ApplyJobAction extends Action{
 		$Apply = M('Apply');
 		$data['app_uid'] = session("uid");
 		$data['app_jid'] = session("jid");
+		$Job = M('jobs');
+		$oid = $Job->where("jid=".session('jid'))->field("pub_oid")->find();
+		//dump($Job->getLastSql());
+		$data['app_oid'] = $oid['pub_oid'];
 		$data['ctime'] = time();
 		$where = "app_uid=".$data['app_uid']." AND app_jid=".$data['app_jid'];
 		if($Apply->where($where)->find()){

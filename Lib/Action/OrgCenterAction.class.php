@@ -100,15 +100,12 @@ class OrgCenterAction extends Action{
 			return;
 		}
 		$Apply = M('apply');
-		$where = "app_oid=".session('oid');
+		$where = "app_oid=".session('oid')." AND is_pass !=2";
 		$field = "xm_users.uid AS uid,xm_users.username AS username,xm_apply.ctime AS ctime,xm_apply.app_jid AS jid";
 		$join = "INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid";
 		$arr2_apply = $Apply->where($where)->join($join)->field($field)->select();
-		if($arr2_apply){
-			$this->assign("applyList",$arr2_apply);
-		}else{
-			return $arr2_apply;
-		}
+		dump($Apply->getLastSql());
+		return $arr2_apply;
 	}
 	//是否通过申请人的兼职申请
 	public function isPass(){
@@ -127,12 +124,15 @@ class OrgCenterAction extends Action{
 			$Job->where($where)->setInc("current_peo",1);
 			//xm_jobs表 crowd_uids新增申请人uid
 			$uids = $Job->field("crowd_uids")->where($where)->find();
+			$uids = unserialize($uids);
 			$uids[] = $uid;
+			$uids = serialize($uids);
 			$Job->where($where)->setField("crowd_uids",$uids);
 			//xm_apply表中 is_pass 改为2
 			$Apply = M('apply');
-			$Apply->where("aid".$aid)->setField("is_pass, 2);
+			$Apply->where("aid".$aid)->setField("is_pass", 2);
 		}else{
+		
 		}
 	}
 }
