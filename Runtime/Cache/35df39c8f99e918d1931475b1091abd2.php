@@ -106,7 +106,7 @@ THINK;
 			<div class="list-group">
 			<?php if(isset($applyList['fail_warning'])): ?><li class="list-group-item"><?php echo ($applyList["fail_warning"]); ?></li>
 			<?php else: ?>
-			<?php if(is_array($applyList)): $i = 0; $__LIST__ = $applyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$applyList): $mod = ($i % 2 );++$i;?><li href="#" class="list-group-item"><a href="<?php echo U('UserInfo/index');?>&uid=<?php echo ($applyList["uid"]); ?>"><?php echo ($applyList["username"]); ?></a>申请了<span class="btn-content"><button class="btn btn-success">通过</button><button class="btn btn-danger">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+			<?php if(is_array($applyList)): $i = 0; $__LIST__ = $applyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$applyList): $mod = ($i % 2 );++$i;?><li href="#" class="list-group-item"><a target="_blank" href="<?php echo U('UserInfo/index');?>&uid=<?php echo ($applyList["uid"]); ?>"><?php echo ($applyList["username"]); ?></a>申请了<a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($applyList["jid"]); ?>"><?php echo ($applyList["title"]); ?></a><span class="btn-content"><button class="btn btn-success" data-app_id="<?php echo ($applyList["app_id"]); ?>" data-jid="<?php echo ($applyList["jid"]); ?>" data-uid="<?php echo ($applyList["uid"]); ?>">通过</button><button class="btn btn-danger" data-app_id="<?php echo ($applyList["app_id"]); ?>">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
 			</div>
 		</div>
 		<!--./兼职申请列表-->
@@ -156,6 +156,31 @@ THINK;
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
+<script type="text/javascript">
+	$(".panel button").click(function(){
+		$info = new Object();
+		$info.ispass = "no";
+		if($(this).attr("class") == 'btn btn-success'){
+			$info['ispass'] = "yes";
+			$info.uid = $(this).attr("data-uid");
+			$info.app_id = $(this).attr("data-app_id");
+			$info.jid = $(this).attr("data-jid");
+		}else if($(this).attr("class") == "btn btn-danger"){
+			$info.app_id = $(this).attr("data-app_id");
+		}
+		console.log($info);
+		//ajax
+		$.ajax({
+			url:"<?php echo U('OrgCenter/isPass');?>",
+			data:$info,
+			type:"GET",
+			success:function(data){
+				alert(data.info);
+			}
+		});
+
+	});
+</script>
 <!--./footer-->
 <script type="text/javascript">
             swfobject.addDomLoadEvent(function () {

@@ -100,10 +100,11 @@ class OrgCenterAction extends Action{
 			return;
 		}
 		$Apply = M('apply');
-		$where = "app_oid=".session('oid')." AND is_pass !=2";
-		$field = "xm_users.uid AS uid,xm_users.username AS username,xm_apply.ctime AS ctime,xm_apply.app_jid AS jid";
-		$join = "INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid";
-		$arr2_apply = $Apply->where($where)->join($join)->field($field)->select();
+		$where = "app_oid=".session('oid')." AND is_pass =1";
+		$field = "xm_apply.app_id AS app_id,xm_users.uid AS uid,xm_users.username AS username,xm_apply.ctime AS ctime,xm_apply.app_jid AS jid,xm_jobs.title AS title";
+		$join_user = "INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid";
+		$join_job = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
+		$arr2_apply = $Apply->where($where)->join($join_user)->join($join_job)->field($field)->select();
 		dump($Apply->getLastSql());
 		return $arr2_apply;
 	}
@@ -117,22 +118,41 @@ class OrgCenterAction extends Action{
 		if($this->_get('ispass') == 'yes'){
 			$uid = $this->_get('uid');
 			$jid = $this->_get('jid');
-			$aid = $this->_get('aid');
+			$app_id = $this->_get('app_id');
 			$where = "jid=".$jid;
 			$Job = M('jobs');
 			//xm_jobs表 current_peo +1
-			$Job->where($where)->setInc("current_peo",1);
+			if(!$Job->where($where)->setInc("current_peo",1)){
+				echo $Job->getError();
+				return;
+			}
 			//xm_jobs表 crowd_uids新增申请人uid
 			$uids = $Job->field("crowd_uids")->where($where)->find();
+			if(!$uids){
+				echo $Job->getError();
+			}
 			$uids = unserialize($uids);
 			$uids[] = $uid;
 			$uids = serialize($uids);
 			$Job->where($where)->setField("crowd_uids",$uids);
 			//xm_apply表中 is_pass 改为2
 			$Apply = M('apply');
-			$Apply->where("aid".$aid)->setField("is_pass", 2);
+			$flag = $Apply->where("app_id=".$app_id)->setField("is_pass", 2);
+			if($flag){
+				$this->ajaxReturn(1,"操作成功",1);
+			}else{
+				$this->ajaxReturn(1,"操作失败".$Apply->getLastSql(),0);
+			}
 		}else{
-		
+			$app_id = $this->_get('app_id');
+			$Apply = M('apply');
+			$flag = $Apply->where("app_id=".$app_id)->setField("is_pass",3);
+			if($flag){
+				$this->ajaxReturn(1,"操作成功",1);
+			}else{
+				echo $Apply->getLastSql();
+				$this->ajaxReturn(0,"删除失败".$Apply->getError(),0);
+			}
 		}
 	}
 }
