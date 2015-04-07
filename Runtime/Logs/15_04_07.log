@@ -312,3 +312,76 @@ NOTIC: 建议使用I方法替代_get
 [ 2015-04-07T20:32:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=28
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-04-07T20:46:26+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=28
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T20:50:25+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005437s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.117556s ]
+
+[ 2015-04-07T20:50:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006834s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.237403s ]
+
+[ 2015-04-07T20:59:23+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005250s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.365214s ]
+
+[ 2015-04-07T21:02:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005811s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/',`org_intro`='公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍' WHERE ( oid=1 ) [ RunTime:0.112387s ]
+
+[ 2015-04-07T21:03:34+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006013s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/',`org_intro`='公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介' WHERE ( oid=1 ) [ RunTime:0.151366s ]
+
+[ 2015-04-07T21:03:52+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005694s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/',`org_intro`='公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介' WHERE ( oid=1 ) [ RunTime:0.186032s ]
+
+[ 2015-04-07T21:05:09+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006833s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/',`org_intro`='公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司' WHERE ( oid=1 ) [ RunTime:0.164886s ]
+
+[ 2015-04-07T21:05:24+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007349s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/',`org_intro`='公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公' WHERE ( oid=1 ) [ RunTime:0.119374s ]
+
+[ 2015-04-07T21:06:03+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001026s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006400s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/',`org_intro`='公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍' WHERE ( oid=1 ) [ RunTime:0.132599s ]
+
+[ 2015-04-07T21:06:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006583s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/',`org_intro`='公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍d' WHERE ( oid=1 ) [ RunTime:0.157678s ]
+

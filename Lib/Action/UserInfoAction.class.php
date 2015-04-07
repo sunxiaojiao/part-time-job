@@ -28,19 +28,7 @@ class UserInfoAction extends Action{
 			return 0;
 		}
 	}
-	/**
-	 * 模板赋值
-	 * @param string $username
-	 * @param string $sex
-	 * @param integer $age
-	 * @param string $city
-	 * @param string $school
-	 * @param string $intent
-	 * @param string $exp
-	 * @param string $phone
-	 * @param string $qq
-	 * @param string $email
-	 */
+	//模板赋值
 	private function assignIt(){
 		
 		if($arr = $this->read()){

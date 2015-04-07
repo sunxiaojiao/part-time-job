@@ -108,7 +108,7 @@ THINK;
         </div>
           <div class="form-group">
             <label for="exp">公司或机构介绍:</label>
-            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="简要介绍"><?php echo ($orgInfo["org_intro"]); ?></textarea>
+            <textarea class="form-control" rows="3" id="exp" name="org_intro" placeholder="简要介绍"><?php echo ($orgInfo["org_intro"]); ?></textarea>
           </div>
         <div class="form-group">
           <label for="intent">招聘意向:</label>
@@ -208,6 +208,9 @@ $("#goto-info").click(function(){
 		type:"POST",
 		success:function(data){
 			alert(data.info);
+      if(data.status == 1){
+        location.href="<?php echo U('OrgCenter/editInfo');?>";
+      }
 		}
 		});
 });

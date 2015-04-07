@@ -84,10 +84,9 @@ class OrgCenterAction extends Action{
 		if($flag = $Org->where($where)->save()){
 			$this->ajaxReturn(1,"更新成功",1);
 		}else{
-			$info = "更新失败";
 			if($flag == 0){
-				$this->ajaxReturn(1,"数据未更新",1);
-				
+				//dump($Org->getLastSql());
+				$this->ajaxReturn(1,"数据未更新",2);
 			}else{
 				$this->ajaxReturn(1,"更新失败",0);
 			}
