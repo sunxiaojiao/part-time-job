@@ -154,5 +154,24 @@ class OrgCenterAction extends Action{
 			}
 		}
 	}
+	public function changePasswd(){
+		if(session('?oid')){
+			$this->error("企业用户未登录！",U("Login/index"),3);
+			return;
+		}
+		//判断旧密码是否正确
+		$old_passwd = $this->_post('old_passwd');
+		$new_passwd = $this->_post('new_passwd');
+		$Org = M('orgs');
+		$oid = $Org->field("oid")
+					->where("oid=".session('oid') . " AND " . "passwd=" . "'$old_passwd'")
+					->find();
+		if($oid){
+			//更改密码
+			$Org->where("oid=".$oid)->setField("passwd", $new_passwd);
+		}else{
+			$this->ajaxReturn(0,"旧密码错误",1);
+		}
+	}
 }
 ?>
