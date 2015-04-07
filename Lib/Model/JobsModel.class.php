@@ -8,6 +8,7 @@ class JobsModel extends Model{
 		array('want_peo','require','请输入需要的人数',0,''),
 		array('address','require','请输入工作地点'),
 		array('leader','require','请输入负责人'),
+		array('expire_time','require','请输入过期时间'),
 	);
 	//自动完成
 	protected  $_auto = array(

@@ -1,0 +1,314 @@
+[ 2015-04-07T15:13:16+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.033125s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.111874s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000220s ]
+
+[ 2015-04-07T15:17:12+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=26
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T15:25:19+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T15:33:03+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=23
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T15:33:25+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.069679s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004676s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000251s ]
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000192s ]
+
+[ 2015-04-07T15:33:35+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=25
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T15:33:39+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=25
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T15:33:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005133s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004831s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=25 ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=25 ) LIMIT 1   [ RunTime:0.000244s ]
+
+[ 2015-04-07T15:34:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=2
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T15:34:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.005485s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004694s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=2 ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=2 ) LIMIT 1   [ RunTime:0.000236s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,2,1,1428392044) [ RunTime:1.059426s ]
+
+[ 2015-04-07T15:34:16+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=isPass&ispass=yes&uid=1&app_id=11&jid=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.006397s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=2 ) [ RunTime:0.123038s ]
+SQL: SELECT `crowd_uids` FROM `xm_jobs` WHERE ( jid=2 ) LIMIT 1   [ RunTime:0.000260s ]
+NOTIC: [2] unserialize() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\OrgCenterAction.class.php 第 134 行.
+SQL: UPDATE `xm_jobs` SET `crowd_uids`='a:1:{i:0;s:1:\"1\";}' WHERE ( jid=2 ) [ RunTime:0.099057s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004857s ]
+SQL: UPDATE `xm_apply` SET `is_pass`=2 WHERE ( app_id=11 ) [ RunTime:0.072310s ]
+
+[ 2015-04-07T15:35:13+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=25
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T15:37:46+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=validate
+ERR: 非法操作:validate
+
+[ 2015-04-07T15:37:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001342s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006496s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.080138s ]
+
+[ 2015-04-07T15:37:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004798s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.147977s ]
+
+[ 2015-04-07T15:38:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004879s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.067938s ]
+
+[ 2015-04-07T15:38:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006204s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.109273s ]
+
+[ 2015-04-07T15:43:42+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008479s ]
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com/' WHERE ( oid=1 ) [ RunTime:0.202320s ]
+
+[ 2015-04-07T16:14:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005248s ]
+
+[ 2015-04-07T16:16:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005750s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfa',0,14,'asdf','10010','asdfasdf',1428394575,null) [ RunTime:0.000201s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfa',0,14,'asdf','10010','asdfasdf',1428394575,null)
+
+[ 2015-04-07T16:16:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004857s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfa',0,14,'asdf','10010','asdfasdf',1428394597,null) [ RunTime:0.000222s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfa',0,14,'asdf','10010','asdfasdf',1428394597,null)
+
+[ 2015-04-07T16:52:33+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.068390s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfa',0,14,'asdf','10010','asdfasdf',1428396753,null) [ RunTime:0.000282s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfa',0,14,'asdf','10010','asdfasdf',1428396753,null)
+
+[ 2015-04-07T16:53:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005011s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfa',0,14,'asdf','10010','asdfasdf',1428396794,null) [ RunTime:0.000228s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('asdfa',0,14,'asdf','10010','asdfasdf',1428396794,null)
+
+[ 2015-04-07T16:53:26+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004839s ]
+
+[ 2015-04-07T16:53:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004805s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('afdfasd',0,10,'asdf','100','sdfasdfsad',1428396829,null) [ RunTime:0.000239s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('afdfasd',0,10,'asdf','100','sdfasdfsad',1428396829,null)
+
+[ 2015-04-07T16:54:10+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005085s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('afdfasd',0,10,'asdf','100','sdfasdfsad',1428396850,null) [ RunTime:0.000228s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('afdfasd',0,10,'asdf','100','sdfasdfsad',1428396850,null)
+
+[ 2015-04-07T16:54:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.020178s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('afdfasd',0,10,'asdf','100','sdfasdfsad',1428396877,null) [ RunTime:0.000224s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('afdfasd',0,10,'asdf','100','sdfasdfsad',1428396877,null)
+
+[ 2015-04-07T16:59:23+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004932s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('afdfasd',0,10,'asdf','100','sdfasdfsad',1428397163,null) [ RunTime:0.000233s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('afdfasd',0,10,'asdf','100','sdfasdfsad',1428397163,null)
+
+[ 2015-04-07T17:00:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005087s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('12wef',0,10,'adsf','sadfas','adfasdfasdf',1428397220,null) [ RunTime:0.000228s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('12wef',0,10,'adsf','sadfas','adfasdfasdf',1428397220,null)
+
+[ 2015-04-07T17:29:34+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007385s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('12wef',0,10,'adsf','sadfas','adfasdfasdf',1428398974,null) [ RunTime:0.000210s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('12wef',0,10,'adsf','sadfas','adfasdfasdf',1428398974,null)
+
+[ 2015-04-07T19:02:16+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.096109s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('12wef',0,10,'adsf','sadfas','adfasdfasdf',1428404536,null) [ RunTime:0.000259s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`detail`,`ctime`,`pub_oid`) VALUES ('12wef',0,10,'adsf','sadfas','adfasdfasdf',1428404536,null)
+
+[ 2015-04-07T19:02:30+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008381s ]
+
+[ 2015-04-07T19:02:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004785s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`expire_time`,`detail`,`ctime`,`pub_oid`) VALUES ('ss',0,1,'sdf','asd',12,'dsfasdf',1428404569,null) [ RunTime:0.000224s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`expire_time`,`detail`,`ctime`,`pub_oid`) VALUES ('ss',0,1,'sdf','asd',12,'dsfasdf',1428404569,null)
+
+[ 2015-04-07T19:05:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004925s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`expire_time`,`detail`,`ctime`,`pub_oid`) VALUES ('ss',0,1,'sdf','asd',12,'dsfasdf',1428404729,null) [ RunTime:0.000230s ]
+ERR: 1048:Column 'pub_oid' cannot be null
+ [ SQL语句 ] : INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`expire_time`,`detail`,`ctime`,`pub_oid`) VALUES ('ss',0,1,'sdf','asd',12,'dsfasdf',1428404729,null)
+
+[ 2015-04-07T19:07:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=insert
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005279s ]
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`expire_time`,`detail`,`ctime`,`pub_oid`) VALUES ('ss',0,1,'sdf','asd',12,'dsfasdf',1428404874,1) [ RunTime:0.314327s ]
+
+[ 2015-04-07T19:08:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.048893s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006243s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.014204s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000231s ]
+
+[ 2015-04-07T19:08:30+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=27
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T19:10:41+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=publish
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004887s ]
+
+[ 2015-04-07T19:18:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=publish
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005079s ]
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`expire_time`,`detail`,`ctime`,`pub_oid`) VALUES ('阿呆发生的',0,12,'阿呆沙发','阿道夫',1428491901,'大法师的',1428405501,1) [ RunTime:0.102315s ]
+
+[ 2015-04-07T19:18:36+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=28
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T20:25:16+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=publish
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005727s ]
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`expire_time`,`detail`,`ctime`,`pub_oid`) VALUES ('adf',0,10,'fasdf','adf',1428418156,'dadsfasdf',1428409516,1) [ RunTime:0.139058s ]
+
+[ 2015-04-07T20:25:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=29
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T20:25:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=28
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-07T20:32:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=28
+NOTIC: 建议使用I方法替代_get
+

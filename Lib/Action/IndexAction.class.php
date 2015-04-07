@@ -11,13 +11,14 @@ class IndexAction extends Action{
      */
     public function index(){
     	$Jobs = M('Jobs');
+    	$Jobs->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
     	import('ORG.Util.Page');
-    	$count = $Jobs->count();
+    	$count = $Jobs->where("(" . time() . "- expire_time)<0")->count();
     	$Page = new Page($count,10);
-    	
 		$list = $Jobs->order('ctime desc')
 					->limit($Page->firstRow.','.$Page->listRows)
 					->field("jid,title,money,want_peo,current_peo,address,pv,ctime")
+					->where("(" . time() . "- expire_time)<0")
 					->select();
 		//设置分页样式
 //		$Page->setConfig('header','条');

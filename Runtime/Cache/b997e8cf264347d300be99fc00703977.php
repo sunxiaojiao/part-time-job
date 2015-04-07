@@ -18,6 +18,7 @@
   .my-select-address>select{width:auto;display: inline-block;}
   .my-personimg{width:200px; cursor: pointer;}
   #swfwrapper{width:630px;}
+  div.expire{font:18px/34px ""; height:34px;}
 
 </style>
 </head>
@@ -54,6 +55,7 @@
           <ul class="dropdown-menu" role="menu">
             $info
             <li><a href="index.php?m=PublishJobs">发布兼职</a></li>
+            <li><a href="index.php">修改密码</a></li>
             <li class="divider"></li>
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
@@ -97,6 +99,15 @@ THINK;
         <div class="form-group">
           <label for="job-much">工资范围：</label>
           <input class="form-control" name="money" placeholder="工资范围"/>
+        </div>
+        <div class="form-group">
+          <label for="job-expire">过期时间：</label>
+          <div class="row">
+            <div class="col-md-4">
+            <input class="form-control" name="expire_time" placeholder="过期时间"/>
+            </div>
+            <div class="col-md-4 expire">天后过期</div>
+          </div>
         </div>
         <div class="form-group">
           <label for="job-more">工作介绍：</label>
@@ -147,7 +158,7 @@ function getFromInput(form){
     console.log(info);
     //ajax
     $.post(
-      "<?php echo U('PublishJobs/insert');?>",
+      "<?php echo U('PublishJobs/publish');?>",
       info,
       function(data){
         if(data.status){
