@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>兼职平台</title>
+
+<link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
+<link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
+<script src="./__GROUP__/js/jquery.min.js"></script>
+<script src="./__GROUP__/js/bootstrap.min.js"></script>
+<script src="./__GROUP__/js/common.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<include file="./Tpl/bootstrap/public/header.html" />
+<!--container-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+		<div class="row">
+		
+		<div class="col-md-8 col-md-offset-1">
+		<form class="form-horizontal" action="">
+
+				<label>旧密码：</label>
+				<input class="form-control" name="old_passwd" />
+				<label>新密码：</label>
+				<input class="form-control" name="new_passwd"/>
+				<label>再输一遍新密码：</label>
+				<input class="form-control" name="re_passwd"/>
+				<label>输入验证码：</label>
+				<div class="" id="verify">
+					<img src="{:U('ChangePasswd/vCode')}"/>
+					<button class="btn btn-primary" type="button">换一个</button>
+				</div>
+				<input class="form-control" name="vcode"/>
+				<button type="button" class="btn btn-primary" id="goto-submit">修改密码</button>
+		</form>
+		</div>
+		<div class="col-md-4"></div>
+		</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+        		<div class="panel-heading">关于小蜜蜂</div>
+        		<div class="panel-body">
+          		<img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+        		</div>
+      		</div>
+    	</div>
+	</div>
+</div>
+<!--./container-->
+<!--footer-->
+<div class="container">
+  <hr />
+  <p class="text-center">小蜜蜂兼职</p>
+  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+</div>
+<!--./footer-->
+<script type="text/javascript">
+//刷新验证码
+$("#verify>button").click(function(){
+  var ver_img = $("#verify>img");
+  ver_img.attr("src","__APP__/Login/vCode?" + new Date().getTime());
+});
+$("#verify>img").click(function(){
+  $(this).attr("src","__APP__/Login/vCode?" + new Date().getTime());
+});
+
+
+$("#goto-submit").on('click',function(){
+	var info = getFromInput(".form-horizontal");
+	console.log(info);
+	$.ajax({
+		url:"{:U('ChangePasswd/change')}",
+		data:info,
+		type:"POST",
+		success:function(data){
+			alert(data.info);
+		}
+	});
+});
+</script>
+</body>
+</html>

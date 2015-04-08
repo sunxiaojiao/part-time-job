@@ -3,18 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
+<title>兼职平台</title>
 
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
 <script src="./__GROUP__/js/jquery.min.js"></script>
 <script src="./__GROUP__/js/bootstrap.min.js"></script>
-
 <style type="text/css">
-  .red{color:#F00;}
-  .panel-body{position: relative;}
-  #login{position: absolute; right:16px; bottom: 16px;}
-  #verify>input{display:inline;width:216px;}
 </style>
 </head>
 <body>
@@ -63,39 +58,10 @@ THINK;
   </div><!-- /.container-fluid -->
 </nav>
 <!--======导航条结束======--->
+<!--container-->
 <div class="container">
-<div class="row">
-<div class="col-md-8"></div>
-<div class="col-md-4">
-  <div class="panel panel-default">
-  <div class="panel-heading">登录</div>
-  <div class="panel-body">
-    <form id="login-form">
-      <div class="form-group">
-        <input type="type" id="email" class="form-control" placeholder="登录邮箱" />
-      </div>
-      <div class="form-group">
-        <input type="password" id="passwd" class="form-control" placeholder="密码" />
-      </div>
-      <div class="form-group" id="verify">
-        <img src="<?php echo U('Login/vCode');?>" />
-        <input type="text" class="form-control" placeholder="验证码" />
-        <button class="btn btn-default" type="button">刷新</button>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="pwdmem" value="1">三天内免登录
-        </label>
-        <span class="red warninfo"></span>
-      </div>
-      <button type="button" class="btn btn-default" id="login">登录</button>
-    </form>
-  </div>
-  <div class="panel-footer">xiaomifengjob.com</div>
-  </div>
 </div>
-</div>
-</div><!--./container-->
+<!--./container-->
 <!--footer-->
 <div class="container">
   <hr />
@@ -104,80 +70,8 @@ THINK;
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
 <!--./footer-->
-<script>
-/**
-*修改指定元素的文本为指定字符串
-*@param element
-*@param str
-*/
-function changText(element,str){
-  $(element).text(str);
-}
+<script type="text/javascript">
 
-//刷新验证码
-$("#verify>button").click(function(){
-  var ver_img = $("#verify>img");
-  ver_img.attr("src","__APP__/Login/vCode?" + new Date().getTime());
-});
-$("#verify>img").click(function(){
-  $(this).attr("src","__APP__/Login/vCode?" + new Date().getTime());
-});
-//按钮点击时触发ajax
-  $("#login").click(function(){
-    //获取字段值
-    var email = $("#email").val();
-    var passwd = $("#passwd").val();
-    var ver_val = $("#verify>input").val();
-    //checkbox判断
-    var pwdmem = $("#pwdmem").is(":checked");
-    pwdmem = pwdmem ? 1 : 0;
-    //检测字段是否为空
-    if( email == "" ){
-      $("#email").focus();
-      changText(".warninfo","请输入邮箱地址");
-      return;
-    }
-    if( passwd == "" ){
-      $("#passwd").focus();
-      changText(".warninfo","请输入密码");
-      return;
-    }
-    //AJAX
-    $.post(
-      "<?php echo U('Login/login');?>",
-      {
-        email:email,
-        passwd:passwd,
-        pwdmem:pwdmem,
-        verify:ver_val
-      },
-      function(data){
-        var str = '';
-        switch (data){
-          case 0:
-            str = '登录成功';
-            setTimeout(function(){location.href = 'index.php';},1000);
-            break;
-          case 2:
-            str = '密码错误';
-            break;
-          case 3:
-            str = '邮箱格式不正确';
-            break;
-          case 4:
-            str = '验证码错误';
-            break;
-          case 5:
-            str =   '用户不存在';
-            break;
-        }
-        console.log(str);
-        changText(".warninfo",str);
-      }
-      );
-  });
-
-  
 </script>
 </body>
 </html>

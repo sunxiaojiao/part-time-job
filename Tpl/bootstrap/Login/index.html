@@ -108,11 +108,11 @@ $("#verify>img").click(function(){
         verify:ver_val
       },
       function(data){
-        var str = '11';
+        var str = '';
         switch (data){
           case 0:
             str = '登录成功';
-            setTimeout(function(){window.location.href = 'index.php';},5000);
+            setTimeout(function(){location.href = 'index.php';},1000);
             break;
           case 2:
             str = '密码错误';
