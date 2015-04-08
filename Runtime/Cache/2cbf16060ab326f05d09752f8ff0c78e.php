@@ -3,19 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
+<title>兼职平台</title>
 
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
 <script src="./__GROUP__/js/jquery.min.js"></script>
 <script src="./__GROUP__/js/bootstrap.min.js"></script>
+<script src="./__GROUP__/js/common.js"></script>
 <style type="text/css">
-  .panel-body{position: relative;}
-  .my-perinfo{margin-left:26px;}
-  .my-perinfo>p>span{margin-right:18px;}
-  .my-perimg{border:1px solid #EEE;}
-  .my-jobhead>p{position: absolute; top:10px; right:10px;}
-  .my-jobhead>p>span{/*position: absolute;*/ margin-left: 10px;}
 </style>
 </head>
 <body>
@@ -66,54 +61,7 @@ THINK;
 <!--======导航条结束======--->
 <!--container-->
 <div class="container">
-  <div class="row">
-    <!--left-->
-    <div class="col-md-8">
-
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="my-jobhead">
-            <h3><?php echo ($title); ?></h3>
-            <p><span>兼职类型：其他</span><span>发布时间：<?php echo (date("m月d日 h:i",$ctime)); ?></span></p>
-          </div>
-        </div>
-      </div>
-      <!--信息统计字段 具体还需要参考其他大型人才网站-->
-      <div class="panel panel-default">
-        <div class="panel-heading">详细信息</div>
-        <div class="panel-body">
-          <h3 class="">兼职描述</h3>
-          <hr />
-          <p><?php echo ($detail); ?> </p>
-          <h3></h3>
-          <hr />
-          <p>联系人：<?php echo ($lead); ?></p>
-          <p>联系电话：{}</p>
-          <h3>评价</h3>
-          <hr />
-          <p>好不好好不好好不好好不好好不好好不好好不好好不好</p>
-          <form action="" method="post" class="">
-            <div class="form-group">
-              <label for="pingjia">评价:</label>
-              <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
-            </div>
-            <button type="submit" class="btn btn-default">评价</button>
-          </form>
-          <hr />
-          <button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
-        </div>
-      </div>
-    </div>
-    <!--right-->
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">关于小蜜蜂</div>
-        <div class="panel-body">
-          <img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-        </div>
-      </div>
-    </div>
-  </div>
+	
 </div>
 <!--./container-->
 <!--footer-->
@@ -123,16 +71,30 @@ THINK;
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
-<script type="text/javascript">
-  $("#goto-apply").click(function(){
-    $.ajax({
-      url:"<?php echo U('ApplyJob/apply');?>",
-      success:function(data){
-        alert(data.info);
-      }
-    });
-  });
-</script>
 <!--./footer-->
+<script type="text/javascript">
+//刷新验证码
+$("#verify>button").click(function(){
+  var ver_img = $("#verify>img");
+  ver_img.attr("src","__APP__/Login/vCode?" + new Date().getTime());
+});
+$("#verify>img").click(function(){
+  $(this).attr("src","__APP__/Login/vCode?" + new Date().getTime());
+});
+
+
+$("#goto-submit").on('click',function(){
+	var info = getFromInput(".form-horizontal");
+	console.log(info);
+	$.ajax({
+		url:"<?php echo U('ChangePasswd/change');?>",
+		data:info,
+		type:"POST",
+		success:function(data){
+			alert(data.info);
+		}
+	});
+});
+</script>
 </body>
 </html>

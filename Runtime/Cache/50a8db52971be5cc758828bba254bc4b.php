@@ -58,7 +58,7 @@
           <ul class="dropdown-menu" role="menu">
             $info
             <li><a href="index.php?m=PublishJobs">发布兼职</a></li>
-            <li><a href="index.php">修改密码</a></li>
+            <li><a href="index.php?m=ChangePasswd&a=index">修改密码</a></li>
             <li class="divider"></li>
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
@@ -81,7 +81,7 @@ THINK;
       <form method="post" action="" id="edit-info">
         <div class="">
           <label>认证状态：</label><?php if($orgInfo["is_validate"] == 0): ?><span>未认证</span><?php else: ?><span>已认证</span><?php endif; ?>
-          <button class="btn btn-primary"><a href="<?php echo U('OrgCenter/validate');?>">认证</a></button>
+          <button class="btn btn-primary"><a href="<?php echo U('OrgAuth/index');?>">认证</a></button>
         </div>
         <div class="form-group">
           <label for="username">所在地：</label>

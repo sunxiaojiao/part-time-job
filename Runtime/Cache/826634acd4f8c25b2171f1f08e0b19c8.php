@@ -50,7 +50,7 @@
           <ul class="dropdown-menu" role="menu">
             $info
             <li><a href="index.php?m=PublishJobs">发布兼职</a></li>
-            <li><a href="index.php?m=OrgCenter&a=changePasswd">修改密码</a></li>
+            <li><a href="index.php?m=ChangePasswd&a=index">修改密码</a></li>
             <li class="divider"></li>
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
