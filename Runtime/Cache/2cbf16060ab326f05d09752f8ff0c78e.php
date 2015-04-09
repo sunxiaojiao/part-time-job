@@ -1,20 +1,26 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>兼职平台</title>
 
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-<script src="./__GROUP__/js/jquery.min.js"></script>
-<script src="./__GROUP__/js/bootstrap.min.js"></script>
-<script src="./__GROUP__/js/common.js"></script>
-<style type="text/css">
-</style>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>兼职平台</title>
+    <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
+    <script src="./__GROUP__/js/jquery.min.js"></script>
+    <script src="./__GROUP__/js/bootstrap.min.js"></script>
+    <script src="./__GROUP__/js/common.js"></script>
+    <style type="text/css">
+    .must-input {
+        color: #F00;
+        padding: 0 8px;
+        font: 18px/18px "";
+    }
+    </style>
 </head>
+
 <body>
-<!--======导航条======-->
+    <!--======导航条======-->
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -59,42 +65,108 @@ THINK;
   </div><!-- /.container-fluid -->
 </nav>
 <!--======导航条结束======--->
-<!--container-->
-<div class="container">
-	
-</div>
-<!--./container-->
-<!--footer-->
-<div class="container">
-  <hr />
-  <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-</div>
-<!--./footer-->
-<script type="text/javascript">
-//刷新验证码
-$("#verify>button").click(function(){
-  var ver_img = $("#verify>img");
-  ver_img.attr("src","__APP__/Login/vCode?" + new Date().getTime());
-});
-$("#verify>img").click(function(){
-  $(this).attr("src","__APP__/Login/vCode?" + new Date().getTime());
-});
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form class="" action="" method="post" id="auth-form">
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>机构名称：</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>执照编号：</label>
+                        <input class="form-control" name="license_num" />
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>所属行业：</label>
+                        <select class="form-control" name="industry">
+                            <option value="">房地产</option>
+                            <option value="">建筑</option>
+                            <option value="">物流管理</option>
+                            <option value="">IT/互联网</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>机构性质：</label>
+                        <select class="form-control" name="nature">
+                            <option value="">国有企业</option>
+                            <option value="">私营企业</option>
+                            <option value="">中外合资</option>
+                            <option value="">个体户</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>机构规模：</label>
+                        <select class="form-control" name="size">
+                            <option value="">20以下</option>
+                            <option value="">20-50</option>
+                            <option value="">50-100</option>
+                            <option value="">100-300</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>结构地址：</label>
+                        <input class="form-control" name="address" />
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>联系人：</label>
+                        <input class="form-control" name="contact" />
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>联系电话：</label>
+                        <input class="form-control" name="phone" />
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>机构固定电话：</label>
+                        <input class="form-control" name="fixed_phone" />
+                    </div>
+                    <div class="form-group">
+                        <label><span class="must-input">*</span>机构邮箱：</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>结构介绍：</label>
+                        <textarea class="form-control" rows="4" name="intro"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="goto-submit">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--./container-->
+    <!--footer-->
+    <div class="container">
+        <hr />
+        <p class="text-center">小蜜蜂兼职</p>
+        <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+        <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+    </div>
+    <!--./footer-->
+    <script type="text/javascript">
+    //刷新验证码
+    $("#verify>button").click(function() {
+        var ver_img = $("#verify>img");
+        ver_img.attr("src", "__APP__/Login/vCode?" + new Date().getTime());
+    });
+    $("#verify>img").click(function() {
+        $(this).attr("src", "__APP__/Login/vCode?" + new Date().getTime());
+    });
 
 
-$("#goto-submit").on('click',function(){
-	var info = getFromInput(".form-horizontal");
-	console.log(info);
-	$.ajax({
-		url:"<?php echo U('ChangePasswd/change');?>",
-		data:info,
-		type:"POST",
-		success:function(data){
-			alert(data.info);
-		}
-	});
-});
-</script>
+    $("#goto-submit").on('click', function() {
+        var info = getFromInput("#auth-form");
+        console.log(info);
+        $.ajax({
+            url: "<?php echo U('OrgAuth/auth');?>",
+            data: info,
+            type: "POST",
+            success: function(data) {
+                alert(data.info);
+            }
+        });
+    });
+    </script>
 </body>
+
 </html>

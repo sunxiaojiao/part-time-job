@@ -15,7 +15,7 @@ class OrgCenterAction extends Action{
 		}
 		//dump($publiced_jobs);
 		$org_info = $this->showOrgInfo();
-		dump($org_info);
+		//dump($org_info);
 		if($org_info){
 			$this->assign("orgInfo",$org_info);
 		}else{
@@ -24,13 +24,13 @@ class OrgCenterAction extends Action{
 		//列出申请列表
 		$apply_list = $this->whoApplyed();
 		if($apply_list){
-			
+				
 		}elseif ($apply_list === null){
 			$apply_list['fail_warning'] = "无申请人";
 		}else{
 			$apply_list['fail_warning'] = "查询失败";
 		}
-		dump($apply_list);
+		//dump($apply_list);
 		$this->assign("applyList",$apply_list);
 		$this->display();
 	}
@@ -80,7 +80,7 @@ class OrgCenterAction extends Action{
 			$this->ajaxReturn(0,$Org->getError(),0);
 			return;
 		}
-	
+
 		if($flag = $Org->where($where)->save()){
 			$this->ajaxReturn(1,"更新成功",1);
 		}else{
@@ -104,7 +104,7 @@ class OrgCenterAction extends Action{
 		$join_user = "INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid";
 		$join_job = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
 		$arr2_apply = $Apply->where($where)->join($join_user)->join($join_job)->field($field)->select();
-		dump($Apply->getLastSql());
+		//dump($Apply->getLastSql());
 		return $arr2_apply;
 	}
 	//是否通过申请人的兼职申请
@@ -113,7 +113,7 @@ class OrgCenterAction extends Action{
 			$this->error("企业用户未登录",U('Login/index'));
 			return;
 		}
-		
+
 		if($this->_get('ispass') == 'yes'){
 			$uid = $this->_get('uid');
 			$jid = $this->_get('jid');
@@ -154,5 +154,6 @@ class OrgCenterAction extends Action{
 			}
 		}
 	}
+
 }
 ?>
