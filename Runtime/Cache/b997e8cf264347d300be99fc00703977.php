@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
+  <title>兼职平台</title>
 
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
 <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
@@ -14,9 +14,12 @@
   .my-perinfo{margin-left:26px;}
   .my-perinfo>p>span{margin-right:18px;}
   .my-perimg{border:1px solid #EEE;}
-  .my-jobhead>p{position: absolute; top:10px; right:10px;}
-  .my-jobhead>p>span{/*position: absolute;*/ margin-left: 10px;}
-  .form-group a.login{position: relative; top:32px; left:36px; font:18px/18px "";}
+  .my-select-address{}
+  .my-select-address>select{width:auto;display: inline-block;}
+  .my-personimg{width:200px; cursor: pointer;}
+  #swfwrapper{width:630px;}
+  div.expire{font:18px/34px ""; height:34px;}
+
 </style>
 </head>
 <body>
@@ -68,51 +71,52 @@ THINK;
 <!--container-->
 <div class="container">
   <div class="row">
-    <!--left-->
-    <div class="col-md-8">
-
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="my-jobhead">
-            <h3><?php echo ($title); ?></h3>
-            <p><span>兼职类型：其他</span><span>发布时间：<?php echo (date("m月d日 h:i",$ctime)); ?></span></p>
+    <div class="page-header">
+        <h1><small>发布新兼职</small></h1>
+    </div>
+    <div class="col-md-7">
+      <form id="jobinfo">
+        <div class="form-group">
+          <label for="job-name">兼职标题：</label>
+          <input class="form-control" name="title" placeholder="兼职标题"/>
+        </div>
+        <div class="form-group">
+          <label for="job-consumer">联系人：</label>
+          <input class="form-control" name="leader" placeholder="联系人"/>
+        </div>
+        <div class="form-group">
+          <label for="jobn-tel">联系电话：</label>
+          <input class="form-control" name="phone" placeholder="联系电话"/>
+        </div>
+        <div class="form-group">
+          <label for="job-people">需求人数：</label>
+          <input class="form-control" name="want_peo" placeholder="需求人数"/>
+        </div>
+        <div class="form-group">
+          <label for="job-address">工作地点：</label>
+          <input class="form-control" name="address" placeholder="工作地点"/>
+        </div>
+        <div class="form-group">
+          <label for="job-much">工资范围：</label>
+          <input class="form-control" name="money" placeholder="工资范围"/>
+        </div>
+        <div class="form-group">
+          <label for="job-expire">过期时间：</label>
+          <div class="row">
+            <div class="col-md-4">
+            <input class="form-control" name="expire_time" placeholder="过期时间"/>
+            </div>
+            <div class="col-md-4 expire">天后过期</div>
           </div>
         </div>
-      </div>
-      <!--信息统计字段 具体还需要参考其他大型人才网站-->
-      <div class="panel panel-default">
-        <div class="panel-heading">详细信息</div>
-        <div class="panel-body">
-          <h3 class="">兼职描述</h3>
-          <hr />
-          <p><?php echo ($detail); ?> </p>
-          <h3></h3>
-          <hr />
-          <p>联系人：<?php echo ($leader); ?></p>
-          <p>联系电话：<?php echo ($leader_phone); ?></p>
-          <h3>评价</h3>
-          <hr />
-          <p>好不好好不好好不好好不好好不好好不好好不好好不好</p>
-          <form action="" method="post" class="">
-            <?php if( session('uid') != '' ): ?><div class="form-group">
-              <label for="pingjia">评价:</label>
-              <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
-            </div>
-            <button type="submit" class="btn btn-default">评价</button>
-            <?php else: ?>
-            <div class="form-group">
-              <label for="pingjia">评价:</label>
-              <a class="login" href="<?php echo U('Login/index');?>">登录</a>
-              <textarea class="form-control" rows="3" id="pingjia" disabled="true" name="pingjia" placeholder="">请先登录</textarea>
-            </div>
-            <button type="submit" disabled="true" class="btn btn-default">评价</button><?php endif; ?>
-          </form>
-          <hr />
-          <button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
+        <div class="form-group">
+          <label for="job-more">工作介绍：</label>
+          <textarea class="form-control" rows="3" name="detail" placeholder="工作介绍"></textarea>
         </div>
-      </div>
+        <button type="button" class="btn btn-primary pull-right" id="publish">提交</button>
+      </form>
     </div>
-    <!--right-->
+    <div class="col-md-1"></div>
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">关于小蜜蜂</div>
@@ -131,16 +135,41 @@ THINK;
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
+<!--./footer-->
 <script type="text/javascript">
-  $("#goto-apply").click(function(){
-    $.ajax({
-      url:"<?php echo U('ApplyJob/apply');?>",
-      success:function(data){
-        alert(data.info);
+/**
+*返回一个对象，将表单中input的name值做属性名，value值做属性值。
+*@param String form CSS selector
+*@return Object
+*/
+function getFromInput(form){
+  var  input_list = $(form + " input");
+  var info = new Object();
+  for(var i=0;i<input_list.length;i++){
+    info[input_list.eq(i).attr("name")] = input_list.eq(i).val();
+  }
+  return info;
+}
+
+  $("#publish").click(function(){
+    //获取数据
+    var info = getFromInput("#jobinfo");
+    info['detail'] = $("textarea[name='detail']").val();
+    console.log(info);
+    //ajax
+    $.post(
+      "<?php echo U('PublishJobs/publish');?>",
+      info,
+      function(data){
+        if(data.status){
+          alert("发布成功");
+          location.href="<?php echo U('PublishJobs/index');?>";
+        }else{
+          alert(data.info);
+        }
       }
-    });
+      );
   });
 </script>
-<!--./footer-->
 </body>
 </html>

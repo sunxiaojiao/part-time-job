@@ -380,3 +380,67 @@ INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
 SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004638s ]
 SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000294s ]
 
+[ 2015-04-11T10:27:22+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=publish
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004844s ]
+
+[ 2015-04-11T10:27:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=publish
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.003745s ]
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`money`,`expire_time`,`detail`,`ctime`,`pub_oid`) VALUES ('兼职',0,10,'芝罘区','100',1429151277,'就是干活',1428719277,1) [ RunTime:0.143991s ]
+
+[ 2015-04-11T10:28:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:32:24+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:33:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:38:32+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:39:04+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:39:19+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:39:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:40:09+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:40:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:42:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:42:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:43:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:43:47+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:43:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:44:03+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T10:44:17+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+
