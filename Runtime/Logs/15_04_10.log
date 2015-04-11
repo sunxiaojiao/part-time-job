@@ -1,0 +1,175 @@
+[ 2015-04-10T08:00:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.031951s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.037414s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000190s ]
+
+[ 2015-04-10T08:00:33+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.006899s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006602s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000715s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000376s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='e00cf25ad42683b3df678c61f42c6bda' ) LIMIT 1   [ RunTime:0.000307s ]
+
+[ 2015-04-10T08:10:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.026307s ]
+
+[ 2015-04-10T08:10:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005967s ]
+
+[ 2015-04-10T08:24:53+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004874s ]
+
+[ 2015-04-10T08:27:59+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005143s ]
+
+[ 2015-04-10T08:28:11+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005509s ]
+
+[ 2015-04-10T08:41:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005062s ]
+
+[ 2015-04-10T08:43:12+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005243s ]
+
+[ 2015-04-10T08:46:33+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004899s ]
+
+[ 2015-04-10T08:47:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004696s ]
+
+[ 2015-04-10T08:49:56+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005495s ]
+
+[ 2015-04-10T09:04:22+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:3.099970s ]
+
+[ 2015-04-10T09:05:13+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004654s ]
+
+[ 2015-04-10T09:05:19+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004764s ]
+
+[ 2015-04-10T09:06:52+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004970s ]
+
+[ 2015-04-10T09:07:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005312s ]
+
+[ 2015-04-10T12:25:24+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.130332s ]
+
+[ 2015-04-10T12:26:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004502s ]
+
+[ 2015-04-10T12:31:07+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004775s ]
+
+[ 2015-04-10T12:59:22+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004672s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004823s ]
+NOTIC: [8] Undefined variable: session D:\wamp\www\ThinkPHP3.1\Lib\Action\OrgAuthAction.class.php 第 23 行.
+
+[ 2015-04-10T13:00:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004529s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004734s ]
+SQL: UPDATE `xm_orgs` SET `license_num`='',`industry`='',`nature`='',`size`='',`contact`='',`phone`='',`fixed_phone`='' WHERE ( oid=1 ) [ RunTime:0.190161s ]
+
+[ 2015-04-10T13:02:13+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004669s ]
+SQL: INSERT INTO `xm_orgsauth` (`auth_oid`,`ctime`) VALUES (1,1428642133) [ RunTime:0.127406s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004634s ]
+SQL: UPDATE `xm_orgs` SET `license_num`='',`industry`='',`nature`='',`size`='',`contact`='',`phone`='',`fixed_phone`='' WHERE ( oid=1 ) [ RunTime:0.093577s ]
+
+[ 2015-04-10T13:05:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005086s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000297s ]
+
+[ 2015-04-10T13:06:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005202s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000256s ]
+

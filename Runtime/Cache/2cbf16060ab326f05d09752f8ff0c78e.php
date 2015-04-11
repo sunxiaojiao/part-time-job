@@ -10,6 +10,8 @@
     <script src="./__GROUP__/js/jquery.min.js"></script>
     <script src="./__GROUP__/js/bootstrap.min.js"></script>
     <script src="./__GROUP__/js/common.js"></script>
+    <script src="./__GROUP__/js/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./__GROUP__/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
     .must-input {
         color: #F00;
@@ -72,7 +74,7 @@ THINK;
                 <form class="" action="" method="post" id="auth-form">
                     <div class="form-group">
                         <label><span class="must-input">*</span>机构名称：</label>
-                        <input class="form-control" />
+                        <input class="form-control" disabled="true" />
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>执照编号：</label>
@@ -81,28 +83,28 @@ THINK;
                     <div class="form-group">
                         <label><span class="must-input">*</span>所属行业：</label>
                         <select class="form-control" name="industry">
-                            <option value="">房地产</option>
-                            <option value="">建筑</option>
-                            <option value="">物流管理</option>
-                            <option value="">IT/互联网</option>
+                            <option value="1">房地产</option>
+                            <option value="2">建筑</option>
+                            <option value="3">物流管理</option>
+                            <option value="4">IT/互联网</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>机构性质：</label>
                         <select class="form-control" name="nature">
-                            <option value="">国有企业</option>
-                            <option value="">私营企业</option>
-                            <option value="">中外合资</option>
-                            <option value="">个体户</option>
+                            <option value="1">国有企业</option>
+                            <option value="2">私营企业</option>
+                            <option value="3">中外合资</option>
+                            <option value="4">个体户</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>机构规模：</label>
                         <select class="form-control" name="size">
-                            <option value="">20以下</option>
-                            <option value="">20-50</option>
-                            <option value="">50-100</option>
-                            <option value="">100-300</option>
+                            <option value="1">20以下</option>
+                            <option value="2">20-50</option>
+                            <option value="3">50-100</option>
+                            <option value="4">100-300</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -123,13 +125,15 @@ THINK;
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>机构邮箱：</label>
-                        <input class="form-control" />
+                        <input class="form-control" disabled="true" />
                     </div>
                     <div class="form-group">
                         <label>结构介绍：</label>
                         <textarea class="form-control" rows="4" name="intro"></textarea>
                     </div>
-                    <button type="button" class="btn btn-primary" id="goto-submit">提交</button>
+                    <?php if($isApply == 'true'): ?><button type="button" class="btn btn-primary" id="goto-submit" disabled="true">提交</button>
+                    <?php else: ?>
+                    <button type="button" class="btn btn-primary" id="goto-submit">提交</button><?php endif; ?>
                 </form>
             </div>
         </div>
