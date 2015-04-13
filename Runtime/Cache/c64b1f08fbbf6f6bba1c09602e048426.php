@@ -13,10 +13,8 @@
   .panel-body{position: relative;}
   .my-perinfo{margin-left:26px;}
   .my-perinfo>p>span{margin-right:18px;}
+  .my-perinfo>h3>span{font-size:16px;}
   .my-perimg{border:1px solid #EEE;}
-  .my-jobhead>p{position: absolute; top:10px; right:10px;}
-  .my-jobhead>p>span{/*position: absolute;*/ margin-left: 10px;}
-  .form-group a.login{position: relative; top:32px; left:36px; font:18px/18px "";}
 </style>
 </head>
 <body>
@@ -73,44 +71,36 @@ THINK;
 
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="my-jobhead">
-            <h3><?php echo ($title); ?></h3>
-            <p><span>兼职类型：其他</span><span>发布时间：<?php echo (date("m月d日 h:i",$ctime)); ?></span></p>
+          <img src="<?php echo ($headlogo); ?>" class="pull-left my-perimg" />
+          <div class="pull-left my-perinfo">
+            <h3><?php echo ($orgname); ?>
+            <?php if($is_validate == 1): ?><span class="label label-success">已认证</span>
+            <?php else: ?>
+            <span class="label label-danger">未认证</span><?php endif; ?>
+            </h3>
+            
+            <p><span><?php echo ($org_address); ?></span></p>
           </div>
         </div>
       </div>
       <!--信息统计字段 具体还需要参考其他大型人才网站-->
       <div class="panel panel-default">
-        <div class="panel-heading">详细信息</div>
+        <div class="panel-heading">个人信息</div>
         <div class="panel-body">
-          <h3 class="">兼职描述</h3>
+          <h3 class="">公司介绍</h3>
           <hr />
-          <p><?php echo ($detail); ?> </p>
-          <h3></h3>
+          <p>公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍 </p>
+          <h3>最新兼职</h3>
           <hr />
-          <p>联系人：<?php echo ($leader); ?></p>
-          <p>联系电话：<?php echo ($leader_phone); ?></p>
-          <h3>评价</h3>
+          <ul class="list-group">
+            <a class="list-group-item">Cras justo odio <span class="time pull-right">今天</span></a>
+            <a class="list-group-item">Dapibus ac facilisis in<span class="time pull-right">今天</span></a>
+            <a class="list-group-item">Morbi leo risus<span class="time pull-right">今天</span></a>
+            <a class="list-group-item">Porta ac consectetur ac<span class="time pull-right">今天</span></a>
+            <a class="list-group-item">Vestibulum at eros<span class="time pull-right">今天</span></a>
+          </ul>
+          <h3>投诉建议</h3>
           <hr />
-          <p>好不好好不好好不好好不好好不好好不好好不好好不好</p>
-          <form action="" method="post" class="">
-            <?php if( session('?uid')): ?><div class="form-group">
-              <label for="pingjia">评价:</label>
-              <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
-            </div>
-            <button type="submit" class="btn btn-default">评价</button>
-            <?php else: ?>
-            <div class="form-group">
-              <label for="pingjia">评价:</label>
-              <a class="login" href="<?php echo U('Login/index');?>">登录</a>
-              <textarea class="form-control" rows="3" id="pingjia" disabled="true" name="pingjia" placeholder="">请先登录</textarea>
-            </div>
-            <button type="submit" disabled="true" class="btn btn-default">评价</button><?php endif; ?>
-          </form>
-          <hr />
-          <?php if(session('?uid')): ?><button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
-          <?php else: ?>
-          <button type="button" id="goto-apply" class="btn btn-primary btn-lg" disabled="true">申请此兼职</button><?php endif; ?>
         </div>
       </div>
     </div>
@@ -133,16 +123,6 @@ THINK;
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
-<script type="text/javascript">
-  $("#goto-apply").click(function(){
-    $.ajax({
-      url:"<?php echo U('ApplyJob/apply');?>",
-      success:function(data){
-        alert(data.info);
-      }
-    });
-  });
-</script>
 <!--./footer-->
 </body>
 </html>

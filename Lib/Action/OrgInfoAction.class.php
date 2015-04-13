@@ -2,6 +2,12 @@
 class OrgInfoAction extends Action{
 	private $oid;
 	public function index(){
+			//检测用户登录
+//		if(empty(session('oid'))){
+//			return 3;
+//		}else{
+//			$this->oid = session('oid');
+//		}
 		$this->assignIt();
 		$this->display();
 	}
@@ -11,13 +17,7 @@ class OrgInfoAction extends Action{
 	 * @return $list：查询成功返回数组
 	 */
 	private function read(){
-		//检测用户登录
-//		if(empty(session('oid'))){
-//			return 3;
-//		}else{
-//			$this->oid = session('oid');
-//		}
-		$this->oid = 1;
+		$this->oid = $this->_get('oid');
 		$Users = M('Orgs');
 		$list = $Users->where("oid=".$this->oid)->limit(1)->select();
 		if($list){

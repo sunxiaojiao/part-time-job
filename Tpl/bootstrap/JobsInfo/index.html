@@ -50,7 +50,7 @@
           <hr />
           <p>好不好好不好好不好好不好好不好好不好好不好好不好</p>
           <form action="" method="post" class="">
-            <if condition=" session('uid') neq '' ">
+            <if condition=" session('?uid')">
             <div class="form-group">
               <label for="pingjia">评价:</label>
               <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
@@ -66,7 +66,11 @@
             </if>
           </form>
           <hr />
+          <if condition="session('?uid')">
           <button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
+          <else />
+          <button type="button" id="goto-apply" class="btn btn-primary btn-lg" disabled="true">申请此兼职</button>
+          </if>
         </div>
       </div>
     </div>

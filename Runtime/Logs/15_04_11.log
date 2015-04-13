@@ -444,3 +444,246 @@ INFO: [ app_begin ] --START--
 INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000570s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
 
+[ 2015-04-11T10:55:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+
+[ 2015-04-11T11:12:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T11:13:04+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.006594s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004852s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000520s ]
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000283s ]
+
+[ 2015-04-11T11:13:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T11:13:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=ApplyJob&a=apply
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.003670s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.003538s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=30 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=30 ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,30,1,1428721994) [ RunTime:0.125493s ]
+
+[ 2015-04-11T14:25:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T14:25:48+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001511s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007682s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.010568s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000589s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='e00cf25ad42683b3df678c61f42c6bda' ) LIMIT 1   [ RunTime:0.000221s ]
+
+[ 2015-04-11T14:26:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T14:26:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=isPass&ispass=yes&uid=1&app_id=12&jid=30
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001233s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005625s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=30 ) [ RunTime:0.473928s ]
+SQL: SELECT `crowd_uids` FROM `xm_jobs` WHERE ( jid=30 ) LIMIT 1   [ RunTime:0.000309s ]
+NOTIC: [2] unserialize() expects parameter 1 to be string, array given D:\wamp\www\ThinkPHP3.1\Lib\Action\OrgCenterAction.class.php 第 133 行.
+SQL: UPDATE `xm_jobs` SET `crowd_uids`='a:1:{i:0;s:1:\"1\";}' WHERE ( jid=30 ) [ RunTime:0.252730s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.008689s ]
+SQL: UPDATE `xm_apply` SET `is_pass`=2 WHERE ( app_id=12 ) [ RunTime:0.149350s ]
+
+[ 2015-04-11T16:22:32+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T16:24:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30.com
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T16:25:00+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30.com
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T16:25:54+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T17:48:18+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-11T18:00:15+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.003779s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000270s ]
+SQL: INSERT INTO `xm_orgsauth` (`auth_oid`,`ctime`) VALUES (1,1428746414) [ RunTime:0.263477s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.035970s ]
+
+[ 2015-04-11T18:12:58+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004673s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: INSERT INTO `xm_orgsauth` (`auth_oid`,`ctime`) VALUES (1,1428747178) [ RunTime:0.241580s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005019s ]
+
+[ 2015-04-11T18:14:14+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004763s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005008s ]
+
+[ 2015-04-11T18:14:51+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004821s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004801s ]
+
+[ 2015-04-11T18:16:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004964s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004827s ]
+
+[ 2015-04-11T18:16:32+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004629s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.006091s ]
+
+[ 2015-04-11T18:17:02+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004833s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005391s ]
+
+[ 2015-04-11T18:29:22+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=PublishJobs&a=publish
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005851s ]
+
+[ 2015-04-11T18:29:33+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005016s ]
+NOTIC: [8] Undefined index: license_num D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Model.class.php 第 974 行.
+SQL: UPDATE `xm_orgs` SET `phone`='13256929238',`website`='http://www.baidu.com',`org_intro`='你好你好' WHERE ( oid=1 ) [ RunTime:0.198856s ]
+
+[ 2015-04-11T18:30:21+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-11T18:30:24+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004926s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005755s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000524s ]
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000273s ]
+
+[ 2015-04-11T18:30:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=UserCenter&a=updateInfo
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.004834s ]
+SQL: SELECT `aid` FROM `xm_address` WHERE ( province='山东' AND city='烟台' AND area='芝罘区' ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004808s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 282 行.
+SQL: UPDATE `xm_users` SET `username`='1451583383',`sex`=3,`age`=100,`school`='鲁东大学',`phone`='13345678910',`qq`='962783114',`exp`='干过兼职，干过保姆，干过小蜜',`intent`='a:5:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";i:3;s:1:\"4\";i:4;s:1:\"5\";}' WHERE ( uid = '1' ) [ RunTime:0.192886s ]
+
+[ 2015-04-11T18:31:06+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-11T18:31:08+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-11T18:31:13+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Register&a=confirm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-11T18:34:09+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Login&a=login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.010703s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007125s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000596s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000786s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='e00cf25ad42683b3df678c61f42c6bda' ) LIMIT 1   [ RunTime:0.000477s ]
+
+[ 2015-04-11T18:34:26+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004944s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004827s ]
+
+[ 2015-04-11T19:43:38+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.003652s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.003847s ]
+
+[ 2015-04-11T20:02:44+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgAuth&a=auth
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005063s ]
+SQL: SELECT `auth_id` FROM `xm_orgsauth` WHERE ( auth_oid=1 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.003830s ]
+

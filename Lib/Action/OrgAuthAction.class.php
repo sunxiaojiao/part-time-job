@@ -7,6 +7,9 @@
  */
 class OrgAuthAction extends Action {
 	public function index() {
+		if(!session('?oid')){
+			$this->error("请企业用户登录",U('Login/index'));
+		}
 		//判断是否申请过,让申请按钮disabled
 		if($this->isApply()) {
 			$this->assign('isApply','true');
@@ -39,13 +42,16 @@ class OrgAuthAction extends Action {
 			if($flag){
 				$this->ajaxReturn(1,"申请成功",1);
 			}else{
-				dump($data);
+				dump($flag);
 				//dump($Org->getLastSql());
-				$this->ajaxReturn(1,"申请失败".$Org->getError(),0);
+				$this->ajaxReturn(1,"申请失败".$Org->getError(),1);
 			}
 		}else{
 			$this->ajaxReturn(0,$Org->getError(),1);
+			return;
 		}
+		dump("ddd");
+		
 	}
 	private function isApply() {
 		$OrgAuth = M('Orgsauth'); 

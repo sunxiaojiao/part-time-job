@@ -29,7 +29,14 @@
         <div class="panel-body">
           <img src="{$headlogo}" class="pull-left my-perimg" />
           <div class="pull-left my-perinfo">
-            <h3>{$orgname}<span class="label label-success">已认证</span></h3>
+            <h3>{$orgname}
+            <if condition="$is_validate eq 1">
+            <span class="label label-success">已认证</span>
+            <else />
+            <span class="label label-danger">未认证</span>
+            </if>
+            </h3>
+            
             <p><span>{$org_address}</span></p>
           </div>
         </div>

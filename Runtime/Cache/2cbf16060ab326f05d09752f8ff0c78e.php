@@ -10,8 +10,7 @@
     <script src="./__GROUP__/js/jquery.min.js"></script>
     <script src="./__GROUP__/js/bootstrap.min.js"></script>
     <script src="./__GROUP__/js/common.js"></script>
-    <script src="./__GROUP__/js/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./__GROUP__/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
     <style type="text/css">
     .must-input {
         color: #F00;
@@ -78,7 +77,7 @@ THINK;
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>执照编号：</label>
-                        <input class="form-control" name="license_num" />
+                        <input class="form-control"  name="license_num" />
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>所属行业：</label>
@@ -170,6 +169,7 @@ THINK;
             }
         });
     });
+
     </script>
 </body>
 
