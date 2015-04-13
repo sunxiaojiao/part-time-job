@@ -8,16 +8,16 @@ class AdminAction extends Action {
 			return;
 		}
 		$this->authApply();
+		$this->orgsList();
 		$this->display();
 	}
 	//列出认证申请列表
 	protected function authApply() {
 		$OrgAuth = M('Orgsauth');
-		$where = "";
+		$where = "is_pass = 1";
 		$field = "xm_orgs.oid AS oid,xm_orgs.orgname AS orgname";
 		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid";
 		$arr2_list = $OrgAuth->where($where)->join($join)->field($field)->select();
-		dump($arr2_list);
 		dump($OrgAuth->getLastSql());
 		if($arr2_list > 0){
 			$this->assign('applyLists',$arr2_list);
@@ -67,6 +67,21 @@ class AdminAction extends Action {
 	//删除任意兼职
 	public function deleteJob() {
 		
+	}
+	//现有公司列表
+	public function orgsList() {
+		$Orgs  = M('Orgs');
+		$field = "oid,orgname,from_unixtime(ctime,'%y/%m/%d') AS ctime,is_validate";
+		$arr2_orgs = $Orgs->field($field)->select();
+//		dump($arr2_orgs);
+		if($arr2_orgs){
+			dump($arr2_orgs);
+			$this->assign("orgLists",$arr2_orgs);
+		}elseif(is_null($arr2_orgs)) {
+			$this->assign("empty","记录为空！");
+		}else{
+			$this->assign("empty","读取错误！");
+		}
 	}
 	//删除公司
 	public function deleteOrg() {

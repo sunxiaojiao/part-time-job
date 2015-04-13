@@ -173,3 +173,18 @@ SQL: INSERT INTO `xm_orgsauth` (`auth_oid`,`ctime`) VALUES (1,1428925793) [ RunT
 SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005019s ]
 SQL: UPDATE `xm_orgs` SET `license_num`='123456789012345',`industry`='1',`nature`='1',`size`='1',`contact`='孙小蛟',`phone`='13256929238',`fixed_phone`='64449872',`org_address`='芝罘区',`org_intro`='介绍' WHERE ( oid=1 ) [ RunTime:0.084739s ]
 
+[ 2015-04-13T19:53:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=authHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004709s ]
+NOTIC: 建议使用I方法替代_post
+SQL: UPDATE `xm_orgsauth` SET `is_pass`=2 WHERE ( auth_oid=1 ) [ RunTime:0.174585s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004968s ]
+NOTIC: 建议使用I方法替代_post
+SQL: UPDATE `xm_orgs` SET `is_validate`=1 WHERE ( oid=1 ) [ RunTime:0.094250s ]
+
+[ 2015-04-13T19:53:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo&a=index&oid=1
+NOTIC: 建议使用I方法替代_get
+

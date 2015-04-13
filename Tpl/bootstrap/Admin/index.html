@@ -60,6 +60,15 @@
                 </div>
                 <div class="panel panel-primary">
                     <div class="panel-heading">现有公司列表</div>
+                    <ul class="list-group">
+                        <if condition="isset($empty)">
+                            <li class="list-group-item">{$empty}</li>
+                            <else />
+                            <volist name="orgLists" id="orglists">
+                                <a href="{:U('')}&oid={$orglists.oid}" class="list-group-item">{$orglists.orgname}/{$orglists.is_validate}/创建时间：{$orglists.ctime}<a>
+                        </volist>
+                    </if>
+                    </ul>
                 </div>
                 <div class="panel panel-primary">
                     <div class="panel-heading">兼职列表</div>
@@ -73,25 +82,25 @@
         <hr />
         <p class="text-center">小蜜蜂兼职</p>
         <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-        <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-    </div>
-    <!--./footer-->
-    <script>
-    $(".btn-content>button").on('click', function() {
-        var info  = new Object();
-        info.pass = $(this).attr('data-pass');
-        info.oid  = $(this).parent().attr('data-oid');
-        console.log(info);
-        $.ajax({
-            url: "{:U('Admin/authHandler')}",
-            data: info,
-            type: "POST",
-            success: function(data) {
-                alert(data.info);
-            }
-        });
-    })
-    </script>
+                                <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+                </div>
+                <!--./footer-->
+                <script>
+                $(".btn-content>button").on('click', function() {
+                    var info = new Object();
+                    info.pass = $(this).attr('data-pass');
+                    info.oid = $(this).parent().attr('data-oid');
+                    console.log(info);
+                    $.ajax({
+                        url: "{:U('Admin/authHandler')}",
+                        data: info,
+                        type: "POST",
+                        success: function(data) {
+                            alert(data.info);
+                        }
+                    });
+                })
+                </script>
 </body>
 
 </html>

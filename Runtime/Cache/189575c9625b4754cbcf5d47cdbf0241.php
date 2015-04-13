@@ -100,6 +100,11 @@ THINK;
                 </div>
                 <div class="panel panel-primary">
                     <div class="panel-heading">现有公司列表</div>
+                    <ul class="list-group">
+                        <?php if(isset($empty)): ?><li class="list-group-item"><?php echo ($empty); ?></li>
+                            <?php else: ?>
+                            <?php if(is_array($orgLists)): $i = 0; $__LIST__ = $orgLists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$orglists): $mod = ($i % 2 );++$i;?><a href="<?php echo U('');?>&oid=<?php echo ($orglists["oid"]); ?>" class="list-group-item"><?php echo ($orglists["orgname"]); ?>/<?php echo ($orglists["is_validate"]); ?>/创建时间：<?php echo ($orglists["ctime"]); ?><a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                    </ul>
                 </div>
                 <div class="panel panel-primary">
                     <div class="panel-heading">兼职列表</div>
@@ -113,25 +118,25 @@ THINK;
         <hr />
         <p class="text-center">小蜜蜂兼职</p>
         <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-        <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-    </div>
-    <!--./footer-->
-    <script>
-    $(".btn-content>button").on('click', function() {
-        var info  = new Object();
-        info.pass = $(this).attr('data-pass');
-        info.oid  = $(this).parent().attr('data-oid');
-        console.log(info);
-        $.ajax({
-            url: "<?php echo U('Admin/authHandler');?>",
-            data: info,
-            type: "POST",
-            success: function(data) {
-                alert(data.info);
-            }
-        });
-    })
-    </script>
+                                <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+                </div>
+                <!--./footer-->
+                <script>
+                $(".btn-content>button").on('click', function() {
+                    var info = new Object();
+                    info.pass = $(this).attr('data-pass');
+                    info.oid = $(this).parent().attr('data-oid');
+                    console.log(info);
+                    $.ajax({
+                        url: "<?php echo U('Admin/authHandler');?>",
+                        data: info,
+                        type: "POST",
+                        success: function(data) {
+                            alert(data.info);
+                        }
+                    });
+                })
+                </script>
 </body>
 
 </html>
