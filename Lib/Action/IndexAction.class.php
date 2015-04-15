@@ -13,12 +13,13 @@ class IndexAction extends Action{
     	$Jobs = M('Jobs');
     	$Jobs->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
     	import('ORG.Util.Page');
-    	$count = $Jobs->where("(" . time() . "- expire_time)<0")->count();
-    	$Page = new Page($count,10);
-		$list = $Jobs->order('ctime desc')
+    	$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=1";
+    	$count = $Jobs->where($where)->count();
+    	$Page  = new Page($count,10);
+		$list  = $Jobs->order('ctime desc')
 					->limit($Page->firstRow.','.$Page->listRows)
 					->field("jid,title,money,want_peo,current_peo,address,pv,ctime")
-					->where("(" . time() . "- expire_time)<0")
+					->where($where)
 					->select();
 		//设置分页样式
 //		$Page->setConfig('header','条');
@@ -27,6 +28,7 @@ class IndexAction extends Action{
 		$show = $Page->show();
 		$this->assign('list',$list);
 		$this->assign('page',$show);
+		//dump($Jobs->getLastSql());
 		$this->display();
 		
     }

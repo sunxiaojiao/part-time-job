@@ -1,0 +1,108 @@
+[ 2015-04-15T09:27:09+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo&a=index&oid=7
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-15T20:51:20+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-15T21:41:27+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobInfo&a=index&jid=30
+ERR: 无法加载模块:JobInfo
+
+[ 2015-04-15T21:41:42+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=JobsInfo&a=index&jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-15T22:04:49+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo&a=index&oid=4
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-15T22:22:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=authHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.004806s ]
+NOTIC: 建议使用I方法替代_post
+SQL: UPDATE `xm_orgsauth` SET `is_pass`=2 WHERE ( auth_oid=30 ) [ RunTime:0.000314s ]
+
+[ 2015-04-15T22:23:07+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=authHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005745s ]
+NOTIC: 建议使用I方法替代_post
+SQL: UPDATE `xm_orgsauth` SET `is_pass`=2 WHERE ( auth_oid=30 ) [ RunTime:0.000320s ]
+
+[ 2015-04-15T22:23:30+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=authHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005467s ]
+NOTIC: 建议使用I方法替代_post
+SQL: UPDATE `xm_orgsauth` SET `is_pass`=2 WHERE ( auth_oid= ) [ RunTime:0.000179s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `xm_orgsauth` SET `is_pass`=2 WHERE ( auth_oid= )
+
+[ 2015-04-15T22:36:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.005097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.000306s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000155s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000441s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 141 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005035s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 103 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 125 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 103 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 125 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000253s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000156s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 137 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.000281s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 141 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005087s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 67 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 125 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 67 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 125 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1429108610- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.000434s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000168s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 137 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1429108610- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.000327s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 141 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 98 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 112 行.
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 158 行.
+NOTIC: [8] Use of undefined constant jobsHandler - assumed 'jobsHandler' D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 158 行.
+NOTIC: [2] Division by zero D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 158 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018604s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000564s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000478s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000385s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002287s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000616s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2015-04-15T22:37:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=jobsHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+ERR: 非法操作:jobsHandler
+
+[ 2015-04-15T22:40:37+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=jobHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007942s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: UPDATE `xm_jobs` SET `is_pass`=1 WHERE ( jid=30 ) [ RunTime:0.093119s ]
+

@@ -9,23 +9,32 @@ class AdminAction extends Action {
 		}
 		$this->authApply();
 		$this->orgsList();
+		$this->publishApply();
 		$this->display();
+	}
+	//登录页面
+	public function login() {
+		
+	}
+	//登录处理
+	public function loginHandler() {
+		if(!$this->isPost()){
+			return;
+		}
 	}
 	//列出认证申请列表
 	protected function authApply() {
-		$OrgAuth = M('Orgsauth');
+		$Model = M('Orgsauth');
 		$where = "is_pass = 1";
 		$field = "xm_orgs.oid AS oid,xm_orgs.orgname AS orgname";
 		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid";
-		$arr2_list = $OrgAuth->where($where)->join($join)->field($field)->select();
-		dump($OrgAuth->getLastSql());
-		if($arr2_list > 0){
-			$this->assign('applyLists',$arr2_list);
-		}elseif($arr2_list === false) {
-			$this->assign("applyLists","读取失败");
-		}else{
-			$this->assign("applyLists","记录为空");
-		}
+		$order = "xm_orgs.ctime";
+		$num   = 4;
+		$data_list = "orgsauth_list";
+		$show_list = "orgsauth_page";
+		$error_info = "orgsauth_error";
+		$this->pagingList($Model, $num, $where, $field, $data_list, $show_list, $error_info, $join,$order);
+		
 	}
 	//处理认证申请列表
 	public function authHandler() {
@@ -58,10 +67,34 @@ class AdminAction extends Action {
 	}
 	//列出兼职发布申请列表
 	protected function publishApply() {
-		
+		$Model = M('jobs');
+		$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
+		$num = 10;
+		$field = "jid,title,from_unixtime(ctime) AS ctime";
+		$data_list  = "jobs_list";
+		$show_list  = "jobs_page";
+		$error_info = "jobs_error";
+		$this->pagingList($Model, $num, $where, $field, $data_list, $show_list,$error_info);
+		//dump($Model->getLastSql());
 	}
 	//处理兼职申请列表
 	public function jobHandler() {
+		$Job = M('jobs');
+		if(!$this->isPost()){
+			return ;
+		}
+		$value = 0;
+		if($this->_post('pass') == 'yes'){
+			$value = 1;
+		}elseif($this->_post('pass') == 'no'){
+			$value = 2;
+		}
+		$where = "jid=".$this->_post('jid');
+		if($Job->where($where)->setField("is_pass",$value)){
+			$this->ajaxReturn(1,"操作成功",1);
+		}else{
+			$this->ajaxReturn(0,"操作失败",0);
+		}
 		
 	}
 	//删除任意兼职
@@ -72,16 +105,12 @@ class AdminAction extends Action {
 	public function orgsList() {
 		$Orgs  = M('Orgs');
 		$field = "oid,orgname,from_unixtime(ctime,'%y/%m/%d') AS ctime,is_validate";
-		$arr2_orgs = $Orgs->field($field)->select();
-//		dump($arr2_orgs);
-		if($arr2_orgs){
-			dump($arr2_orgs);
-			$this->assign("orgLists",$arr2_orgs);
-		}elseif(is_null($arr2_orgs)) {
-			$this->assign("empty","记录为空！");
-		}else{
-			$this->assign("empty","读取错误！");
-		}
+		$num        = 4;
+		$data_list  = "orgs_list";
+		$show_list  = "orgs_page";
+		$where      = "";
+		$error_info = "orgs_error";
+		$this->pagingList($Orgs, $num, $where, $field, $data_list, $show_list,$error_info);
 	}
 	//删除公司
 	public function deleteOrg() {
@@ -90,6 +119,47 @@ class AdminAction extends Action {
 	//记录上一次登录的时间和IP
 	protected function lastRecord() {
 		
+	}
+	/**
+	 * 
+	 * 分页方法
+	 * @param $Model 数据库对象
+	 * @param $num 每页的数据条数
+	 * @param $where 选择数据的条件
+	 * @param $field 选择的字段
+	 * @param $data_list 模板中数据集的变量名
+	 * @param $show_list 模板中分类的变量名
+	 * @param $error_info 读取失败或结果为空时的模板变量
+	 * $param $join 
+	 */
+	protected function pagingList(Model $Model,$num,$where,$field,$data_list,$show_list,$error_info,$join,$order) {
+		if(empty($order)){
+			$order="ctime";
+		}
+		import('ORG.Util.Page');
+		$count      = $Model->where($where)->count();
+		$Page       = new Page($count,$num);
+		$show       = $Page->show();
+		$Model->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
+		$list = $Model->where($where)
+					  ->field($field)
+					  ->order($order)
+					  ->join($join)
+					  ->limit($Page->firstRow.','.$Page->listRows)
+					  ->select();
+		//
+		$Page->setConfig("", $value);
+		if($list){
+			//dump($list);
+			//dump($show);
+				$this->assign($data_list,$list);// 赋值数据集
+				$this->assign($show_list,$show);// 赋值分页输出
+			}elseif(is_null($list)) {
+				$this->assign($error_info,"记录为空！");
+			}else{
+				$this->assign($error_info,"读取错误！");
+			}			  
+	
 	}
 }
 ?>

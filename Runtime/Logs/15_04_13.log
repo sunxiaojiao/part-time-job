@@ -188,3 +188,18 @@ SQL: UPDATE `xm_orgs` SET `is_validate`=1 WHERE ( oid=1 ) [ RunTime:0.094250s ]
 [ 2015-04-13T19:53:50+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo&a=index&oid=1
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-04-13T20:52:44+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgsInfo&a=index&oid=1
+ERR: 无法加载模块:OrgsInfo
+
+[ 2015-04-13T20:52:53+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo&a=index&oid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-13T20:52:57+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo&a=index&oid=2
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-13T20:53:00+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo&a=index&oid=4
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-13T20:53:04+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=OrgInfo&a=index&oid=8
+NOTIC: 建议使用I方法替代_get
+
