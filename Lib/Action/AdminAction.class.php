@@ -43,11 +43,32 @@ class AdminAction extends Action {
 		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid";
 		$order = "xm_orgs.ctime";
 		$num   = 4;
-		$data_list = "orgsauth_list";
-		$show_list = "orgsauth_page";
+		$data_list  = "orgsauth_list";
+		$show_list  = "orgsauth_page";
 		$error_info = "orgsauth_error";
 		$this->pagingList($Model, $num, $where, $field, $data_list, $show_list, $error_info, $join,$order);
 		
+	}
+	//列出申请认证公司资料
+	public function authDetail() {
+		if(!session('?admin_id')){
+			
+		}
+//		$oid = $this->_post('oid') = 1 ;
+$oid =1;
+		$Org   = M('orgs');
+		$where = "oid=" . $oid;
+		$field = "email,orgname,license_num,industry,nature,size,contact,org_address,phone,fixed_phone,org_intro";
+		$arr2_data = $Org->where($where)->field($field)->find();
+		if($arr2_data){
+			$this->assign("org_info",$arr2_data);
+		}elseif(is_null($arr2_data)){
+			$this->assign("error_info","无记录");
+		}else{
+			$this->assign("error_info","读取错误");
+		}
+		dump($Org->getLastSql());
+		$this->display();
 	}
 	//处理认证申请列表
 	public function authHandler() {

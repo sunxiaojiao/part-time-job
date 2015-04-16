@@ -74,3 +74,12 @@ NOTIC: 建议使用I方法替代_post
 SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.003727s ]
 SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000348s ]
 
+[ 2015-04-16T10:59:04+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.004844s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000306s ]
+
