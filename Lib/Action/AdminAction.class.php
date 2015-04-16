@@ -1,7 +1,7 @@
 <?php
 class AdminAction extends Action {
 	public function index() {
-		session('admin_id',1);
+		//session('admin_id',1);
 		//检查用户登录
 		if(!session('?admin_id')) {
 			$this->error("未登录",U('Index/index'));
@@ -14,12 +14,25 @@ class AdminAction extends Action {
 	}
 	//登录页面
 	public function login() {
-		
+		$this->display();
 	}
 	//登录处理
 	public function loginHandler() {
 		if(!$this->isPost()){
 			return;
+		}
+		$username = $this->_post('username');
+		$passwd = $this->_post('passwd');
+		$Admin = M('Admin');
+		$where = "username=" . "'" . $username. "'" . " AND " . "passwd=" . "'" . md5($passwd) . "'";
+		$field = "admin_id";
+		$arr1_data = $Admin->where($where)->field($field)->find();
+		if($arr1_data){
+			session('username',$username);
+			session('admin_id',$arr1_data['admin_id']);
+			$this->ajaxReturn(1,"登录成功",1);
+		}else{
+			$this->ajaxReturn(0,"登录失败",0);
 		}
 	}
 	//列出认证申请列表
@@ -118,6 +131,12 @@ class AdminAction extends Action {
 	}
 	//记录上一次登录的时间和IP
 	protected function lastRecord() {
+		
+	}
+	//注销
+	public function logout() {
+		session('admin_id',null);
+		$this->error("注销成功",U('Admin/login'),1);
 		
 	}
 	/**

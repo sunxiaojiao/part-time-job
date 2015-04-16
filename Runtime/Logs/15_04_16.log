@@ -1,0 +1,76 @@
+[ 2015-04-16T10:22:46+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.003667s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='admin' ) LIMIT 1   [ RunTime:0.000279s ]
+
+[ 2015-04-16T10:23:05+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001285s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.071703s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='admin' ) LIMIT 1   [ RunTime:0.000256s ]
+
+[ 2015-04-16T10:23:29+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.003690s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000277s ]
+NOTIC: [8] Undefined variable: admin_id D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 32 行.
+
+[ 2015-04-16T10:24:30+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.004464s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000297s ]
+NOTIC: [8] Undefined variable: admin_id D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 32 行.
+
+[ 2015-04-16T10:39:10+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.004828s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000334s ]
+NOTIC: [8] Undefined variable: admin_id D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 32 行.
+
+[ 2015-04-16T10:39:55+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.003528s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000282s ]
+NOTIC: [8] Undefined variable: admin_id D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 32 行.
+
+[ 2015-04-16T10:40:45+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.004445s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000295s ]
+
+[ 2015-04-16T10:57:00+08:00 ] 0.0.0.0 /thinkphp3.1/index.php?m=Admin&a=loginHandler
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.003727s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000348s ]
+
