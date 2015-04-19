@@ -22,16 +22,7 @@ class OrgCenterAction extends Action{
 			$this->ajaxReturn(0,"获取企业信息失败",0);
 		}
 		//列出申请列表
-		$apply_list = $this->whoApplyed();
-		if($apply_list){
-				
-		}elseif ($apply_list === null){
-			$apply_list['fail_warning'] = "无申请人";
-		}else{
-			$apply_list['fail_warning'] = "查询失败";
-		}
-		//dump($apply_list);
-		$this->assign("applyList",$apply_list);
+		$this->whoApplyed();
 		$this->display();
 	}
 	//显示发布的兼职
@@ -105,7 +96,13 @@ class OrgCenterAction extends Action{
 		$join_job = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
 		$arr2_apply = $Apply->where($where)->join($join_user)->join($join_job)->field($field)->select();
 		//dump($Apply->getLastSql());
-		return $arr2_apply;
+		if($arr2_apply){
+			$this->assign("apply_list",$arr2_apply);
+		}elseif (is_null($apply_list)){
+			$this->assign("apply_error_info","无申请人");
+		}else{
+			$this->assign("apply_error_info","查询失败");
+		}
 	}
 	//是否通过申请人的兼职申请
 	public function isPass(){

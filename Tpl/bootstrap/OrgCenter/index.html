@@ -1,167 +1,199 @@
 <!doctype html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>兼职平台</title>
-
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-<script src="./__GROUP__/js/jquery.min.js"></script>
-<script src="./__GROUP__/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./__GROUP__/js/common.js"></script>
-<script type="text/javascript" src="./__GROUP__/js/fullAvatarEditor.js"></script>
-<script type="text/javascript" src="./__GROUP__/js/swfobject.js"></script>
-<style type="text/css">
-  .panel-body{position: relative;}
-  .my-perinfo{margin-left:26px;}
-  .my-perinfo>p>span{margin-right:18px;}
-  .my-perimg{border:1px solid #EEE;}
-  .my-select-address{}
-  .my-select-address>select{width:auto;display: inline-block;}
-  .my-personimg{width:200px; cursor: pointer;}
-  #swfwrapper{width:630px;}
-	.d-markup{display: inline-block; padding:4px 6px; background: #EEE; font:18px/24px "微软雅黑,黑体"; margin: 6px 2px;}
-	.d-markup:hover{background: #DDD; color:#111;}
-  td.table-field{width:148px;}
-  td.table-field+td{min-width:100px;}
-  .btn-content{position: absolute; right:10px; margin-top: -8px;}
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>兼职平台</title>
+    <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
+    <script src="./__GROUP__/js/jquery.min.js"></script>
+    <script src="./__GROUP__/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./__GROUP__/js/common.js"></script>
+    <script type="text/javascript" src="./__GROUP__/js/fullAvatarEditor.js"></script>
+    <script type="text/javascript" src="./__GROUP__/js/swfobject.js"></script>
+    <style type="text/css">
+    .panel-body {
+        position: relative;
+    }
+    
+    .my-perinfo {
+        margin-left: 26px;
+    }
+    
+    .my-perinfo>p>span {
+        margin-right: 18px;
+    }
+    
+    .my-perimg {
+        border: 1px solid #EEE;
+    }
+    
+    .my-select-address {}
+    
+    .my-select-address>select {
+        width: auto;
+        display: inline-block;
+    }
+    
+    .my-personimg {
+        width: 200px;
+       /* cursor: pointer;*/
+    }
+    
+    #swfwrapper {
+        width: 630px;
+    }
+    
+    .d-markup {
+        display: inline-block;
+        padding: 4px 6px;
+        background: #EEE;
+        font: 18px/24px "微软雅黑,黑体";
+        margin: 6px 2px;
+    }
+    
+    .d-markup:hover {
+        background: #DDD;
+        color: #111;
+    }
+    
+    td.table-field {
+        width: 148px;
+    }
+    
+    td.table-field+td {
+        min-width: 100px;
+    }
+    
+    .btn-content {
+        position: absolute;
+        right: 10px;
+        margin-top: -8px;
+    }
+    </style>
 </head>
+
 <body>
- <include file="./Tpl/bootstrap/public/header.html" />
-<!--container-->
-<div class="container">
-  <div class="page-header">
-      <h1><small>{$orgInfo.orgname}</small></h1>
-  </div>
-  <div class="row">
-    <div class="col-md-8">
-		<!--基本信息-->
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				基本信息<a class="pull-right" href="{:U('OrgCenter/editInfo')}">更改信息</a>
-			</div>
-			<table class="table table-bordered">	
-				<tr>
-					<td class="table-field">公司资质：</td><td><if condition="$orgInfo.is_validate eq 1">已验证<else />未验证</if></td>
-					<td class="table-field">登录邮箱：</td><td>{$orgInfo.email}</td>
-				</tr>
-				<tr>
-					<td class="table-field">客服电话：</td><td>{$orgInfo.phone}</td>
-					<td class="table-field">公司网址：</td><td>{$orgInfo.website}</td>
-				</tr>
-				</tr>
-					<td class="table-field">公司地址：</td><td>{$orgInfo.org_address}</td>
-				</tr>
-			</table>
-		</div>
-		<!--./基本信息-->
-		<!--兼职申请列表-->
-		<div class="panel panel-default ">
-			<div class="panel-heading">申请列表</div>
-			<div class="list-group">
-			<if condition="isset($applyList['fail_warning'])">
-			<li class="list-group-item">{$applyList.fail_warning}</li>
-			<else />
-			<volist name="applyList" id="applyList">
-				<li href="#" class="list-group-item"><a target="_blank" href="{:U('UserInfo/index')}&uid={$applyList.uid}">{$applyList.username}</a>申请了<a href="{:U('JobsInfo/index')}&jid={$applyList.jid}">{$applyList.title}</a><span class="btn-content"><button class="btn btn-success" data-app_id="{$applyList.app_id}" data-jid="{$applyList.jid}" data-uid="{$applyList.uid}">通过</button><button class="btn btn-danger" data-app_id="{$applyList.app_id}">拒绝</button></span></li>
-			</volist>
-
-			</if>
-			</div>
-		</div>
-		<!--./兼职申请列表-->
-		<!--发布的兼职列表-->
-		<div class="panel panel-default">
-			<div class="panel-heading">发布的兼职</div>
-			<div class="list-group">
-			<volist name="publicedJobs" id="jobs">
-			  <a href="{:U("JobsInfo/index")}&jid={$jobs.jid}" target="_blank" class="list-group-item">{$jobs.title}<span class="badge">{$jobs.current_peo}/{$jobs.want_peo}</span></a>
-			</volist>
-			</div>
-		</div>
-		<!--./发布的兼职列表-->
-
-    </div>
-    <div class="col-md-4">
-    	<div class="panel panel-default">
-        <div class="panel-body">
-          <img src="{$orgInfo.headlogo}" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+    <include file="./Tpl/bootstrap/public/header.html" />
+    <!--container-->
+    <div class="container">
+        <div class="page-header">
+            <h1><small>{$orgInfo.orgname}</small></h1>
         </div>
-      </div>
-    </div>
-  </div>	
- <!--./container-->
- <!--上传头像用model框-->
-<div class="modal fade" id="headimg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">修改头像</h4>
-      </div>
-      <div class="modal-body">
-        <div class="center-block" id="swfwrapper">
-                <p id="swfContainer">
-                    本组件需要安装Flash Player后才可使用，请从
-                    <a href="http://www.adobe.com/go/getflashplayer">这里</a>
-                    下载安装。
-                </p>
+        <div class="row">
+            <div class="col-md-8">
+                <!--基本信息-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        基本信息<a class="pull-right" href="{:U('OrgCenter/editInfo')}">更改信息</a>
+                    </div>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td class="table-field">公司资质：</td>
+                            <td>
+                                <if condition="$orgInfo.is_validate eq 1">已验证
+                                    <else />未验证</if>
+                            </td>
+                            <td class="table-field">登录邮箱：</td>
+                            <td>{$orgInfo.email}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-field">客服电话：</td>
+                            <td>{$orgInfo.phone}</td>
+                            <td class="table-field">公司网址：</td>
+                            <td>{$orgInfo.website}</td>
+                        </tr>
+                        </tr>
+                        <td class="table-field">公司地址：</td>
+                        <td>{$orgInfo.org_address}</td>
+                        </tr>
+                    </table>
+                </div>
+                <!--./基本信息-->
+                <!--兼职申请列表-->
+                <div class="panel panel-default ">
+                    <div class="panel-heading">申请列表</div>
+                    <div class="list-group">
+                        <if condition="isset($apply_error_info)">
+                            <li class="list-group-item">{$apply_error_info}</li>
+                            <else />
+                            <volist name="applylist" id="applylist">
+                                <li href="#" class="list-group-item"><a target="_blank" href="{:U('UserInfo/index')}&uid={$applylist.uid}">{$applylist.username}</a>申请了<a href="{:U('JobsInfo/index')}&jid={$applylist.jid}">{$applylist.title}</a><span class="btn-content"><button class="btn btn-success" data-app_id="{$applylist.app_id}" data-jid="{$applylist.jid}" data-uid="{$applylist.uid}">通过</button><button class="btn btn-danger" data-app_id="{$applylist.app_id}">拒绝</button></span></li>
+                            </volist>
+                        </if>
+                    </div>
+                </div>
+                <!--./兼职申请列表-->
+                <!--发布的兼职列表-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">发布的兼职</div>
+                    <div class="list-group">
+                        <volist name="publicedJobs" id="jobs">
+                            <a href="{:U(" JobsInfo/index ")}&jid={$jobs.jid}" target="_blank" class="list-group-item">{$jobs.title}<span class="badge">{$jobs.current_peo}/{$jobs.want_peo}</span></a>
+                        </volist>
+                    </div>
+                </div>
+                <!--./发布的兼职列表-->
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img src="{$orgInfo.headlogo}" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--footer-->
-<div class="container">
-  <hr />
-  <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-</div>
-<script type="text/javascript">
-	$(".panel button").click(function(){
-		$info = new Object();
-		$info.ispass = "no";
-		if($(this).attr("class") == 'btn btn-success'){
-			$info['ispass'] = "yes";
-			$info.uid = $(this).attr("data-uid");
-			$info.app_id = $(this).attr("data-app_id");
-			$info.jid = $(this).attr("data-jid");
-		}else if($(this).attr("class") == "btn btn-danger"){
-			$info.app_id = $(this).attr("data-app_id");
-		}
-		console.log($info);
-		//ajax
-		$.ajax({
-			url:"{:U('OrgCenter/isPass')}",
-			data:$info,
-			type:"GET",
-			success:function(data){
-				alert(data.info);
-			}
-		});
-
-	});
-</script>
-<!--./footer-->
-<script type="text/javascript">
-            swfobject.addDomLoadEvent(function () {
-                var swf = new fullAvatarEditor("./swf/fullAvatarEditor.swf", "./swf/expressInstall.swf", "swfContainer", {
-                        id : "swf",
-                        upload_url : "/upload.php?userid=999&username=looselive",
-                        method : "post",
-                        src_url : "./images/person.jpg",
-                        src_upload : 2
-                    },function(){
-
-                    }
-                );
-                document.getElementById("upload").onclick=function(){
-                    swf.call("upload");
-                };
+        <!--./container-->
+        <!--footer-->
+        <div class="container">
+            <hr />
+            <p class="text-center">小蜜蜂兼职</p>
+            <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+            <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+        </div>
+        <script type="text/javascript">
+        $(".panel button").click(function() {
+            $info = new Object();
+            $info.ispass = "no";
+            if ($(this).attr("class") == 'btn btn-success') {
+                $info['ispass'] = "yes";
+                $info.uid = $(this).attr("data-uid");
+                $info.app_id = $(this).attr("data-app_id");
+                $info.jid = $(this).attr("data-jid");
+            } else if ($(this).attr("class") == "btn btn-danger") {
+                $info.app_id = $(this).attr("data-app_id");
+            }
+            console.log($info);
+            //ajax
+            $.ajax({
+                url: "{:U('OrgCenter/isPass')}",
+                data: $info,
+                type: "GET",
+                success: function(data) {
+                    alert(data.info);
+                }
             });
+
+        });
+        </script>
+        <!--./footer-->
+        <script type="text/javascript">
+        swfobject.addDomLoadEvent(function() {
+            var swf = new fullAvatarEditor("./swf/fullAvatarEditor.swf", "./swf/expressInstall.swf", "swfContainer", {
+                id: "swf",
+                upload_url: "/upload.php?userid=999&username=looselive",
+                method: "post",
+                src_url: "./images/person.jpg",
+                src_upload: 2
+            }, function() {
+
+            });
+            document.getElementById("upload").onclick = function() {
+                swf.call("upload");
+            };
+        });
         </script>
 </body>
+
 </html>
