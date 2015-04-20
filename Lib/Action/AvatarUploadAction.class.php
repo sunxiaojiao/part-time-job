@@ -40,7 +40,7 @@ class AvatarUploadAction extends Action {
 				//原始文件的扩展名(不包含“.”)\
 				$sourceExtendName = substr($sourceFileName, strripos($sourceFileName, "."));
 				//保存路径
-				$savePath = "{$this->upload_url}\$filename.".$sourceExtendName;
+				$savePath = "{$this->upload_url}/".$filename.".".$sourceExtendName;
 				//当前头像基于原图的初始化参数（只有上传原图时才会发送该数据，且发送的方式为POST），用于修改头像时保证界面的视图跟保存头像时一致，提升用户体验度。
 				//修改头像时设置默认加载的原图url为当前原图url+该参数即可，可直接附加到原图url中储存，不影响图片呈现。
 				$init_params = $_POST["__initParams"];
