@@ -5,11 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>兼职平台</title>
-    <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-    <script src="./__GROUP__/js/jquery.min.js"></script>
-    <script src="./__GROUP__/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./__GROUP__/js/common.js"></script>
+    <include file="./Tpl/bootstrap/public/static.html" />
     <script type="text/javascript" src="./__GROUP__/js/fullAvatarEditor.js"></script>
     <script type="text/javascript" src="./__GROUP__/js/swfobject.js"></script>
     <style type="text/css">
@@ -119,7 +115,7 @@
                             <li class="list-group-item">{$apply_error_info}</li>
                             <else />
                             <volist name="applylist" id="applylist">
-                                <li href="#" class="list-group-item"><a target="_blank" href="{:U('UserInfo/index')}&uid={$applylist.uid}">{$applylist.username}</a>申请了<a href="{:U('JobsInfo/index')}&jid={$applylist.jid}">{$applylist.title}</a><span class="btn-content"><button class="btn btn-success" data-app_id="{$applylist.app_id}" data-jid="{$applylist.jid}" data-uid="{$applylist.uid}">通过</button><button class="btn btn-danger" data-app_id="{$applylist.app_id}">拒绝</button></span></li>
+                                <li href="#" class="list-group-item"><a target="_blank" href="{:U('UserInfo/index')}?uid={$applylist.uid}">{$applylist.username}</a>申请了<a href="{:U('JobsInfo/index')}?jid={$applylist.jid}">{$applylist.title}</a><span class="btn-content"><button class="btn btn-success" data-app_id="{$applylist.app_id}" data-jid="{$applylist.jid}" data-uid="{$applylist.uid}">通过</button><button class="btn btn-danger" data-app_id="{$applylist.app_id}">拒绝</button></span></li>
                             </volist>
                         </if>
                     </div>
@@ -130,7 +126,7 @@
                     <div class="panel-heading">发布的兼职</div>
                     <div class="list-group">
                         <volist name="publicedJobs" id="jobs">
-                            <a href="{:U(" JobsInfo/index ")}&jid={$jobs.jid}" target="_blank" class="list-group-item">{$jobs.title}<span class="badge">{$jobs.current_peo}/{$jobs.want_peo}</span></a>
+                            <a href="{:U("JobsInfo/index")}?jid={$jobs.jid}" target="_blank" class="list-group-item">{$jobs.title}<span class="badge">{$jobs.current_peo}/{$jobs.want_peo}</span></a>
                         </volist>
                     </div>
                 </div>

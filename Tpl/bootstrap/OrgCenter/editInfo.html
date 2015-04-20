@@ -4,14 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>兼职平台</title>
-
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-<script src="./__GROUP__/js/jquery.min.js"></script>
-<script src="./__GROUP__/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./__GROUP__/js/common.js"></script>
-<script type="text/javascript" src="./__GROUP__/js/fullAvatarEditor.js"></script>
-<script type="text/javascript" src="./__GROUP__/js/swfobject.js"></script>
+<include file="./Tpl/bootstrap/public/static.html" />
+<script type="text/javascript" src="/__GROUP__/js/fullAvatarEditor.js"></script>
+<script type="text/javascript" src="/__GROUP__/js/swfobject.js"></script>
 
 <style type="text/css">
   .panel-body{position: relative;}
@@ -97,7 +92,7 @@
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-body">
-          <img src="{$orgInfo.headlogo}" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+          <img src="{$orgInfo.avatar}" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
         </div>
       </div>
     </div>
@@ -136,18 +131,20 @@
 <script type="text/javascript">
             swfobject.addDomLoadEvent(function () {
                 var queryInfo = "";
-                var swf = new fullAvatarEditor("./__GROUP__/swf/fullAvatarEditor.swf", "./__GROUP__/swf/expressInstall.swf", "swfContainer", {
+                var swf = new fullAvatarEditor("/__GROUP__/swf/fullAvatarEditor.swf", "/__GROUP__/swf/expressInstall.swf", "swfContainer", {
                         id : "swf",
-                        upload_url : "{:U('AvatarUpload/upload')}" + queryInfo,
+                        upload_url : "{:U('AvatarUpload/upload')}",
                         method : "post",
+                        isShowUploadResultIcon : true,
                         src_url : "{$orgInfo.headlogo}",
                         src_upload : 2
                     },function(msg){
+                        // alert(msg.toString());
                         console.log(msg);
                         switch(msg.code)
                         {
-                            case 1 : alert("页面成功加载了组件！");break;
-                            case 2 : alert("已成功加载图片到编辑面板。");break;
+                            // case 1 : alert("页面成功加载了组件！");break;
+                            // case 2 : alert("已成功加载图片到编辑面板。");break;
                             case 3 :
                                 if(msg.type == 0)
                                 {

@@ -5,7 +5,7 @@ return array(
     //数据库配置
     'DB_DSN' => 'mysql://root@localhost:3306/think_job',
     
-    'URL_MODEL' => 0,
+    'URL_MODEL' => 2,
     'DEFAULT_THEME' => 'bootstrap',
     
     'TMPL_PARSE_STRING'  =>array(

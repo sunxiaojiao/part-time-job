@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>兼职平台</title>
-    <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-    <script src="./__GROUP__/js/jquery.min.js"></script>
-    <script src="./__GROUP__/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./__GROUP__/js/common.js"></script>
+    <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css">
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css">
+<script src="/__GROUP__/js/jquery.min.js"></script>
+<script src="/__GROUP__/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
     <script type="text/javascript" src="./__GROUP__/js/fullAvatarEditor.js"></script>
     <script type="text/javascript" src="./__GROUP__/js/swfobject.js"></script>
     <style type="text/css">
@@ -85,7 +85,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php">小蜜蜂兼职</a>
+      <a class="navbar-brand" href="/">小蜜蜂兼职</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -101,19 +101,30 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="index.php?m=UserCenter">个人中心</a></li>' : '<li><a href="index.php?m=OrgCenter">企业中心</a></li>'; $dropdown = <<<THINK
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
       	<li class="dropdown">
           <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             $info
-            <li><a href="index.php?m=PublishJobs">发布兼职</a></li>
-            <li><a href="index.php?m=ChangePasswd&a=index">修改密码</a></li>
+            <li><a href="/PublishJobs">发布兼职</a></li>
+            <li><a href="/ChangePasswd">修改密码</a></li>
             <li class="divider"></li>
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
         </li><!--/.dropdown-->
 THINK;
- if(session('?uid')){ echo $dropdown; }elseif(session('?oid')){ echo $dropdown; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+ $dropdown2 = <<<THINK
+        <li class="dropdown">
+          <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            $info
+            <li><a href="/ChangePasswd">修改密码</a></li>
+            <li class="divider"></li>
+            <li><a href="$logoutUrl">注销</a></li>
+          </ul>
+        </li><!--/.dropdown-->
+THINK;
+ if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -161,7 +172,7 @@ THINK;
                     <div class="list-group">
                         <?php if(isset($apply_error_info)): ?><li class="list-group-item"><?php echo ($apply_error_info); ?></li>
                             <?php else: ?>
-                            <?php if(is_array($applylist)): $i = 0; $__LIST__ = $applylist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$applylist): $mod = ($i % 2 );++$i;?><li href="#" class="list-group-item"><a target="_blank" href="<?php echo U('UserInfo/index');?>&uid=<?php echo ($applylist["uid"]); ?>"><?php echo ($applylist["username"]); ?></a>申请了<a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($applylist["jid"]); ?>"><?php echo ($applylist["title"]); ?></a><span class="btn-content"><button class="btn btn-success" data-app_id="<?php echo ($applylist["app_id"]); ?>" data-jid="<?php echo ($applylist["jid"]); ?>" data-uid="<?php echo ($applylist["uid"]); ?>">通过</button><button class="btn btn-danger" data-app_id="<?php echo ($applylist["app_id"]); ?>">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                            <?php if(is_array($applylist)): $i = 0; $__LIST__ = $applylist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$applylist): $mod = ($i % 2 );++$i;?><li href="#" class="list-group-item"><a target="_blank" href="<?php echo U('UserInfo/index');?>?uid=<?php echo ($applylist["uid"]); ?>"><?php echo ($applylist["username"]); ?></a>申请了<a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($applylist["jid"]); ?>"><?php echo ($applylist["title"]); ?></a><span class="btn-content"><button class="btn btn-success" data-app_id="<?php echo ($applylist["app_id"]); ?>" data-jid="<?php echo ($applylist["jid"]); ?>" data-uid="<?php echo ($applylist["uid"]); ?>">通过</button><button class="btn btn-danger" data-app_id="<?php echo ($applylist["app_id"]); ?>">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </div>
                 </div>
                 <!--./兼职申请列表-->
@@ -169,7 +180,7 @@ THINK;
                 <div class="panel panel-default">
                     <div class="panel-heading">发布的兼职</div>
                     <div class="list-group">
-                        <?php if(is_array($publicedJobs)): $i = 0; $__LIST__ = $publicedJobs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$jobs): $mod = ($i % 2 );++$i;?><a href="<?php echo U(" JobsInfo/index ");?>&jid=<?php echo ($jobs["jid"]); ?>" target="_blank" class="list-group-item"><?php echo ($jobs["title"]); ?><span class="badge"><?php echo ($jobs["current_peo"]); ?>/<?php echo ($jobs["want_peo"]); ?></span></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($publicedJobs)): $i = 0; $__LIST__ = $publicedJobs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$jobs): $mod = ($i % 2 );++$i;?><a href="<?php echo U("JobsInfo/index");?>?jid=<?php echo ($jobs["jid"]); ?>" target="_blank" class="list-group-item"><?php echo ($jobs["title"]); ?><span class="badge"><?php echo ($jobs["current_peo"]); ?>/<?php echo ($jobs["want_peo"]); ?></span></a><?php endforeach; endif; else: echo "" ;endif; ?>
                     </div>
                 </div>
                 <!--./发布的兼职列表-->

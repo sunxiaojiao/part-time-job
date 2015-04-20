@@ -5,10 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>兼职平台</title>
-    <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-    <script src="./__GROUP__/js/jquery.min.js"></script>
-    <script src="./__GROUP__/js/bootstrap.min.js"></script>
+    <include file="./Tpl/bootstrap/public/static.html" />
     <style type="text/css">
     </style>
 </head>
@@ -30,7 +27,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>       
+            </div>
         </div>
     </div>
     <!--./container-->
@@ -43,20 +40,20 @@
     </div>
     <!--./footer-->
     <script>
-    $("#login-form button").on('click',function() {
+    $("#login-form button").on('click', function() {
         //获取input值
         var info = new Object();
         info.username = $("#login-form input").eq(0).val();
-        info.passwd   = $("#login-form input").eq(1).val();
+        info.passwd = $("#login-form input").eq(1).val();
         console.log(info);
         //ajax
         $.ajax({
-            url:"{:U('Admin/loginHandler')}",
-            data:info,
-            type:"POST",
-            success:function(data) {
+            url: "{:U('Admin/loginHandler')}",
+            data: info,
+            type: "POST",
+            success: function(data) {
                 alert(data.info);
-                if( data.status == 1 ) {
+                if (data.status == 1) {
                     location.href = "{:U('Admin/index')}";
                 }
             }

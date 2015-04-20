@@ -3,13 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
-
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-<script src="./__GROUP__/js/jquery.min.js"></script>
-<script src="./__GROUP__/js/bootstrap.min.js"></script>
-
+	<title>登录</title>
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css">
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css">
+<script src="/__GROUP__/js/jquery.min.js"></script>
+<script src="/__GROUP__/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
 <style type="text/css">
   .red{color:#F00;}
   .panel-body{position: relative;}
@@ -28,7 +27,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php">小蜜蜂兼职</a>
+      <a class="navbar-brand" href="/">小蜜蜂兼职</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -44,7 +43,7 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="index.php?m=UserCenter">个人中心</a></li>' : '<li><a href="index.php?m=OrgCenter">企业中心</a></li>'; $dropdown = <<<THINK
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? "<li><a href='U(\"UserCenter/index\")'>个人中心</a></li>" : "<li><a href='U(\"OrgCenter\")'>企业中心</a></li>"; $dropdown = <<<THINK
       	<li class="dropdown">
           <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -156,7 +155,7 @@ $("#verify>img").click(function(){
         switch (data){
           case 0:
             str = '登录成功';
-            setTimeout(function(){location.href = 'index.php';},1000);
+            setTimeout(function(){location.href = '/index.php';},1000);
             break;
           case 2:
             str = '密码错误';
@@ -168,7 +167,7 @@ $("#verify>img").click(function(){
             str = '验证码错误';
             break;
           case 5:
-            str =   '用户不存在';
+            str = '用户不存在';
             break;
         }
         console.log(str);
