@@ -55,7 +55,7 @@
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
         <div class="form-group">
-          <input type="text" class="form-control" name="wd" placeholder="输入关键词">
+          <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
@@ -94,7 +94,7 @@ THINK;
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="alert alert-success">共搜索到<?php echo ($result["count"]); ?>条</div>
+                <div class="alert alert-success">共搜索到<?php echo (($result["count"])?($result["count"]): 0); ?>条</div>
                 <div class="panel panel-primary">
                     <ul class="list-group">
                         <?php if(isset($error_info)): ?><li class="list-group-item"><?php echo ($error_info); ?></li>

@@ -33,7 +33,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="alert alert-success">共搜索到{$result.count}条</div>
+                <div class="alert alert-success">共搜索到{$result.count|default = 0}条</div>
                 <div class="panel panel-primary">
                     <ul class="list-group">
                         <if condition="isset($error_info)">

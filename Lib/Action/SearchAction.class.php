@@ -11,13 +11,14 @@ class SearchAction extends Action {
 		$result = $data;
 		//dump($result);
 		//采用thinkphp的原生SQL，当结果为空时，返回的是空数组
-		if($result) {
+		if($result && $result['count'] != 0) {
 			$this->assign("result",$result);
 		}elseif($result === false) {
 			$this->assign("error_info","搜索错误");
 		}else{
 			$this->assign("error_info","搜素结果为空");
 		}
+		//dump($result);
 		$this->display('index');
 	}
 	/**
@@ -42,7 +43,6 @@ class SearchAction extends Action {
 		$sql  = "SELECT jid,title,address,money FROM `xm_jobs` WHERE `title` LIKE BINARY '%" . $this->word . "%'";
 		$data = $Jobs->query($sql);
 		//通过直接获取结果数组的长度来，减轻了数据库的压力
-		dump(count($data));
 		$data['count'] = count($data);
 		//dump($Jobs->getLastSql());
 		$this->index($data);
