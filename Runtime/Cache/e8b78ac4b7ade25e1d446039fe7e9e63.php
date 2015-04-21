@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>兼职平台</title>
 
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-<link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-<script src="./__GROUP__/js/jquery.min.js"></script>
-<script src="./__GROUP__/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css">
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css">
+<script src="/__GROUP__/js/jquery.min.js"></script>
+<script src="/__GROUP__/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
 
 <style type="text/css">
 #banner{height:200px; margin-bottom:12px;}
@@ -91,19 +92,19 @@ THINK;
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="./__GROUP__/images/1.jpg" alt="...">
+      <img src="/__GROUP__/images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="./__GROUP__/images/1.jpg" alt="...">
+      <img src="/__GROUP__/images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="./__GROUP__/images/1.jpg" alt="...">
+      <img src="/__GROUP__/images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>

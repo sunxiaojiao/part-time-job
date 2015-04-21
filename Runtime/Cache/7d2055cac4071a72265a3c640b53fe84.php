@@ -96,19 +96,19 @@ THINK;
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="./images/1.jpg" alt="...">
+      <img src="/__GROUP__/images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="./images/1.jpg" alt="...">
+      <img src="/__GROUP__/images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="./images/1.jpg" alt="...">
+      <img src="/__GROUP__/images/1.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>

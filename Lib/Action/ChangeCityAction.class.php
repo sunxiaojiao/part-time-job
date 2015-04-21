@@ -15,7 +15,7 @@ class ChangeCityAction extends Action{
 		if($data){
 			$this->assign("addr",$data);
 		}
-		dump($data);
+		//dump($data);
 		$this->display();
 	}
 	//切换城市

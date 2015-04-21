@@ -51,7 +51,7 @@ class JobsInfoAction extends Action{
 			if(!in_array($this->jid,$arr)){
 				$Job->where("jid=".$this->jid)->setInc("pv",1);
 				$arr[] = $this->jid;
-				dump($arr);
+				//dump($arr);
 				cookie($cookie,serialize($arr),array('expire'=>3600*6));
 			}
 		}
