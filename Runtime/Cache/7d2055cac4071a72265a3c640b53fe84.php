@@ -52,19 +52,30 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="index.php?m=UserCenter">个人中心</a></li>' : '<li><a href="index.php?m=OrgCenter">企业中心</a></li>'; $dropdown = <<<THINK
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
       	<li class="dropdown">
           <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             $info
-            <li><a href="index.php?m=PublishJobs">发布兼职</a></li>
-            <li><a href="index.php?m=ChangePasswd&a=index">修改密码</a></li>
+            <li><a href="/PublishJobs">发布兼职</a></li>
+            <li><a href="/ChangePasswd">修改密码</a></li>
             <li class="divider"></li>
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
         </li><!--/.dropdown-->
 THINK;
- if(session('?uid')){ echo $dropdown; }elseif(session('?oid')){ echo $dropdown; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+ $dropdown2 = <<<THINK
+        <li class="dropdown">
+          <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            $info
+            <li><a href="/ChangePasswd">修改密码</a></li>
+            <li class="divider"></li>
+            <li><a href="$logoutUrl">注销</a></li>
+          </ul>
+        </li><!--/.dropdown-->
+THINK;
+ if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->

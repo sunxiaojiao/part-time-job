@@ -3,6 +3,7 @@ class JobsInfoAction extends Action{
 	private $jid;
 	public function index(){
 		$this->assignIt();
+		$this->recordClickNum();
 		session("jid",$this->jid);
 		$this->display();
 	}
@@ -13,14 +14,14 @@ class JobsInfoAction extends Action{
 	 */
 	private function read(){
 		$this->jid =  $this->_get('jid');
-		$Users = M('Jobs');
-		$list = $Users->where("jid=".$this->jid)->limit(1)->select();
+		$Job = M('Jobs');
+		$list = $Job->where("jid=".$this->jid)->find();
 		if($list){
 			if(is_null($list)){
 				//无记录
 				return 1;
 			}else{
-				return $list[0];
+				return $list;
 			}
 		}else{
 			return 0;
@@ -36,6 +37,25 @@ class JobsInfoAction extends Action{
 				$this->assign($key,$value);
 			}
 		}
+	}
+	protected function recordClickNum() {
+		$Job    = M('jobs');
+		$cookie = "hadclick";
+//		$path   = __URL__."/".$this->jid;
+		dump($path);
+		if(cookie($cookie) == ''){
+			$Job->where("jid=".$this->jid)->setInc("pv",1);
+			cookie($cookie,serialize(array($this->jid)),array('expire'=>3600*6));
+		}else{
+			$arr =unserialize(cookie($cookie));
+			if(!in_array($this->jid,$arr)){
+				$Job->where("jid=".$this->jid)->setInc("pv",1);
+				$arr[] = $this->jid;
+				dump($arr);
+				cookie($cookie,serialize($arr),array('expire'=>3600*6));
+			}
+		}
+		
 	}
 }
 ?>

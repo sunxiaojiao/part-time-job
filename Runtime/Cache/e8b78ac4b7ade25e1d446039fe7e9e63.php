@@ -148,7 +148,7 @@ THINK;
 				    <div role="tabpanel" class="tab-pane active" id="newest">
 				    	<!-- 兼职列表 -->
 					  <ul class="list-group">
-						<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($job["jid"]); ?>" class="list-group-item"><?php echo ($job["title"]); ?>
+						<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($job["jid"]); ?>" class="list-group-item"><?php echo ($job["title"]); ?>
 					    	
 					    	<?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
 						    <span class="my-partjob-address">
@@ -181,7 +181,7 @@ THINK;
 			<div class="panel panel-default">
 				<div class="panel-heading">关于小蜜蜂</div>
 				<div class="panel-body">
-					<img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+					<img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
 				</div>
 			</div>
 		</div>

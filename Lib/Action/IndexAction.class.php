@@ -13,7 +13,7 @@ class IndexAction extends Action{
     	$Jobs = M('Jobs');
     	$Jobs->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
     	import('ORG.Util.Page');
-    	$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=1";
+    	$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
     	$count = $Jobs->where($where)->count();
     	$Page  = new Page($count,10);
 		$list  = $Jobs->order('ctime desc')

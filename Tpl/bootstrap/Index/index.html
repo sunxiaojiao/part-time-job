@@ -94,7 +94,7 @@
 				    	<!-- 兼职列表 -->
 					  <ul class="list-group">
 						<volist name="list" id="job">
-					    <a href="{:U('JobsInfo/index')}&jid={$job.jid}" class="list-group-item">{$job.title}
+					    <a href="{:U('JobsInfo/index')}?jid={$job.jid}" class="list-group-item">{$job.title}
 					    	{//新增的一个小时内，显示new，3600为一个小时}
 					    	<if condition="time()-$job['ctime'] elt 3600">
 						    <span class="label label-danger">New</span>
@@ -130,7 +130,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">关于小蜜蜂</div>
 				<div class="panel-body">
-					<img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+					<img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
 				</div>
 			</div>
 		</div>

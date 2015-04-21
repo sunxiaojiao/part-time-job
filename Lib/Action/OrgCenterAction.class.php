@@ -55,7 +55,7 @@ class OrgCenterAction extends Action{
 		$where = "oid=".session('oid');
 		$field = "oid,passwd";
 		$arr_info = $Org->field($field,true)->where($where)->find();
-		dump($arr_info);
+		//dump($arr_info);
 		if($arr_info){
 			$this->assign("orgInfo",$arr_info);
 		}else{

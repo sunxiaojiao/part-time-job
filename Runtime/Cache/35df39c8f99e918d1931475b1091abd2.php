@@ -10,8 +10,6 @@
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
-    <script type="text/javascript" src="./__GROUP__/js/fullAvatarEditor.js"></script>
-    <script type="text/javascript" src="./__GROUP__/js/swfobject.js"></script>
     <style type="text/css">
     .panel-body {
         position: relative;
@@ -188,7 +186,7 @@ THINK;
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img src="<?php echo ($orgInfo["headlogo"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+                        <img src="<?php echo ($orgInfo["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
                     </div>
                 </div>
             </div>
@@ -227,22 +225,6 @@ THINK;
         });
         </script>
         <!--./footer-->
-        <script type="text/javascript">
-        swfobject.addDomLoadEvent(function() {
-            var swf = new fullAvatarEditor("./swf/fullAvatarEditor.swf", "./swf/expressInstall.swf", "swfContainer", {
-                id: "swf",
-                upload_url: "/upload.php?userid=999&username=looselive",
-                method: "post",
-                src_url: "./images/person.jpg",
-                src_upload: 2
-            }, function() {
-
-            });
-            document.getElementById("upload").onclick = function() {
-                swf.call("upload");
-            };
-        });
-        </script>
 </body>
 
 </html>

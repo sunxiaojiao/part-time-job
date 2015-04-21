@@ -91,7 +91,7 @@ THINK;
       <form method="post" action="" id="edit-info">
         <div class="">
           <label>认证状态：</label><?php if($orgInfo["is_validate"] == 0): ?><span>未认证</span><?php else: ?><span>已认证</span><?php endif; ?>
-          <button class="btn btn-primary"><a href="<?php echo U('OrgAuth/index');?>">认证</a></button>
+          <button class="btn btn-primary"><a class="btn-primary" href="<?php echo U('OrgAuth/index');?>">认证</a></button>
         </div>
         <div class="form-group">
           <label for="username">所在地：</label>
