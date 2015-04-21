@@ -41,8 +41,6 @@ class JobsInfoAction extends Action{
 	protected function recordClickNum() {
 		$Job    = M('jobs');
 		$cookie = "hadclick";
-//		$path   = __URL__."/".$this->jid;
-		dump($path);
 		if(cookie($cookie) == ''){
 			$Job->where("jid=".$this->jid)->setInc("pv",1);
 			cookie($cookie,serialize(array($this->jid)),array('expire'=>3600*6));
