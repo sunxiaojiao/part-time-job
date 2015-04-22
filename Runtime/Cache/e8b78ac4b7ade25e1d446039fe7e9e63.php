@@ -45,12 +45,14 @@
     .my-partjob-address {
         left: 200px;
     }
-    .assort{
-		overflow: hidden;
+    
+    .assort {
+        overflow: hidden;
     }
-	.assort>li>a{
-		display: inline-block;
-	}
+    
+    .assort>li>a {
+        display: inline-block;
+    }
     </style>
 </head>
 
@@ -176,15 +178,17 @@ THINK;
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="newest">
                                 <!--分类选择-->
-                                <ul class=" list-group assort">
+                                <ul class="list-group assort">
                                     <li class="list-group-item">
-                                        <a class="">时间<span class="glyphicon glyphicon-chevron-down"></span></a><a class="my-partjob-address">地点<span class="glyphicon glyphicon-chevron-down"></span></a><a class="my-partjob-money">工资<span class="glyphicon glyphicon-chevron-down"></span></a><a class="my-explor">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?sort=<?php echo ($arr_sort["ctime"]); ?>" class="my-partjob-time">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?sort=<?php echo ($arr_sort["address"]); ?>" class="my-partjob-address">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?sort=<?php echo ($arr_sort["money"]); ?>" class="my-partjob-money">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?sort=<?php echo ($arr_sort["pv"]); ?>" class="my-explor">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
                                     </li>
                                 </ul>
                                 <!--/分类选择-->
                                 <!-- 兼职列表 -->
                                 <ul class="list-group">
-
                                     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($job["jid"]); ?>" class="list-group-item"><?php echo ($job["title"]); ?>
 					    	
 					    	<?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
@@ -231,6 +235,55 @@ THINK;
         <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
     </div>
     <!--footer-end-->
+    <script>
+    $(".assort a").on('click', function() {
+        //var cla  = $(this).attr('class');
+        link = $(this).attr('href');
+        // if(link.substr(link.length-1,1) == '0') {
+        // 	$(this).attr('href',link.substr(0,link.length-1) + "1");
+        // }else if(link.substr(link.length-1,1) == '1') {
+        // 	$(this).attr('href',link.substr(0,link.length-1) + "0")
+        // }
+        //var data = new Object();
+        // switch(cla){
+        // 	case 'my-partjob-time':
+        // 		if($(this).attr('h') = 10){
+
+        // 		}
+        // 		break;
+        // 	case 'my-partjob-address':
+        // 		data.order = 20;
+        // 		break;
+        // 	case 'my-partjob-money':
+        // 		data.order = 30;
+        // 		break;
+        // 	case 'my-partjob-explor':
+        // 		data.order = 40;
+        // 		break;
+        // }
+
+        // $.ajax({
+        // 	url:"U('Admin/index')",
+        // data:data,
+        // type:"POST"
+        // });
+    });
+    $(document).on('ready', function() {
+        var list = $(".assort .glyphicon").parent();
+        console.log(list);
+        for (var i = 0; i < list.length; i++) {
+            var thehref = list.eq(i).attr('href');
+            var thelast = thehref.substr(thehref.length - 1, 2);
+            var unexpect_last = thehref.substr(0, thehref.length - 1);
+            console.log(thelast);
+            if (thehref.substr(list.eq(i).attr('href').length - 1, 1) == 1) {
+                $(".assort .glyphicon").eq(i).removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+            } else {
+                $(".assort .glyphicon").eq(i).removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+            }
+        }
+    });
+    </script>
 </body>
 
 </html>

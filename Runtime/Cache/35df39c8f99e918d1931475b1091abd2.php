@@ -5,8 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>兼职平台</title>
-    <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css">
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css">
+    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
+<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
@@ -91,9 +93,9 @@
         <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
       </ul>
 
-      <form class="navbar-form navbar-left" role="search">
+      <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="输入关键词">
+          <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
