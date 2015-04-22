@@ -43,7 +43,7 @@
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
         <div class="form-group">
-          <input type="text" class="form-control" name="wd" placeholder="输入关键词">
+          <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>

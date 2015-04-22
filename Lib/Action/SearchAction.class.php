@@ -10,9 +10,12 @@ class SearchAction extends Action {
 	public function index($data) {
 		$result = $data;
 		//dump($result);
+		//通过直接获取结果数组的长度来，减轻了数据库的压力
+		$count = count($data);
 		//采用thinkphp的原生SQL，当结果为空时，返回的是空数组
-		if($result && $result['count'] != 0) {
+		if($result && $count != 0) {
 			$this->assign("result",$result);
+			$this->assign("count",$count);
 		}elseif($result === false) {
 			$this->assign("error_info","搜索错误");
 		}else{
@@ -42,8 +45,6 @@ class SearchAction extends Action {
 		//$sql  = "SELECT jid,title,address,money FROM `xm_jobs` WHERE `title` LIKE BINARY CONCAT('%',UPPER('" . $this->word . "'),'%')";
 		$sql  = "SELECT jid,title,address,money FROM `xm_jobs` WHERE `title` LIKE BINARY '%" . $this->word . "%'";
 		$data = $Jobs->query($sql);
-		//通过直接获取结果数组的长度来，减轻了数据库的压力
-		$data['count'] = count($data);
 		//dump($Jobs->getLastSql());
 		$this->index($data);
 	}

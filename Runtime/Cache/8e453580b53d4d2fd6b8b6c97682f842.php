@@ -94,7 +94,7 @@ THINK;
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="alert alert-success">共搜索到<?php echo (($result["count"])?($result["count"]): 0); ?>条</div>
+                <div class="alert alert-success">共搜索到<?php echo (($count)?($count): 0); ?>条</div>
                 <div class="panel panel-primary">
                     <ul class="list-group">
                         <?php if(isset($error_info)): ?><li class="list-group-item"><?php echo ($error_info); ?></li>
