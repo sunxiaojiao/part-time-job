@@ -10,6 +10,7 @@ class IndexAction extends Action{
 	 * 默认30分钟内添加的显示 NEW 徽章
 	 */
 	public function index(){
+		//设置分类排序
 		$order_flag = $this->_get('sort');
 		$order = "ctime desc";
 		$order_flag_first_num = substr($order_flag,0,1);
@@ -41,13 +42,6 @@ class IndexAction extends Action{
 		}
 		
 		$this->assign("arr_sort",$arr_sort);
-		//    	if(!cookie('toggle')){//如果没有设置cookie
-		//    		$arr = array('ctime'=>10,'address'=>20,'money'=>30,'pv'=>40);
-		//    		cookie(serialize($arr));
-		//    	}else{
-		//    		//$cookie_arr =unserialize(cookie('toggle'));
-		//    		//cookie();
-		//    	}
 		$Jobs = M('Jobs');
 		$Jobs->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
 		import('ORG.Util.Page');

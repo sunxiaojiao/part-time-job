@@ -275,7 +275,6 @@ THINK;
             var thehref = list.eq(i).attr('href');
             var thelast = thehref.substr(thehref.length - 1, 2);
             var unexpect_last = thehref.substr(0, thehref.length - 1);
-            console.log(thelast);
             if (thehref.substr(list.eq(i).attr('href').length - 1, 1) == 1) {
                 $(".assort .glyphicon").eq(i).removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
             } else {
