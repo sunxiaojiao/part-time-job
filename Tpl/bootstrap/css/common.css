@@ -1,0 +1,36 @@
+@charset "utf-8";
+/*公共css*/
+.navbar ul.sort-search{
+	margin-left: 40px;
+}
+.list-options{
+    overflow: hidden;
+    padding:4px 0;
+}
+.list-options>li{
+    list-style: none;
+    outline: 1px solid #DDD;
+    float: left;
+    margin:0 4px;
+/*    padding:4px 8px;*/
+}
+.list-options>li>a{
+    display: block;
+    width:inherit;
+    height:inherit;
+    padding:4px 8px;
+    transition: .4s all ease-out;
+   -moz-transition: .4s all ease-out;
+    -wekit-transition: .4s all ease-out;
+    -ms-transition: .4s all ease-out;
+    -o-transition: .4s all ease-out;
+}
+.my-title{
+    float: left;
+    font: 16px/38px "";
+}
+.list-options>li>a:hover,.list-options>li>a:focus{
+    text-decoration: none;
+    background: #DDD;
+    color:#888; 
+}

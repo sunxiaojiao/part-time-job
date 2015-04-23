@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>分类查找|更快捷的兼职搜索</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+        .my-label{
+            margin:0 2px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header.html" />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">分类检索</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item clear-fix"><span class="my-title">类型：</span>
+                                <ul class="list-options">
+                            <volist name="molds" id="molds">
+<!--
+                                <label class="checkbox-inline my-label">
+                                    <input type="checkbox" id="" name="intent" value="{$molds.mid}">{$molds.name}
+                                </label>
+-->
+                                
+                                <li><a href="{:U('SortSearch/search')}?">{$molds.name}</a></li>
+                            </volist>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><span class="my-title">工资：</span>
+                                <ul class="list-options">
+                                    <li class="my-options"><a href="{:U('SortSearch/search')}" class="">1-50</a></li>
+                                    <li class="my-options"><a href="{:U('SortSearch/search')}">50-100</a></li>
+                                    <li class="my-options"><a href="{:U('SortSearch/search')}">100-200</a></li>
+                                    <li class="my-options"><a href="{:U('SortSearch/search')}">200以上</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="my-title">地点：</span>
+                                <ul class="list-options">
+         <volist name="address" id="address">
+                                    <li class="my-options"><a href="{:U('SortSearch/search')}" class="">{$address.area}</a></li>
+                                    </volist>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="my-title">认证：</span>
+                                <ul class="list-options">
+                                    <li><a href="{:U('SortSearch/search')}">已认证</a></li>
+                                    <li><a href="{:U('SortSearch/search')}">未认证</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="my-title">人数：</span>
+                            <ul class="list-options">
+                                <li><a href="{:U('SortSearch/search')}">1-2</a></li>
+                                <li><a href="{:U('SortSearch/search')}">2-5</a></li>
+                                <li><a href="{:U('SortSearch/search')}">5-10</a></li>
+                                <li><a href="{:U('SortSearch/search')}">10-30</a></li>
+                                <li><a href="{:U('SortSearch/search')}">30以上</a></li>
+                            </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="my-title">工作时长：</span>
+                            <ul class="list-options">
+                                <li><a href="{:U('SortSearch/search')}">1小时以下</a></li>
+                                <li><a href="{:U('SortSearch/search')}">2-6小时</a></li>
+                                <li><a href="{:U('SortSearch/search')}">一天以上</a></li>
+                            </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="my-title">工作时间段：</span>
+                            <ul class="list-options">
+                                <li><a href="{:U('SortSearch/search')}">6点-9点</a></li>
+                                <li><a href="{:U('SortSearch/search')}">9点-12点</a></li>
+                                <li><a href="{:U('SortSearch/search')}">12点-15点</a></li>
+                                <li><a href="{:U('SortSearch/search')}">15点-18点</a></li>
+                                <li><a href="{:U('SortSearch/search')}">18点-22点</a></li>
+                                <li><a href="{:U('SortSearch/search')}">凌晨-6点</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Library</a></li>
+                            <li class="active">Data</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <ul class="list-group">
+                        <if condition="$error_info">
+                            <li class="list-group-item">{$error_info}</li>
+                        <else />
+                        
+                        <volist name="job_list" id="job">
+                            <li class="list-group-item">{$job.title}</li>
+                        </volist>
+                        </if>
+                    </ul>
+                    <nav>
+                        <ul class="pagination">
+                        {$page}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+    </div>
+    <!--./container-->
+    <!--footer-->
+    <include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+    <script>
+    </script>
+</body>
+
+</html>

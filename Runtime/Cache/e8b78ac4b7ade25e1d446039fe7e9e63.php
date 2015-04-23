@@ -9,6 +9,7 @@
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
@@ -81,7 +82,9 @@
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
-
+      <ul class="nav navbar-nav sort-search">
+        <li class=""><a href="<?php echo U('SortSearch/index');?>">分类查找</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
       <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
       	<li class="dropdown">
@@ -180,7 +183,7 @@ THINK;
                                 <!--分类选择-->
                                 <ul class="list-group assort">
                                     <li class="list-group-item">
-                                        <a href="index.php?sort=<?php echo ($arr_sort["ctime"]); ?>" class="my-partjob-time">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?	sort=<?php echo ($arr_sort["ctime"]); ?>" class="my-partjob-time">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
                                         <a href="index.php?sort=<?php echo ($arr_sort["address"]); ?>" class="my-partjob-address">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
                                         <a href="index.php?sort=<?php echo ($arr_sort["money"]); ?>" class="my-partjob-money">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
                                         <a href="index.php?sort=<?php echo ($arr_sort["pv"]); ?>" class="my-explor">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
@@ -228,12 +231,12 @@ THINK;
     </div>
     <!--end container-->
     <!--footer-->
-    <div class="container">
-        <hr />
-        <p class="text-center">小蜜蜂兼职</p>
-        <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-        <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-    </div>
+<div class="container">
+  <hr />
+  <p class="text-center">小蜜蜂兼职</p>
+  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+</div>
     <!--footer-end-->
     <script>
     $(".assort a").on('click', function() {
