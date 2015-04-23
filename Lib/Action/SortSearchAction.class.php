@@ -21,8 +21,23 @@ class SortSearchAction extends Action{
 	 * @param time    时间段
 	 */
 	public function search() {
+		$all_fields = array('style','wage','address','isvld','peonum','wt','time');
 		$this->showMolds();
 		$this->showAddress();
+		//设置标签URL
+		$nurl = __SELF__;
+		dump($nurl);
+		foreach($all_fields as $value){
+			$the_url = "";
+			if(strpos($nurl, $value)){
+				if($the_url = preg_replace("/$value=.*?&/", '', $nurl)){
+					$the_url = preg_replace("/$value=.*?$/", '', $nurl);
+				}
+			}else{
+				$the_url = $nurl;
+			}
+			$this->assign("now_url_".$value,$the_url);
+		}
 		//获取get
 		$filter = "";
 		$arr_get;
@@ -50,7 +65,7 @@ class SortSearchAction extends Action{
 		$field = "";
 		import('ORG.Util.Page');
 		$count = $Job->where($where)->count();
-		$Page  = new Page($count,2);
+		$Page  = new Page($count,20);
 		$show = $Page->show();
 		$this->assign("page",$show);
 		$arr2 = $Job->field($field)

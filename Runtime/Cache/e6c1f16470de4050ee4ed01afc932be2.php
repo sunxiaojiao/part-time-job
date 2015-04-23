@@ -14,10 +14,6 @@
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
-        .my-label{
-            margin:0 2px;
-        }
-        
     </style>
 </head>
 
@@ -95,57 +91,57 @@ THINK;
                                 </label>
 -->
                                 
-                                <li><a href="<?php echo U('SortSearch/search');?>?"><?php echo ($molds["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <li><a href="<?php echo ($now_url_style); ?>"><?php echo ($molds["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                             </li>
                             <li class="list-group-item"><span class="my-title">工资：</span>
                                 <ul class="list-options">
-                                    <li class="my-options"><a href="<?php echo U('SortSearch/search');?>" class="">1-50</a></li>
-                                    <li class="my-options"><a href="<?php echo U('SortSearch/search');?>">50-100</a></li>
-                                    <li class="my-options"><a href="<?php echo U('SortSearch/search');?>">100-200</a></li>
-                                    <li class="my-options"><a href="<?php echo U('SortSearch/search');?>">200以上</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>" class="">1-50</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>">50-100</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>">100-200</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>">200以上</a></li>
                                 </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">地点：</span>
                                 <ul class="list-options">
-         <?php if(is_array($address)): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$address): $mod = ($i % 2 );++$i;?><li class="my-options"><a href="<?php echo U('SortSearch/search');?>" class=""><?php echo ($address["area"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+         <?php if(is_array($address)): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$address): $mod = ($i % 2 );++$i;?><li class="my-options"><a href="<?php echo ($now_url_address); ?>" class=""><?php echo ($address["area"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">认证：</span>
                                 <ul class="list-options">
-                                    <li><a href="<?php echo U('SortSearch/search');?>">已认证</a></li>
-                                    <li><a href="<?php echo U('SortSearch/search');?>">未认证</a></li>
+                                    <li><a href="<?php echo ($now_url_isvla); ?>">已认证</a></li>
+                                    <li><a href="<?php echo ($now_url_isvla); ?>">未认证</a></li>
                                 </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">人数：</span>
                             <ul class="list-options">
-                                <li><a href="<?php echo U('SortSearch/search');?>">1-2</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">2-5</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">5-10</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">10-30</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">30以上</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>">1-2</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>">2-5</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>">5-10</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>">10-30</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>">30以上</a></li>
                             </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">工作时长：</span>
                             <ul class="list-options">
-                                <li><a href="<?php echo U('SortSearch/search');?>">1小时以下</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">2-6小时</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">一天以上</a></li>
+                                <li><a href="<?php echo ($now_url_wk); ?>">1小时以下</a></li>
+                                <li><a href="<?php echo ($now_url_wk); ?>">2-6小时</a></li>
+                                <li><a href="<?php echo ($now_url_wk); ?>">一天以上</a></li>
                             </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">工作时间段：</span>
                             <ul class="list-options">
-                                <li><a href="<?php echo U('SortSearch/search');?>">6点-9点</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">9点-12点</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">12点-15点</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">15点-18点</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">18点-22点</a></li>
-                                <li><a href="<?php echo U('SortSearch/search');?>">凌晨-6点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>">6点-9点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>">9点-12点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>">12点-15点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>">15点-18点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>">18点-22点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>">凌晨-6点</a></li>
                             </ul>
                             </li>
                         </ul>
