@@ -45,7 +45,7 @@ class SortSearchAction extends Action{
 //				 /*"isvalidate="  .*/ $this->isNullThenNull($arr_get['isvld'])   . " AND "       .
 				 /*"want_peo="    .*/ $this->isNullThenNull($arr_get['peonum'],"want_peo","AND") .
 				 /*"work_time="   .*/ $this->isNullThenNull($arr_get['wt'],"work_time","AND")    .
-				 /*"begin_time="  .*/ $this->isNullThenNull($arr_get['time'],"begin_time");
+				 /*"begin_time="  .*/ $this->isNullThenNull($arr_get['time'],"begin_time","AND") . "1=1";
 		dump($where);
 		$field = "";
 		import('ORG.Util.Page');

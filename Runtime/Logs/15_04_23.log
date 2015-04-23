@@ -261,3 +261,24 @@ NOTIC: 建议使用I方法替代_get
 [ 2015-04-23T22:14:27+08:00 ] 127.0.0.1 /SortSearch/search.html?wage=1000
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-04-23T22:22:00+08:00 ] 127.0.0.1 /SortSearch/search.html?wage=1000
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-23T22:22:42+08:00 ] 127.0.0.1 /SortSearch/search.html?wage=1000
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-23T22:22:57+08:00 ] 127.0.0.1 /SortSearch/search.html?peonum=100
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-23T22:23:43+08:00 ] 127.0.0.1 /SortSearch/search.html?peonum=10
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-23T22:23:49+08:00 ] 127.0.0.1 /SortSearch/search/peonum/10/p/2.html
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-23T22:24:47+08:00 ] 127.0.0.1 /SortSearch/search/peonum/10/p/2.html?wage=2000
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
