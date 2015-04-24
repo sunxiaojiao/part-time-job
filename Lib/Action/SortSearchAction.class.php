@@ -65,16 +65,18 @@ class SortSearchAction extends Action{
 		/*"work_time="   .*/ $this->strongWhere($arr_get['wt'],"work_time","AND",'',":")    .
 		/*"begin_time="  .*/ $this->strongWhere($arr_get['time'],"begin_time","AND",'',":") . "1=1";
 		dump($where);
-		$field = "";
+		$field = "xm_jobs.title AS title";
+		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid" . $this->strongWhere($arr_get['isvld'], 'xm_orgs.is_validate', 'AND', true);
 		import('ORG.Util.Page');
-		$count = $Job->where($where)->count();
+		$count = $Job->where($where)->join($join)->count();
 		$Page  = new Page($count,20);
-		$show = $Page->show();
+		$show  = $Page->show();
 		$this->assign("page",$show);
 		$arr2 = $Job->field($field)
-		->limit($Page->firstRow.','.$Page->listRows)
-		->where($where)
-		->select();
+					->join($join)
+					->limit($Page->firstRow.','.$Page->listRows)
+					->where($where)
+					->select();
 		if($arr2){
 			$this->assign("job_list",$arr2);
 		}elseif(is_null($arr2)){
@@ -114,7 +116,7 @@ class SortSearchAction extends Action{
 	 * @param $variable
 	 * @param $field
 	 * @param $operator
-	 * @param $location 除true，其他值都会令其变为false，默认为false; ture在前面加一个空格，false在后面加一个空格
+	 * @param $location 除true，其他值都会令其变为false，默认为false; ture在前面加空格和逻辑运算符，false在后面空格和逻辑运算符
 	 * @param $betweenAnd 将传入值$variable分割，使用between and
 	 */
 	protected function strongWhere($variable,$field,$operator,$location,$betweenAnd) {
@@ -141,10 +143,10 @@ class SortSearchAction extends Action{
 				return " " . $operator . " " . $field . " BETWEEN " . $arr[0] . " AND " . $arr[1];
 			}else{
 				if($arr[1] == 'max'){
-					return  $field . " > " . $arr[0] . " AND " .  " " .$operator . " ";
+					return  $field . " > " . $arr[0] . " " .$operator . " ";
 				}
 				if($arr[0] == 'min'){
-					return  $field . " < " . $arr[1] . " AND " .  " " .$operator . " ";
+					return  $field . " < " . $arr[1] . " " .$operator . " ";
 				}
 				return  $field . " BETWEEN " . $arr[0] . " AND " . $arr[1] . " " .$operator . " ";
 			}
