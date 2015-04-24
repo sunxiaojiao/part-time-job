@@ -7,7 +7,7 @@ class SortSearchAction extends Action{
 		dump($this->isNullThenNull(123, "test","AND"));
 		$this->showMolds();
 		$this->showAddress();
-//		$this->assign("list",$arr2);
+		//		$this->assign("list",$arr2);
 		$this->display();
 	}
 	/**
@@ -30,8 +30,8 @@ class SortSearchAction extends Action{
 		foreach($all_fields as $value){
 			$the_url = "";
 			if(strpos($nurl, $value)){
-				if($the_url = preg_replace("/$value=.*?&/", '', $nurl)){
-					$the_url = preg_replace("/$value=.*?$/", '', $nurl);
+				if(!$the_url = preg_replace("/&$value=.*?&/", '&', $nurl)){//在url中间
+					$the_url = preg_replace("/&$value=.*$/", '', $nurl);//在url末尾
 				}
 			}else{
 				$the_url = $nurl;
@@ -48,19 +48,19 @@ class SortSearchAction extends Action{
 			}
 			$arr_get[$key] = $this->_get($key,$filter);
 		}
-		//转换相应字段
-		
+		//转换范围为相应字段
+
 		//xm_jobs表中搜索
 		$Job = M('jobs');
 		$Job->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
 		$where = //"(" . time() . "- expire_time)<0" . " AND " . "is_pass=0" 	. " AND "			 .
-				 /*"mold_id="     .*/ $this->isNullThenNull($arr_get['style'],"mold_id","AND")   .
-				 /*"money="       .*/ $this->isNullThenNull($arr_get['wage'],"money","AND")      .
-				 /*"address="     .*/ $this->isNullThenNull($arr_get['address'],"address","AND") .
-//				 /*"isvalidate="  .*/ $this->isNullThenNull($arr_get['isvld'])   . " AND "       .
-				 /*"want_peo="    .*/ $this->isNullThenNull($arr_get['peonum'],"want_peo","AND") .
-				 /*"work_time="   .*/ $this->isNullThenNull($arr_get['wt'],"work_time","AND")    .
-				 /*"begin_time="  .*/ $this->isNullThenNull($arr_get['time'],"begin_time","AND") . "1=1";
+		/*"mold_id="     .*/ $this->strongWhere($arr_get['style'],"mold_id","AND")   .
+		/*"money="       .*/ $this->strongWhere($arr_get['wage'],"money","AND",'',":")      .
+		/*"address="     .*/ $this->strongWhere($arr_get['address'],"address","AND") .
+		//				 /*"isvalidate="  .*/ $this->strongWhere($arr_get['isvld'])   . " AND "       .
+		/*"want_peo="    .*/ $this->strongWhere($arr_get['peonum'],"want_peo","AND",'',':') .
+		/*"work_time="   .*/ $this->strongWhere($arr_get['wt'],"work_time","AND",'',":")    .
+		/*"begin_time="  .*/ $this->strongWhere($arr_get['time'],"begin_time","AND",'',":") . "1=1";
 		dump($where);
 		$field = "";
 		import('ORG.Util.Page');
@@ -69,9 +69,9 @@ class SortSearchAction extends Action{
 		$show = $Page->show();
 		$this->assign("page",$show);
 		$arr2 = $Job->field($field)
-					->limit($Page->firstRow.','.$Page->listRows)
-					->where($where)
-					->select();
+		->limit($Page->firstRow.','.$Page->listRows)
+		->where($where)
+		->select();
 		if($arr2){
 			$this->assign("job_list",$arr2);
 		}elseif(is_null($arr2)){
@@ -103,40 +103,51 @@ class SortSearchAction extends Action{
 		}
 	}
 	protected function showAllJob() {
-		
+
 	}
 	/**
-	 * 
+	 *
 	 * 生成SQL中where子句。当$variable === null 时，其余传入值都为空
 	 * @param $variable
 	 * @param $field
 	 * @param $operator
-	 * @param $location 除true，其他值都会令其变为false
+	 * @param $location 除true，其他值都会令其变为false，默认为false
+	 * @param $betweenAnd 将传入值$variable分割，使用between and
 	 */
-	protected function isNullThenNull($variable,$field,$operator,$location) {
+	protected function strongWhere($variable,$field,$operator,$location,$betweenAnd) {
+		//若$variable === null 直接返回空字符，结束函数
+		if(is_null($variable)){
+			return '';
+		}
 		if($operator != 'AND' && $operator != 'OR'){
 			$operator = '';
 		}
 		if($location !== false && $location !== true){
 			$location = false;
 		}
-		if(is_null($variable)){
-				return '';
-		}else{
-			if(is_numeric($variable)){
-				if($location){
-					return " " . $operator . " " . $field . "=" . $variable;
-				}else{
-					return  $field . "=" . $variable . " " .$operator . " ";
-				}
+		if($betweenAnd){
+			$arr = explode($betweenAnd, $variable);
+			dump($arr);
+			if($location){
+				return " " . $operator . " " . $field . " BETWEEN " . $arr[0] . " AND " . $arr[1];
 			}else{
-				if($location){
-					return " " . $operator . " " . $field . "=" . "'" .$variable ."'";
-				}else{
-					return $field . "=" . "'" .$variable ."'" . " " . $operator . " ";
-				}
+				return  $field . " BETWEEN " . $arr[0] . " AND " . $arr[1] . " " .$operator . " ";
 			}
 		}
+		if(is_numeric($variable)){
+			if($location){
+				return " " . $operator . " " . $field . "=" . $variable;
+			}else{
+				return  $field . "=" . $variable . " " .$operator . " ";
+			}
+		}else{
+			if($location){
+				return " " . $operator . " " . $field . "=" . "'" .$variable ."'";
+			}else{
+				return $field . "=" . "'" .$variable ."'" . " " . $operator . " ";
+			}
+		}
+
 	}
 }
 ?>

@@ -43,7 +43,7 @@
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
       <ul class="nav navbar-nav sort-search">
-        <li class=""><a href="<?php echo U('SortSearch/index');?>">分类查找</a></li>
+        <li class=""><a href="<?php echo U('SortSearch/search');?>?q=q">分类查找</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
@@ -91,57 +91,57 @@ THINK;
                                 </label>
 -->
                                 
-                                <li><a href="<?php echo ($now_url_style); ?>"><?php echo ($molds["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <li><a href="<?php echo ($now_url_style); ?>&style=<?php echo ($molds["mid"]); ?>"><?php echo ($molds["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                             </li>
                             <li class="list-group-item"><span class="my-title">工资：</span>
                                 <ul class="list-options">
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>" class="">1-50</a></li>
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>">50-100</a></li>
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>">100-200</a></li>
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>">200以上</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=" class="">1-50</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=">50-100</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=">100-200</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=">200以上</a></li>
                                 </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">地点：</span>
                                 <ul class="list-options">
-         <?php if(is_array($address)): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$address): $mod = ($i % 2 );++$i;?><li class="my-options"><a href="<?php echo ($now_url_address); ?>" class=""><?php echo ($address["area"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+         <?php if(is_array($address)): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$address): $mod = ($i % 2 );++$i;?><li class="my-options"><a href="<?php echo ($now_url_address); ?>&address=<?php echo ($address["aid"]); ?>" class=""><?php echo ($address["area"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">认证：</span>
                                 <ul class="list-options">
-                                    <li><a href="<?php echo ($now_url_isvla); ?>">已认证</a></li>
-                                    <li><a href="<?php echo ($now_url_isvla); ?>">未认证</a></li>
+                                    <li><a href="<?php echo ($now_url_isvld); ?>&isvld=1">已认证</a></li>
+                                    <li><a href="<?php echo ($now_url_isvld); ?>&isvld=2">未认证</a></li>
                                 </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">人数：</span>
                             <ul class="list-options">
-                                <li><a href="<?php echo ($now_url_peonum); ?>">1-2</a></li>
-                                <li><a href="<?php echo ($now_url_peonum); ?>">2-5</a></li>
-                                <li><a href="<?php echo ($now_url_peonum); ?>">5-10</a></li>
-                                <li><a href="<?php echo ($now_url_peonum); ?>">10-30</a></li>
-                                <li><a href="<?php echo ($now_url_peonum); ?>">30以上</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>&peonum=">1-2</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>&peonum=">2-5</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>&peonum=">5-10</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>&peonum=">10-30</a></li>
+                                <li><a href="<?php echo ($now_url_peonum); ?>&peonum=">30以上</a></li>
                             </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">工作时长：</span>
                             <ul class="list-options">
-                                <li><a href="<?php echo ($now_url_wk); ?>">1小时以下</a></li>
-                                <li><a href="<?php echo ($now_url_wk); ?>">2-6小时</a></li>
-                                <li><a href="<?php echo ($now_url_wk); ?>">一天以上</a></li>
+                                <li><a href="<?php echo ($now_url_wk); ?>&wk=">1小时以下</a></li>
+                                <li><a href="<?php echo ($now_url_wk); ?>&wk=">2-6小时</a></li>
+                                <li><a href="<?php echo ($now_url_wk); ?>&wk=">一天以上</a></li>
                             </ul>
                             </li>
                             <li class="list-group-item">
                                 <span class="my-title">工作时间段：</span>
                             <ul class="list-options">
-                                <li><a href="<?php echo ($now_url_time); ?>">6点-9点</a></li>
-                                <li><a href="<?php echo ($now_url_time); ?>">9点-12点</a></li>
-                                <li><a href="<?php echo ($now_url_time); ?>">12点-15点</a></li>
-                                <li><a href="<?php echo ($now_url_time); ?>">15点-18点</a></li>
-                                <li><a href="<?php echo ($now_url_time); ?>">18点-22点</a></li>
-                                <li><a href="<?php echo ($now_url_time); ?>">凌晨-6点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>&time=">6点-9点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>&time=">9点-12点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>&time=">12点-15点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>&time=">15点-18点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>&time=">18点-22点</a></li>
+                                <li><a href="<?php echo ($now_url_time); ?>&time=">凌晨-6点</a></li>
                             </ul>
                             </li>
                         </ul>

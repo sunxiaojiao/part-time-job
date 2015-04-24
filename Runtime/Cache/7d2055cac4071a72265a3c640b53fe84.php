@@ -9,6 +9,7 @@
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
@@ -52,7 +53,9 @@
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
-
+      <ul class="nav navbar-nav sort-search">
+        <li class=""><a href="<?php echo U('SortSearch/search');?>?q=q">分类查找</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
       <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
       	<li class="dropdown">
