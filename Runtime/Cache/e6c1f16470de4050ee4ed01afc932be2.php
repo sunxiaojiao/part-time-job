@@ -96,10 +96,10 @@ THINK;
                             </li>
                             <li class="list-group-item"><span class="my-title">工资：</span>
                                 <ul class="list-options">
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=" class="">1-50</a></li>
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=">50-100</a></li>
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=">100-200</a></li>
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=">200以上</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=1:50" class="">1-50</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=50:100">50-100</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=100:200">100-200</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=200:max">200以上</a></li>
                                 </ul>
                             </li>
                             <li class="list-group-item">
@@ -128,9 +128,9 @@ THINK;
                             <li class="list-group-item">
                                 <span class="my-title">工作时长：</span>
                             <ul class="list-options">
-                                <li><a href="<?php echo ($now_url_wk); ?>&wk=">1小时以下</a></li>
-                                <li><a href="<?php echo ($now_url_wk); ?>&wk=">2-6小时</a></li>
-                                <li><a href="<?php echo ($now_url_wk); ?>&wk=">一天以上</a></li>
+                                <li><a href="<?php echo ($now_url_wt); ?>&wt=">1小时以下</a></li>
+                                <li><a href="<?php echo ($now_url_wt); ?>&wt=">2-6小时</a></li>
+                                <li><a href="<?php echo ($now_url_wt); ?>&wt=">一天以上</a></li>
                             </ul>
                             </li>
                             <li class="list-group-item">

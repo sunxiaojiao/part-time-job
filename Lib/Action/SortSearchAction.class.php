@@ -30,9 +30,12 @@ class SortSearchAction extends Action{
 		foreach($all_fields as $value){
 			$the_url = "";
 			if(strpos($nurl, $value)){
-				if(!$the_url = preg_replace("/&$value=.*?&/", '&', $nurl)){//在url中间
+				$the_url = preg_replace("/&$value=.*&/", '&', $nurl);//在url中间
+				if($nurl == $the_url){
 					$the_url = preg_replace("/&$value=.*$/", '', $nurl);//在url末尾
 				}
+				dump("/&$value=.*?&/");
+				dump($the_url);
 			}else{
 				$the_url = $nurl;
 			}
@@ -111,7 +114,7 @@ class SortSearchAction extends Action{
 	 * @param $variable
 	 * @param $field
 	 * @param $operator
-	 * @param $location 除true，其他值都会令其变为false，默认为false
+	 * @param $location 除true，其他值都会令其变为false，默认为false; ture在前面加一个空格，false在后面加一个空格
 	 * @param $betweenAnd 将传入值$variable分割，使用between and
 	 */
 	protected function strongWhere($variable,$field,$operator,$location,$betweenAnd) {
@@ -129,8 +132,20 @@ class SortSearchAction extends Action{
 			$arr = explode($betweenAnd, $variable);
 			dump($arr);
 			if($location){
+				if($arr[1] == 'max'){
+					return " " . $operator . " " . $field . " > " . $arr[0];
+				}
+				if($arr[0] == 'min'){
+					return " " . $operator . " " . $field . " < " . $arr[1];
+				}
 				return " " . $operator . " " . $field . " BETWEEN " . $arr[0] . " AND " . $arr[1];
 			}else{
+				if($arr[1] == 'max'){
+					return  $field . " > " . $arr[0] . " AND " .  " " .$operator . " ";
+				}
+				if($arr[0] == 'min'){
+					return  $field . " < " . $arr[1] . " AND " .  " " .$operator . " ";
+				}
 				return  $field . " BETWEEN " . $arr[0] . " AND " . $arr[1] . " " .$operator . " ";
 			}
 		}
