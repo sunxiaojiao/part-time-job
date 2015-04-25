@@ -7,6 +7,24 @@
     <title>分类查找|更快捷的兼职搜索</title>
     <include file="./Tpl/bootstrap/public/static.html" />
     <style type="text/css">
+    .filter-alter>li+li:before{
+        padding: 0 5px;
+        color: #ccc;
+        content: "\003e";
+    }
+    .filter-alter>li>a{
+        outline: 1px solid #CCC;
+        display: inline-block;
+        padding:2px 10px;
+    }
+    .filter-alter>li>a:hover{
+        text-decoration: none;
+        background: #CCC;
+    }
+    .filter-alter>li>a:after{
+        content: "\e058";
+        margin-left: 10px;
+    }
     </style>
 </head>
 
@@ -85,10 +103,11 @@
                             </ul>
                             </li>
                         </ul>
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
+                        <ol class="breadcrumb filter-alter">
+                            <li><a href="#">所有兼职</a></li>
+                            <volist name="arr_nav_route" id="arr">
                             <li><a href="#">Library</a></li>
-                            <li class="active">Data</li>
+                            </volist>
                         </ol>
                     </div>
                 </div>
@@ -119,6 +138,21 @@
     <include file="./Tpl/bootstrap/public/footer.html" />
     <!--./footer-->
     <script>
+    (function(){
+        var alter = $(".filter-alter>li>a");
+        alter.on('click',function(){
+            var href = location.href;
+            var arr  = href.split("&");
+            var i;
+            if(arr.length == 1){
+                return;
+            }
+            for(i=1 ; i<arr.length; i++){
+                arr[i]
+            }
+        });
+    })();
+   
     </script>
 </body>
 

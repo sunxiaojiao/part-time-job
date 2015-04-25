@@ -3,6 +3,7 @@
  * 分类检索
  */
 class SortSearchAction extends Action{
+	protected $all_fields = array('style'=>'类型','wage'=>'工资','address'=>'地点','isvld'=>'公司验证','peonum'=>'需求人数','wt'=>'工作时长','time'=>'工作时间段');
 	public function index() {
 		dump($this->isNullThenNull(123, "test","AND"));
 		$this->showMolds();
@@ -21,20 +22,20 @@ class SortSearchAction extends Action{
 	 * @param time    时间段
 	 */
 	public function search() {
-		$all_fields = array('style','wage','address','isvld','peonum','wt','time');
 		$this->showMolds();
 		$this->showAddress();
+		$this->showRouteNav();
 		//设置标签URL
 		$nurl = __SELF__;
 		dump($nurl);
-		foreach($all_fields as $value){
+		foreach($this->all_fields as $key=>$value){
 			$the_url = "";
-			if(strpos($nurl, $value)){
-				$the_url = preg_replace("/&$value=.*&/", '&', $nurl);//在url中间
+			if(strpos($nurl, $key)){
+				$the_url = preg_replace("/&$key=.*&/", '&', $nurl);//在url中间
 				if($nurl == $the_url){
-					$the_url = preg_replace("/&$value=.*$/", '', $nurl);//在url末尾
+					$the_url = preg_replace("/&$key=.*$/", '', $nurl);//在url末尾
 				}
-				dump("/&$value=.*?&/");
+				dump("/&$key=.*?&/");
 				dump($the_url);
 			}else{
 				$the_url = $nurl;
@@ -106,6 +107,28 @@ class SortSearchAction extends Action{
 		}else{
 			$this->assign("address",array('area'=>'抱歉，出了点小差错。请刷新一下，若不行，联系一下管理员。。'));
 		}
+	}
+	//显示面包屑导航
+	protected function showRouteNav() {
+		//当url中没有请求分类筛选时，停止
+		$url = __SELF__;
+		//例：将类似style=2这种形式提取出来
+		$arr = split("&", $url);
+		if(count($arr) == 1){
+			return ;
+		}
+		//存放输出到模板的字符串
+		$arr_nav_route;
+		foreach($arr as $value){
+			$value_arr = split("&",$value);
+			
+			if(array_key_exists($value_arr[0],$this->all_fields)){
+				$arr_nav_route[] = $this->fields[$value_arr[0]]. $value_arr[0];
+			}
+		}
+		$this->assign("nav_route",$arr_nav_route);
+		
+		
 	}
 	protected function showAllJob() {
 

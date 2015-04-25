@@ -14,6 +14,24 @@
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
+    .filter-alter>li+li:before{
+        padding: 0 5px;
+        color: #ccc;
+        content: "\003e";
+    }
+    .filter-alter>li>a{
+        outline: 1px solid #CCC;
+        display: inline-block;
+        padding:2px 10px;
+    }
+    .filter-alter>li>a:hover{
+        text-decoration: none;
+        background: #CCC;
+    }
+    .filter-alter>li>a:after{
+        content: "\e058";
+        margin-left: 10px;
+    }
     </style>
 </head>
 
@@ -145,10 +163,9 @@ THINK;
                             </ul>
                             </li>
                         </ul>
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Library</a></li>
-                            <li class="active">Data</li>
+                        <ol class="breadcrumb filter-alter">
+                            <li><a href="#">所有兼职</a></li>
+                            <?php if(is_array($arr_nav_route)): $i = 0; $__LIST__ = $arr_nav_route;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><li><a href="#">Library</a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                         </ol>
                     </div>
                 </div>
@@ -180,6 +197,21 @@ THINK;
 </div>
     <!--./footer-->
     <script>
+    (function(){
+        var alter = $(".filter-alter>li>a");
+        alter.on('click',function(){
+            var href = location.href;
+            var arr  = href.split("&");
+            var i;
+            if(arr.length == 1){
+                return;
+            }
+            for(i=1 ; i<arr.length; i++){
+                arr[i]
+            }
+        });
+    })();
+   
     </script>
 </body>
 
