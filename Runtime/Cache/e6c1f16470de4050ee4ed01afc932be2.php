@@ -165,7 +165,7 @@ THINK;
                         </ul>
                         <ol class="breadcrumb filter-alter">
                             <li><a href="#">所有兼职</a></li>
-                            <?php if(is_array($arr_nav_route)): $i = 0; $__LIST__ = $arr_nav_route;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><li><a href="#">Library</a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <?php if(is_array($nav_route)): $i = 0; $__LIST__ = $nav_route;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><li><a href="#"><?php echo ($arr); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                         </ol>
                     </div>
                 </div>

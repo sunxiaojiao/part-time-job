@@ -31,16 +31,16 @@ class SortSearchAction extends Action{
 		foreach($this->all_fields as $key=>$value){
 			$the_url = "";
 			if(strpos($nurl, $key)){
-				$the_url = preg_replace("/&$key=.*&/", '&', $nurl);//在url中间
+				$the_url = preg_replace("/&$key=.*?&/", '&', $nurl);//在url中间
 				if($nurl == $the_url){
 					$the_url = preg_replace("/&$key=.*$/", '', $nurl);//在url末尾
 				}
-				dump("/&$key=.*?&/");
-				dump($the_url);
+				//dump("/&$key=.*?&/");
+				//dump($the_url);
 			}else{
 				$the_url = $nurl;
 			}
-			$this->assign("now_url_".$value,$the_url);
+			$this->assign("now_url_".$key,$the_url);
 		}
 		//获取get
 		$filter = "";
@@ -87,6 +87,7 @@ class SortSearchAction extends Action{
 		}
 		$this->display('index');
 	}
+	
 	protected function showMolds() {
 		$Mold = M('mold');
 		$field = "mid ,name";
@@ -97,6 +98,7 @@ class SortSearchAction extends Action{
 			//报错
 		}
 	}
+	
 	protected function showAddress() {
 		$Address      = M('address');
 		$where        = "";
@@ -108,6 +110,15 @@ class SortSearchAction extends Action{
 			$this->assign("address",array('area'=>'抱歉，出了点小差错。请刷新一下，若不行，联系一下管理员。。'));
 		}
 	}
+	//查询兼职类型，生成一个数组
+	protected function getMolds() {
+		$Mold = M('mold');
+		$arr2 = $Mold->field("mid,name")->where("")->select();
+		if($arr2){
+			return array_2dTo1d($arr2);
+		}
+	}
+	
 	//显示面包屑导航
 	protected function showRouteNav() {
 		//当url中没有请求分类筛选时，停止
@@ -117,13 +128,16 @@ class SortSearchAction extends Action{
 		if(count($arr) == 1){
 			return ;
 		}
-		//存放输出到模板的字符串
-		$arr_nav_route;
+		$arr_molds = $this->getMolds();
+		dump($arr_molds);
+		$arr_nav_route =array();//存放输出到模板的字符串
 		foreach($arr as $value){
-			$value_arr = split("&",$value);
-			
+			$value_arr = split("=",$value);
+			//dump($value_arr);
 			if(array_key_exists($value_arr[0],$this->all_fields)){
-				$arr_nav_route[] = $this->fields[$value_arr[0]]. $value_arr[0];
+				//处理
+				
+				$arr_nav_route[] = $this->all_fields[$value_arr[0]] . $value_arr[1];
 			}
 		}
 		$this->assign("nav_route",$arr_nav_route);

@@ -52,4 +52,24 @@ function ranVerify($length = 4){
 	return $verify;
 	
 }
+/**
+ * 
+ * 数组二维转一维
+ */
+function array_2dTo1d($array_2d){
+	if(!isset($array_2d)){
+		return false;
+	}
+	static $arr2; 
+    foreach($array_2d as $v){ 
+        if(is_array($v)){
+        	
+            array_2dTo1d($v);
+        } 
+        else{ 
+            $arr2[]=$v; 
+        }
+    } 
+    return $arr2; 
+}
 ?>
