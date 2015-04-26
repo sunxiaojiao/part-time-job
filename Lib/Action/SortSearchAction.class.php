@@ -148,18 +148,44 @@ class SortSearchAction extends Action{
 			$value_arr = split("=",$value);
 			if(array_key_exists($value_arr[0],$this->all_fields)){
 				//处理，转换
+				//类型
 				if($value_arr[0] == 'style'){
 					$value_arr[1] = $arr_molds[$value_arr[1]-1];
 				}
+				//地址
 				if($value_arr[0] == 'address'){
-					$value_arr[1] = $arr_address[$value_arr[1]];
+					$value_arr[1] = $arr_address[$value_arr[1]-1];
 				}
-				if(strpos($value_arr[1],':max') !== false){
-					 $value_arr[1] = str_replace(':max', "以上",$value_arr[1]);
+				//工资
+				if($value_arr[0] == 'wage'){
+					$value_arr[1] = str_replace(':','-',$value_arr[1]);
 				}
-				if(strpos($value_arr[1], ':min') !== false){
-					$value_arr[1] = str_replace('min:', "以下", $value_arr[1]);
+				//认证
+				if($value_arr[0] == 'isvld'){
+					$value_arr[1] = $value_arr[1]==1 ? "已认证" : "未认证" ;
 				}
+				//人数
+				if($value_arr[0] == 'peonum'){
+					$value_arr[1] = str_replace(':','-',$value_arr[1]);
+				}
+				//工作时长
+				if($value_arr[0] == 'wt'){
+					$value_arr[1] = str_replace(':','-',$value_arr[1]);
+					$value_arr[1] .= "小时";
+				}
+				//工作时间段
+				if($value_arr[0] == 'time'){
+					$value_arr[1] = str_replace(':','点-',$value_arr[1]);
+					$value_arr[1] .= "点";
+				}
+				
+				if(strpos($value_arr[1],'-max') !== false){
+					 $value_arr[1] = str_replace('-max', "以上",$value_arr[1]);
+				}
+				if(strpos($value_arr[1], 'min-') !== false){
+					$value_arr[1] = str_replace('min-', "少于", $value_arr[1]);
+				}
+				
 				//设置url
 				$changed_url = preg_replace("/&$value_arr[0]=.*?&/",'&',__SELF__);//中间
 				$changed_url = preg_replace("/&$value_arr[0]=.*$/",'',$changed_url);//末尾

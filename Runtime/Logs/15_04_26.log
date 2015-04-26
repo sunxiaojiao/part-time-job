@@ -783,3 +783,186 @@ NOTIC: 建议使用I方法替代_get
 [ 2015-04-26T20:22:33+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&p=2
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-04-26T20:26:24+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=6:9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:19+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=6:9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:28+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=6:9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:29+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:31+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:33+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&address=4
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:35+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&address=4&isvld=0
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:39+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&address=4&isvld=0
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:47+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&address=4&isvld=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:48+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&address=4&isvld=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:49+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&address=4&isvld=0
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:52+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=5
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:54+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=4
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:36:58+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:00+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=1&wage=200:max
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:03+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=1&wage=100:200
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:05+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=1&wage=50:100
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:06+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=1&wage=1:50
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:07+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=1&wage=200:max
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:09+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=1&wage=200:max&style=6
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:25+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&address=1&wage=200:max&style=6
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:32+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&wage=200:max&style=6&address=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:37:34+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&wage=200:max&style=6&address=5
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:38:05+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&wt=2:6&isvld=0&wage=200:max&style=6&address=5
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:38:11+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&isvld=0&wage=200:max&style=6&address=5&wt=min:1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:38:21+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&isvld=0&wage=200:max&style=6&address=5&wt=min:1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:39:04+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&isvld=0&wage=200:max&style=6&address=5&wt=min:1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:39:45+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&time=12:15&isvld=0&wage=200:max&style=6&address=5&wt=min:1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T20:40:04+08:00 ] 127.0.0.1 /SortSearch/search.html?m=SortSearch&a=search&isvld=0&wage=200:max&style=6&address=5&wt=min:1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
