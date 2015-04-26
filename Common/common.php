@@ -55,21 +55,18 @@ function ranVerify($length = 4){
 /**
  * 
  * 数组二维转一维
+ * 指定键值做新数组的键
  */
-function array_2dTo1d($array_2d){
-	if(!isset($array_2d)){
-		return false;
+function array_2dTo1d($array_2d,$key){
+	$arr1 = array();
+	foreach($array_2d as $k=> $value){
+		$arr_key = array_keys($value);
+		if($arr_key[0] == $key){
+			$arr1[] = $value[$arr_key[1]];
+		}else{
+			$arr1[] = $value[$arr_key[0]];
+		}
 	}
-	static $arr2; 
-    foreach($array_2d as $v){ 
-        if(is_array($v)){
-        	
-            array_2dTo1d($v);
-        } 
-        else{ 
-            $arr2[]=$v; 
-        }
-    } 
-    return $arr2; 
+	return $arr1;
 }
 ?>

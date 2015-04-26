@@ -3,12 +3,10 @@
  * 分类检索
  */
 class SortSearchAction extends Action{
-	protected $all_fields = array('style'=>'类型','wage'=>'工资','address'=>'地点','isvld'=>'公司验证','peonum'=>'需求人数','wt'=>'工作时长','time'=>'工作时间段');
+	protected $all_fields = array('style'=>'类型','wage'=>'工资','address'=>'地点','isvld'=>'公司验证','peonum'=>'需求人数','wt'=>'工作时长','time'=>'工作时间段'); 
 	public function index() {
-		dump($this->isNullThenNull(123, "test","AND"));
 		$this->showMolds();
 		$this->showAddress();
-		//		$this->assign("list",$arr2);
 		$this->display();
 	}
 	/**
@@ -22,12 +20,12 @@ class SortSearchAction extends Action{
 	 * @param time    时间段
 	 */
 	public function search() {
+		C('URL_MODEL',0);
 		$this->showMolds();
 		$this->showAddress();
 		$this->showRouteNav();
 		//设置标签URL
 		$nurl = __SELF__;
-		dump($nurl);
 		foreach($this->all_fields as $key=>$value){
 			$the_url = "";
 			if(strpos($nurl, $key)){
@@ -35,8 +33,8 @@ class SortSearchAction extends Action{
 				if($nurl == $the_url){
 					$the_url = preg_replace("/&$key=.*$/", '', $nurl);//在url末尾
 				}
-				//dump("/&$key=.*?&/");
-				//dump($the_url);
+				$the_url = preg_replace("/&p=\d*$/",  '', $the_url);
+				$the_url = preg_replace("/&p=\d*&/", '&', $the_url);
 			}else{
 				$the_url = $nurl;
 			}
@@ -58,19 +56,25 @@ class SortSearchAction extends Action{
 		$Job = M('jobs');
 		$Job->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
 		$where = //"(" . time() . "- expire_time)<0" . " AND " . "is_pass=0" 	. " AND "			 .
-		/*"mold_id="     .*/ $this->strongWhere($arr_get['style'],"mold_id","AND")   .
-		/*"money="       .*/ $this->strongWhere($arr_get['wage'],"money","AND",'',":")      .
-		/*"address="     .*/ $this->strongWhere($arr_get['address'],"address","AND") .
-		//				 /*"isvalidate="  .*/ $this->strongWhere($arr_get['isvld'])   . " AND "       .
-		/*"want_peo="    .*/ $this->strongWhere($arr_get['peonum'],"want_peo","AND",'',':') .
-		/*"work_time="   .*/ $this->strongWhere($arr_get['wt'],"work_time","AND",'',":")    .
-		/*"begin_time="  .*/ $this->strongWhere($arr_get['time'],"begin_time","AND",'',":") . "1=1";
-		dump($where);
-		$field = "xm_jobs.title AS title";
+				$this->strongWhere($arr_get['style'],"mold_id","AND")          .
+				$this->strongWhere($arr_get['wage'],"money","AND",'',":")      .
+				$this->strongWhere($arr_get['address'],"address","AND")        .
+				$this->strongWhere($arr_get['peonum'],"want_peo","AND",'',':') .
+				$this->strongWhere($arr_get['wt'],"work_time","AND",'',":")    .
+				$this->strongWhere($arr_get['time'],"begin_time","AND",'',":") . "1=1";
+		$field = "xm_jobs.title AS title,
+				  xm_jobs.address AS address,
+				  xm_jobs.jid AS jid,
+				  xm_jobs.want_peo AS want_peo,
+				  xm_jobs.current_peo AS current_peo,
+				  xm_jobs.money AS money,
+				  xm_jobs.begin_time AS begin_time,
+				  xm_jobs.work_time AS wktime,
+				  xm_jobs.pv AS pv";
 		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid" . $this->strongWhere($arr_get['isvld'], 'xm_orgs.is_validate', 'AND', true);
 		import('ORG.Util.Page');
 		$count = $Job->where($where)->join($join)->count();
-		$Page  = new Page($count,20);
+		$Page  = new Page($count,5);
 		$show  = $Page->show();
 		$this->assign("page",$show);
 		$arr2 = $Job->field($field)
@@ -81,7 +85,7 @@ class SortSearchAction extends Action{
 		if($arr2){
 			$this->assign("job_list",$arr2);
 		}elseif(is_null($arr2)){
-			$this->assign("error_info","没有符合要求的结果".$Job->getLastSql());
+			$this->assign("error_info","没有符合要求的结果");
 		}else{
 			$this->assign("error_info","检索出错".$Job->getLastSql());
 		}
@@ -100,7 +104,7 @@ class SortSearchAction extends Action{
 	}
 	
 	protected function showAddress() {
-		$Address      = M('address');
+		$Address      = M('Address');
 		$where        = "";
 		$field        = "aid,area";
 		$arr2_address = $Address->where($where)->field($field)->select();
@@ -112,10 +116,18 @@ class SortSearchAction extends Action{
 	}
 	//查询兼职类型，生成一个数组
 	protected function getMolds() {
-		$Mold = M('mold');
+		$Mold = M('Mold');
 		$arr2 = $Mold->field("mid,name")->where("")->select();
 		if($arr2){
-			return array_2dTo1d($arr2);
+			return array_2dTo1d($arr2,'mid');
+		}
+	}
+	//查询地址
+	protected function getAddress() {
+		$Address = M('Address');
+		$arr2 = $Address->field('aid,area')->select();
+		if($arr2){
+			return array_2dTo1d($arr2, 'aid');
 		}
 	}
 	
@@ -128,16 +140,32 @@ class SortSearchAction extends Action{
 		if(count($arr) == 1){
 			return ;
 		}
-		$arr_molds = $this->getMolds();
-		dump($arr_molds);
+
+		$arr_molds   = $this->getMolds();
+		$arr_address = $this->getAddress();
 		$arr_nav_route =array();//存放输出到模板的字符串
 		foreach($arr as $value){
 			$value_arr = split("=",$value);
-			//dump($value_arr);
 			if(array_key_exists($value_arr[0],$this->all_fields)){
-				//处理
-				
-				$arr_nav_route[] = $this->all_fields[$value_arr[0]] . $value_arr[1];
+				//处理，转换
+				if($value_arr[0] == 'style'){
+					$value_arr[1] = $arr_molds[$value_arr[1]-1];
+				}
+				if($value_arr[0] == 'address'){
+					$value_arr[1] = $arr_address[$value_arr[1]];
+				}
+				if(strpos($value_arr[1],':max') !== false){
+					 $value_arr[1] = str_replace(':max', "以上",$value_arr[1]);
+				}
+				if(strpos($value_arr[1], ':min') !== false){
+					$value_arr[1] = str_replace('min:', "以下", $value_arr[1]);
+				}
+				//设置url
+				$changed_url = preg_replace("/&$value_arr[0]=.*?&/",'&',__SELF__);//中间
+				$changed_url = preg_replace("/&$value_arr[0]=.*$/",'',$changed_url);//末尾
+				//存入二维数组，array(array('show'=>'','url'=>''),...
+				$show = $this->all_fields[$value_arr[0]] . "：" . $value_arr[1];
+				$arr_nav_route[] = array('show'=>$show,'url'=>$changed_url);
 			}
 		}
 		$this->assign("nav_route",$arr_nav_route);
@@ -169,7 +197,6 @@ class SortSearchAction extends Action{
 		}
 		if($betweenAnd){
 			$arr = explode($betweenAnd, $variable);
-			dump($arr);
 			if($location){
 				if($arr[1] == 'max'){
 					return " " . $operator . " " . $field . " > " . $arr[0];

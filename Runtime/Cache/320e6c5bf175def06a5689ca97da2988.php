@@ -9,6 +9,7 @@
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
@@ -47,7 +48,9 @@
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
-
+      <ul class="nav navbar-nav sort-search">
+        <li class=""><a href="<?php echo U('SortSearch/search');?>">分类查找</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
       <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
       	<li class="dropdown">
@@ -147,6 +150,7 @@ THINK;
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
+<!--/footer-->
 <script type="text/javascript">
   $("#goto-apply").click(function(){
     $.ajax({
