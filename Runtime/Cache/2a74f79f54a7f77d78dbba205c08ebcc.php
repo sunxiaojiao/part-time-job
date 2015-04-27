@@ -92,9 +92,9 @@ THINK;
         <div class="row">
             <div class="col-md-7">
                 <div class="alert alert-success alert-dismissable hidden" id="alert-success">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>发送成功</div>
+                    <button type="button" class="close" aria-hidden="true">&times;</button><p>发送成功</p></div>
                 <div class="alert alert-danger alert-dismissable hidden" id="alert-failed">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>发送失败</div>
+                    <button type="button" class="close" aria-hidden="true">&times;</button><p>发送失败</p></div>
                 <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form" class="form-inline">
                     <div class="form-group input-group">
                         <label for="email" class="sr-only">邮箱：</label>
@@ -123,21 +123,28 @@ THINK;
         </div>
         <!--end footer-->
         <script type="text/javascript">
+        (function(){
+        	$(".alert button").on('click',function(){
+        		$(this).parent().addClass("hidden");
+        	});
+        })();
         $("#email-goto").click(function() {
             var btn = $("#email-goto");
-            var btnLoading = $(this).button('loading');
             var email = $("#email").val();
+            console.log(email);
             //验证邮箱格式
-            var re = new RegExp("/^.*\@.*\..*/", "i");
-            //var flag = re.exec(email);
-            var flag = 1;
+            var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            var flag = re.exec(email);
+            //var flag = 1;
             console.log(flag);
             if (!flag) {
-                alert('邮箱格式错误');
+            	$("#alert-failed>p").text("请填写正确的邮箱格式");
+                $("#alert-success").addClass("hidden");
+                $("#alert-failed").removeClass("hidden");
                 return;
             }
+            var btnLoading = $(this).button('loading');
             console.log(email);
-            //$(".alert").alert();
             $.ajax({
                 url: "<?php echo U('Register/sendEmailHandler');?>",
                 data: {
@@ -145,21 +152,26 @@ THINK;
                 },
                 type: "POST",
                 success: function(data) {
-                    if (data.status == 1) {
-                    	$("#alert-failed").addClass("hidden");
+                    if (data.data == 1) {
+                        $("#alert-failed").addClass("hidden");
                         $("#alert-success").removeClass("hidden");
-                       	btn.text("发送成功");
-                    } else if (data.status == 0) {
+                        btn.text("发送成功");
+                    } else if (data.data == 0) {
+                        $("#alert-success").addClass("hidden");
+                        $("#alert-failed").removeClass("hidden");
+                        btn.button('reset');
+                    } else if(data.data == 2) {
+                    	$("#alert-failed>p").text("邮箱已存在	");
                     	$("#alert-success").addClass("hidden");
                         $("#alert-failed").removeClass("hidden");
                         btn.button('reset');
                     }
                 },
                 error: function() {
-                		$("#alert-success").addClass("hidden");
-                        $("#alert-failed").removeClass("hidden");
-                        btn.button('reset');
-                    }
+                    $("#alert-success").addClass("hidden");
+                    $("#alert-failed").removeClass("hidden");
+                    btn.button('reset');
+                }
             });
         });
         //ajax验证验证码

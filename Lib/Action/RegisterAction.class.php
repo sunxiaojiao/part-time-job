@@ -63,11 +63,27 @@ class RegisterAction extends Action{
 	}
 	//创建邮箱验证链接
 	protected function buildUrl($email) {
+		//验证邮箱是否已经存在
+		$User = M('Users');
+		$where = "email="."'".$email."'";
+		$field = "email";
+		$flag = $User->field($field)->where($where)->find();
+		if(!$flag){
+			$this->ajaxReturn(2,"邮箱已存在",1);
+			return ;
+		}
+		$Org = M('Orgs');
+		$flag = $Org->field($field)->where($where)->find();
+		if(!$flag){
+			$this->ajaxReturn(2,"邮箱已存在",1);
+			return ;
+		}
+		//插入数据库
 		$rand = ranVerify(8);
 		C('URL_MODEL', 0);
 		$url = U("Register/confirm","email=$email&code=$rand",'',false,true);
 		$MailReg = M('Mailreg_url');
-		$data = array('email'=>$email,'vld_code_value'=>$rand);
+		$data = array('email'=>$email,'vld_code_value'=>$rand,'ctime'=>time());
 		$MailReg->add($data);
 		//$this->ajaxReturn($url);
 		return $url;
@@ -77,6 +93,11 @@ class RegisterAction extends Action{
 	 * @param string $to 收信人
 	 */
 	public function sendEmailHandler(){
+		//后台再来一遍验证呀
+		if(!preg_match("/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/", $this->_post('email'))){
+			$this->ajaxReturn(3,"邮箱格式不正确".var_dump($f),1);
+			return ;
+		}
 		$this->email = $this->_post('email');
 		$vld_url = $this->buildUrl($this->email);
 		$title = "小蜜蜂兼职";
@@ -90,7 +111,7 @@ EOT;
 			session('email',$this->email);
 			$this->ajaxReturn(1,"发送成功",1);
 		}else{
-			$this->ajaxReturn(0,"发送失败",0);
+			$this->ajaxReturn(0,"发送失败",1);
 		}
 
 	}
