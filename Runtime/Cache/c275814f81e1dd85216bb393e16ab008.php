@@ -115,10 +115,10 @@ THINK;
 		    			<input id="repasswd" type="password" name="repasswd" class="form-control validate[required,equals[passwd]] text-input" data-prompt-position="topRight:-70" placeholder="再次输入密码" />
 		    		</div>
 		    		<div class="input-group">
-		    			<input name="" class="form-control" type="text" placeholder="验证码" />
-		    			<img src="<?php echo U("Register/vCode");?>" />
+		    			<input class="form-control" type="text" name="vcode" placeholder="验证码" />
+		    			<img src="<?php echo U("Register/vCode");?>" /><button type="button" >刷新</button>
 		    		</div>
-					<button type="submit" class="btn btn-default" id="reg-goto">提交</button>
+					<button type="button" class="btn btn-default" id="reg-goto">提交</button>
 					
 		    		
 		    	</form>
@@ -194,34 +194,17 @@ function onConfirmed(flag){
 $("#reg-goto").click(function(){
 	//获取数据
 	var info = getFromInput("#reg-form");
+	console.log(info);
 	//ajax传输
-	// $.post(
-	// 	"<?php echo U('Register/reg');?>",
-	// 	info,
-	// 	function(data){
-	// 		console.log(data);
-	// 		if(data == 10 ){
-	// 			changText($(".my-warning"),"注册成功");
-	// 			window.href = "index.php";
-	// 		}else if(data.substr(0,1) == 0){
-	// 			changText($(".my-warning"),"验证码错误，注册失败");
-	// 		}else{
-	// 			changText($(".my-warning"),"注册失败，请稍后再试");
-	// 		}
-	// 	}
-	// 	);
-});
-$("#email-goto").click(function(){
-	var email = $("#email").val();
-	console.log(email);
 	$.post(
-		"<?php echo U('Register/sendEmail');?>",
-		{
-			'email':email
-		},
-		function(data){onConfirmed(data)}
+		"<?php echo U('Register/reg');?>",
+		info,
+		function(data){
+			console.log(data);
+		}
 		);
 });
+
 //ajax验证验证码
 $("#yzm").blur(function(){
 	$.post(	

@@ -5,7 +5,7 @@ class RegisterAction extends Action{
 	private $passwd;
 	private $address;
 	private $orgname;
-	
+
 	public function index(){
 		if(!session("?reg_email")){
 			$this->error('未认证邮箱',U("Register/sendMail"),3);
@@ -17,24 +17,25 @@ class RegisterAction extends Action{
 	public function sendMail(){
 		$this->display('sendmail');
 	}
-/**
- * 注册 
- * 只取passwd 不取repasswd 两次密码验证 在客户端实现
- * return int 0：注册成功	1：非POST请求	 2：邮箱验证码错误 	3:邮箱验证通过	4：插入数据库失败
- */
+	/**
+	 * 注册
+	 * 只取passwd 不取repasswd 两次密码验证 在客户端实现
+	 * return int 0：注册成功	1：非POST请求	 2：邮箱验证码错误 	3:邮箱验证通过	4：插入数据库失败
+	 */
 	public function reg(){
 		$this->confirmVcode();
 		//插入数据库，成功跳转到个人中心
 		$reger;
 		if($this->isOrg()){
-			$reger = D('Orgs');//orgs表 
+			$reger = D('Orgs');//orgs表
 		}else{
 			$reger = D('Users');//users表
 		}
 		//获取数据
 		$this->getAll();
-		$data['email']  = $this->email;
+		$data['email']  = session('reg_email');
 		$data['passwd'] = md5($this->passwd);
+		$data['ctime'] = time();
 		if($this->orgname != '' && $this->address != ''){
 			$data['orgname'] = $this->orgname;
 			$data['org_address'] = $this->address;
@@ -46,7 +47,7 @@ class RegisterAction extends Action{
 			$this->ajaxReturn(4);
 		}
 	}
-	
+
 	//判断是否是为企业用户注册
 	private function isOrg(){
 		if($this->isPost()){
@@ -60,6 +61,7 @@ class RegisterAction extends Action{
 			return $flag;
 		}
 	}
+	//创建邮箱验证链接
 	protected function buildUrl($email) {
 		$rand = ranVerify(8);
 		C('URL_MODEL', 0);
@@ -67,13 +69,12 @@ class RegisterAction extends Action{
 		$MailReg = M('Mailreg_url');
 		$data = array('email'=>$email,'vld_code_value'=>$rand);
 		$MailReg->add($data);
-		$this->ajaxReturn($url);
+		//$this->ajaxReturn($url);
 		return $url;
 	}
 	/**
 	 * 发送验证邮件
 	 * @param string $to 收信人
-	 * 0:邮件发送失败 1:邮件发送成功
 	 */
 	public function sendEmailHandler(){
 		$this->email = $this->_post('email');
@@ -93,16 +94,7 @@ EOT;
 		}
 
 	}
-	//判断邮箱验证码
-//	public function confirm(){
-//		if(session('email_ver') == $this->_post('yzm')){
-//			echo 1;
-//			return true;
-//		}else{
-//			echo 0;
-//			return false;
-//		}
-//	}
+	//验证邮箱链接
 	public function confirm(){
 		$email    = $this->_get('email');
 		$vld_code = $this->_get('code');
@@ -112,8 +104,8 @@ EOT;
 		}
 		$reg = M('Mailreg_url');
 		$reg_id = $reg->field("reg_id")
-				   	  ->where("email=" . "'" . $email . "'" . " AND " . "vld_code_value=" . "'" . "$vld_code" . "'")
-				   	  ->find();
+		->where("email=" . "'" . $email . "'" . " AND " . "vld_code_value=" . "'" . "$vld_code" . "'")
+		->find();
 		if($reg_id){
 			session('reg_email',$email);
 			$MailReg = M('Mailreg_url');
@@ -128,7 +120,7 @@ EOT;
 	private function getAll(){
 		if($this->isPost()){
 			//合法性检验
-//			/if(){}
+			//			/if(){}
 			//$this->email  = $this->_post('email');
 			$this->email = session('email');
 			$this->passwd = $this->_post('passwd');
@@ -142,9 +134,9 @@ EOT;
 		Image::buildImageVerify(4,2,'png',0,32);
 	}
 	protected function confirmVcode() {
-		$vcode = $this->_post();
-		if(session('verify') != md5($vcode)) {
-			$this->ajaxReturn(1,"验证码错误",1);
+		$vcode = $this->_post('vcode');
+		if(session('verify') != md5(strtoupper($vcode))) {
+			$this->ajaxReturn(0,"验证码错误".session('verify')."/".md5($vcode),0);
 			return;
 		}
 	}

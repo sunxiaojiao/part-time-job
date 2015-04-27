@@ -1,12 +1,12 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>注册</title>
 
-<link rel="stylesheet" href="./__GROUP__/css/validationEngine.jquery.css" type="text/css"/>
-<link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>注册</title>
+    <link rel="stylesheet" href="./__GROUP__/css/validationEngine.jquery.css" type="text/css" />
+    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
@@ -14,18 +14,19 @@
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
-<script src="./__GROUP__/js/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8"></script>
-<script src="./__GROUP__/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
-<style type="text/css">
-form{
-	margin-top:50px;
-}
-</style>
-<script>
-</script>
+    <script src="./__GROUP__/js/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./__GROUP__/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+    form {
+        margin-top: 50px;
+    }
+    </style>
+    <script>
+    </script>
 </head>
+
 <body>
-<!--======导航条======-->
+    <!--======导航条======-->
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -83,99 +84,101 @@ THINK;
   </div><!-- /.container-fluid -->
 </nav>
 <!--======导航条结束======--->
-<!--container-->
-<div class="container">
-	<div class="page-header">
-  		<h1>验证邮箱<small>小蜜蜂兼职</small></h1>
-	</div>
-	<div class="row">
-		<div class="col-md-7">
-			<div class="alert alert-success alert-dismissable hidden" id="alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>发送成功</div>
-			<div class="alert alert-danger alert-dismissable hidden" id="alert-failed"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>发送失败</div>
-		    <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form" class="form-inline">
-		    		<div class="form-group input-group">
-		    			<label for="email" class="sr-only">邮箱：</label>
-		    			<input id="email" type="text" name="email" class="form-control validate[required,custom[email]] text-input" data-prompt-position="topRight:-70" placeholder="请输入邮箱" />
+    <!--container-->
+    <div class="container">
+        <div class="page-header">
+            <h1>验证邮箱<small>小蜜蜂兼职</small></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="alert alert-success alert-dismissable hidden" id="alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>发送成功</div>
+                <div class="alert alert-danger alert-dismissable hidden" id="alert-failed">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>发送失败</div>
+                <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form" class="form-inline">
+                    <div class="form-group input-group">
+                        <label for="email" class="sr-only">邮箱：</label>
+                        <input id="email" type="text" name="email" class="form-control validate[required,custom[email]] text-input" data-prompt-position="topRight:-70" placeholder="请输入邮箱" />
+                    </div>
+                    <button type="button" class="btn btn-primary" id="email-goto" data-loading-text="发送中..." autocomplete="off">发送</button>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end container-->
+        <!--footer-->
+        <div class="container">
+            <hr />
+            <p class="text-center">小蜜蜂兼职</p>
+            <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+            <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+        </div>
+        <!--end footer-->
+        <script type="text/javascript">
+        $("#email-goto").click(function() {
+            var btn = $("#email-goto");
+            var btnLoading = $(this).button('loading');
+            var email = $("#email").val();
+            //验证邮箱格式
+            var re = new RegExp("/^.*\@.*\..*/", "i");
+            //var flag = re.exec(email);
+            var flag = 1;
+            console.log(flag);
+            if (!flag) {
+                alert('邮箱格式错误');
+                return;
+            }
+            console.log(email);
+            //$(".alert").alert();
+            $.ajax({
+                url: "<?php echo U('Register/sendEmailHandler');?>",
+                data: {
+                    'email': email
+                },
+                type: "POST",
+                success: function(data) {
+                    if (data.status == 1) {
+                    	$("#alert-failed").addClass("hidden");
+                        $("#alert-success").removeClass("hidden");
+                       	btn.text("发送成功");
+                    } else if (data.status == 0) {
+                    	$("#alert-success").addClass("hidden");
+                        $("#alert-failed").removeClass("hidden");
+                        btn.button('reset');
+                    }
+                },
+                error: function() {
+                		$("#alert-success").addClass("hidden");
+                        $("#alert-failed").removeClass("hidden");
+                        btn.button('reset');
+                    }
+            });
+        });
+        //ajax验证验证码
+        $("#yzm").blur(function() {
+            $.post(
+                "<?php echo U('Register/confirm');?>", {
+                    yzm: $("#yzm").val()
+                },
+                function(data) {
+                    if (data == 1) {
+                        $(".my-verify").text("正确");
+                    } else {
+                        $(".my-verify").text("错误");
+                    }
+                }
+            );
 
-		    		</div>
-		    		<button type="button" class="btn btn-primary" id="email-goto">发送</button>
-					
-		    	</form>
-		</div>
-		<div class="col-md-1"></div>
-		<div class="col-md-4">
-			<div class="panel panel-default">
-				<div class="panel-heading">关于小蜜蜂</div>
-				<div class="panel-body">
-					<img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-				</div>
-			</div>
-		</div>
 
-	</div>
-<!--end container-->
-<!--footer-->
-<div class="container">
-  <hr />
-  <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-</div>
-<!--end footer-->
-<script type="text/javascript">
-$("#email-goto").click(function(){
-	var email = $("#email").val();
-	//验证邮箱格式
-	var re   = new RegExp("/^.*\@.*\..*/","i");
-	//var flag = re.exec(email);
-	var flag = 1;
-	console.log(flag);
-	if(!flag){
-		alert('邮箱格式错误');
-		return ;
-	}
-	console.log(email);
-	//$(".alert").alert();
-	$.ajax({
-		url:"<?php echo U('Register/sendEmailHandler');?>",
-		data:{
-			'email':email
-		},
-		type:"POST",
-		success:function(data){
-			alert(data.info);
-			if(data.status ==0 ){
-				$(".alert").alert();
-			}
-			$("#alert-success").removeClass("hidden");
-			$("#alert-failed").removeClass("hidden");
-		}
-		// error:function(){
-		// 	alert("");
-		// 	$("#alert-success").removeClass("hidden");
-		// 	$("#alert-failed").removeClass("hidden");
-		// }
-		});
-});
-//ajax验证验证码
-$("#yzm").blur(function(){
-	$.post(	
-		"<?php echo U('Register/confirm');?>",
-		{
-			yzm:$("#yzm").val()
-		},
-		function(data){
-			if( data ==1 ){
-				$(".my-verify").text("正确");
-			}else{
-				$(".my-verify").text("错误");
-			}
-		}
-		);
-
-	
-});
-//表单验证
-
-</script>
+        });
+        //表单验证
+        </script>
 </body>
