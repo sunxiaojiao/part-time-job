@@ -40,14 +40,7 @@
 		    <form method="post" action="{:U('Register/reg')}" id="reg-form" >
 		    		<div class="form-group input-group">
 		    			<label for="email">邮箱：</label>
-		    			<input id="email" type="text" name="email" class="form-control validate[required,custom[email]] text-input" data-prompt-position="topRight:-70" placeholder="请输入邮箱" />
-		    			<span class="input-group-btn"> 
-		        			<button class="btn btn-default" id="email-goto" type="button">发送验证邮件</button>
-		      			</span>
-		    		</div>
-		    		<div class="form-group">
-		    			<label for="yzm">验证码：<font class="red my-verify"></font></label>
-		    			<input id="yzm" type="text" name="yzm" class="form-control validate[required,ajax[ajaxNameCallPhp]] text-input" data-prompt-position="topRight:-70" placeholder="请输入验证码" />
+		    			<input id="email" type="text" name="email" class="form-control" disabled="true" placeholder=""  value="{$email}" />
 		    		</div>
 		    		<div class="form-group">
 		    			<label for="passwd">密码：</label>
@@ -56,6 +49,10 @@
 		    		<div class="form-group">
 		    			<label for="passwd">确认密码：</label>
 		    			<input id="repasswd" type="password" name="repasswd" class="form-control validate[required,equals[passwd]] text-input" data-prompt-position="topRight:-70" placeholder="再次输入密码" />
+		    		</div>
+		    		<div class="input-group">
+		    			<input name="" class="form-control" type="text" placeholder="验证码" />
+		    			<img src="{:U("Register/vCode")}" />
 		    		</div>
 					<button type="submit" class="btn btn-default" id="reg-goto">提交</button>
 					

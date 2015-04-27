@@ -90,7 +90,7 @@ THINK;
           </ul>
         </li><!--/.dropdown-->
 THINK;
- if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+ if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/sendMail') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->

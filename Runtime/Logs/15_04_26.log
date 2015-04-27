@@ -1709,3 +1709,14 @@ ERR: 非法操作:Tpl
 [ 2015-04-26T22:59:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
 ERR: 非法操作:Tpl
 
+[ 2015-04-26T23:05:32+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T23:05:40+08:00 ] 127.0.0.1 /?m=Register&a=confirm&1451583383@qq_com=8XLZlfS2
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-26T23:05:41+08:00 ] 127.0.0.1 /?m=Register&a=confirm&1451583383@qq_com=8XLZlfS2
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+

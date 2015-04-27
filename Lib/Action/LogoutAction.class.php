@@ -6,7 +6,7 @@ class LogoutAction extends Action{
 		session('usernmae',null);
 		session('orgname',null);
 		session_destroy();
-		redirect("index.php");
+		$this->success('注销成功',U('Index/index'),3);
 	}
 }
 ?>

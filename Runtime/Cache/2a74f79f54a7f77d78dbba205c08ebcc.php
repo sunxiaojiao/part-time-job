@@ -17,16 +17,11 @@
 <script src="./__GROUP__/js/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8"></script>
 <script src="./__GROUP__/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 <style type="text/css">
-	#email-goto{top:13px;}
-	#email{border-radius:4px;}
-	#select-list a{cursor: pointer;}
-	.red{color: #F00;}
-	.my-warning{float:left;}
+form{
+	margin-top:50px;
+}
 </style>
 <script>
-	jQuery(document).ready(function(){
-		jQuery("#reg-form").validationEngine();
-	});            
 </script>
 </head>
 <body>
@@ -91,36 +86,20 @@ THINK;
 <!--container-->
 <div class="container">
 	<div class="page-header">
-  		<h1>注册<small>小蜜蜂兼职</small></h1>
+  		<h1>验证邮箱<small>小蜜蜂兼职</small></h1>
 	</div>
 	<div class="row">
 		<div class="col-md-7">
-			<ul class="nav nav-pills" id="select-list">
-			  <li role="presentation" class="active"><a>求职者</a></li>
-			  <li role="presentation"><a>公司或机构组织</a></li>
-			  <li role="presentation"><a>学校</a></li>
-			</ul>
-
-		    <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form" >
+			<div class="alert alert-success alert-dismissable hidden" id="alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>发送成功</div>
+			<div class="alert alert-danger alert-dismissable hidden" id="alert-failed"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>发送失败</div>
+		    <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form" class="form-inline">
 		    		<div class="form-group input-group">
-		    			<label for="email">邮箱：</label>
-		    			<input id="email" type="text" name="email" class="form-control" disabled="true" placeholder=""  value="<?php echo ($email); ?>" />
+		    			<label for="email" class="sr-only">邮箱：</label>
+		    			<input id="email" type="text" name="email" class="form-control validate[required,custom[email]] text-input" data-prompt-position="topRight:-70" placeholder="请输入邮箱" />
+
 		    		</div>
-		    		<div class="form-group">
-		    			<label for="passwd">密码：</label>
-		    			<input id="passwd" type="password" name="passwd" class="form-control validate[required] text-input" data-prompt-position="topRight:-70" placeholder="请输入密码" />
-		    		</div>
-		    		<div class="form-group">
-		    			<label for="passwd">确认密码：</label>
-		    			<input id="repasswd" type="password" name="repasswd" class="form-control validate[required,equals[passwd]] text-input" data-prompt-position="topRight:-70" placeholder="再次输入密码" />
-		    		</div>
-		    		<div class="input-group">
-		    			<input name="" class="form-control" type="text" placeholder="验证码" />
-		    			<img src="<?php echo U("Register/vCode");?>" />
-		    		</div>
-					<button type="submit" class="btn btn-default" id="reg-goto">提交</button>
+		    		<button type="button" class="btn btn-primary" id="email-goto">发送</button>
 					
-		    		
 		    	</form>
 		</div>
 		<div class="col-md-1"></div>
@@ -144,83 +123,39 @@ THINK;
 </div>
 <!--end footer-->
 <script type="text/javascript">
-
-function tabShow(arg){
-	for(var i=0; i<3; i++){
-		$("#select-list>li").eq(i).removeClass("active");
-	}
-
-	$("#select-list>li").eq(arg).addClass("active");
-	whatToSelect = arg;
-}
-
-
-function tabChange(arg){
-	var str = new String('<div class="form-group input-org"><label for="org">组织名称：</label><input id="org" type="text" name="org" class="form-control validate[required] text-input" data-prompt-position="topRight:-70" placeholder="组织机构学校名称" /></div><div class="form-group input-org"><label for="org_address">所在地：</label><input id="org_address" type="text" name="org_address" class="form-control validate[required] text-input" data-prompt-position="topRight:-70" placeholder="组织机构学校所在地" /></div>');
-	if(arg == 0){
-		console.log(0)
-		if($(".input-org")){
-			$(".input-org").remove();
-		}
-	}else{
-		if($(".input-org").length !=0){
-		}else{
-			$("#reg-goto").before(str);
-		}
-	}
-}
-//绑定事件
-$("#select-list>li").eq(0).click(function(){
-	tabShow(0);
-	tabChange(0);
-});
-$("#select-list>li").eq(1).click(function(){
-	tabShow(1);
-	tabChange(1);
-});
-$("#select-list>li").eq(2).click(function(){
-	tabShow(2);
-	tabChange(2);
-});
-
-function onConfirmed(flag){
-	if(flag == 1){
-		$("#email-goto").text("邮箱发送成功").attr("disabled","true");
-	}else{
-		$("#email-goto").text("邮箱发送异常");
-	}
-}
-//Ajax	
-$("#reg-goto").click(function(){
-	//获取数据
-	var info = getFromInput("#reg-form");
-	//ajax传输
-	// $.post(
-	// 	"<?php echo U('Register/reg');?>",
-	// 	info,
-	// 	function(data){
-	// 		console.log(data);
-	// 		if(data == 10 ){
-	// 			changText($(".my-warning"),"注册成功");
-	// 			window.href = "index.php";
-	// 		}else if(data.substr(0,1) == 0){
-	// 			changText($(".my-warning"),"验证码错误，注册失败");
-	// 		}else{
-	// 			changText($(".my-warning"),"注册失败，请稍后再试");
-	// 		}
-	// 	}
-	// 	);
-});
 $("#email-goto").click(function(){
 	var email = $("#email").val();
+	//验证邮箱格式
+	var re   = new RegExp("/^.*\@.*\..*/","i");
+	//var flag = re.exec(email);
+	var flag = 1;
+	console.log(flag);
+	if(!flag){
+		alert('邮箱格式错误');
+		return ;
+	}
 	console.log(email);
-	$.post(
-		"<?php echo U('Register/sendEmail');?>",
-		{
+	//$(".alert").alert();
+	$.ajax({
+		url:"<?php echo U('Register/sendEmailHandler');?>",
+		data:{
 			'email':email
 		},
-		function(data){onConfirmed(data)}
-		);
+		type:"POST",
+		success:function(data){
+			alert(data.info);
+			if(data.status ==0 ){
+				$(".alert").alert();
+			}
+			$("#alert-success").removeClass("hidden");
+			$("#alert-failed").removeClass("hidden");
+		}
+		// error:function(){
+		// 	alert("");
+		// 	$("#alert-success").removeClass("hidden");
+		// 	$("#alert-failed").removeClass("hidden");
+		// }
+		});
 });
 //ajax验证验证码
 $("#yzm").blur(function(){

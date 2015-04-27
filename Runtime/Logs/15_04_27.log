@@ -1,0 +1,875 @@
+[ 2015-04-27T09:05:55+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T09:09:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:09:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:09:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:09:12+08:00 ] 127.0.0.1 /Register/sendEmail.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.309342s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','nDJTU6b6') [ RunTime:0.321959s ]
+
+[ 2015-04-27T09:21:40+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:21:40+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:21:40+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:10+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:10+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:10+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:33+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:33+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:23:33+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:24:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:24:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:24:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:26:15+08:00 ] 127.0.0.1 /Login/login.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.093378s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.040097s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000265s ]
+
+[ 2015-04-27T09:26:16+08:00 ] 127.0.0.1 /index.php
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T09:27:34+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T09:27:36+08:00 ] 127.0.0.1 /Logout/index.php
+ERR: 非法操作:index.php
+
+[ 2015-04-27T09:28:58+08:00 ] 127.0.0.1 /Logout/index.php
+ERR: 非法操作:index.php
+
+[ 2015-04-27T09:30:19+08:00 ] 127.0.0.1 /Index/index.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T09:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:32:41+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:32:41+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:32:41+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:33:27+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:33:28+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:33:28+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:34:06+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:34:06+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:34:06+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:35:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:35:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:35:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:35:55+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:35:56+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:35:56+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:36:09+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:41:28+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:41:29+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:41:29+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:41:29+08:00 ] 127.0.0.1 /Register/sendEmail.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+ERR: 非法操作:sendEmail
+
+[ 2015-04-27T09:56:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:56:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:56:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:56:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:56:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:56:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:57:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:57:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:57:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:58:27+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:58:27+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:58:27+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:17+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:17+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:17+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:33+08:00 ] 127.0.0.1 /Register/sendEmail.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+ERR: 非法操作:sendEmail
+
+[ 2015-04-27T09:59:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T09:59:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:00:18+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:00:18+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:00:18+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:00:38+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:00:39+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:00:39+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:03:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:03:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:03:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:03:57+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.005452s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('1451583383@qq.com','kfzGCj66') [ RunTime:0.191462s ]
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: php_network_getaddresses: getaddrinfo failed: ��֪��������������  D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to smtp.ym.163.com:25 (php_network_getaddresses: getaddrinfo failed: ��֪�������������� ) D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+
+[ 2015-04-27T10:05:17+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:05:28+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:05:28+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:05:28+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:05:30+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:05:35+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=31
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:05:40+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:05:46+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:05:52+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:07:33+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=31
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:07:37+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:07:41+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:08:30+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=30
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:08:33+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:08:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:08:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:08:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:09:14+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001234s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.004272s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('1451583383@qq.com','mACY2ByV') [ RunTime:0.106820s ]
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: php_network_getaddresses: getaddrinfo failed: ��֪��������������  D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to smtp.ym.163.com:25 (php_network_getaddresses: getaddrinfo failed: ��֪�������������� ) D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+
+[ 2015-04-27T10:09:57+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:09:57+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:09:58+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:10:19+08:00 ] 127.0.0.1 /Login/login.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-27T10:10:26+08:00 ] 127.0.0.1 /Login/login.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004314s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.003742s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000209s ]
+
+[ 2015-04-27T10:10:28+08:00 ] 127.0.0.1 /index.php
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:11:41+08:00 ] 127.0.0.1 /Index/index.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:11:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:11:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:11:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:11:49+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.003750s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('1451583383@qq.com','HVEsXWha') [ RunTime:0.119935s ]
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: php_network_getaddresses: getaddrinfo failed: ��֪��������������  D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to smtp.ym.163.com:25 (php_network_getaddresses: getaddrinfo failed: ��֪�������������� ) D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+
+[ 2015-04-27T10:12:02+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:12:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:12:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:12:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:12:47+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.004347s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('1451583383@qq.com','SFiR6VLU') [ RunTime:0.157067s ]
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: php_network_getaddresses: getaddrinfo failed: ��֪��������������  D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to smtp.ym.163.com:25 (php_network_getaddresses: getaddrinfo failed: ��֪�������������� ) D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+
+[ 2015-04-27T10:16:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:16:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:16:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:16:12+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.005836s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('1451583383@qq.com','L3LkBlkN') [ RunTime:0.132382s ]
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: php_network_getaddresses: getaddrinfo failed: ��֪��������������  D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+NOTIC: [2] fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to smtp.ym.163.com:25 (php_network_getaddresses: getaddrinfo failed: ��֪�������������� ) D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Net\class.smtp.php 第 132 行.
+
+[ 2015-04-27T10:16:40+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:16:40+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:16:40+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:16:43+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.003724s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('11','rrGUKp3w') [ RunTime:0.096194s ]
+
+[ 2015-04-27T10:20:39+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:20:39+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:20:39+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:21:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:21:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:21:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:22+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:22+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:22+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:22:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:26:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:26:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:26:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:26:59+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.004515s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','UXD1lQmm') [ RunTime:0.115141s ]
+
+[ 2015-04-27T10:28:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:28:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:28:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:29:00+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:29:00+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:29:00+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:30:58+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:31:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:31:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:31:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:32:51+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:32:51+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:32:51+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:32:55+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.005788s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('111','oDqlmwAB') [ RunTime:0.119673s ]
+
+[ 2015-04-27T10:33:14+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:33:14+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:33:14+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:33:15+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.003561s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','4M7G8am2') [ RunTime:0.104238s ]
+
+[ 2015-04-27T10:34:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:34:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:34:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:34:53+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.004317s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','opH3pfCd') [ RunTime:0.557871s ]
+
+[ 2015-04-27T10:35:00+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.003662s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','uRaX8Sd4') [ RunTime:0.112511s ]
+
+[ 2015-04-27T10:36:34+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:34+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:34+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:47+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:47+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.004437s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','3RLzVWvz') [ RunTime:0.113455s ]
+
+[ 2015-04-27T10:36:48+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.003612s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','6JFcdWBV') [ RunTime:0.126915s ]
+
+[ 2015-04-27T10:36:48+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.003559s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','jN9H10F0') [ RunTime:0.267687s ]
+
+[ 2015-04-27T10:36:49+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.003742s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','F3Wdwuyd') [ RunTime:0.296716s ]
+
+[ 2015-04-27T10:36:51+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:51+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:51+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:36:53+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.003638s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('','qMYO6RqA') [ RunTime:0.103127s ]
+
+[ 2015-04-27T10:38:11+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:38:12+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:38:12+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:39:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:39:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:39:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:39:56+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:39:57+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:39:57+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:43:54+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:43:55+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:43:55+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:43:58+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.005923s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`) VALUES ('1451583383@qq.com','HMMqE0PG') [ RunTime:0.121979s ]
+
+[ 2015-04-27T10:44:17+08:00 ] 127.0.0.1 /?m=Register&a=confirm&email=1451583383@qq.com&code=HMMqE0PG
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:44:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:44:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:44:21+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:49:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:49:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:49:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:52:25+08:00 ] 127.0.0.1 /?m=Register&a=confirm&email=1451583383@qq.com&code=HMMqE0PG
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:52:26+08:00 ] 127.0.0.1 /?m=Register&a=confirm&email=1451583383@qq.com&code=HMMqE0PG
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:52:26+08:00 ] 127.0.0.1 /?m=Register&a=confirm&email=1451583383@qq.com&code=HMMqE0PG
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:52:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:52:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:52:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:54:01+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:54:01+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:54:01+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:54:06+08:00 ] 127.0.0.1 /Register/confirm.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:54:08+08:00 ] 127.0.0.1 /Register/confirm.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-27T10:55:07+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:55:07+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:55:07+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:56:36+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:56:36+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:56:36+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:56:56+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:56:56+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:56:57+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:57:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:57:48+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:57:49+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:57:49+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:58:05+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:58:05+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:58:05+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:59:55+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:59:55+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-27T10:59:55+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+

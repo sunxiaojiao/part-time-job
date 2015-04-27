@@ -7,7 +7,15 @@ class RegisterAction extends Action{
 	private $orgname;
 	
 	public function index(){
+		if(!session("?reg_email")){
+			$this->error('未认证邮箱',U("Register/sendMail"),3);
+			return;
+		}
+		$this->assign("email",session('reg_email'));
 		$this->display();
+	}
+	public function sendMail(){
+		$this->display('sendmail');
 	}
 /**
  * 注册 
@@ -15,13 +23,7 @@ class RegisterAction extends Action{
  * return int 0：注册成功	1：非POST请求	 2：邮箱验证码错误 	3:邮箱验证通过	4：插入数据库失败
  */
 	public function reg(){
-		//判断邮箱验证码
-		if(!$this->confirm()){
-			$this->ajaxReturn(2);
-			return;
-		}else{
-			//$this->ajaxReturn(3);	
-		}
+		$this->confirmVcode();
 		//插入数据库，成功跳转到个人中心
 		$reger;
 		if($this->isOrg()){
@@ -65,6 +67,7 @@ class RegisterAction extends Action{
 		$MailReg = M('Mailreg_url');
 		$data = array('email'=>$email,'vld_code_value'=>$rand);
 		$MailReg->add($data);
+		$this->ajaxReturn($url);
 		return $url;
 	}
 	/**
@@ -72,7 +75,7 @@ class RegisterAction extends Action{
 	 * @param string $to 收信人
 	 * 0:邮件发送失败 1:邮件发送成功
 	 */
-	public function sendEmail(){
+	public function sendEmailHandler(){
 		$this->email = $this->_post('email');
 		$vld_url = $this->buildUrl($this->email);
 		$title = "小蜜蜂兼职";
@@ -84,9 +87,9 @@ EOT;
 			//设置session
 			session('email_ver',$verify);
 			session('email',$this->email);
-			echo 1;
+			$this->ajaxReturn(1,"发送成功",1);
 		}else{
-			echo 0;
+			$this->ajaxReturn(0,"发送失败",0);
 		}
 
 	}
@@ -112,10 +115,10 @@ EOT;
 				   	  ->where("email=" . "'" . $email . "'" . " AND " . "vld_code_value=" . "'" . "$vld_code" . "'")
 				   	  ->find();
 		if($reg_id){
-			session('reg_vld',1);
+			session('reg_email',$email);
 			$MailReg = M('Mailreg_url');
 			$MailReg->where("email=".$email)->setField("ispass",1);
-			$this->success("邮箱验证成功","/",3);
+			$this->success("邮箱验证成功",U("Register/index"),3);
 		}else{
 			dump($reg->getLastSql());
 			$this->error('验证链接错误',"http://www.xiaomifengjob.com",3);
@@ -131,6 +134,18 @@ EOT;
 			$this->passwd = $this->_post('passwd');
 			$this->address = $this->_post('org_address');
 			$this->orgname = $this->_post('org');
+		}
+	}
+	//设置验证码
+	public function vCode(){
+		import('ORG.Util.Image');
+		Image::buildImageVerify(4,2,'png',0,32);
+	}
+	protected function confirmVcode() {
+		$vcode = $this->_post();
+		if(session('verify') != md5($vcode)) {
+			$this->ajaxReturn(1,"验证码错误",1);
+			return;
 		}
 	}
 
