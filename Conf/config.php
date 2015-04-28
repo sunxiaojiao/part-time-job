@@ -13,6 +13,9 @@ return array(
         '__UPLOAD__' => '/Uploads',
         '__GROUP__' => 'Tpl/bootstrap',
     ),
+    //过滤和验证
+    'VAR_FILTERS'=>'stripslashes,strip_tags',
+    'DB_FIELDTYPE_CHECK'=>true,
     //表前缀
     'DB_PREFIX' => 'xm_',
     //session

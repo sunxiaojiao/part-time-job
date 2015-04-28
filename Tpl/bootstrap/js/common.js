@@ -27,10 +27,7 @@ function changText(element, str) {
      */
 var form = 0;
 
-function enterKey(keypress, click, form) {
-        if (form) {
-            console.log(form);
-        }
+function enterKey(keypress, click) {
         keypress.on('keypress', function(e) {
             if (e.keyCode == 13) {
                 click.click();

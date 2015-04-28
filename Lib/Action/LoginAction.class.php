@@ -17,18 +17,18 @@ class LoginAction extends Action{
 	}
 	/**
 	 * 判断登录
-	 * @return int 0：登录成功，1：非POST请求，2：密码错误，3：邮箱格式不正确 ，4：验证码错误， 5：用户不存在
+	 * @return int 0：登录成功 2：密码错误，3：邮箱格式不正确 ，4：验证码错误， 5：用户不存在
 	 */
 	public function login(){
 		//判断验证码
 		$this->getVerify();
 		if($_SESSION['verify'] != md5($this->verify)){
-			$this->ajaxReturn(4);
+			$this->ajaxReturn(4,"验证码错误",1);
 			return;
 		}
 		//获取正确的email
 		if(!$this->getEmail()){
-			echo 3;
+			$this->ajaxReturn(3,"邮箱格式不正确",1);
 			return;
 		}
 		//获取passwd
@@ -42,9 +42,10 @@ class LoginAction extends Action{
 			->field('uid,username')
 			->find();
 			if($userInfo){
-				$flag = 0;
+				$flag  = 0;
+				$isorg = 0;
 			}else{
-				echo 2;
+				$this->ajaxReturn(2,"密码不正确",1);
 				return;
 			}
 			//设置session
@@ -60,9 +61,10 @@ class LoginAction extends Action{
 			->field('orgname')
 			->find();
 			if($orgInfo){
-				$flag = 0;
+				$flag  = 0;
+				$isorg = 1;
 			}else{
-				echo 2;
+				$this->ajaxReturn(2,"密码不正确",1);
 				return;
 			}
 			session('uid',null);
@@ -72,8 +74,11 @@ class LoginAction extends Action{
 		}else{
 			$flag = 5;
 		}
-		
-		$this->ajaxReturn($flag);
+		if($flag ==0 ){
+			$this->ajaxReturn(0,"登录成功，正在跳转...",$isorg);
+		}else if($flag ==5){
+			$this->ajaxReturn(5,"用户不存在",1);
+		}
 
 	}
 
@@ -84,7 +89,7 @@ class LoginAction extends Action{
 			//判断是否为邮箱格式，
 			$re = "/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/";
 			$email = $this->_post('email');
-			if(preg_match($re,$email)){
+			if($f = preg_match($re,$email)){
 				$this->email = $email;
 				return $this->email;
 			}else{

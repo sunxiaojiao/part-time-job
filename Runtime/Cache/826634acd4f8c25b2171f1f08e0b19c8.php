@@ -1,10 +1,11 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>登录</title>
-<link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>登录</title>
+    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
@@ -12,15 +13,28 @@
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
-<style type="text/css">
-  .red{color:#F00;}
-  .panel-body{position: relative;}
-  #login{position: absolute; right:16px; bottom: 16px;}
-  #verify>input{display:inline;width:216px;}
-</style>
+    <style type="text/css">
+    .red {
+        color: #F00;
+    }
+    
+    .panel-body {
+        position: relative;
+    }
+    
+    #verify>input {
+        display: inline;
+        width: 216px;
+    }
+    
+    .alert-sm {
+        padding: 10px;
+    }
+    </style>
 </head>
+
 <body>
-<!--======导航条======-->
+    <!--======导航条======-->
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -78,114 +92,111 @@ THINK;
   </div><!-- /.container-fluid -->
 </nav>
 <!--======导航条结束======--->
-<div class="container">
-<div class="row">
-<div class="col-md-8"></div>
-<div class="col-md-4">
-  <div class="panel panel-default">
-  <div class="panel-heading">登录</div>
-  <div class="panel-body">
-    <form id="login-form">
-      <div class="form-group">
-        <input type="text" id="email" name="email" class="form-control" placeholder="登录邮箱" />
-      </div>
-      <div class="form-group">
-        <input type="password" id="passwd" class="form-control" placeholder="密码" />
-      </div>
-      <div class="form-group" id="verify">
-        <img src="<?php echo U('Login/vCode');?>" class="verify" />
-        <input type="text" class="form-control" placeholder="验证码" />
-        <button class="btn btn-default verify" type="button">刷新</button>
-      </div>
-      <div class="checkbox">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">登录</div>
+                    <div class="panel-body">
+                        <form id="login-form">
+                          <div class="alert alert-success alert-sm hidden" role="alert">
+                              <button type="button" class="close" aria-hidden="true">&times;</button>
+                              <p></p>
+                          </div>
+                            <div class="form-group">
+                                <input type="text" id="email" name="email" class="form-control" placeholder="登录邮箱" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="passwd" class="form-control" placeholder="密码" />
+                            </div>
+                            <div class="form-group" id="verify">
+                                <img src="<?php echo U('Login/vCode');?>" class="verify" />
+                                <input type="text" class="form-control" placeholder="验证码" />
+                                <button class="btn btn-default verify" type="button">刷新</button>
+                            </div>
+                            <!--       <div class="checkbox">
         <label>
           <input type="checkbox" id="pwdmem" value="1">三天内免登录
         </label>
-        <span class="red warninfo"></span>
-      </div>
-      <button type="button" class="btn btn-default" id="login">登录</button>
-    </form>
-  </div>
-  <div class="panel-footer">xiaomifengjob.com</div>
-  </div>
-</div>
-</div>
-</div><!--./container-->
-<!--footer-->
-<div class="container">
+      </div> -->
+                            <div class="form-group">
+                                <button type="button" class="btn btn-default pull-right" id="login">登录</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer">xiaomifengjob.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--./container-->
+    <!--footer-->
+    <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
-<!--./footer-->
-<script>
-/**
-*修改指定元素的文本为指定字符串
-*@param element
-*@param str
-*/
-function changText(element,str){
-  $(element).text(str);
-}
+    <!--./footer-->
+    <script>
+    (function() {
+        $(".alert button").on('click', function() {
+            $(this).parent().addClass("hidden");
+        });
+    })();
+    //按钮点击时触发ajax
+    $("#login").click(function() {
+        //获取字段值
+        var email = $("#email").val();
+        var passwd = $("#passwd").val();
+        var ver_val = $("#verify>input").val();
+        //checkbox判断
+        var pwdmem = $("#pwdmem").is(":checked");
+        pwdmem = pwdmem ? 1 : 0;
+        //检测字段是否为空
+        if (email == "") {
+            $("#email").focus();
+            $(".alert>p").text("您忘记填写邮箱啦"); $(".alert").removeClass("alert-success").addClass("alert-danger"); $(".alert").removeClass("hidden");
 
-//刷新验证码
-//按钮点击时触发ajax
-  $("#login").click(function(){
-    //获取字段值
-    var email = $("#email").val();
-    var passwd = $("#passwd").val();
-    var ver_val = $("#verify>input").val();
-    //checkbox判断
-    var pwdmem = $("#pwdmem").is(":checked");
-    pwdmem = pwdmem ? 1 : 0;
-    //检测字段是否为空
-    if( email == "" ){
-      $("#email").focus();
-      changText(".warninfo","请输入邮箱地址");
-      return;
-    }
-    if( passwd == "" ){
-      $("#passwd").focus();
-      changText(".warninfo","请输入密码");
-      return;
-    }
-    //AJAX
-    $.post(
-      "<?php echo U('Login/login');?>",
-      {
-        email:email,
-        passwd:passwd,
-        pwdmem:pwdmem,
-        verify:ver_val
-      },
-      function(data){
-        var str = '';
-        switch (data){
-          case 0:
-            str = '登录成功';
-            setTimeout(function(){location.href = '/index.php';},1000);
-            break;
-          case 2:
-            str = '密码错误';
-            break;
-          case 3:
-            str = '邮箱格式不正确';
-            break;
-          case 4:
-            str = '验证码错误';
-            break;
-          case 5:
-            str = '用户不存在';
-            break;
+            return;
         }
-        console.log(str);
-        changText(".warninfo",str);
-      }
-      );
-  });
-
-  
-</script>
+        if (passwd == "") {
+            $("#passwd").focus();
+            $(".alert>p").text("您忘记填写密码啦"); $(".alert").removeClass("alert-success").addClass("alert-danger"); $(".alert").removeClass("hidden");
+            return;
+        }
+        //AJAX
+        $.post(
+            "<?php echo U('Login/login');?>",
+            {
+                email: email,
+                passwd: passwd,
+                pwdmem: pwdmem,
+                verify: ver_val
+            },
+            function(data) {
+              var org = "<?php echo U("OrgCenter/index");?>",user = "<?php echo U("UserCenter/index");?>";
+              if(data.data == 0){
+                $(".alert").removeClass("alert-danger").addClass("alert-success");
+                if(data.status == 0){
+                  setTimeout(function(){location.href = user},1000);
+                }else if(data.status == 1){
+                  setTimeout(function(){location.href = org},1000);
+                }
+              }else{
+                setTimeout(function() {
+                            $("#verify>img").click()
+                        }, 500);
+                $(".alert").removeClass("alert-success").addClass("alert-danger");
+              }
+              $(".alert>p").text(data.info);
+              $(".alert").removeClass("hidden");
+            }
+        );
+    });
+enterKey($("#verify input"),$("#login"));
+    </script>
 </body>
+
 </html>

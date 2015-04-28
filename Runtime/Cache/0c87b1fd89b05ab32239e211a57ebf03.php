@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>兼职平台</title>
 
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css">
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css">
+<link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
+<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
@@ -44,13 +47,15 @@
         <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
       </ul>
 
-      <form class="navbar-form navbar-left" role="search">
+      <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="输入关键词">
+          <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
-
+      <ul class="nav navbar-nav sort-search">
+        <li class=""><a href="<?php echo U('SortSearch/search');?>">分类查找</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
       <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
       	<li class="dropdown">
@@ -75,7 +80,7 @@ THINK;
           </ul>
         </li><!--/.dropdown-->
 THINK;
- if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+ if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/sendMail') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->

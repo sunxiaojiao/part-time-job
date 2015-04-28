@@ -129,7 +129,7 @@ THINK;
         		$(this).parent().addClass("hidden");
         	});
         })();
-        enterKey($("#reg-form input"),$("#email-goto"),$("#reg-form"));
+        enterKey($("#reg-form input"),$("#email-goto"));
         $("#email-goto").click(function() {
             var btn = $("#email-goto");
             var email = $("#email").val();
@@ -176,23 +176,5 @@ THINK;
                 }
             });
         });
-        //ajax验证验证码
-        $("#yzm").blur(function() {
-            $.post(
-                "<?php echo U('Register/confirm');?>", {
-                    yzm: $("#yzm").val()
-                },
-                function(data) {
-                    if (data == 1) {
-                        $(".my-verify").text("正确");
-                    } else {
-                        $(".my-verify").text("错误");
-                    }
-                }
-            );
-
-
-        });
-        //表单验证
         </script>
 </body>
