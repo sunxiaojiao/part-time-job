@@ -20,7 +20,7 @@ class RegisterAction extends Action{
 	/**
 	 * 注册
 	 * 只取passwd 不取repasswd 两次密码验证 在客户端实现
-	 * return int 0：注册成功	1：非POST请求	 2：邮箱验证码错误 	3:邮箱验证通过	4：插入数据库失败
+	 * return int 0：注册成功     1：验证码错误 	2：插入数据库失败
 	 */
 	public function reg(){
 		$this->confirmVcode();
@@ -42,9 +42,9 @@ class RegisterAction extends Action{
 		}
 		//插入数据库
 		if($flag = $reger->data($data)->add()){
-			$this->ajaxReturn(0);
+			$this->ajaxReturn(0,"注册成功",1);
 		}else{
-			$this->ajaxReturn(4);
+			$this->ajaxReturn(2,"注册失败",1);
 		}
 	}
 
@@ -52,7 +52,7 @@ class RegisterAction extends Action{
 	private function isOrg(){
 		if($this->isPost()){
 			$flag = false;
-			if($_POST['org_address'] == '' || $_POST['org'] == ''){
+			if(!isset($_POST['org_address']) || !isset($_POST['org'])){
 				unset($_POST['org']);
 				unset($_POST['org_address']);
 			}else{
@@ -134,7 +134,7 @@ EOT;
 			$this->success("邮箱验证成功",U("Register/index"),3);
 		}else{
 			dump($reg->getLastSql());
-			$this->error('验证链接错误',"http://www.xiaomifengjob.com",3);
+			$this->error('验证链接错误',"/",3);
 			return ;
 		}
 	}
@@ -154,10 +154,11 @@ EOT;
 		import('ORG.Util.Image');
 		Image::buildImageVerify(4,2,'png',0,32);
 	}
+	//验证验证码
 	protected function confirmVcode() {
 		$vcode = $this->_post('vcode');
 		if(session('verify') != md5(strtoupper($vcode))) {
-			$this->ajaxReturn(0,"验证码错误".session('verify')."/".md5($vcode),0);
+			$this->ajaxReturn(1,"验证码错误",1);
 			return;
 		}
 	}

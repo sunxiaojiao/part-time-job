@@ -93,9 +93,9 @@ THINK;
         <input type="password" id="passwd" class="form-control" placeholder="密码" />
       </div>
       <div class="form-group" id="verify">
-        <img src="<?php echo U('Login/vCode');?>" />
+        <img src="<?php echo U('Login/vCode');?>" class="verify" />
         <input type="text" class="form-control" placeholder="验证码" />
-        <button class="btn btn-default" type="button">刷新</button>
+        <button class="btn btn-default verify" type="button">刷新</button>
       </div>
       <div class="checkbox">
         <label>
@@ -130,13 +130,6 @@ function changText(element,str){
 }
 
 //刷新验证码
-$("#verify>button").click(function(){
-  var ver_img = $("#verify>img");
-  ver_img.attr("src","__APP__/Login/vCode?" + new Date().getTime());
-});
-$("#verify>img").click(function(){
-  $(this).attr("src","__APP__/Login/vCode?" + new Date().getTime());
-});
 //按钮点击时触发ajax
   $("#login").click(function(){
     //获取字段值

@@ -112,23 +112,5 @@
                 }
             });
         });
-        //ajax验证验证码
-        $("#yzm").blur(function() {
-            $.post(
-                "{:U('Register/confirm')}", {
-                    yzm: $("#yzm").val()
-                },
-                function(data) {
-                    if (data == 1) {
-                        $(".my-verify").text("正确");
-                    } else {
-                        $(".my-verify").text("错误");
-                    }
-                }
-            );
-
-
-        });
-        //表单验证
         </script>
 </body>

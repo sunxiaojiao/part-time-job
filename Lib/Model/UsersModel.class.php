@@ -22,7 +22,7 @@ class UsersModel extends Model{
 	//自动完成
 	protected $_auto=array(
 		//array('citme','now'),
-		array('passwd','md5'),
+		//array('passwd','md5'),
 	);
 }
 ?>

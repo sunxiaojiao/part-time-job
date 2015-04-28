@@ -439,3 +439,651 @@ ERR: 非法操作:Tpl
 [ 2015-04-28T07:47:57+08:00 ] 127.0.0.1 /
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-04-28T10:46:25+08:00 ] 127.0.0.1 /Index/index.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-28T10:46:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:46:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:46:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:46:50+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.028460s ]
+SQL: SELECT `email` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005154s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000298s ]
+
+[ 2015-04-28T10:49:27+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001814s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.004864s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`,`ctime`) VALUES ('1451583383@qq.com','eis6pBHc',1430189357) [ RunTime:0.246695s ]
+NOTIC: [8] Undefined variable: verify D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 110 行.
+
+[ 2015-04-28T10:49:44+08:00 ] 127.0.0.1 /?m=Register&a=confirm&email=1451583383@qq.com&code=eis6pBHc
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-04-28T10:49:47+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:49:48+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:49:48+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:50:10+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined index: org_address D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005674s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_users` (`email`,`passwd`,`ctime`) VALUES ('1451583383@qq.com','21232f297a57a5a743894a0e4a801fc3',1430189410) [ RunTime:0.150695s ]
+
+[ 2015-04-28T10:50:13+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:56:42+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined index: org_address D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.006137s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_users` (`email`,`passwd`,`ctime`) VALUES ('1451583383@qq.com','21232f297a57a5a743894a0e4a801fc3',1430189802) [ RunTime:0.198959s ]
+
+[ 2015-04-28T10:59:49+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:59:49+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T10:59:49+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:00:07+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined index: org_address D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004984s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_users` (`email`,`passwd`,`ctime`) VALUES ('1451583383@qq.com','c5df4f4eabf1cbcfeb50fbbf97c5289f',1430190007) [ RunTime:0.105846s ]
+
+[ 2015-04-28T11:03:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:03:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:03:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:04:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:04:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:04:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:06:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:06:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:06:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:07:06+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:07:06+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:07:06+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:07:08+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T11:07:18+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:07:24+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T11:08:03+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T11:11:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:11:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:11:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:11:12+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:11:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:11:47+08:00 ] 127.0.0.1 /Register/__APP__/Login/vCode?1430190707522
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:11:48+08:00 ] 127.0.0.1 /Register/__APP__/Login/vCode?1430190708761
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:34:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:34:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:34:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T11:34:33+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192073035
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:35:21+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192121912
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:35:31+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192131617
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:35:36+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192136378
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:37:31+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192251652
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:37:39+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192259727
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:37:40+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192260624
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:37:41+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192261187
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:37:41+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192261700
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:37:42+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192262250
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:37:43+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192263606
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:09+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192289334
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:10+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192290190
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:10+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192290931
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:11+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192291497
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:14+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192294901
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:20+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192300022
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:33+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192313555
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:34+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192314719
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:52+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192332684
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:55+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192335910
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:57+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192336996
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:57+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192337495
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:57+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192337880
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:58+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192338123
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:58+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192338328
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:58+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192338559
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:38:58+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192338754
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:41:24+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192483991
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:42:16+08:00 ] 127.0.0.1 /Login/login.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T11:42:18+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192538569
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:44:47+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192687878
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:47:24+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192844195
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:47:51+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192871096
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:47:54+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192874348
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:47:58+08:00 ] 127.0.0.1 /Login/__APP__/Login/vCode?1430192878266
+ERR: 非法操作:__APP__
+
+[ 2015-04-28T11:48:46+08:00 ] 127.0.0.1 /Login/vCode.html14301929264711430192926471
+ERR: 非法操作:vCode.html14301929264711430192926471
+
+[ 2015-04-28T11:49:05+08:00 ] 127.0.0.1 /Login/[object%20Object]1430192945848
+ERR: 非法操作:[object Object]1430192945848
+
+[ 2015-04-28T11:49:09+08:00 ] 127.0.0.1 /Login/[object%20Object]1430192949470
+ERR: 非法操作:[object Object]1430192949470
+
+[ 2015-04-28T11:49:10+08:00 ] 127.0.0.1 /Login/[object%20Object]1430192950673
+ERR: 非法操作:[object Object]1430192950673
+
+[ 2015-04-28T11:51:40+08:00 ] 127.0.0.1 /Login/vCode.html14301931004921430193100492
+ERR: 非法操作:vCode.html14301931004921430193100492
+
+[ 2015-04-28T11:51:41+08:00 ] 127.0.0.1 /Login/vCode.html1430193100492143019310049214301931016681430193101668
+ERR: 非法操作:vCode.html1430193100492143019310049214301931016681430193101668
+
+[ 2015-04-28T11:54:03+08:00 ] 127.0.0.1 /Login/vCode.html1430193243547?1430193243547
+ERR: 非法操作:vCode.html1430193243547
+
+[ 2015-04-28T11:54:14+08:00 ] 127.0.0.1 /Login/vCode.html1430193254497?1430193254497
+ERR: 非法操作:vCode.html1430193254497
+
+[ 2015-04-28T12:02:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T12:03:05+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:06:15+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:06:28+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:08:27+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:08:58+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:09:01+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:09:03+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:09:03+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:09:04+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:09:05+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:09:26+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:09:28+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:09:45+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:09:46+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:10:57+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:10:58+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:11:00+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:11:01+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:11:03+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:11:11+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:11:12+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:11:13+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:11:46+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:12:04+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:12:04+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:12:13+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:15:00+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:15:02+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:17:38+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:18:18+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:18:36+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:25:54+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:26:56+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:26:56+08:00 ] 127.0.0.1 /%20Register/vCode%20.html
+ERR: 无法加载模块: Register
+
+[ 2015-04-28T14:27:39+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:27:39+08:00 ] 127.0.0.1 /Register/vCode%20.html
+ERR: 非法操作:vCode 
+
+[ 2015-04-28T14:27:47+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:28:47+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:29:06+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:30:15+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:30:48+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:31:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:31:38+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:31:51+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:32:01+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:32:12+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined index: org_address D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.259572s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_users` (`email`,`passwd`,`ctime`) VALUES ('1451583383@qq.com','d41d8cd98f00b204e9800998ecf8427e',1430202732) [ RunTime:0.147527s ]
+
+[ 2015-04-28T14:33:20+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined index: org_address D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005057s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_users` (`email`,`passwd`,`ctime`) VALUES ('1451583383@qq.com','d41d8cd98f00b204e9800998ecf8427e',1430202800) [ RunTime:0.200337s ]
+
+[ 2015-04-28T14:33:24+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:33:30+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined index: org_address D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.043949s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_users` (`email`,`passwd`,`ctime`) VALUES ('1451583383@qq.com','d41d8cd98f00b204e9800998ecf8427e',1430202810) [ RunTime:0.139671s ]
+
+[ 2015-04-28T14:40:01+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:44:07+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:44:08+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:44:25+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:45:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:46:07+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:46:07+08:00 ] 127.0.0.1 /%20Register/vCode%20.html
+ERR: 无法加载模块: Register
+
+[ 2015-04-28T14:46:29+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T14:46:40+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:53:16+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T14:59:59+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T15:04:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T15:05:05+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T15:05:38+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001804s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-04-28T15:05:53+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined index: org_address D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005167s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_users` (`email`,`passwd`,`ctime`) VALUES ('1451583383@qq.com','b59c67bf196a4758191e42f76670ceba',1430204753) [ RunTime:0.151391s ]
+
+[ 2015-04-28T15:11:41+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T15:11:41+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T15:11:41+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T15:13:16+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T15:24:22+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-04-28T15:48:02+08:00 ] 127.0.0.1 /Register/reg.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.219035s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_orgs` (`email`,`passwd`,`ctime`,`orgname`,`org_address`) VALUES ('1451583383@qq.com','81dc9bdb52d04dc20036dbd8313ed055',1430207282,'蓝翔','济南') [ RunTime:0.118347s ]
+
