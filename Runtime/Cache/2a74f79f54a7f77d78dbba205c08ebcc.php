@@ -95,10 +95,11 @@ THINK;
                     <button type="button" class="close" aria-hidden="true">&times;</button><p>发送成功</p></div>
                 <div class="alert alert-danger alert-dismissable hidden" id="alert-failed">
                     <button type="button" class="close" aria-hidden="true">&times;</button><p>发送失败</p></div>
-                <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form" class="form-inline">
+                <form id="reg-form" class="form-inline">
                     <div class="form-group input-group">
                         <label for="email" class="sr-only">邮箱：</label>
-                        <input id="email" type="text" name="email" class="form-control validate[required,custom[email]] text-input" data-prompt-position="topRight:-70" placeholder="请输入邮箱" />
+                        <input id="email" type="text" name="email" class="form-control text-input" placeholder="请输入邮箱" />
+                        <input class="hidden" />
                     </div>
                     <button type="button" class="btn btn-primary" id="email-goto" data-loading-text="发送中..." autocomplete="off">发送</button>
                 </form>
@@ -128,6 +129,7 @@ THINK;
         		$(this).parent().addClass("hidden");
         	});
         })();
+        enterKey($("#reg-form input"),$("#email-goto"),$("#reg-form"));
         $("#email-goto").click(function() {
             var btn = $("#email-goto");
             var email = $("#email").val();

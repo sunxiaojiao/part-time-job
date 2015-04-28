@@ -22,3 +22,18 @@ function getFromInput(form){
 function changText(element,str){
   $(element).text(str);
 }
+/**
+*
+*/
+var form = 0;
+function enterKey(keypress,click,form){
+	if(form){
+		console.log(form);
+	}
+	keypress.on('keypress',function(e){
+		if(e.keyCode == 13){
+			click.click();
+		}
+	});
+
+}
