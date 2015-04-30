@@ -4,6 +4,7 @@ var citySelect = document.getElementById('city');
 var districtSelect = document.getElementById('district');
 var areaSelect = document.getElementById('biz_area');
 var address = "";
+var addressname = "";
 mapObj = new AMap.Map('mapContainer', {
     resizeEnable: true,
     // layers: [
@@ -61,8 +62,7 @@ function getData(e) {
                 mapObj.setFitView(); //地图自适应
                 //清除地图上所有覆盖物
 		        setTimeout(function(){
-		        	for (var i = 0, l = polygons.length; i < l; i++) {
-		            polygons[i].setMap(null);}
+                    mapObj.clearMap();
 		        },1500);
             }
         }
@@ -147,15 +147,16 @@ function search(obj) {
 				icon:"http://webapi.amap.com/images/marker_sprite.png", //marker图标，直接传递地址url
 				offset:{x:-8,y:-34} //相对于基点的位置
 			});
-			address = {x:contextMenuPositon.getLng(),y:contextMenuPositon.getLat()};
-			console.log(contextMenuPositon);
+			address    = {x:contextMenuPositon.getLng(),y:contextMenuPositon.getLat()};
+            mapObj.getCity(function(result){
+                addressname = result.city + result.district;
+                console.log(result);
+            })
+            console.log(address);
+			console.log(addressname);
 		},3);
 		//地图绑定鼠标右击事件——弹出右键菜单
 		AMap.event.addListener(mapObj,'rightclick',function(e){
 			contextMenu.open(mapObj,e.lnglat);
 			contextMenuPositon = e.lnglat;
 		});
-//     //为地图注册click事件获取鼠标点击出的经纬度坐标
-// var clickEventListener = AMap.event.addListener(mapObj, 'mousedown', function(e) {
-//      console.log(e.lnglat.getLng(),e.lnglat.getLat());
-// });

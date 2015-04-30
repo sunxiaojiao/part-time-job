@@ -90,7 +90,7 @@
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
       <ul class="nav navbar-nav sort-search">
-        <li class=""><a href="<?php echo U('SortSearch/search');?>?q=q">分类查找</a></li>
+        <li class=""><a href="/SortSearch/search.html?q=q">分类查找</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
@@ -178,7 +178,8 @@ THINK;
                     <div class="form-group">
                         <label for="job-address" class="col-sm-2 control-label">工作地点：</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="address" name="address" placeholder="工作地点" />
+                            <input type="text" id="address" class="hidden" name="address" />
+                            <input class="form-control" id="addressname" name="addressname" placeholder="工作地点" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -294,23 +295,12 @@ THINK;
     <script type="text/javascript" src="/__GROUP__/js/map.js"></script>
     <script type="text/javascript">
     //Modal
-    $("#address").on('focus',function(){
+    $("#addressname").on('focus',function(){
       $(".modal").modal('toggle');
     });
-    //加载地图
-    // $("#address").on('focus',function(){
-    //     (function(exprots){
-    //       var map = new AMap.Map('mapContainer',{
-    //         view:new AMap.View2D({
-    //           center: new AMap.LngLat(119,39),
-    //           zoom: 12
-    //         })
-    //       });
-    //     })(window);
-    // });
-    //
     $('.modal').on('hidden.bs.modal', function (e) {
-      $("#address").val(address.x + "," +address.y);  
+      $("#address").val(address.x + "," +address.y);
+      $("#addressname").val(addressname);  
     })
     
     //时间控件

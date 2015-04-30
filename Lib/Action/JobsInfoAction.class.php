@@ -12,11 +12,12 @@ class JobsInfoAction extends Action{
 	private function showInfo(){
 		$this->jid =  $this->_get('jid');
 		$Job = M('Jobs');
-		$field = "jid,title,org_intro,detail,xm_mold.name,xm_orgs.orgname,is_validate,pub_oid,money,money_style,work_time,begin_time,want_peo,peo_style,current_peo,leader,xm_jobs.ctime,leader_phone,pv";
+		$field = "jid,address,title,org_intro,addressname,detail,xm_mold.name,xm_orgs.orgname,is_validate,pub_oid,money,money_style,work_time,begin_time,want_peo,peo_style,current_peo,leader,xm_jobs.ctime,leader_phone,pv";
 		$where = "jid=".$this->jid;// . " AND " . 'is_pass=1';
 		$join1 = "INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id";
 		$join2 = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid";
 		$list = $Job->where($where)->join($join1)->join($join2)->field($field)->find();
+		$list['address'] = explode(",", $list['address']);
 		dump($list);
 		if($list){
 			$this->assign("list",$list);

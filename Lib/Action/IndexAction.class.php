@@ -50,7 +50,7 @@ class IndexAction extends Action{
 		$Page  = new Page($count,10);
 		$list  = $Jobs->order('pv desc')->order($order/*.","."ctime desc"*/)
 		->limit($Page->firstRow.','.$Page->listRows)
-		->field("jid,title,money,want_peo,current_peo,address,pv,ctime")
+		->field("jid,title,money,want_peo,current_peo,addressname,pv,ctime")
 		->where($where)
 		->select();
 		//设置分页样式

@@ -116,7 +116,8 @@
                     <div class="form-group">
                         <label for="job-address" class="col-sm-2 control-label">工作地点：</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="address" name="address" placeholder="工作地点" />
+                            <input type="text" id="address" class="hidden" name="address" />
+                            <input class="form-control" id="addressname" name="addressname" placeholder="工作地点" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -227,23 +228,12 @@
     <script type="text/javascript" src="/__GROUP__/js/map.js"></script>
     <script type="text/javascript">
     //Modal
-    $("#address").on('focus',function(){
+    $("#addressname").on('focus',function(){
       $(".modal").modal('toggle');
     });
-    //加载地图
-    // $("#address").on('focus',function(){
-    //     (function(exprots){
-    //       var map = new AMap.Map('mapContainer',{
-    //         view:new AMap.View2D({
-    //           center: new AMap.LngLat(119,39),
-    //           zoom: 12
-    //         })
-    //       });
-    //     })(window);
-    // });
-    //
     $('.modal').on('hidden.bs.modal', function (e) {
-      $("#address").val(address.x + "," +address.y);  
+      $("#address").val(address.x + "," +address.y);
+      $("#addressname").val(addressname);  
     })
     
     //时间控件

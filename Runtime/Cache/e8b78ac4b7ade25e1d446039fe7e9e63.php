@@ -196,7 +196,7 @@ THINK;
 					    	
 					    	<?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
 						    <span class="my-partjob-address">
-						    	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["address"]); ?></span>
+						    	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["addressname"]); ?></span>
 						    <span class="my-partjob-money">
 						    	<span class="glyphicon glyphicon-yen" aria-hidden="true"></span><?php echo ($job["money"]); ?>
 						    </span>

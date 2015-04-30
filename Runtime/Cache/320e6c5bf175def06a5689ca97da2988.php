@@ -13,6 +13,7 @@
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=8d8574dfcfd097659736c026a6921ca5"></script>
     <style type="text/css">
     .panel-body {
         position: relative;
@@ -37,6 +38,12 @@
     
     .nvlded-color {
         color: #F00;
+    }
+    .tab-content{
+      margin-top:20px;
+    }
+    #mapContainer{
+      height:500px;
     }
     </style>
 </head>
@@ -150,7 +157,7 @@ THINK;
                                 <td>联系电话：<?php echo ($list["leader_phone"]); ?></td>
                             </tr>
                             <tr>
-                                <td>工作地址：<?php echo ($list["address"]); ?><a href="">点击查看地图</a></td>
+                                <td>工作地址：<?php echo ($list["addressname"]); ?><a href="javascript:void(0);" data-toggle="modal" data-target=".modal">点击查看地图</a></td>
                             </tr>
                         </table>
                         <button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
@@ -220,6 +227,27 @@ THINK;
             </div>
         </div>
     </div>
+    <!--modeal-->
+    <div class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">选择地点</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="mapContainer"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
     <!--./container-->
     <!--footer-->
     <div class="container">
@@ -238,6 +266,38 @@ THINK;
             }
         });
     });
+    </script>
+    <script type="text/javascript">
+    //加载地图
+    $(".modal").on('show.bs.modal',function(){
+      var x= "<?php echo ($list["address"]["0"]); ?>",y = <?php echo (($list["address"]["1"])?($list["address"]["1"]):'true'); ?>;
+      var map;
+      if(y === true){
+        (function(exprots){
+          map = new AMap.Map('mapContainer',{
+            view:new AMap.View2D({
+              zoom: 12
+            })
+          });
+        })(window);
+        return;
+      }
+      
+        (function(exprots){
+          map = new AMap.Map('mapContainer',{
+            view:new AMap.View2D({
+              center: new AMap.LngLat(x,y),
+              zoom: 15
+            })
+          });
+        })(window);
+        marker = new AMap.Marker({          
+        icon:"http://webapi.amap.com/images/marker_sprite.png",
+        position:new AMap.LngLat(x,y)
+      });
+      marker.setMap(map);  //在地图上添加点
+    });
+    
     </script>
     <!--./footer-->
 </body>
