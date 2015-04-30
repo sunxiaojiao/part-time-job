@@ -1,11 +1,11 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
 
-<link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>兼职平台</title>
+    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
@@ -13,18 +13,36 @@
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
-<style type="text/css">
-  .panel-body{position: relative;}
-  .my-perinfo{margin-left:26px;}
-  .my-perinfo>p>span{margin-right:18px;}
-  .my-perimg{border:1px solid #EEE;}
-  .my-jobhead>p{position: absolute; top:10px; right:10px;}
-  .my-jobhead>p>span{/*position: absolute;*/ margin-left: 10px;}
-  .form-group a.login{position: relative; top:32px; left:36px; font:18px/18px "";}
-</style>
+    <style type="text/css">
+    .panel-body {
+        position: relative;
+    }
+    
+    .form-group a.login {
+        position: relative;
+        top: 32px;
+        left: 36px;
+        font: 18px/18px "";
+    }
+    
+    .orgname {
+        padding-left: 10px;
+        margin-bottom: 20px;
+        font: 18px/18px "";
+    }
+    
+    .vlded-color {
+        color: #48C629;
+    }
+    
+    .nvlded-color {
+        color: #F00;
+    }
+    </style>
 </head>
+
 <body>
-<!--======导航条======-->
+    <!--======导航条======-->
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -82,85 +100,146 @@ THINK;
   </div><!-- /.container-fluid -->
 </nav>
 <!--======导航条结束======--->
-<!--container-->
-<div class="container">
-  <div class="row">
-    <!--left-->
-    <div class="col-md-8">
-
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="my-jobhead">
-            <h3><?php echo ($title); ?></h3>
-            <p><span>兼职类型：其他</span><span>发布时间：<?php echo (date("m月d日 h:i",$ctime)); ?></span></p>
-          </div>
-        </div>
-      </div>
-      <!--信息统计字段 具体还需要参考其他大型人才网站-->
-      <div class="panel panel-default">
-        <div class="panel-heading">详细信息</div>
-        <div class="panel-body">
-          <h3 class="">兼职描述</h3>
-          <hr />
-          <p><?php echo ($detail); ?> </p>
-          <h3></h3>
-          <hr />
-          <p>联系人：<?php echo ($leader); ?></p>
-          <p>联系电话：<?php echo ($leader_phone); ?></p>
-          <h3>评价</h3>
-          <hr />
-          <p>好不好好不好好不好好不好好不好好不好好不好好不好</p>
-          <form action="" method="post" class="">
-            <?php if( session('?uid')): ?><div class="form-group">
-              <label for="pingjia">评价:</label>
-              <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <!--left-->
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <?php if($error_info): ?><h3><?php echo ($error_info); ?></h3>
+                            <?php else: ?>
+                            <h3><?php echo ($list["title"]); ?></h3><?php endif; ?>
+                        <div class="row">
+                            <div class="col-md-3"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp;<?php echo (date("m月d日 h:i",$list["ctime"])); ?>发布</div>
+                            <div class="col-md-3"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;<?php echo ($list["pv"]); ?>次浏览</div>
+                            <div class="col-md-3"><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>&nbsp;<?php echo ($list["current_peo"]); ?>人已申请</div>
+                            <div class="col-md-3"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span>&nbsp;<?php echo ($list["name"]); ?></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">详细信息</div>
+                    <div class="panel-body">
+                        <div class="orgname">
+                            公司名称：<?php echo ($list["orgname"]); ?>
+                            <?php if($list["is_validate"] == 0): ?><span class="glyphicon glyphicon-question-sign nvlded-color"></span><span class="nvlded-color">未认证</span>
+                                <?php else: ?>
+                                <span class="glyphicon glyphicon-ok-sign vlded-color"></span><span class="vlded-color">已认证</span><?php endif; ?>
+                        </div>
+                        <table class="table">
+                            <tr>
+                                <td>工资待遇：<?php echo ($list["money"]); ?>
+                                    <?php switch($list["money_style"]): case "1": ?>元每小时<?php break;?>
+                                        <?php case "2": ?>元每天<?php break;?>
+                                        <?php case "3": ?>元每次<?php break;?>
+                                        <?php default: ?>元<?php endswitch;?>
+                                </td>
+                                <td>招聘人数：<?php echo ($list["want_peo"]); ?>
+                                    <?php switch($list["peo_style"]): case "1": ?>个人<?php break;?>
+                                        <?php case "2": ?>人左右<?php break;?>
+                                        <?php default: ?>个人<?php endswitch;?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>到岗时间：<?php echo (date("m月d日h:i",$list["begin_time"])); ?></td>
+                                <td>工作时长：<?php echo ($list["work_time"]); ?>小时</td>
+                            </tr>
+                            <tr>
+                                <td>联系人：<?php echo ($list["leader"]); ?></td>
+                                <td>联系电话：<?php echo ($list["leader_phone"]); ?></td>
+                            </tr>
+                            <tr>
+                                <td>工作地址：<?php echo ($list["address"]); ?><a href="">点击查看地图</a></td>
+                            </tr>
+                        </table>
+                        <button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
+                        <?php if(session('?uid')): endif; ?>
+                        <hr />
+                        <div role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">兼职详情</a></li>
+                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">公司介绍</a></li>
+                                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">公司评价</a></li>
+                                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">申请记录</a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                  <?php echo ($list["detail"]); ?>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="profile">
+                                  <?php echo ($list["org_intro"]); ?>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="messages">
+                                    <form action="" method="post" class="">
+                                        <?php if( session('?uid')): ?><div class="form-group">
+                                                <label for="pingjia">评价:</label>
+                                                <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-default">评价</button>
+                                            <?php else: ?>
+                                            <div class="form-group">
+                                                <label for="pingjia">评价:</label>
+                                                <a class="login" href="<?php echo U('Login/index');?>">登录</a>
+                                                <textarea class="form-control" rows="3" id="pingjia" disabled="true" name="pingjia" placeholder="">请先登录</textarea>
+                                            </div>
+                                            <button type="submit" disabled="true" class="btn btn-default">评价</button><?php endif; ?>
+                                    </form>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="settings">
+                                  <table class="table">
+                                    <thead><td>申请人</td><td>申请时间</td><td>处理结果</td></thead>
+                                    <?php if($apply_error_info): ?><tr><td><?php echo ($apply_error_info); ?></td></tr>
+                                    <?php else: ?>
+                                    <?php if(is_array($applylist)): $i = 0; $__LIST__ = $applylist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$applylist): $mod = ($i % 2 );++$i;?><tr>
+                                      <td><?php echo ($applylist["username"]); ?></td><td><?php echo (date("m月d日h点",$applylist["ctime"])); ?></td>
+                                      <td>
+                                      <?php switch($applylist["is_pass"]): case "1": ?>未处理<?php break;?>
+                                      <?php case "2": ?><span class="vlded-color">通过</span><?php break;?>
+                                      <?php case "3": ?><span class="nvlded-color">未通过</span><?php break; endswitch;?>
+                                      </td>
+                                    </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                                  </table>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn btn-default">评价</button>
-            <?php else: ?>
-            <div class="form-group">
-              <label for="pingjia">评价:</label>
-              <a class="login" href="<?php echo U('Login/index');?>">登录</a>
-              <textarea class="form-control" rows="3" id="pingjia" disabled="true" name="pingjia" placeholder="">请先登录</textarea>
+            <!--right-->
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                    </div>
+                </div>
             </div>
-            <button type="submit" disabled="true" class="btn btn-default">评价</button><?php endif; ?>
-          </form>
-          <hr />
-          <?php if(session('?uid')): ?><button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
-          <?php else: ?>
-          <button type="button" id="goto-apply" class="btn btn-primary btn-lg" disabled="true">申请此兼职</button><?php endif; ?>
         </div>
-      </div>
     </div>
-    <!--right-->
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">关于小蜜蜂</div>
-        <div class="panel-body">
-          <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--./container-->
-<!--footer-->
-<div class="container">
+    <!--./container-->
+    <!--footer-->
+    <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
-<!--/footer-->
-<script type="text/javascript">
-  $("#goto-apply").click(function(){
-    $.ajax({
-      url:"<?php echo U('ApplyJob/apply');?>",
-      success:function(data){
-        alert(data.info);
-      }
+    <!--/footer-->
+    <script type="text/javascript">
+    $("#goto-apply").click(function() {
+        $.ajax({
+            url: "<?php echo U('ApplyJob/apply');?>",
+            success: function(data) {
+                alert(data.info);
+            }
+        });
     });
-  });
-</script>
-<!--./footer-->
+    </script>
+    <!--./footer-->
 </body>
+
 </html>

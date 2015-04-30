@@ -2,40 +2,29 @@
 class JobsInfoAction extends Action{
 	private $jid;
 	public function index(){
-		$this->assignIt();
+		$this->showInfo();
+		$this->showApplyRecord();
 		$this->recordClickNum();
 		session("jid",$this->jid);
 		$this->display();
 	}
-	/**
-	 * 读取数据
-	 * @return integer 0：查询错误  1：无记录  3：用户未登录
-	 * @return $list：查询成功返回数组
-	 */
-	private function read(){
+
+	private function showInfo(){
 		$this->jid =  $this->_get('jid');
 		$Job = M('Jobs');
-		$list = $Job->where("jid=".$this->jid)->find();
+		$field = "jid,title,org_intro,detail,xm_mold.name,xm_orgs.orgname,is_validate,pub_oid,money,money_style,work_time,begin_time,want_peo,peo_style,current_peo,leader,xm_jobs.ctime,leader_phone,pv";
+		$where = "jid=".$this->jid;// . " AND " . 'is_pass=1';
+		$join1 = "INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id";
+		$join2 = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid";
+		$list = $Job->where($where)->join($join1)->join($join2)->field($field)->find();
+		dump($list);
 		if($list){
-			if(is_null($list)){
-				//无记录
-				return 1;
-			}else{
-				return $list;
-			}
+			$this->assign("list",$list);
+			return;
+		}else if(is_null($list)){
+			$this->assign('error_info','没有此兼职');
 		}else{
-			return 0;
-		}
-	}
-	/**
-	 * 模板赋值
-	 * @param 
-	 */
-	private function assignIt(){	
-		if($arr = $this->read()){
-			foreach ($arr as $key=>$value){
-				$this->assign($key,$value);
-			}
+			$this->assign('error_info','查询错误，请稍后再试'.$Job->getLastSql());
 		}
 	}
 	protected function recordClickNum() {
@@ -53,7 +42,20 @@ class JobsInfoAction extends Action{
 				cookie($cookie,serialize($arr),array('expire'=>3600*6));
 			}
 		}
-		
+	}
+	protected function showApplyRecord() {
+		$Apply = M('apply');
+		$where = "app_jid=".$this->_get('jid');
+		$field = "username,xm_apply.ctime,is_pass";
+		$join  = "INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid";
+		$arr2  = $Apply->field($field)->join($join)->where($where)->select();
+		if($arr2){
+			$this->assign("applylist",$arr2);
+		}else if(is_null($arr2)){
+			$this->assign("apply_error_info","还没有人申请");
+		}else{
+			$this->assign("apply_error_info","查询错误，请稍后再试");
+		}
 	}
 }
 ?>

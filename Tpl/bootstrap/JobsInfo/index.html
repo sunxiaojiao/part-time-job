@@ -1,101 +1,193 @@
 <!doctype html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
-
-<include file="./Tpl/bootstrap/public/static.html" />
-<style type="text/css">
-  .panel-body{position: relative;}
-  .my-perinfo{margin-left:26px;}
-  .my-perinfo>p>span{margin-right:18px;}
-  .my-perimg{border:1px solid #EEE;}
-  .my-jobhead>p{position: absolute; top:10px; right:10px;}
-  .my-jobhead>p>span{/*position: absolute;*/ margin-left: 10px;}
-  .form-group a.login{position: relative; top:32px; left:36px; font:18px/18px "";}
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .panel-body {
+        position: relative;
+    }
+    
+    .form-group a.login {
+        position: relative;
+        top: 32px;
+        left: 36px;
+        font: 18px/18px "";
+    }
+    
+    .orgname {
+        padding-left: 10px;
+        margin-bottom: 20px;
+        font: 18px/18px "";
+    }
+    
+    .vlded-color {
+        color: #48C629;
+    }
+    
+    .nvlded-color {
+        color: #F00;
+    }
+    </style>
 </head>
-<body>
-<include file="./Tpl/bootstrap/public/header.html" />
-<!--container-->
-<div class="container">
-  <div class="row">
-    <!--left-->
-    <div class="col-md-8">
 
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="my-jobhead">
-            <h3>{$title}</h3>
-            <p><span>兼职类型：其他</span><span>发布时间：{$ctime|date="m月d日 h:i",###}</span></p>
-          </div>
-        </div>
-      </div>
-      <!--信息统计字段 具体还需要参考其他大型人才网站-->
-      <div class="panel panel-default">
-        <div class="panel-heading">详细信息</div>
-        <div class="panel-body">
-          <h3 class="">兼职描述</h3>
-          <hr />
-          <p>{$detail} </p>
-          <h3></h3>
-          <hr />
-          <p>联系人：{$leader}</p>
-          <p>联系电话：{$leader_phone}</p>
-          <h3>评价</h3>
-          <hr />
-          <p>好不好好不好好不好好不好好不好好不好好不好好不好</p>
-          <form action="" method="post" class="">
-            <if condition=" session('?uid')">
-            <div class="form-group">
-              <label for="pingjia">评价:</label>
-              <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
+<body>
+    <include file="./Tpl/bootstrap/public/header.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <!--left-->
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <if condition="$error_info">
+                            <h3>{$error_info}</h3>
+                            <else />
+                            <h3>{$list.title}</h3>
+                        </if>
+                        <div class="row">
+                            <div class="col-md-3"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp;{$list.ctime|date="m月d日 h:i",###}发布</div>
+                            <div class="col-md-3"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;{$list.pv}次浏览</div>
+                            <div class="col-md-3"><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>&nbsp;{$list.current_peo}人已申请</div>
+                            <div class="col-md-3"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span>&nbsp;{$list.name}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">详细信息</div>
+                    <div class="panel-body">
+                        <div class="orgname">
+                            公司名称：{$list.orgname}
+                            <if condition="$list.is_validate eq 0">
+                                <span class="glyphicon glyphicon-question-sign nvlded-color"></span><span class="nvlded-color">未认证</span>
+                                <else />
+                                <span class="glyphicon glyphicon-ok-sign vlded-color"></span><span class="vlded-color">已认证</span>
+                            </if>
+                        </div>
+                        <table class="table">
+                            <tr>
+                                <td>工资待遇：{$list.money}
+                                    <switch name="list.money_style">
+                                        <case value="1">元每小时</case>
+                                        <case value="2">元每天</case>
+                                        <case value="3">元每次</case>
+                                        <default />元
+                                    </switch>
+                                </td>
+                                <td>招聘人数：{$list.want_peo}
+                                    <switch name="list.peo_style">
+                                        <case value="1">个人</case>
+                                        <case value="2">人左右</case>
+                                        <default />个人
+                                    </switch>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>到岗时间：{$list.begin_time|date="m月d日h:i",###}</td>
+                                <td>工作时长：{$list.work_time}小时</td>
+                            </tr>
+                            <tr>
+                                <td>联系人：{$list.leader}</td>
+                                <td>联系电话：{$list.leader_phone}</td>
+                            </tr>
+                            <tr>
+                                <td>工作地址：{$list.address}<a href="">点击查看地图</a></td>
+                            </tr>
+                        </table>
+                        <button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
+                        <if condition="session('?uid')">
+                        </if>
+                        <hr />
+                        <div role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">兼职详情</a></li>
+                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">公司介绍</a></li>
+                                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">公司评价</a></li>
+                                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">申请记录</a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                  {$list.detail}
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="profile">
+                                  {$list.org_intro}
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="messages">
+                                    <form action="" method="post" class="">
+                                        <if condition=" session('?uid')">
+                                            <div class="form-group">
+                                                <label for="pingjia">评价:</label>
+                                                <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-default">评价</button>
+                                            <else />
+                                            <div class="form-group">
+                                                <label for="pingjia">评价:</label>
+                                                <a class="login" href="{:U('Login/index')}">登录</a>
+                                                <textarea class="form-control" rows="3" id="pingjia" disabled="true" name="pingjia" placeholder="">请先登录</textarea>
+                                            </div>
+                                            <button type="submit" disabled="true" class="btn btn-default">评价</button>
+                                        </if>
+                                    </form>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="settings">
+                                  <table class="table">
+                                    <thead><td>申请人</td><td>申请时间</td><td>处理结果</td></thead>
+                                    <if condition="$apply_error_info">
+                                      <tr><td>{$apply_error_info}</td></tr>
+                                    <else />
+                                    <volist name="applylist" id="applylist">
+                                    <tr>
+                                      <td>{$applylist.username}</td><td>{$applylist.ctime|date="m月d日h点",###}</td>
+                                      <td>
+                                      <switch name="applylist.is_pass">
+                                      <case value="1">未处理</case>
+                                      <case value="2"><span class="vlded-color">通过</span></case>
+                                      <case value="3"><span class="nvlded-color">未通过</span></case>
+                                      </switch>
+                                      </td>
+                                    </tr>
+                                    </volist>
+                                    </if>
+                                  </table>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn btn-default">评价</button>
-            <else />
-            <div class="form-group">
-              <label for="pingjia">评价:</label>
-              <a class="login" href="{:U('Login/index')}">登录</a>
-              <textarea class="form-control" rows="3" id="pingjia" disabled="true" name="pingjia" placeholder="">请先登录</textarea>
+            <!--right-->
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                    </div>
+                </div>
             </div>
-            <button type="submit" disabled="true" class="btn btn-default">评价</button>
-            </if>
-          </form>
-          <hr />
-          <if condition="session('?uid')">
-          <button type="button" id="goto-apply" class="btn btn-primary btn-lg">申请此兼职</button>
-          <else />
-          <button type="button" id="goto-apply" class="btn btn-primary btn-lg" disabled="true">申请此兼职</button>
-          </if>
         </div>
-      </div>
     </div>
-    <!--right-->
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">关于小蜜蜂</div>
-        <div class="panel-body">
-          <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--./container-->
-<!--footer-->
-<include file="./Tpl/bootstrap/public/footer.html" />
-<!--/footer-->
-<script type="text/javascript">
-  $("#goto-apply").click(function(){
-    $.ajax({
-      url:"{:U('ApplyJob/apply')}",
-      success:function(data){
-        alert(data.info);
-      }
+    <!--./container-->
+    <!--footer-->
+    <include file="./Tpl/bootstrap/public/footer.html" />
+    <!--/footer-->
+    <script type="text/javascript">
+    $("#goto-apply").click(function() {
+        $.ajax({
+            url: "{:U('ApplyJob/apply')}",
+            success: function(data) {
+                alert(data.info);
+            }
+        });
     });
-  });
-</script>
-<!--./footer-->
+    </script>
+    <!--./footer-->
 </body>
+
 </html>
