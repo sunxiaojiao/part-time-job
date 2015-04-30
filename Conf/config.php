@@ -9,7 +9,6 @@ return array(
     'DEFAULT_THEME' => 'bootstrap',
     
     'TMPL_PARSE_STRING'  =>array(
-        
         '__UPLOAD__' => '/Uploads',
         '__GROUP__' => 'Tpl/bootstrap',
     ),

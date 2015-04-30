@@ -36,7 +36,7 @@ function enterKey(keypress, click) {
 
     }
     //刷新验证码
-$(document).on('ready', function() {	
+$(document).on('ready', function() {
     $("#verify button.verify").click(function() {
         var ver_img = $("#verify img.verify");
         var src     = ver_img.attr("src");
@@ -50,4 +50,11 @@ $(document).on('ready', function() {
         a.href  = src;
         $(this).attr("src", a.pathname + "?" + new Date().getTime());
     });
+//alert button x
+(function() {
+    $(".alert button").on('click', function() {
+        $(this).parent().addClass("hidden");
+    });
+})();
+
 });

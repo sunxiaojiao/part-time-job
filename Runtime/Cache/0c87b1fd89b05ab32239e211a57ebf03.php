@@ -186,7 +186,7 @@ THINK;
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-body">
-          <img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+          <img src="<?php echo ($userinfo["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
         </div>
       </div>
     </div>
@@ -224,19 +224,19 @@ THINK;
 <!--./footer-->
 <script type="text/javascript">
             swfobject.addDomLoadEvent(function () {
-                var swf = new fullAvatarEditor("./swf/fullAvatarEditor.swf", "./swf/expressInstall.swf", "swfContainer", {
+                var swf = new fullAvatarEditor("/__GROUP__/swf/fullAvatarEditor.swf", "/__GROUP__/swf/expressInstall.swf", "swfContainer", {
                         id : "swf",
-                        upload_url : "/upload.php?userid=999&username=looselive",
+                        upload_url : "<?php echo U('AvatarUpload/upload');?>",
                         method : "post",
-                        src_url : "./images/person.jpg",
-                        src_upload : 2
-                    },function(){
+                        isShowUploadResultIcon : true,
+                        src_url : "<?php echo ($orgInfo["avatar"]); ?>",
+                        src_upload : 0
+                    },function(msg){
+                        switch(msg.code)
+                        {
 
-                    }
+                    }}
                 );
-                document.getElementById("upload").onclick=function(){
-                    swf.call("upload");
-                };
             });
 </script>
 <script type="text/javascript">

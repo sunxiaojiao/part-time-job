@@ -76,8 +76,8 @@ class AvatarUploadAction extends Action {
 		}
 		//<------------------------------------------------------------------------处理头像图片结束
 		//upload_url中传递的额外的参数，如果定义的method为get请换为$_GET
-		$this->result["userid"]	= $_POST["userid"];
-		$this->result["username"]	= $_POST["username"];
+		$this->result["userid"]	  = $_POST["userid"];
+		$this->result["username"] = $_POST["username"];
 
 		$this->result['msg'] = $msg;
 		if ($success_num > 0)
