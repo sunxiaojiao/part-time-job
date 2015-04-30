@@ -5,8 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>兼职平台</title>
-    <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css">
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css">
+    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
+<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
@@ -39,13 +42,15 @@
         <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
       </ul>
 
-      <form class="navbar-form navbar-left" role="search">
+      <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="输入关键词">
+          <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
-
+      <ul class="nav navbar-nav sort-search">
+        <li class=""><a href="<?php echo U('SortSearch/search');?>?q=q">分类查找</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
       <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
       	<li class="dropdown">
@@ -70,7 +75,7 @@ THINK;
           </ul>
         </li><!--/.dropdown-->
 THINK;
- if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+ if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/sendMail') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -150,12 +155,12 @@ THINK;
     </div>
     <!--./container-->
     <!--footer-->
-    <div class="container">
-        <hr />
-        <p class="text-center">小蜜蜂兼职</p>
-        <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-        <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-    </div>
+<div class="container">
+  <hr />
+  <p class="text-center">小蜜蜂兼职</p>
+  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+</div>
     <!--./footer-->
     <script type="text/javascript">
     //刷新验证码
