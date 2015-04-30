@@ -17,6 +17,8 @@ class PublishJobsAction extends Action{
 			//
 			$Job->ctime = time();
 			$Job->expire_time = $Job->ctime + $this->_post('expire_time')*3600;
+			$Job->begin_time  = strtotime($Job->begin_time);
+			//dump($info);
 			if($Job->add()){
 				$this->ajaxReturn(0,"发布成功",1);
 			}else{
