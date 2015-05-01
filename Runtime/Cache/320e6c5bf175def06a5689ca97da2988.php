@@ -180,19 +180,29 @@ THINK;
                                   <?php echo ($list["org_intro"]); ?>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="messages">
-                                    <form action="" method="post" class="">
+                                    <table class="table">
+                                    <thead><td>名字</td><td>内容</td><td>时间</td></thead>
+                                    <?php if($eval_error_info): ?><tr><td><?php echo ($eval_error_info); ?></td></tr>
+                                    <?php else: ?>
+                                        <?php if(is_array($eval_list)): $i = 0; $__LIST__ = $eval_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><tr>
+                                            <td><?php echo ($list["username"]); ?></td>
+                                            <td><?php echo ($list["content"]); ?></td>
+                                            <td><?php echo (date("m/d",$list["ctime"])); ?></td>
+                                        </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                                    </table>
+                                    <form class="">
                                         <?php if( session('?uid')): ?><div class="form-group">
                                                 <label for="pingjia">评价:</label>
-                                                <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
+                                                <textarea class="form-control" rows="3" id="assess" name="assess-content" placeholder=""></textarea>
                                             </div>
-                                            <button type="submit" class="btn btn-default">评价</button>
+                                            <button type="button" class="btn btn-default" id="assess-btn">评价</button>
                                             <?php else: ?>
                                             <div class="form-group">
                                                 <label for="pingjia">评价:</label>
                                                 <a class="login" href="<?php echo U('Login/index');?>">登录</a>
-                                                <textarea class="form-control" rows="3" id="pingjia" disabled="true" name="pingjia" placeholder="">请先登录</textarea>
+                                                <textarea class="form-control" rows="3" disabled="true" placeholder="">请先登录</textarea>
                                             </div>
-                                            <button type="submit" disabled="true" class="btn btn-default">评价</button><?php endif; ?>
+                                            <button type="button" disabled="true" class="btn btn-default">评价</button><?php endif; ?>
                                     </form>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="settings">
@@ -297,7 +307,18 @@ THINK;
       });
       marker.setMap(map);  //在地图上添加点
     });
-    
+    $("#assess-btn").on('click',function(){
+        $.ajax({
+            url: "<?php echo U("OrgEvalute/index");?>",
+            data:{
+                content:$("textarea[name='assess-content']").val()
+            },
+            type:"POST",
+            success:function(data){
+                alert(data.info);
+            }
+        });
+    });
     </script>
     <!--./footer-->
 </body>

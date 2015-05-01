@@ -125,20 +125,34 @@
                                   {$list.org_intro}
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="messages">
-                                    <form action="" method="post" class="">
+                                    <table class="table">
+                                    <thead><td>名字</td><td>内容</td><td>时间</td></thead>
+                                    <if condition="$eval_error_info">
+                                        <tr><td>{$eval_error_info}</td></tr>
+                                    <else />
+                                        <volist name="eval_list" id="list">
+                                        <tr>
+                                            <td>{$list.username}</td>
+                                            <td>{$list.content}</td>
+                                            <td>{$list.ctime|date="m/d",###}</td>
+                                        </tr>
+                                        </volist>
+                                    </if>
+                                    </table>
+                                    <form class="">
                                         <if condition=" session('?uid')">
                                             <div class="form-group">
                                                 <label for="pingjia">评价:</label>
-                                                <textarea class="form-control" rows="3" id="pingjia" name="pingjia" placeholder=""></textarea>
+                                                <textarea class="form-control" rows="3" id="assess" name="assess-content" placeholder=""></textarea>
                                             </div>
-                                            <button type="submit" class="btn btn-default">评价</button>
+                                            <button type="button" class="btn btn-default" id="assess-btn">评价</button>
                                             <else />
                                             <div class="form-group">
                                                 <label for="pingjia">评价:</label>
                                                 <a class="login" href="{:U('Login/index')}">登录</a>
-                                                <textarea class="form-control" rows="3" id="pingjia" disabled="true" name="pingjia" placeholder="">请先登录</textarea>
+                                                <textarea class="form-control" rows="3" disabled="true" placeholder="">请先登录</textarea>
                                             </div>
-                                            <button type="submit" disabled="true" class="btn btn-default">评价</button>
+                                            <button type="button" disabled="true" class="btn btn-default">评价</button>
                                         </if>
                                     </form>
                                 </div>
@@ -245,7 +259,18 @@
       });
       marker.setMap(map);  //在地图上添加点
     });
-    
+    $("#assess-btn").on('click',function(){
+        $.ajax({
+            url: "{:U("OrgEvalute/index")}",
+            data:{
+                content:$("textarea[name='assess-content']").val()
+            },
+            type:"POST",
+            success:function(data){
+                alert(data.info);
+            }
+        });
+    });
     </script>
     <!--./footer-->
 </body>
