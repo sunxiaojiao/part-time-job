@@ -10,15 +10,27 @@ class UserCenterAction extends Action{
 	private $data;
 	private $form;
 	public function index(){
-		if(session("?uid")){
-			$uid = session('uid');
-		}else{
-			$this->error('未登录','index.php');
+		//判断登录
+		if(!session("?uid")){
+			$this->error('您还未登录','index.php',3);
 		}
+		$this->showInfo();
+		//显示工作申请信息
+		$this->jobApplyed();
+		$this->jobLists();
+		$this->display();
+	}
+	public function editInfo(){
+		$this->showInfo();
+		$this->display();
+	}
+	//显示用户信息
+	protected function showInfo(){
+		//获取数据库中的用户信息
 		$User = D('Users');
-		$where = "uid='$uid'";
-		$field = "passwd";
-		$this->data = $User->where($where)->field($field,true)->find();
+		$where = "uid=".session('uid');
+		$nofield = "passwd";
+		$this->data = $User->where($where)->field($nofield,true)->find();
 		$this->assign("userinfo",$this->data);
 		//兼职意向 类型
 		$Mold =M('Mold');
@@ -27,9 +39,6 @@ class UserCenterAction extends Action{
 		
 		dump($this->data);
 		session("userData",$this->data);
-		//显示工作申请信息
-		$this->jobApplyed();
-		$this->display();
 	}
 	//更改用户信息
 	public function updateInfo(){
@@ -39,52 +48,77 @@ class UserCenterAction extends Action{
 //				$this->data[$key] = $_POST[$key];
 //			}
 //		}
-		$this->data = session("userData");
-		$this->form = $this->_post();
-		//根据用户选择的地点从xm_address表中选择地点的aid
-		$province = $this->form['province'];
-		$city = $this->form['city'];
-		$area = $this->form['area'];
-		$Addr = M('Address');
-		$aid  = $Addr->where("province='{$province}' AND city='{$city}' AND area='{$area}'")->field("aid")->find();
-		if($aid){
-			unset($this->form['province']);
-			unset($this->form['city']);
-			unset($this->form['area']);
-			$this->form['address'] = $aid;
-		}else{
-			echo $aid;
-			$this->ajaxReturn(0,"地点查询错误",0);
-			return;
-		}
+//		$this->data = session("userData");
+//		$this->form = $this->_post();
+//		//根据用户选择的地点从xm_address表中选择地点的aid
+//		$province = $this->form['province'];
+//		$city = $this->form['city'];
+//		$area = $this->form['area'];
+//		$Addr = M('Address');
+//		$aid  = $Addr->where("province='{$province}' AND city='{$city}' AND area='{$area}'")->field("aid")->find();
+//		if($aid){
+//			unset($this->form['province']);
+//			unset($this->form['city']);
+//			unset($this->form['area']);
+//			$this->form['address'] = $aid;
+//		}else{
+//			echo $aid;
+//			$this->ajaxReturn(0,"地点查询错误",0);
+//			return;
+//		}
 
-		$User = M('Users');
+		$User = D('Users');
+		if(!$User->create()){
+			//dump($this->_post());
+			$this->ajaxReturn(0,$User->getError(),1);
+			return ;
+		}
+		//dump($_POST['intent']);
 		//默认得到intent中的数据为数组，将它将换为可存储字符串
-		$this->form['intent'] = serialize($this->form["intent"]);
-		$where = "uid = '".$this->data['uid']."'";
-		if($User->where($where)->save($this->form)){
-			//echo $User->getLastSql();
+		$User->intent = serialize($User->intent);
+		//$this->form['intent'] = serialize($this->form["intent"]);
+		$where = "uid=" . session('uid');
+		//修改数据库中的用户信息
+		$flag = $User->where($where)->save();
+		if($flag){
+			$this->ajaxReturn(1,"更改成功",1);
+		}elseif($flag === 0){
 			$this->ajaxReturn(1,"更新成功",1);
 		}else{
-			if($User->getError() === ""){
-				$this->ajaxReturn(1,"没有更新数据",1);
-			}else{
-				$this->ajaxReturn(1,$User->getError(),0);
-			}
+			$this->ajaxReturn(3,"更新失败",1);
 		}
 	}
-	//显示干过的兼职
+	//显示申请成功的兼职
 	private function jobLists(){
-		
-	}
-	private function jobApplyed(){
 		$Apply = M('Apply');
-		$where = "app_uid=".session('uid');
+		$where = "app_uid=".session('uid') . " AND " . "xm_apply.is_pass=2";
 		$field = "xm_jobs.jid AS jid,xm_jobs.title AS title,xm_apply.ctime AS ctime";
 		$join = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
 		$data = $Apply->where($where)->join($join)->field($field)->select();
-		$this->assign("apply",$data);
+		if($data){
+			$this->assign("passed_job",$data);
+		}elseif(is_null($data)){
+			$this->assign("passed_error_info","无记录");
+		}else{
+			$this->assign("passed_error_info","查询错误");
+		}
 		dump($Apply->getLastSql());
+	}
+	//
+	private function jobApplyed(){
+		$Apply = M('Apply');
+		$where = "app_uid=".session('uid');
+		$field = "xm_jobs.jid,xm_jobs.title,xm_apply.ctime,xm_apply.is_pass";
+		$join = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
+		$data = $Apply->where($where)->join($join)->field($field)->select();
+		if($data){
+			$this->assign("apply",$data);	
+		}elseif(is_null($data)){
+			$this->assign("apply_error_info","无记录");
+		}else{
+			$this->assign("apply_error_info","查询错误");
+		}
+		
 	}
 }
 

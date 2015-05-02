@@ -13,8 +13,6 @@
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
-<script type="text/javascript" src="./__GROUP__/js/fullAvatarEditor.js"></script>
-<script type="text/javascript" src="./__GROUP__/js/swfobject.js"></script>
 
 <style type="text/css">
   .panel-body{position: relative;}
@@ -25,6 +23,12 @@
   .my-select-address>select{width:auto;display: inline-block;}
   .my-personimg{width:200px; cursor: pointer;}
   #swfwrapper{width:630px;}
+  .must-input {
+        color: #F00;
+        padding: 0 8px;
+        font: 18px/18px "";
+    }
+    
 
 </style>
 </head>
@@ -94,126 +98,77 @@ THINK;
   </div>
   <div class="row">
     <div class="col-md-8">
-    <!--
-	@param usernmae
-	sex
-	age
-	province
-	city
-	area
-	school
-	phone
-	email
-	qq
-	exp
-	intent
-    -->
-      <form method="post" action="" id="edit-info">
-        <div class="form-group">
-          <label for="username">用户名：</label>
-          <input type="text" id="username" name="username" value='<?php echo ($userinfo["username"]); ?>' class="form-control" placeholder="填写用户名" />
+      <div class="panel panel-default">
+        <div class="panel-heading">个人信息及求职简历<a href="<?php echo U("UserCenter/editInfo");?>" class="pull-right">编辑我的资料和简历</a></div>
+        <div class="panel-body">
+          <table class="table">
+            <tr>
+            <td>用户名：</td>
+            <td><?php echo ($userinfo["username"]); ?></td>
+            <td>性别</td>
+            <td>
+            <?php switch($userinfo["sex"]): case "1": ?>男<?php break;?>
+              <?php case "2": ?>女<?php break;?>
+              <?php default: ?>保密<?php endswitch;?>
+            </td>
+            </tr>
+            <tr>
+              <td>年龄：</td>
+              <td><?php echo ($userinfo["age"]); ?>岁</td>
+              <td>电话：</td>
+              <td><?php echo ($userinfo["phone"]); ?></td>
+            </tr>
+            <tr><td>地址：</td>
+            <td><?php echo ($userinfo["address"]); ?></td>
+            </tr>
+          </table>
         </div>
-        <div class="form-group">
-          <label>性别：</label>
-          <select class="form-control" name="sex">
-          	<?php if($userinfo["sex"] == 1): ?><option value="1" selected="true">男生</option>
-            <option value="2">女生</option>
-            <option value="3">保密</option>
-            <?php elseif($userinfo["sex"] == 2): ?>
-            <option value="1">男生</option>
-            <option value="2" selected="true">女生</option>
-            <option value="3">保密</option>
-            <?php else: ?>
-            <option value="1">男生</option>
-            <option value="2">女生</option>
-            <option value="3" selected="true">保密</option><?php endif; ?>
-          </select>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">我的申请</div>
+        <div class="panel-body">
+        <table class="table">
+        <thead>
+          <td>兼职</td>
+          <td>申请时间</td>
+          <td>是否通过</td>
+        </thead>
+         <?php if($apply_error_info): ?><tr><td class="list-group-item"><?php echo ($apply_error_info); ?></td></tr>
+          <?php else: ?>
+ <?php if(is_array($apply)): $i = 0; $__LIST__ = $apply;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><tr>
+            <td><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($apply["jid"]); ?>"><?php echo ($apply["title"]); ?></a></td>
+            <td><?php echo (date("m/d h:i",$apply["ctime"])); ?></td>
+            <td>
+            <?php switch($apply["is_pass"]): case "1": ?>处理中...<?php break;?>
+              <?php case "2": ?>通过<?php break;?>
+              <?php case "3": ?>未通过<?php break; endswitch;?>
+            </td>
+          </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+        </table>
         </div>
-        <div class="form-group">
-          <label for="age">年龄：</label>
-          <input type="text" id="age" name="age" value="<?php echo ($userinfo["age"]); ?>" class="form-control" placeholder="填写年龄" />
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">我的兼职</div>
+        <div class="panel-body">
+          <ul class="list-group">
+          <?php if($passed_error_info): ?><li class="list-group-item"><?php echo ($passed_error_info); ?></li>
+          <?php else: ?>
+            <?php if(is_array($passed_job)): $i = 0; $__LIST__ = $passed_job;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($apply["jid"]); ?>" class="list-group-item"><?php echo ($apply["title"]); echo (date("m-d",$apply["ctime"])); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="username">居住地：</label>
-          <div class="my-select-address">
-            <select name="province" id="" class="form-control">
-              <option>山东</option>
-            </select>
-            <select name="city" id="" class="form-control">
-              <option>烟台</option>
-            </select>
-            <select name="area" id="" class="form-control">
-              <option>芝罘区</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="school">学校：</label>
-          <input type="text" id="school" name="school" class="form-control" value="<?php echo ($userinfo["school"]); ?>" placeholder="填写所在学校" />
-        </div>
-        <div class="form-group">
-          <label for="phone">联系电话：</label>
-          <input type="text" id="phone" name="phone" class="form-control" value="<?php echo ($userinfo["phone"]); ?>" placeholder="填写联系电话" />
-        </div>
-        <div class="form-group">
-          <label for="qq">QQ：</label>
-          <input type="text" id="qq" name="qq" class="form-control" value="<?php echo ($userinfo["qq"]); ?>" placeholder="填写联系QQ" />
-        </div>
-          <div class="form-group">
-            <label for="exp">基本介绍和工作经验:</label>
-            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="填写个人的简介和工作经验"><?php echo ($userinfo["exp"]); ?></textarea>
-          </div>
-        <div class="form-group">
-          <label for="intent">求职意向:</label>
-          <div>
-         <?php if(is_array($molds)): $i = 0; $__LIST__ = $molds;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array($molds['mid'],unserialize($userinfo['intent']))): ?><label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>" checked="true"><?php echo ($molds["name"]); ?>
-            </label>
-            <?php else: ?>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>"><?php echo ($molds["name"]); ?>
-            </label><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-          </div>
-        </div>
-        <button type="button" class="btn btn-primary"id="goto-info">修改</button>
-      </form>
-      <div class="panel">
-      	<ul>
-      	<?php if(is_array($apply)): $i = 0; $__LIST__ = $apply;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($apply["jid"]); ?>"><?php echo ($apply["title"]); echo (date("m-d",$apply["ctime"])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
-      	</ul>
       </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
+      <div class="panel-heading">头像</div>
         <div class="panel-body">
-          <img src="<?php echo ($userinfo["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+          <img src="<?php echo ($userinfo["avatar"]); ?>" class="center-block" />
         </div>
       </div>
-    </div>
+    </div>  
   </div>
 </div>
 <!--./container-->
-<!--上传头像用model框-->
-<div class="modal fade" id="headimg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">修改头像</h4>
-      </div>
-      <div class="modal-body">
-        <div class="center-block" id="swfwrapper">
-                <p id="swfContainer">
-                    本组件需要安装Flash Player后才可使用，请从
-                    <a href="http://www.adobe.com/go/getflashplayer">这里</a>
-                    下载安装。
-                </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!--footer-->
 <div class="container">
   <hr />
@@ -241,26 +196,30 @@ THINK;
 </script>
 <script type="text/javascript">
 $("#goto-info").click(function(){
+  $(".alert").addClass("hidden");
 	//获取数据
 	var info = getFromInput('#edit-info');
 	var checkboxs = $("input[type='checkbox']");
-	var intent = new Array();
+	var intent = new Object();
 	for(var i=0;i<checkboxs.length;i++){
 		if(checkboxs.eq(i).is(":checked")){
 			intent[i] = checkboxs.eq(i).val();
 		}
 	}
 	info.intent = intent;
-	console.log(checkboxs);
-	console.log(intent);
-	console.log(info);
 	//ajax
 	$.ajax({
 		url:'<?php echo U('UserCenter/updateInfo');?>',
 		data:info,
 		type:"POST",
 		success:function(data){
-			alert(data);
+      if(data.data ===1){
+        $(".alert").removeClass("alert-danger").addClass("alert-success");
+      }else{
+        $(".alert").removeClass("alert-success").addClass("alert-danger");
+      }
+			$(".alert>p").text(data.info);
+      $(".alert").removeClass("hidden");
 		}
 		});
 });

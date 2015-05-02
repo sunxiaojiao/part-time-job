@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>兼职平台</title>
+
 <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
@@ -24,6 +25,12 @@
   .my-select-address>select{width:auto;display: inline-block;}
   .my-personimg{width:200px; cursor: pointer;}
   #swfwrapper{width:630px;}
+  .must-input {
+        color: #F00;
+        padding: 0 8px;
+        font: 18px/18px "";
+    }
+    
 
 </style>
 </head>
@@ -89,17 +96,41 @@ THINK;
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>企业信息<small>(<?php echo ($orgInfo["orgname"]); ?>)</small></small></h1>
+      <h1><small>完善个人信息<small>(<?php echo ($userinfo["email"]); ?>)</small></small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">
+    <div class="alert alert-success hidden" role="alert">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <p>不符合</p>
+                </div>
       <form method="post" action="" id="edit-info">
-        <div class="">
-          <label>认证状态：</label><?php if($orgInfo["is_validate"] == 0): ?><span>未认证</span><?php else: ?><span>已认证</span><?php endif; ?>
-          <a class="btn-primary btn" href="<?php echo U('OrgAuth/index');?>">认证</a>
+        <div class="form-group">
+          <label for="username"><span class="must-input">*</span>用户名：</label>
+          <input type="text" id="username" name="username" value='<?php echo ($userinfo["username"]); ?>' class="form-control" placeholder="填写用户名" />
         </div>
         <div class="form-group">
-          <label for="username">所在地：</label>
+          <label><span class="must-input">*</span>性别：</label>
+          <select class="form-control" name="sex">
+          	<?php if($userinfo["sex"] == 1): ?><option value="1" selected="true">男生</option>
+            <option value="2">女生</option>
+            <option value="3">保密</option>
+            <?php elseif($userinfo["sex"] == 2): ?>
+            <option value="1">男生</option>
+            <option value="2" selected="true">女生</option>
+            <option value="3">保密</option>
+            <?php else: ?>
+            <option value="1">男生</option>
+            <option value="2">女生</option>
+            <option value="3" selected="true">保密</option><?php endif; ?>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="age"><span class="must-input">*</span>年龄：</label>
+          <input type="text" id="age" name="age" value="<?php echo ($userinfo["age"]); ?>" class="form-control" placeholder="填写年龄" />
+        </div>
+        <div class="form-group">
+          <label for="username"><span class="must-input">*</span>居住地：</label>
           <div class="my-select-address">
             <select name="province" id="" class="form-control">
               <option>山东</option>
@@ -112,21 +143,24 @@ THINK;
             </select>
           </div>
         </div>
-
         <div class="form-group">
-          <label for="phone">联系电话：</label>
-          <input type="text" id="phone" name="phone" class="form-control" value="<?php echo ($orgInfo["phone"]); ?>" placeholder="填写联系电话" />
+          <label for="school">学校：</label>
+          <input type="text" id="school" name="school" class="form-control" value="<?php echo ($userinfo["school"]); ?>" placeholder="填写所在学校" />
         </div>
         <div class="form-group">
-          <label for="qq">公司网址：</label>
-          <input type="text" id="website" name="website" class="form-control" value="<?php echo ($orgInfo["website"]); ?>" placeholder="公司网址" />
+          <label for="phone"><span class="must-input">*</span>联系电话：</label>
+          <input type="text" id="phone" name="phone" class="form-control" value="<?php echo ($userinfo["phone"]); ?>" placeholder="填写联系电话" />
+        </div>
+        <div class="form-group">
+          <label for="qq">QQ：</label>
+          <input type="text" id="qq" name="qq" class="form-control" value="<?php echo ($userinfo["qq"]); ?>" placeholder="填写联系QQ" />
         </div>
           <div class="form-group">
-            <label for="exp">公司或机构介绍:</label>
-            <textarea class="form-control" rows="3" id="exp" name="org_intro" placeholder="简要介绍"><?php echo ($orgInfo["org_intro"]); ?></textarea>
+            <label for="exp"><span class="must-input">*</span>基本介绍和工作经验:</label>
+            <textarea class="form-control" rows="3" id="exp" name="exp" placeholder="填写个人的简介和工作经验"><?php echo ($userinfo["exp"]); ?></textarea>
           </div>
         <div class="form-group">
-          <label for="intent">招聘意向:</label>
+          <label for="intent"><span class="must-input">*</span>求职意向:</label>
           <div>
          <?php if(is_array($molds)): $i = 0; $__LIST__ = $molds;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array($molds['mid'],unserialize($userinfo['intent']))): ?><label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>" checked="true"><?php echo ($molds["name"]); ?>
@@ -139,17 +173,11 @@ THINK;
         </div>
         <button type="button" class="btn btn-primary"id="goto-info">修改</button>
       </form>
-      <div class="panel">
-      	<ul>
-      	<?php if(is_array($apply)): $i = 0; $__LIST__ = $apply;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($apply["jid"]); ?>"><?php echo ($apply["title"]); echo (date("m-d",$apply["ctime"])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
-      	</ul>
-      </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading">修改头像</div>
         <div class="panel-body">
-          <img src="<?php echo ($orgInfo["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+          <img src="<?php echo ($userinfo["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
         </div>
       </div>
     </div>
@@ -187,13 +215,12 @@ THINK;
 <!--./footer-->
 <script type="text/javascript">
             swfobject.addDomLoadEvent(function () {
-                var queryInfo = "";
                 var swf = new fullAvatarEditor("/__GROUP__/swf/fullAvatarEditor.swf", "/__GROUP__/swf/expressInstall.swf", "swfContainer", {
                         id : "swf",
                         upload_url : "<?php echo U('AvatarUpload/upload');?>",
                         method : "post",
                         isShowUploadResultIcon : true,
-                        src_url : "<?php echo ($orgInfo["avatar"]); ?>",
+                        src_url : "<?php echo ($userinfo["avatar"]); ?>",
                         src_upload : 0
                     },function(msg){
                         switch(msg.code)
@@ -205,10 +232,11 @@ THINK;
 </script>
 <script type="text/javascript">
 $("#goto-info").click(function(){
+  $(".alert").addClass("hidden");
 	//获取数据
 	var info = getFromInput('#edit-info');
 	var checkboxs = $("input[type='checkbox']");
-	var intent = new Array();
+	var intent = new Object();
 	for(var i=0;i<checkboxs.length;i++){
 		if(checkboxs.eq(i).is(":checked")){
 			intent[i] = checkboxs.eq(i).val();
@@ -217,14 +245,17 @@ $("#goto-info").click(function(){
 	info.intent = intent;
 	//ajax
 	$.ajax({
-		url:'<?php echo U('OrgCenter/updateInfo');?>',
+		url:'<?php echo U('UserCenter/updateInfo');?>',
 		data:info,
 		type:"POST",
 		success:function(data){
-			alert(data.info);
-      if(data.status == 1){
-        location.href="<?php echo U('OrgCenter/editInfo');?>";
+      if(data.data ===1){
+        $(".alert").removeClass("alert-danger").addClass("alert-success");
+      }else{
+        $(".alert").removeClass("alert-success").addClass("alert-danger");
       }
+			$(".alert>p").text(data.info);
+      $(".alert").removeClass("hidden");
 		}
 		});
 });

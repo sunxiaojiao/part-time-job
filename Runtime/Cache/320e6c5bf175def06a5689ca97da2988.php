@@ -316,6 +316,9 @@ THINK;
             type:"POST",
             success:function(data){
                 alert(data.info);
+                if(data.data == 1){
+                    location.href = "";
+                }
             }
         });
     });

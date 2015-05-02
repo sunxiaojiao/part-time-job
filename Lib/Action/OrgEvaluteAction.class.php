@@ -5,6 +5,13 @@ class OrgEvaluteAction extends Action {
 			return;
 		}
 		$Eval = D('OrgEvalute');
+		$flag = $Eval->field("eva_id")
+					 ->where("from_uid=" . session('uid') . " AND " . "to_oid=" . session('pub_oid'))
+					 ->find();
+		if($flag){
+			$this->ajaxReturn(4,"您已经评论过了",1);
+			return ;
+		}
 		if(!$Eval->create()){
 			$this->ajaxReturn(0,$Eval->getError(),1);
 			return;

@@ -20,7 +20,7 @@ class JobsInfoAction extends Action{
 		$list = $Job->where($where)->join($join1)->join($join2)->field($field)->find();
 		$list['address'] = explode(",", $list['address']); 
 		session('pub_oid',$list['pub_oid']);
-		dump($list);
+
 		if($list){
 			$this->assign("list",$list);
 			return;
