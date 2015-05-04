@@ -67,7 +67,7 @@
                     <div class="panel-heading">详细信息</div>
                     <div class="panel-body">
                         <div class="orgname">
-                            公司名称：{$list.orgname}
+                            公司名称：<a href="{:U("OrgInfo/index")}?oid={$list.oid}">{$list.orgname}</a>
                             <if condition="$list.is_validate eq 0">
                                 <span class="glyphicon glyphicon-question-sign nvlded-color"></span><span class="nvlded-color">未认证</span>
                                 <else />

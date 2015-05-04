@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>兼职平台</title>
+  <title><?php echo ($userinfo["username"]); ?>的简历|小蜜蜂找兼职</title>
 
 <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
@@ -96,7 +96,7 @@ THINK;
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>完善个人信息<small>(<?php echo ($userinfo["email"]); ?>)</small></small></h1>
+      <h1><small>编辑个人简历<small>(<?php echo ($userinfo["email"]); ?>)</small></small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">

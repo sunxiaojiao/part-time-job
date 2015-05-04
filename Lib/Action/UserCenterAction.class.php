@@ -37,7 +37,7 @@ class UserCenterAction extends Action{
 		$molds = $Mold->field("mid,name")->select();
 		$this->assign("molds",$molds);
 		
-		dump($this->data);
+		//dump($this->data);
 		session("userData",$this->data);
 	}
 	//更改用户信息
@@ -102,7 +102,7 @@ class UserCenterAction extends Action{
 		}else{
 			$this->assign("passed_error_info","查询错误");
 		}
-		dump($Apply->getLastSql());
+//		/dump($Apply->getLastSql());
 	}
 	//
 	private function jobApplyed(){

@@ -25,6 +25,7 @@ return array(
 	'MAIL_SMTP'=>'smtp.ym.163.com', // 邮箱SMTP服务器
 	'MAIL_PASSWORD'=>'6133698039', // 邮箱密码
 	'SHOW_PAGE_TRACE'=>true,
-
+	//认证执照和身份证照片上传路径
+	'UPLOAD_AUTH_PATH' => '/Uploads/auth', 
 );
 ?>

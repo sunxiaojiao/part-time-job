@@ -13,7 +13,7 @@ class JobsInfoAction extends Action{
 	protected function showInfo(){
 		$this->jid =  $this->_get('jid');
 		$Job = M('Jobs');
-		$field = "jid,address,title,org_intro,addressname,detail,xm_mold.name,xm_orgs.orgname,is_validate,pub_oid,money,money_style,work_time,begin_time,want_peo,peo_style,current_peo,leader,xm_jobs.ctime,leader_phone,pv";
+		$field = "jid,oid,address,title,org_intro,addressname,detail,xm_mold.name,xm_orgs.orgname,is_validate,pub_oid,money,money_style,work_time,begin_time,want_peo,peo_style,current_peo,leader,xm_jobs.ctime,leader_phone,pv";
 		$where = "jid=".$this->jid;// . " AND " . 'is_pass=1';
 		$join1 = "INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id";
 		$join2 = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid";

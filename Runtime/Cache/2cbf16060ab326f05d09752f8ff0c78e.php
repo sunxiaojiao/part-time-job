@@ -13,7 +13,8 @@
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="/__GROUP__/css/webuploader.css">
+    <script type="text/javascript" src="/__GROUP__/js/webuploader.min.js"></script>
     <style type="text/css">
     .must-input {
         color: #F00;
@@ -86,27 +87,58 @@ THINK;
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <form class="" action="" method="post" id="auth-form">
+                <form method="post" target="ajax-form" id="auth-form" enctype="multipart/form-data" action="<?php echo U("OrgAuth/uploadFile");?>">
+                <?php if($org_error_info): ?><div class="alert alert-danger">
+                    <p><?php echo ($org_error_info); ?></p>
+                </div>
+                <?php elseif($org_info.is_pass): ?>
+                    <?php switch($org_info["is_pass"]): case "3": ?><div class="alert alert-success">
+                                <p>等待认证结果中...</p>
+                            </div><?php break;?>
+                        <?php case "1": ?><div class="alert alert-danger">
+                                <p>您已认证</p>
+                            </div><?php break;?>
+                        <?php case "2": ?><div class="alert alert-danger">
+                            <p>您未通过认证</p>
+                          </div><?php break;?>
+                        <?php default: ?>
+                        <div class="alert alert-danger">
+                            <p>您还未认证</p>
+                        </div><?php endswitch;?>
+                    <?php else: endif; ?>
                     <div class="form-group">
                         <label><span class="must-input">*</span>机构名称：</label>
-                        <input class="form-control" disabled="true" />
+                        <input class="form-control" disabled="true" value="<?php echo ($org_info["orgname"]); ?>" />
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>执照编号：</label>
-                        <input class="form-control"  name="license_num" />
+                        <input class="form-control"  name="license_num" value="<?php echo ($org_info["license_num"]); ?>" />
+                    </div>
+                    <div class="form-group">
+                        <label for=""><span class="must-input">*</span>营业执照照片：</label>
+                        <p>营业执照照片，图片格式仅限jpg、jpeg、png、gif,且大小不超过2M</p>
+                        <div class="rows clearfix">
+                            <div class="col-md-6" id="orgphoto-select">
+                            </div>
+                            <input type="text" value="" name="org_img" class="hidden" />
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary" id="orgphoto-goto">上传</button>
+                            </div>
+                            <div class="col-md-3" id="orgphoto-info"></div>
+
+                        </div>
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>所属行业：</label>
                         <select class="form-control" name="industry">
-                            <option value="1">房地产</option>
-                            <option value="2">建筑</option>
-                            <option value="3">物流管理</option>
-                            <option value="4">IT/互联网</option>
+                            <option value="">请选择...</option>
+                            <?php if(is_array($indlist)): $i = 0; $__LIST__ = $indlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><option value="<?php echo ($list["ind_id"]); ?>"><?php echo ($list["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>机构性质：</label>
                         <select class="form-control" name="nature">
+                            <option value="">请选择...</option> 
                             <option value="1">国有企业</option>
                             <option value="2">私营企业</option>
                             <option value="3">中外合资</option>
@@ -116,6 +148,7 @@ THINK;
                     <div class="form-group">
                         <label><span class="must-input">*</span>机构规模：</label>
                         <select class="form-control" name="size">
+                            <option value="">请选择...</option>
                             <option value="1">20以下</option>
                             <option value="2">20-50</option>
                             <option value="3">50-100</option>
@@ -123,30 +156,39 @@ THINK;
                         </select>
                     </div>
                     <div class="form-group">
-                        <label><span class="must-input">*</span>结构地址：</label>
-                        <input class="form-control" name="address" />
+                        <label><span class="must-input">*</span>法人或负责人姓名：</label>
+                        <input class="form-control" name="contact" value="<?php echo ($org_info["contact"]); ?>" />
                     </div>
                     <div class="form-group">
-                        <label><span class="must-input">*</span>联系人：</label>
-                        <input class="form-control" name="contact" />
+                        <label for=""><span class="must-input">*</span>身份证号码：</label>
+                        <input type="text" class="form-control" placeholder="身份证号码" value="<?php echo ($org_info["idcard_num"]); ?>" />
+                    </div>   
+                    <div class="form-group">
+                        <label for=""><span class="must-input">*</span>身份证正面和反面照片：</label>
+                        <p>法人或负责人的身份证正反面照片，图片格式仅限jpg、jpeg、png、gif,且大小不超过2M</p>
+                        <div class="rows clearfix">
+                        <div class="col-md-3" id="idcard-select1">
+                            
+                        </div>
+                        <input type="text" value="" name="idcard_img1" class="hidden" />
+                        <div class="col-md-3" id="idcard-select2">
+                            
+                        </div>
+                        <input type="text" value="" name="idcard_img2" class="hidden" />
+                        <div class="col-md-3"><button class="btn btn-primary" id="idcard-goto" type="button">上传</button></div>
+                        <div class="col-md-3" id="idcard-info"></div>
+                        </div>
+                        
                     </div>
                     <div class="form-group">
                         <label><span class="must-input">*</span>联系电话：</label>
-                        <input class="form-control" name="phone" />
+                        <input class="form-control" name="phone" value="<?php echo ($org_info["phone"]); ?>" />
                     </div>
                     <div class="form-group">
-                        <label><span class="must-input">*</span>机构固定电话：</label>
-                        <input class="form-control" name="fixed_phone" />
+                        <label><span class="must-input">*</span>机构联系邮箱：</label>
+                        <input class="form-control" disabled="true" value="<?php echo ($org_info["email"]); ?>" />
                     </div>
-                    <div class="form-group">
-                        <label><span class="must-input">*</span>机构邮箱：</label>
-                        <input class="form-control" disabled="true" />
-                    </div>
-                    <div class="form-group">
-                        <label>结构介绍：</label>
-                        <textarea class="form-control" rows="4" name="intro"></textarea>
-                    </div>
-                    <?php if($isApply == 'true'): ?><button type="button" class="btn btn-primary" id="goto-submit" disabled="true">提交</button>
+                    <?php if($isApply): ?><button type="button" class="btn btn-primary" id="goto-submit" disabled>提交</button>
                     <?php else: ?>
                     <button type="button" class="btn btn-primary" id="goto-submit">提交</button><?php endif; ?>
                 </form>
@@ -163,16 +205,6 @@ THINK;
 </div>
     <!--./footer-->
     <script type="text/javascript">
-    //刷新验证码
-    $("#verify>button").click(function() {
-        var ver_img = $("#verify>img");
-        ver_img.attr("src", "__APP__/Login/vCode?" + new Date().getTime());
-    });
-    $("#verify>img").click(function() {
-        $(this).attr("src", "__APP__/Login/vCode?" + new Date().getTime());
-    });
-
-
     $("#goto-submit").on('click', function() {
         var info = getFromInput("#auth-form");
         console.log(info);
@@ -185,7 +217,104 @@ THINK;
             }
         });
     });
+    var uploader = new WebUploader.create({
+        auto: false,
+        swf : "/__GROUP__/swf/Uploader.swf",
+        server: "<?php echo U("OrgAuth/uploadFile");?>",
+        pick: {id:"#orgphoto-select",
+               innerHTML:"选择",
+               multiple :true
+               },
+        accept: {
+        title: 'Images',
+        extensions: 'gif,jpg,jpeg,png',
+        mimeTypes: 'image/*'
+        },
+        formData:{
+            keys:"org_img"
+        }
+        // fileSingleSizeLimit: 1024*2
+    });
+    var idcard_uploader1 = new WebUploader.create({
+        auto: false,
+        swf : "/__GROUP__/swf/Uploader.swf",
+        server: "<?php echo U("OrgAuth/uploadFile");?>",
+        pick: {id:"#idcard-select1",
+               innerHTML:"正面",
+               multiple :true
+               },
+        accept: {
+        title: 'Images',
+        extensions: 'gif,jpg,jpeg,png',
+        mimeTypes: 'image/*',
+        },
+        formData:{
+            keys: 'idcard_img1'
+        }
+        //fileSingleSizeLimit: 1024*2
+    });
+    var idcard_uploader2 = new WebUploader.create({
+        auto: false,
+        swf : "/__GROUP__/swf/Uploader.swf",
+        server: "<?php echo U("OrgAuth/uploadFile");?>",
+        pick: {id:"#idcard-select2",
+               innerHTML:"反面",
+               multiple :true
+               },
+        accept: {
+        title: 'Images',
+        extensions: 'gif,jpg,jpeg,png',
+        mimeTypes: 'image/*',
+        },
+        formData:{
+            keys: 'idcard_img2'
+        }
+        //fileSingleSizeLimit: 1024*2
+    });
+$("#orgphoto-goto").on('click',function(){
+    uploader.upload();
+    });
+$("#idcard-goto").on('click',function(){
+    idcard_uploader1.upload();
+    idcard_uploader2.upload();
+});
 
+uploader.on( 'fileQueued', function( file ) {
+    $("#orgphoto-select>div.webuploader-pick").text('已选择');
+    $("#orgphoto-info").text(file.name + "  等待上传...");
+});
+uploader.on( 'uploadSuccess', function( file ,response) {
+    $("#orgphoto-info").text(response.info);
+    if(response.data ==1){
+        $("#orgphoto-select+input").val("ok");
+    }
+});
+uploader.on( 'uploadError', function( file ) {
+    $("#orgphoto-info").text("上传失败");
+});
+idcard_uploader2.on( 'fileQueued', function( file ) {
+    $("#idcard-select2>div.webuploader-pick").text('已选择');
+    $("#idcard-info").text(file.name + "  等待上传...");
+});
+idcard_uploader1.on( 'fileQueued', function( file ) {
+    $("#idcard-select1>div.webuploader-pick").text('已选择');
+    $("#idcard-info").text(file.name + "  等待上传...");
+});
+idcard_uploader2.on( 'uploadSuccess', function( file ,response) {
+    $("#idcard-info").text(response.info);
+    if(response.data ==1){
+        $("#idcard-select1+input").val("ok");
+    }
+});
+idcard_uploader1.on( 'uploadSuccess', function( file ,response) {
+    $("#idcard-info").text(response.info);
+    if(response.data ==1){
+        $("#idcard-select2+input").val("ok");
+    }
+});
+idcard_uploader2.on( 'uploadError', function( file ) {
+    $("#idcard-info").text("上传失败");
+});
     </script>
 </body>
 

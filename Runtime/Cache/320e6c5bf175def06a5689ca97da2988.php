@@ -129,7 +129,7 @@ THINK;
                     <div class="panel-heading">详细信息</div>
                     <div class="panel-body">
                         <div class="orgname">
-                            公司名称：<?php echo ($list["orgname"]); ?>
+                            公司名称：<a href="<?php echo U("OrgInfo/index");?>?oid=<?php echo ($list["oid"]); ?>"><?php echo ($list["orgname"]); ?></a>
                             <?php if($list["is_validate"] == 0): ?><span class="glyphicon glyphicon-question-sign nvlded-color"></span><span class="nvlded-color">未认证</span>
                                 <?php else: ?>
                                 <span class="glyphicon glyphicon-ok-sign vlded-color"></span><span class="vlded-color">已认证</span><?php endif; ?>

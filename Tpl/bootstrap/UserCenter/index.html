@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>兼职平台</title>
+  <title>用户中心</title>
 
 <include file="./Tpl/bootstrap/public/static.html" />
 
@@ -30,7 +30,7 @@
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>完善个人信息<small>({$userinfo.email})</small></small></h1>
+      <h1><small>我的小蜜蜂<small>({$userinfo.email})</small></small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -120,23 +120,6 @@
 <!--footer-->
 <include file="./Tpl/bootstrap/public/footer.html" />
 <!--./footer-->
-<script type="text/javascript">
-            swfobject.addDomLoadEvent(function () {
-                var swf = new fullAvatarEditor("/__GROUP__/swf/fullAvatarEditor.swf", "/__GROUP__/swf/expressInstall.swf", "swfContainer", {
-                        id : "swf",
-                        upload_url : "{:U('AvatarUpload/upload')}",
-                        method : "post",
-                        isShowUploadResultIcon : true,
-                        src_url : "{$orgInfo.avatar}",
-                        src_upload : 0
-                    },function(msg){
-                        switch(msg.code)
-                        {
-
-                    }}
-                );
-            });
-</script>
 <script type="text/javascript">
 $("#goto-info").click(function(){
   $(".alert").addClass("hidden");

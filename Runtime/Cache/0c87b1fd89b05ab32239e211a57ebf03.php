@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>兼职平台</title>
+  <title>用户中心</title>
 
 <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
@@ -94,7 +94,7 @@ THINK;
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>完善个人信息<small>(<?php echo ($userinfo["email"]); ?>)</small></small></h1>
+      <h1><small>我的小蜜蜂<small>(<?php echo ($userinfo["email"]); ?>)</small></small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -177,23 +177,6 @@ THINK;
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
 <!--./footer-->
-<script type="text/javascript">
-            swfobject.addDomLoadEvent(function () {
-                var swf = new fullAvatarEditor("/__GROUP__/swf/fullAvatarEditor.swf", "/__GROUP__/swf/expressInstall.swf", "swfContainer", {
-                        id : "swf",
-                        upload_url : "<?php echo U('AvatarUpload/upload');?>",
-                        method : "post",
-                        isShowUploadResultIcon : true,
-                        src_url : "<?php echo ($orgInfo["avatar"]); ?>",
-                        src_upload : 0
-                    },function(msg){
-                        switch(msg.code)
-                        {
-
-                    }}
-                );
-            });
-</script>
 <script type="text/javascript">
 $("#goto-info").click(function(){
   $(".alert").addClass("hidden");
