@@ -10,11 +10,12 @@ class OrgAuthAction extends Action {
 		if(!session('?oid')){
 			$this->error("请企业用户登录",U('Login/index'));
 		}
+		$this->showIndustry();
 		//显示以前的申请信息
 		$this->showInfo();
 		//判断是否申请过,让申请按钮disabled
 		if($this->isApply()) {
-			$this->assign('isApply',false);
+			$this->assign('isApply',true);
 		}else{
 			$this->assign('isApply',false);
 		}
@@ -23,11 +24,13 @@ class OrgAuthAction extends Action {
 	protected function showInfo() {
 		$Org   = M('OrgsAuth');
 		$where = "oid=" . session('oid');
-		$field = "orgname,email,is_pass,license_num,industry,nature,size,contact,idcard_num";
-		$join  = "RIGHT JOIN xm_orgs ON xm_orgs.oid=xm_orgs_auth.auth_oid"; 
-		$arr2  = $Org->where($where)->field($field)->join($join)->find();
+		$field = "orgname,email,is_pass,license_num,xm_industry.name AS industry,nature,size,contact,idcard_num,xm_orgs_auth.phone";
+		$join1 = "RIGHT JOIN xm_orgs ON xm_orgs.oid=xm_orgs_auth.auth_oid";
+		$join2 = "INNER JOIN xm_industry ON xm_industry.ind_id=xm_orgs_auth.industry"; 
+		$arr2  = $Org->where($where)->field($field)->join($join2)->join($join1)->find();
 		//dump($arr2);
 		if($arr2){
+			$arr2['idcard_num'] = substr_replace($arr2['idcard_num'], '****', 14);
 			$this->assign("org_info",$arr2);
 		}elseif(is_null($arr2)){
 			$this->assign("org_error_info","您还未认证");
@@ -35,6 +38,8 @@ class OrgAuthAction extends Action {
 		}else{
 			$this->assign("org_error_info","查询认证状态错误");
 		}
+	}
+	protected function showIndustry() {
 		$Industry = M('Industry');
 		$arr2_ind = $Industry->field('ind_id,name')->select();
 		$this->assign("indlist",$arr2_ind);
@@ -56,10 +61,14 @@ class OrgAuthAction extends Action {
 			$this->ajaxReturn(0,$OrgsAuth->getError(),1);
 			return;
 		}
-		if($OrgsAuth->where("auth_oid=" . session('oid'))->add()){
+		$OrgsAuth->auth_oid    = session('oid'); 
+		$OrgsAuth->license_img = session('license');
+		$OrgsAuth->idcard_img1 = session('idcard1');
+		$OrgsAuth->idcard_img2 = session('idcard2');
+		if($OrgsAuth->add()){
 			$this->ajaxReturn(1,"申请成功",1);	
 		}else{
-			$this->ajaxReturn(2,"申请异常",1);	
+			$this->ajaxReturn(2,"申请异常".$OrgsAuth->getLastSql(),1);	
 		}
 		
 	}
@@ -69,6 +78,10 @@ class OrgAuthAction extends Action {
 		return $ishave;
 	}
 	public function uploadFile(){
+		if($this->isApply()){
+			$this->ajaxReturn(1,"已经申请过了",1);
+			return ;
+		}
 		import('ORG.Net.UploadFile');
 		$photo = new UploadFile();
 		$photo->maxsize = 1024*2;
@@ -85,14 +98,17 @@ class OrgAuthAction extends Action {
 		$OrgAuth = M('OrgsAuth');
 		$where = "auth_oid=" . session('oid');
 		$flag = false;
-		if($this->_post('keys') == 'org_img'){
-			$flag = $OrgAuth->where($where)->setField("license_img", $path);
-		}elseif($this->_post('keys') == 'idcard_img1'){
-			$flag = $OrgAuth->where($where)->setField('idcard_img1', $path);
-		}elseif($this->_post('keys') == 'idcard_img2'){
-			$flag = $OrgAuth->where($where)->setField('idcard_img2', $path);
+		if($this->_post('keys') == 'oimg'){
+			session('license',$path);
+			$flag = session('?license');
+		}elseif($this->_post('keys') == 'iimg1'){
+			session('idcard1',$path);
+			$flag = session('?idcard1');
+		}elseif($this->_post('keys') == 'iimg2'){
+			session('idcard2',$path);
+			$flag = session('?idcard2');
 		}
-		if($flag){
+		if( $flag ){
 			$this->ajaxReturn(1,"上传成功",1);
 		}else{
 			$this->ajaxReturn(0,"上传失败",1);
