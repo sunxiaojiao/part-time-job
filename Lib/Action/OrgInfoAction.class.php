@@ -8,39 +8,16 @@ class OrgInfoAction extends Action{
 //		}else{
 //			$this->oid = session('oid');
 //		}
-		$this->assignIt();
 		$this->display();
 	}
-	/**
-	 * 读取数据
-	 * @return integer 0：查询错误  1：无记录  3：用户未登录
-	 * @return $list：查询成功返回数组
-	 */
-	private function read(){
+	private function showInfo(){
 		$this->oid = $this->_get('oid');
-		$Users = M('Orgs');
-		$list = $Users->where("oid=".$this->oid)->limit(1)->select();
-		if($list){
-			if(is_null($list)){
-				//无记录
-				return 1;
-			}else{
-				return $list[0];
-			}
-		}else{
-			return 0;
+		$Org = M('Orgs');
+		$arr2 = $Org->where("oid=".$this->oid)->find();
+		if($arr2){
+			
 		}
-	}
-	/**
-	 * 模板赋值
-	 */
-	private function assignIt(){
-		if($arr = $this->read()){
-			foreach ($arr as $key=>$value){
-				$this->assign($key,$value);
-			}
-		}
-		dump($arr);
+			
 	}
 }
 ?>
