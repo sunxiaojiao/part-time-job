@@ -166,39 +166,30 @@ THINK;
                     <div class="panel-body">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#newest">最近兼职工作</a></li>
+                            <li role="presentation"><a href="/">最近兼职工作</a></li>
                             <!-- <li role="presentation"><a href="#assort" aria-controls="assort" role="tab" data-toggle="tab">分类查找</a></li> -->
-                            <li role="presentation"><a href="<?php echo U("Resume/index");?>">求职简历</a></li>
+                            <li role="presentation" class="active"><a href="<?php echo U(" Resume/index ");?>">求职简历</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="newest">
-                                <!--分类选择-->
-                                <ul class="list-group assort">
-                                    <li class="list-group-item">
-                                        <a href="index.php?	sort=<?php echo ($arr_sort["ctime"]); ?>" class="my-partjob-time">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["address"]); ?>" class="my-partjob-address">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["money"]); ?>" class="my-partjob-money">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["pv"]); ?>" class="my-explor">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                    </li>
-                                </ul>
-                                <!--/分类选择-->
-                                <!-- 兼职列表 -->
-                                <ul class="list-group">
-                                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($job["jid"]); ?>" class="list-group-item"><?php echo ($job["title"]); ?>
-					    	
-					    	<?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
-						    <span class="my-partjob-address">
-						    	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["addressname"]); ?></span>
-						    <span class="my-partjob-money">
-						    	<span class="glyphicon glyphicon-yen" aria-hidden="true"></span><?php echo ($job["money"]); ?>
-						    </span>
-						    <span class="my-partjob-people"></span><?php echo ($job["current_peo"]); ?>/<?php echo ($job["want_peo"]); ?>
-						    <span class="my-explor">
-						    	<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><?php echo ($job["pv"]); ?>
-						    </span>
-					    </a><?php endforeach; endif; else: echo "" ;endif; ?>
-                                </ul>
-                                <!--./兼职列表-->
+                            <div role="tabpanel" class="tab-panel active">
+                                <table class="table">
+                                    <thead>
+                                        <td>姓名</td>
+                                        <td>年龄</td>
+                                        <td>性别</td>
+                                        <td>学校</td>
+                                    </thead>
+                                    <?php if(is_array($user_info)): $i = 0; $__LIST__ = $user_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user_info): $mod = ($i % 2 );++$i;?><tr>
+                                            <td><a href="<?php echo U("UserInfo/index");?>?uid=<?php echo ($user_info["uid"]); ?>"><?php echo ($user_info["username"]); ?></a></td>
+                                            <td><?php echo ($user_info["age"]); ?></td>
+                                            <td>
+                                                <?php switch($user_info["sex"]): case "1": ?>男<?php break;?>
+                                                    <?php case "2": ?>女<?php break;?>
+                                                    <?php default: ?>保密<?php endswitch;?>
+                                            </td>
+                                            <td><?php echo ($user_info["school"]); ?></td>
+                                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                </table>
                             </div>
                             <nav>
                                 <ul class="pagination">
@@ -221,7 +212,7 @@ THINK;
     </div>
     <!--end container-->
     <!--footer-->
-<div class="container">
+    <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
@@ -233,30 +224,30 @@ THINK;
         //var cla  = $(this).attr('class');
         link = $(this).attr('href');
         // if(link.substr(link.length-1,1) == '0') {
-        // 	$(this).attr('href',link.substr(0,link.length-1) + "1");
+        //  $(this).attr('href',link.substr(0,link.length-1) + "1");
         // }else if(link.substr(link.length-1,1) == '1') {
-        // 	$(this).attr('href',link.substr(0,link.length-1) + "0")
+        //  $(this).attr('href',link.substr(0,link.length-1) + "0")
         // }
         //var data = new Object();
         // switch(cla){
-        // 	case 'my-partjob-time':
-        // 		if($(this).attr('h') = 10){
+        //  case 'my-partjob-time':
+        //      if($(this).attr('h') = 10){
 
-        // 		}
-        // 		break;
-        // 	case 'my-partjob-address':
-        // 		data.order = 20;
-        // 		break;
-        // 	case 'my-partjob-money':
-        // 		data.order = 30;
-        // 		break;
-        // 	case 'my-partjob-explor':
-        // 		data.order = 40;
-        // 		break;
+        //      }
+        //      break;
+        //  case 'my-partjob-address':
+        //      data.order = 20;
+        //      break;
+        //  case 'my-partjob-money':
+        //      data.order = 30;
+        //      break;
+        //  case 'my-partjob-explor':
+        //      data.order = 40;
+        //      break;
         // }
 
         // $.ajax({
-        // 	url:"U('Admin/index')",
+        //  url:"U('Admin/index')",
         // data:data,
         // type:"POST"
         // });

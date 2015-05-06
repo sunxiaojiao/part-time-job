@@ -1,72 +1,104 @@
 <!doctype html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
-
-<include file="./Tpl/bootstrap/public/static.html" />
-<style type="text/css">
-  .panel-body{position: relative;}
-  .my-perinfo{margin-left:26px;}
-  .my-perinfo>p>span{margin-right:18px;}
-  .my-perimg{border:1px solid #EEE;}
-  span.list-intent{margin-right:10px;}
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .panel-body {
+        position: relative;
+    }
+    
+    .my-perinfo {
+        margin-left: 26px;
+    }
+    
+    .my-perinfo>p>span {
+        margin-right: 18px;
+    }
+    
+    .my-perimg {
+        border: 1px solid #EEE;
+    }
+    
+    span.list-intent {
+        margin-right: 10px;
+    }
+    </style>
 </head>
-<body>
-<include file="./Tpl/bootstrap/public/header.html" />
-<!--container-->
-<div class="container">
-  <div class="row">
-    <!--left-->
-    <div class="col-md-8">
 
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <img src="{$headlogo}" class="pull-left my-perimg" />
-          <div class="pull-left my-perinfo">
-            <h3>{$username}</h3>
-            <p><span>{$sex}</span><span>{$age}</span></p>
-          </div>
+<body>
+    <include file="./Tpl/bootstrap/public/header.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <!--left-->
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">基本信息</div>
+                    <div class="panel-body">
+                        <img src="{$user_info.avatar}" class="pull-right" />
+                        <h3 class="h-reset">{$user_info.username}<span class="small">（<switch name="user_info.sex">
+              <case value="1">男</case>
+              <case value="2">女</case>
+              <default />保密
+            </switch>）</span></h3>
+                        <p>年龄：{$user_info.age}</p>
+                        <p>居住地：{$user_info.address}</p>
+                        <p>所在学校：{$user_info.school}</p>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">工作经历及意向</div>
+                    <div class="panel-body">
+                        <p>求职意向：
+                            <volist name="intent" id="intent">
+                                <span class="list-intent">{$intent.name}</span>
+                            </volist>
+                        </p>
+                        <p>工作经历：{$user_info.exp}</p>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">工作技能</div>
+                    <div class="panel-body"></div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">教育经历</div>
+                    <div class="panel-body">
+                      <p>现在所在学校：{$user_info.school}</p>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">TA的评价</div>
+                    <div class="panel-body"></div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">联系方式</div>
+                    <div class="panel-body">
+                        <p>QQ：{$user_info.qq}</p>
+                        <p>电话：{$user_info.phone}</p>
+                        <p>下载APP查看</p>
+                    </div>
+                </div>
+            </div>
+            <!--right-->
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!--信息统计字段 具体还需要参考其他大型人才网站-->
-      <div class="panel panel-default">
-        <div class="panel-heading">个人信息</div>
-        <div class="panel-body">
-          <h3 class="">基本信息</h3>
-          <hr />
-          <p>所在城市：{$city}</p>
-          <p>所在学校：{$school}</p>
-          <p>求职意向：
-            <volist name="intent" id="intent">
-                <span class="list-intent">{$intent.name}</span>
-            </volist>
-          </p>
-          <p>工作经验：{$exp}</p>
-          <h3>联系方式</h3>
-          <hr />
-          <p>QQ：{$qq}</p>
-          <p>电话：{$phone}</p>
-          <p>下载APP查看</p>
-        </div>
-      </div>
     </div>
-    <!--right-->
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">关于小蜜蜂</div>
-        <div class="panel-body">
-          <img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--./container-->
-<!--footer-->
-<include file="./Tpl/bootstrap/public/footer.html" />
-<!--./footer-->
+    <!--./container-->
+    <!--footer-->
+    <include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
 </body>
+
 </html>

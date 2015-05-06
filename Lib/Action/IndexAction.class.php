@@ -64,8 +64,11 @@ class IndexAction extends Action{
 		$this->display();
 
 	}
-	protected function toggle() {
-
-	}
+//	protected function toggle() {
+//
+//	}
+//	protected function showInfo() {
+//		
+//	}
 }
 ?>
