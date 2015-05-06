@@ -24,38 +24,79 @@
 
       <div class="panel panel-default">
         <div class="panel-body">
-          <img src="{$headlogo}" class="pull-left my-perimg" />
+          <img src="{$org_info.avatar}" class="pull-left my-perimg" />
           <div class="pull-left my-perinfo">
-            <h3>{$orgname}
-            <if condition="$is_validate eq 1">
+            <h3>{$org_info.orgname}
+            <if condition="$org_info.is_validate eq 1">
             <span class="label label-success">已认证</span>
             <else />
             <span class="label label-danger">未认证</span>
             </if>
             </h3>
             
-            <p><span>{$org_address}</span></p>
+            <p><span>{$org_info.org_address}</span></p>
           </div>
         </div>
-      </div>
-      <!--信息统计字段 具体还需要参考其他大型人才网站-->
+      </div>`
       <div class="panel panel-default">
-        <div class="panel-heading">个人信息</div>
+        <div class="panel-heading">公司信息</div>
         <div class="panel-body">
-          <h3 class="">公司介绍</h3>
-          <hr />
-          <p>公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍 </p>
-          <h3>最新兼职</h3>
-          <hr />
+        <table class="table table-bordered">
+                        <tr>
+                            <td class="table-field">公司资质：</td>
+                            <td>
+                                <if condition="$org_info.is_validate eq 1">已验证
+                                    <else />未验证</if>
+                            </td>
+                            <td class="table-field">邮箱：</td>
+                            <td>{$org_info.email}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-field">客服电话：</td>
+                            <td>{$org_info.phone}</td>
+                            <td class="table-field">公司网址：</td>
+                            <td>{$org_info.website}</td>
+                        </tr>
+                        </tr>
+                        <td class="table-field">公司地址：</td>
+                        <td>{$org_info.org_address}</td>
+                        </tr>
+                    </table>
+        <h3>最新兼职</h3>
           <ul class="list-group">
-            <a class="list-group-item">Cras justo odio <span class="time pull-right">今天</span></a>
-            <a class="list-group-item">Dapibus ac facilisis in<span class="time pull-right">今天</span></a>
-            <a class="list-group-item">Morbi leo risus<span class="time pull-right">今天</span></a>
-            <a class="list-group-item">Porta ac consectetur ac<span class="time pull-right">今天</span></a>
-            <a class="list-group-item">Vestibulum at eros<span class="time pull-right">今天</span></a>
+            <if condition="$job_error_info">
+            <li class="list-group-item">{$job_error_info}</li>
+            <else />
+            <volist name="job_info" id="job_info">
+            <a class="list-group-item" href="{:U("JobInfo/index")}?jid={$job_info.jid}">{$job_info.title} <span class="time pull-right">{$job_info.ctime}</span></a>
+            </volist>
+            </if>
           </ul>
-          <h3>投诉建议</h3>
           <hr />
+          <h3 class="">公司介绍</h3>
+          <div>{$org_info.org_intro}</div>
+          <hr />
+          <h3>评价</h3>
+          <table class="table">
+          <thead>
+            <td>发布人</td>
+            <td>内容</td>
+            <td>时间</td>
+          </thead>
+          <if condition="$eval_error_info">
+          <tr>
+            <td>{$eval_error_info}</td>
+          </tr>
+          <else />
+          <volist name="eval_info" id="info">
+            <tr>
+              <td>{$info.username}</td>
+              <td>{$info.content}</td>
+              <td>{$info.ctime|date='y/m/d',###}</td>
+            </tr>
+            </volist>
+            </if>
+          </table>
         </div>
       </div>
     </div>
@@ -64,7 +105,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">关于小蜜蜂</div>
         <div class="panel-body">
-          <img src="./__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+          <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
         </div>
       </div>
     </div>

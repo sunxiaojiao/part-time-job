@@ -5,10 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>兼职平台</title>
-    <link rel="stylesheet" href="./__GROUP__/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./__GROUP__/css/bootstrap-theme.min.css">
-    <script src="./__GROUP__/js/jquery.min.js"></script>
-    <script src="./__GROUP__/js/bootstrap.min.js"></script>
+    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
+<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="/__GROUP__/css/common.css">
+<script src="/__GROUP__/js/jquery.min.js"></script>
+<script src="/__GROUP__/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
     </style>
 </head>
@@ -84,12 +88,12 @@
     </div>
     <!--./container-->
     <!--footer-->
-    <div class="container">
-        <hr />
-        <p class="text-center">小蜜蜂兼职</p>
-        <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-        <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-    </div>
+<div class="container">
+  <hr />
+  <p class="text-center">小蜜蜂兼职</p>
+  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+</div>
     <!--./footer-->
     <script>
     $("#login-form button").on('click',function() {
