@@ -1,14 +1,15 @@
 <?php
 class UserInfoAction extends Action{
-	private $uid;
-	private $Model;
+	protected  $uid;
+	protected  $Model;
 
 	public function index(){
+		$this->uid = $this->_get('uid');
 		$this->showInfo();
+		$this->showEval();
 		$this->display();
 	}
-	private function showInfo(){
-		$this->uid = $this->_get('uid');
+	protected  function showInfo(){
 		$Users = M('Users');
 		$field = "uid,username,age,sex,avatar,phone,address,qq,school,exp,intent";
 		$list = $Users->where("uid=".$this->uid)->field($field)->find();
@@ -23,6 +24,38 @@ class UserInfoAction extends Action{
 		$intent = $Mold->where($where)->field("name")->select();
 		$this->assign("user_info",$list);
 		$this->assign("intent",$intent);
+	}
+	protected function showEval() {
+		$Eval  = M('UserEvalute');
+		$field = "orgname,content,xm_user_evalute.ctime";
+		$where = "to_uid=" . $this->uid;
+		$join  = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_user_evalute.from_oid";
+		$arr2  = $Eval->field($field)->join($join)->where($where)->select();
+		if($arr2){
+			$this->assign("eval_info",$arr2);
+		}elseif(is_null($arr2)){
+			$this->assign('eval_error_info','还没有评论');
+		}else{
+			$this->assign('eval_error_info','读取出错');
+		}
+	}
+	//进行评价
+	public function evalMe(){
+		//只能公司进行评论
+		//现在是凌晨12：40 我在敲代码
+		if(!session('?oid')){
+			return;
+		}
+		$content = $this->_post('content');
+		$uid     = $this->_post('uid');
+		$Eval = M('UserEvalute');
+		$data = array('content'=>$content,'from_oid'=>session('oid'),'to_uid'=>$uid,'ctime'=>time());
+		$flag = $Eval->add($data);
+		if($flag){
+			$this->ajaxReturn(1,"评价成功",1);
+		}else{
+			$this->ajaxReturn(0,"评价失败".$Eval->getLastSql(),1);
+		}
 	}
 }
 ?>

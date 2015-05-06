@@ -72,8 +72,31 @@
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">TA的评价</div>
-                    <div class="panel-body"></div>
+                    <div class="panel-heading">TA的评价<a href="#" class="pull-right" data-toggle="modal" data-target=".modal">评价一下</a></div>
+                    <div class="panel-body">
+                      <table class="table">
+                      <thead>
+                        <td>公司</td>
+                        <td>内容</td>
+                        <td>时间</td>
+                      </thead>
+                      <if condition="$eval_error_info">
+                        <tr>
+                          <td>{$eval_error_info}</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      <else />
+                      <volist name="eval_info" id="info">
+                        <tr>
+                          <td>{$info.orgname}</td>
+                          <td>{$info.content}</td>
+                          <td>{$info.ctime}</td>
+                        </tr>
+                      </volist>
+                        </if>
+                      </table>
+                    </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">联系方式</div>
@@ -95,10 +118,49 @@
             </div>
         </div>
     </div>
+     <!--modeal-->
+    <div class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">评论一下{$user_info.username}：</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                      <textarea name="content" id="" class="form-control" cols="30" rows="10"></textarea>
+                      <button type="button" class="btn btn-default" id="eval-goto">评论</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
     <!--./container-->
     <!--footer-->
     <include file="./Tpl/bootstrap/public/footer.html" />
     <!--./footer-->
+    <script>
+    $("#eval-goto").on('click',function(){
+      $.ajax({
+        url:"{:U("UserInfo/evalMe")}",
+        type:"post",
+        data:{
+          content:$("textarea[name='content']").val(),
+          uid    :{$user_info.uid}
+        },
+        success:function(data){
+          alert(data.info);
+        }
+      });
+    });
+    </script>
 </body>
 
 </html>

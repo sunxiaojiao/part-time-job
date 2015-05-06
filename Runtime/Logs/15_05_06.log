@@ -368,3 +368,87 @@ NOTIC: 建议使用I方法替代_get
 [ 2015-05-06T16:08:45+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-05-06T16:13:34+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:25:37+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:25:46+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:25:53+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=43
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:25:57+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:26:25+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:42:32+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:43:52+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:44:25+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:45:42+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:46:28+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:47:38+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:49:24+08:00 ] 127.0.0.1 /Login/login.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-06T23:49:28+08:00 ] 127.0.0.1 /Login/login.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005071s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004972s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000254s ]
+
+[ 2015-05-06T23:49:44+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:50:03+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:53:49+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:53:57+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-06T23:54:13+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=5
+NOTIC: 建议使用I方法替代_get
+

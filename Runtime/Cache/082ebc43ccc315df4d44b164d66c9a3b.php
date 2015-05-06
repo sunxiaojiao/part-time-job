@@ -132,8 +132,27 @@ THINK;
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">TA的评价</div>
-                    <div class="panel-body"></div>
+                    <div class="panel-heading">TA的评价<a href="#" class="pull-right" data-toggle="modal" data-target=".modal">评价一下</a></div>
+                    <div class="panel-body">
+                      <table class="table">
+                      <thead>
+                        <td>公司</td>
+                        <td>内容</td>
+                        <td>时间</td>
+                      </thead>
+                      <?php if($eval_error_info): ?><tr>
+                          <td><?php echo ($eval_error_info); ?></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      <?php else: ?>
+                      <?php if(is_array($eval_info)): $i = 0; $__LIST__ = $eval_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><tr>
+                          <td><?php echo ($info["orgname"]); ?></td>
+                          <td><?php echo ($info["content"]); ?></td>
+                          <td><?php echo ($info["ctime"]); ?></td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                      </table>
+                    </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">联系方式</div>
@@ -155,6 +174,30 @@ THINK;
             </div>
         </div>
     </div>
+     <!--modeal-->
+    <div class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">评论一下<?php echo ($user_info["username"]); ?>：</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                      <textarea name="content" id="" class="form-control" cols="30" rows="10"></textarea>
+                      <button type="button" class="btn btn-default" id="eval-goto">评论</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
     <!--./container-->
     <!--footer-->
     <div class="container">
@@ -164,6 +207,21 @@ THINK;
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
     <!--./footer-->
+    <script>
+    $("#eval-goto").on('click',function(){
+      $.ajax({
+        url:"<?php echo U("UserInfo/evalMe");?>",
+        type:"post",
+        data:{
+          content:$("textarea[name='content']").val(),
+          uid    :<?php echo ($user_info["uid"]); ?>
+        },
+        success:function(data){
+          alert(data.info);
+        }
+      });
+    });
+    </script>
 </body>
 
 </html>
