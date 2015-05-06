@@ -1,11 +1,11 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
 
-<link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>兼职平台</title>
+    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
@@ -13,16 +13,40 @@
 <script src="/__GROUP__/js/jquery.min.js"></script>
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
-<style type="text/css">
-  .panel-body{position: relative;}
-  .my-perinfo{margin-left:26px;}
-  .my-perinfo>p>span{margin-right:18px;}
-  .my-perinfo>h3>span{font-size:16px;}
-  .my-perimg{border:1px solid #EEE;}
-</style>
+    <style type="text/css">
+    .panel-body {
+        position: relative;
+    }
+    
+    .my-perinfo {
+        margin-left: 26px;
+    }
+    
+    .my-perinfo>p>span {
+        margin-right: 18px;
+    }
+    
+    .my-perinfo>h3>span {
+        font-size: 16px;
+    }
+    
+    .my-perimg {
+        border: 1px solid #EEE;
+    }
+    
+    .org-name {
+        line-height: 66px;
+        overflow: hidden;
+    }
+    .h-reset{
+      font-size:14px;
+      margin:0;
+    }
+    </style>
 </head>
+
 <body>
-<!--======导航条======-->
+    <!--======导航条======-->
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -80,99 +104,116 @@ THINK;
   </div><!-- /.container-fluid -->
 </nav>
 <!--======导航条结束======--->
-<!--container-->
-<div class="container">
-  <div class="row">
-    <!--left-->
-    <div class="col-md-8">
-
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <img src="<?php echo ($org_info["avatar"]); ?>" class="pull-left my-perimg" />
-          <div class="pull-left my-perinfo">
-            <h3><?php echo ($org_info["orgname"]); ?>
-            <?php if($org_info["is_validate"] == 1): ?><span class="label label-success">已认证</span>
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <!--left-->
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img src="<?php echo ($org_info["avatar"]); ?>" class="pull-left my-perimg" />
+                        <div class="pull-left my-perinfo">
+                            <h1 class="h3 org-name"><?php echo ($org_info["orgname"]); ?>
+            <!-- <?php if($org_info["is_validate"] == 1): ?><span class="label label-success">已认证</span>
             <?php else: ?>
-            <span class="label label-danger">未认证</span><?php endif; ?>
-            </h3>
-            
-            <p><span><?php echo ($org_info["org_address"]); ?></span></p>
-          </div>
-        </div>
-      </div>`
-      <div class="panel panel-default">
-        <div class="panel-heading">公司信息</div>
-        <div class="panel-body">
-        <table class="table table-bordered">
-                        <tr>
-                            <td class="table-field">公司资质：</td>
-                            <td>
-                                <?php if($org_info["is_validate"] == 1): ?>已验证
-                                    <?php else: ?>未验证<?php endif; ?>
-                            </td>
-                            <td class="table-field">邮箱：</td>
-                            <td><?php echo ($org_info["email"]); ?></td>
-                        </tr>
-                        <tr>
-                            <td class="table-field">客服电话：</td>
-                            <td><?php echo ($org_info["phone"]); ?></td>
-                            <td class="table-field">公司网址：</td>
-                            <td><?php echo ($org_info["website"]); ?></td>
-                        </tr>
-                        </tr>
-                        <td class="table-field">公司地址：</td>
-                        <td><?php echo ($org_info["org_address"]); ?></td>
-                        </tr>
+            <span class="label label-danger">未认证</span><?php endif; ?> -->
+            </h1>
+                        </div>
+                    </div>
+                </div>`
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2 class="h-reset">公司信息</h2></div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td class="table-field">公司资质：</td>
+                                <td>
+                                    <?php if($org_info["is_validate"] == 1): ?>已验证
+                                        <?php else: ?>未验证<?php endif; ?>
+                                </td>
+                                <td class="table-field">性质：</td>
+                                <td><?php echo ($org_info["nature"]); ?></td>
+                            </tr>
+                            <tr>
+                                <td>行业：</td>
+                                <td><?php echo ($org_info["name"]); ?></td>
+                                <td>规模：</td>
+                                <td><?php echo ($org_info["size"]); ?>人</td>
+                            </tr>
+                            <tr>
+                                <td class="table-field">邮箱：</td>
+                                <td><?php echo ($org_info["email"]); ?></td>
+                                <td class="table-field">公司网址：</td>
+                                <td><?php echo ($org_info["website"]); ?></td>
+                            </tr>
+                            </tr>
+                            <td class="table-field">公司地址：</td>
+                            <td><?php echo ($org_info["org_address"]); ?></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="h-reset">最新兼职</h2></div>
+                  <div class="panel-body">
+                    <ul class="list-group">
+                        <?php if($job_error_info): ?><li class="list-group-item"><?php echo ($job_error_info); ?></li>
+                            <?php else: ?>
+                            <?php if(is_array($job_info)): $i = 0; $__LIST__ = $job_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job_info): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U(" JobInfo/index ");?>?jid=<?php echo ($job_info["jid"]); ?>"><?php echo ($job_info["title"]); ?> <span class="time pull-right"><?php echo ($job_info["ctime"]); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="h-reset">公司介绍</h2>
+                    </div>
+                    <div class="panel-body"><?php echo ($org_info["org_intro"]); ?></div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="h-reset">评价</h2>
+                    </div>
+                    <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <td>发布人</td>
+                            <td>内容</td>
+                            <td>时间</td>
+                        </thead>
+                        <?php if($eval_error_info): ?><tr>
+                                <td><?php echo ($eval_error_info); ?></td>
+                            </tr>
+                            <?php else: ?>
+                            <?php if(is_array($eval_info)): $i = 0; $__LIST__ = $eval_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><tr>
+                                    <td><?php echo ($info["username"]); ?></td>
+                                    <td><?php echo ($info["content"]); ?></td>
+                                    <td><?php echo (date('y/m/d',$info["ctime"])); ?></td>
+                                </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </table>
-        <h3>最新兼职</h3>
-          <ul class="list-group">
-            <?php if($job_error_info): ?><li class="list-group-item"><?php echo ($job_error_info); ?></li>
-            <?php else: ?>
-            <?php if(is_array($job_info)): $i = 0; $__LIST__ = $job_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job_info): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U("JobInfo/index");?>?jid=<?php echo ($job_info["jid"]); ?>"><?php echo ($job_info["title"]); ?> <span class="time pull-right"><?php echo ($job_info["ctime"]); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
-          </ul>
-          <hr />
-          <h3 class="">公司介绍</h3>
-          <div><?php echo ($org_info["org_intro"]); ?></div>
-          <hr />
-          <h3>评价</h3>
-          <table class="table">
-          <thead>
-            <td>发布人</td>
-            <td>内容</td>
-            <td>时间</td>
-          </thead>
-          <?php if($eval_error_info): ?><tr>
-            <td><?php echo ($eval_error_info); ?></td>
-          </tr>
-          <?php else: ?>
-          <?php if(is_array($eval_info)): $i = 0; $__LIST__ = $eval_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><tr>
-              <td><?php echo ($info["username"]); ?></td>
-              <td><?php echo ($info["content"]); ?></td>
-              <td><?php echo (date('y/m/d',$info["ctime"])); ?></td>
-            </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
-          </table>
+                    </div>
+                </div>
+            </div>
+            <!--right-->
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!--right-->
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">关于小蜜蜂</div>
-        <div class="panel-body">
-          <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--./container-->
-<!--footer-->
-<div class="container">
+    <!--./container-->
+    <!--footer-->
+    <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
   <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
-<!--./footer-->
+    <!--./footer-->
 </body>
+
 </html>

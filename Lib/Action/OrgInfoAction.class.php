@@ -2,6 +2,7 @@
 class OrgInfoAction extends Action{
 	protected  $oid;
 	public function index(){
+		header('Content-type:text/html;charset=utf-8');
 			//检测用户登录
 //		if(empty(session('oid'))){
 //			return 3;
@@ -15,9 +16,11 @@ class OrgInfoAction extends Action{
 		$this->display();
 	}
 	protected  function showInfo(){
-		$Org = M('Orgs');
-		$field = "orgname,is_validate,avatar,org_address,website,phone,fixed_phone,org_intro,ctime";
-		$arr2 = $Org->field($field)->where("oid=".$this->oid)->find();
+		$Org   = M('Orgs');
+		$field = "orgname,email,is_validate,avatar,org_address,website,fixed_phone,org_intro,xm_orgs.ctime,xm_industry.name,size,nature";
+		$join1  = "LEFT JOIN xm_orgs_auth ON xm_orgs_auth.auth_oid=xm_orgs.oid";
+		$join2 = "INNER JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id"; 
+		$arr2  = $Org->field($field)->join($join1)->join($join2)->where("oid=".$this->oid)->find();
 		if($arr2){
 			$this->assign("org_info",$arr2);
 		}elseif(is_null($arr2)){
@@ -33,7 +36,6 @@ class OrgInfoAction extends Action{
 		$where = "pub_oid=" . $this->oid . " AND " . "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
 		$field = "title,jid,ctime";
 		$arr2  = $Job->where($where)->field($field)->select();
-		
 		if($arr2){
 			$this->assign('job_info',$arr2);
 		}elseif(is_null($arr2)){

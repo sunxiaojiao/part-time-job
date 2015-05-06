@@ -1,119 +1,161 @@
 <!doctype html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>兼职平台</title>
-
-<include file="./Tpl/bootstrap/public/static.html" />
-<style type="text/css">
-  .panel-body{position: relative;}
-  .my-perinfo{margin-left:26px;}
-  .my-perinfo>p>span{margin-right:18px;}
-  .my-perinfo>h3>span{font-size:16px;}
-  .my-perimg{border:1px solid #EEE;}
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .panel-body {
+        position: relative;
+    }
+    
+    .my-perinfo {
+        margin-left: 26px;
+    }
+    
+    .my-perinfo>p>span {
+        margin-right: 18px;
+    }
+    
+    .my-perinfo>h3>span {
+        font-size: 16px;
+    }
+    
+    .my-perimg {
+        border: 1px solid #EEE;
+    }
+    
+    .org-name {
+        line-height: 66px;
+        overflow: hidden;
+    }
+    .h-reset{
+      font-size:14px;
+      margin:0;
+    }
+    </style>
 </head>
-<body>
-<include file="./Tpl/bootstrap/public/header.html" />
-<!--container-->
-<div class="container">
-  <div class="row">
-    <!--left-->
-    <div class="col-md-8">
 
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <img src="{$org_info.avatar}" class="pull-left my-perimg" />
-          <div class="pull-left my-perinfo">
-            <h3>{$org_info.orgname}
-            <if condition="$org_info.is_validate eq 1">
+<body>
+    <include file="./Tpl/bootstrap/public/header.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <!--left-->
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img src="{$org_info.avatar}" class="pull-left my-perimg" />
+                        <div class="pull-left my-perinfo">
+                            <h1 class="h3 org-name">{$org_info.orgname}
+            <!-- <if condition="$org_info.is_validate eq 1">
             <span class="label label-success">已认证</span>
             <else />
             <span class="label label-danger">未认证</span>
-            </if>
-            </h3>
-            
-            <p><span>{$org_info.org_address}</span></p>
-          </div>
-        </div>
-      </div>`
-      <div class="panel panel-default">
-        <div class="panel-heading">公司信息</div>
-        <div class="panel-body">
-        <table class="table table-bordered">
-                        <tr>
-                            <td class="table-field">公司资质：</td>
-                            <td>
-                                <if condition="$org_info.is_validate eq 1">已验证
-                                    <else />未验证</if>
-                            </td>
-                            <td class="table-field">邮箱：</td>
-                            <td>{$org_info.email}</td>
-                        </tr>
-                        <tr>
-                            <td class="table-field">客服电话：</td>
-                            <td>{$org_info.phone}</td>
-                            <td class="table-field">公司网址：</td>
-                            <td>{$org_info.website}</td>
-                        </tr>
-                        </tr>
-                        <td class="table-field">公司地址：</td>
-                        <td>{$org_info.org_address}</td>
-                        </tr>
+            </if> -->
+            </h1>
+                        </div>
+                    </div>
+                </div>`
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2 class="h-reset">公司信息</h2></div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td class="table-field">公司资质：</td>
+                                <td>
+                                    <if condition="$org_info.is_validate eq 1">已验证
+                                        <else />未验证
+                                    </if>
+                                </td>
+                                <td class="table-field">性质：</td>
+                                <td>{$org_info.nature}</td>
+                            </tr>
+                            <tr>
+                                <td>行业：</td>
+                                <td>{$org_info.name}</td>
+                                <td>规模：</td>
+                                <td>{$org_info.size}人</td>
+                            </tr>
+                            <tr>
+                                <td class="table-field">邮箱：</td>
+                                <td>{$org_info.email}</td>
+                                <td class="table-field">公司网址：</td>
+                                <td>{$org_info.website}</td>
+                            </tr>
+                            </tr>
+                            <td class="table-field">公司地址：</td>
+                            <td>{$org_info.org_address}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="h-reset">最新兼职</h2></div>
+                  <div class="panel-body">
+                    <ul class="list-group">
+                        <if condition="$job_error_info">
+                            <li class="list-group-item">{$job_error_info}</li>
+                            <else />
+                            <volist name="job_info" id="job_info">
+                                <a class="list-group-item" href="{:U(" JobInfo/index ")}?jid={$job_info.jid}">{$job_info.title} <span class="time pull-right">{$job_info.ctime}</span></a>
+                            </volist>
+                        </if>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="h-reset">公司介绍</h2>
+                    </div>
+                    <div class="panel-body">{$org_info.org_intro}</div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="h-reset">评价</h2>
+                    </div>
+                    <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <td>发布人</td>
+                            <td>内容</td>
+                            <td>时间</td>
+                        </thead>
+                        <if condition="$eval_error_info">
+                            <tr>
+                                <td>{$eval_error_info}</td>
+                            </tr>
+                            <else />
+                            <volist name="eval_info" id="info">
+                                <tr>
+                                    <td>{$info.username}</td>
+                                    <td>{$info.content}</td>
+                                    <td>{$info.ctime|date='y/m/d',###}</td>
+                                </tr>
+                            </volist>
+                        </if>
                     </table>
-        <h3>最新兼职</h3>
-          <ul class="list-group">
-            <if condition="$job_error_info">
-            <li class="list-group-item">{$job_error_info}</li>
-            <else />
-            <volist name="job_info" id="job_info">
-            <a class="list-group-item" href="{:U("JobInfo/index")}?jid={$job_info.jid}">{$job_info.title} <span class="time pull-right">{$job_info.ctime}</span></a>
-            </volist>
-            </if>
-          </ul>
-          <hr />
-          <h3 class="">公司介绍</h3>
-          <div>{$org_info.org_intro}</div>
-          <hr />
-          <h3>评价</h3>
-          <table class="table">
-          <thead>
-            <td>发布人</td>
-            <td>内容</td>
-            <td>时间</td>
-          </thead>
-          <if condition="$eval_error_info">
-          <tr>
-            <td>{$eval_error_info}</td>
-          </tr>
-          <else />
-          <volist name="eval_info" id="info">
-            <tr>
-              <td>{$info.username}</td>
-              <td>{$info.content}</td>
-              <td>{$info.ctime|date='y/m/d',###}</td>
-            </tr>
-            </volist>
-            </if>
-          </table>
+                    </div>
+                </div>
+            </div>
+            <!--right-->
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!--right-->
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">关于小蜜蜂</div>
-        <div class="panel-body">
-          <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--./container-->
-<!--footer-->
-<include file="./Tpl/bootstrap/public/footer.html" />
-<!--./footer-->
+    <!--./container-->
+    <!--footer-->
+    <include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
 </body>
+
 </html>
