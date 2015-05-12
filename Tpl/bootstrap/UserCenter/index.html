@@ -92,17 +92,26 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">我的兼职</div>
+        <div class="panel-heading">我的评论</div>
         <div class="panel-body">
-          <ul class="list-group">
-          <if condition="$passed_error_info">
-          <li class="list-group-item">{$passed_error_info}</li>
+          <table class="table">
+          <thead>
+            <td>公司机构</td>
+            <td>内容</td>
+            <td>时间</td>
+          </thead>
+          <if condition="$eval_error_info">
+          <tr><td>{$eval_error_info}</td></tr>
           <else />
-            <volist name="passed_job" id="apply">
-          <a href="{:U('JobsInfo/index')}?jid={$apply.jid}" class="list-group-item">{$apply.title}{$apply.ctime|date="m-d",###}</a>
+            <volist name="eval_info" id="list">
+          <tr>
+            <td><a href="{:U('OrgInfo/index')}?oid={$list.oid}">{$list.orgname}</a></td>
+            <td>{$list.content}</td>
+            <td>{$list.ctime|date="m-d",###}</td>
+          </tr>
           </volist>
           </if>
-          </ul>
+          </table>
         </div>
       </div>
     </div>

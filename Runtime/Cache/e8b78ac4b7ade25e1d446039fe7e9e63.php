@@ -175,7 +175,7 @@ THINK;
                                 <!--分类选择-->
                                 <ul class="list-group assort">
                                     <li class="list-group-item">
-                                        <a href="index.php?	sort=<?php echo ($arr_sort["ctime"]); ?>" class="my-partjob-time">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?	sort=<?php echo ($arr_sort["ctime"]); ?>" class="my-partjob-time">默认<span class="glyphicon glyphicon-chevron-down"></span></a>
                                         <a href="index.php?sort=<?php echo ($arr_sort["address"]); ?>" class="my-partjob-address">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
                                         <a href="index.php?sort=<?php echo ($arr_sort["money"]); ?>" class="my-partjob-money">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
                                         <a href="index.php?sort=<?php echo ($arr_sort["pv"]); ?>" class="my-explor">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>

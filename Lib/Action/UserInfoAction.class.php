@@ -49,6 +49,10 @@ class UserInfoAction extends Action{
 		$content = $this->_post('content');
 		$uid     = $this->_post('uid');
 		$Eval = M('UserEvalute');
+		$bool = $Eval->check($content, '1,100',length);
+		if(!$bool){
+			$this->ajaxReturn(2,"评价内容要在100个字以内",1);
+		}
 		$data = array('content'=>$content,'from_oid'=>session('oid'),'to_uid'=>$uid,'ctime'=>time());
 		$flag = $Eval->add($data);
 		if($flag){

@@ -132,7 +132,9 @@ THINK;
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">TA的评价<a href="#" class="pull-right" data-toggle="modal" data-target=".modal">评价一下</a></div>
+                    <div class="panel-heading">TA的评价
+                      <?php if(isset($_SESSION['oid'])): ?><a href="#" class="pull-right" data-toggle="modal" data-target=".modal">评价一下</a><?php endif; ?>
+                    </div>
                     <div class="panel-body">
                       <table class="table">
                       <thead>
@@ -174,7 +176,7 @@ THINK;
             </div>
         </div>
     </div>
-     <!--modeal-->
+    <?php if(isset($_SESSION['oid'])): ?><!--modeal-->
     <div class="modal fade">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -185,19 +187,19 @@ THINK;
                 <div class="modal-body">
                     <form action="">
                       <textarea name="content" id="" class="form-control" cols="30" rows="10"></textarea>
-                      <button type="button" class="btn btn-default" id="eval-goto">评论</button>
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <span class="pull-left">提示：内容在100字以内</span>
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">确认</button>
+                    <button type="button" class="btn btn-primary" id="eval-goto">评论</button>
                 </div>
             </div>
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
+    <!-- /.modal --><?php endif; ?>
     <!--./container-->
     <!--footer-->
     <div class="container">

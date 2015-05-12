@@ -148,13 +148,22 @@ THINK;
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">我的兼职</div>
+        <div class="panel-heading">我的评论</div>
         <div class="panel-body">
-          <ul class="list-group">
-          <?php if($passed_error_info): ?><li class="list-group-item"><?php echo ($passed_error_info); ?></li>
+          <table class="table">
+          <thead>
+            <td>公司机构</td>
+            <td>内容</td>
+            <td>时间</td>
+          </thead>
+          <?php if($eval_error_info): ?><tr><td><?php echo ($eval_error_info); ?></td></tr>
           <?php else: ?>
-            <?php if(is_array($passed_job)): $i = 0; $__LIST__ = $passed_job;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($apply["jid"]); ?>" class="list-group-item"><?php echo ($apply["title"]); echo (date("m-d",$apply["ctime"])); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
-          </ul>
+            <?php if(is_array($eval_info)): $i = 0; $__LIST__ = $eval_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><tr>
+            <td><a href="<?php echo U('OrgInfo/index');?>?oid=<?php echo ($list["oid"]); ?>"><?php echo ($list["orgname"]); ?></a></td>
+            <td><?php echo ($list["content"]); ?></td>
+            <td><?php echo (date("m-d",$list["ctime"])); ?></td>
+          </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+          </table>
         </div>
       </div>
     </div>

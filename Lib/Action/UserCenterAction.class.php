@@ -18,6 +18,7 @@ class UserCenterAction extends Action{
 		//显示工作申请信息
 		$this->jobApplyed();
 		$this->jobLists();
+		$this->evalList();
 		$this->display();
 	}
 	public function editInfo(){
@@ -42,31 +43,6 @@ class UserCenterAction extends Action{
 	}
 	//更改用户信息
 	public function updateInfo(){
-		//先判断用户更改了那些字段的信息，将更改的字段信息进行更新
-//		foreach($this->data as $key => $value){
-//			if($value != $_POST[$key] && isset($_POST($key))){
-//				$this->data[$key] = $_POST[$key];
-//			}
-//		}
-//		$this->data = session("userData");
-//		$this->form = $this->_post();
-//		//根据用户选择的地点从xm_address表中选择地点的aid
-//		$province = $this->form['province'];
-//		$city = $this->form['city'];
-//		$area = $this->form['area'];
-//		$Addr = M('Address');
-//		$aid  = $Addr->where("province='{$province}' AND city='{$city}' AND area='{$area}'")->field("aid")->find();
-//		if($aid){
-//			unset($this->form['province']);
-//			unset($this->form['city']);
-//			unset($this->form['area']);
-//			$this->form['address'] = $aid;
-//		}else{
-//			echo $aid;
-//			$this->ajaxReturn(0,"地点查询错误",0);
-//			return;
-//		}
-
 		$User = D('Users');
 		if(!$User->create()){
 			//dump($this->_post());
@@ -88,7 +64,7 @@ class UserCenterAction extends Action{
 			$this->ajaxReturn(3,"更新失败",1);
 		}
 	}
-	//显示申请成功的兼职
+	//显示申请过的兼职
 	private function jobLists(){
 		$Apply = M('Apply');
 		$where = "app_uid=".session('uid') . " AND " . "xm_apply.is_pass=2";
@@ -107,7 +83,7 @@ class UserCenterAction extends Action{
 	//
 	private function jobApplyed(){
 		$Apply = M('Apply');
-		$where = "app_uid=".session('uid');
+		$where = "app_uid=" . session('uid');
 		$field = "xm_jobs.jid,xm_jobs.title,xm_apply.ctime,xm_apply.is_pass";
 		$join = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
 		$data = $Apply->where($where)->join($join)->field($field)->select();
@@ -118,7 +94,21 @@ class UserCenterAction extends Action{
 		}else{
 			$this->assign("apply_error_info","查询错误");
 		}
-		
+	}
+	//我的评论
+	protected function evalList() {
+		$Eval  = M('UserEvalute');
+		$field = "orgname,from_oid AS oid,content,xm_user_evalute.ctime";
+		$join  = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_user_evalute.from_oid";
+		$where = "to_uid=" . session('uid');
+		$arr2  = $Eval->field($field)->join($join)->where($where)->select();
+		if($arr2){
+			$this->assign('eval_info',$arr2);
+		}elseif(is_null($arr2)){
+			$this->assign('eval_error__info','还没有评论');
+		}else{
+			$this->assign('eval_error_info','查询错误');
+		}
 	}
 }
 
