@@ -92,6 +92,38 @@
         </div>
       </div>
       <div class="panel panel-default">
+        <div class="panel-heading">我的兼职</div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <td>兼职</td>
+              <td>状态</td>
+              <td>时间</td>
+            </thead>
+            <if condition="$work_error_info">
+            <tr>
+              <td>{$work_error_info}</td>
+            </tr>
+            <else />
+            <volist name="work_info" id="list">
+            <tr>
+              <td>{$list.title}</td>
+              <td>
+                <switch name="list.work_status">
+                <case value="0">待做</case>
+                <case value="1">正在进行</case>
+                <case value="2">做完了</case>
+                </switch>
+              </td>
+              <td>{$list.ctime}</td>
+            </tr>
+            </volist>
+            </if>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
         <div class="panel-heading">我的评论</div>
         <div class="panel-body">
           <table class="table">

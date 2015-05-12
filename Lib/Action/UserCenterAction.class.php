@@ -17,8 +17,8 @@ class UserCenterAction extends Action{
 		$this->showInfo();
 		//显示工作申请信息
 		$this->jobApplyed();
-		$this->jobLists();
 		$this->evalList();
+		$this->showMyJobList();
 		$this->display();
 	}
 	public function editInfo(){
@@ -64,22 +64,6 @@ class UserCenterAction extends Action{
 			$this->ajaxReturn(3,"更新失败",1);
 		}
 	}
-	//显示申请过的兼职
-	private function jobLists(){
-		$Apply = M('Apply');
-		$where = "app_uid=".session('uid') . " AND " . "xm_apply.is_pass=2";
-		$field = "xm_jobs.jid AS jid,xm_jobs.title AS title,xm_apply.ctime AS ctime";
-		$join = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
-		$data = $Apply->where($where)->join($join)->field($field)->select();
-		if($data){
-			$this->assign("passed_job",$data);
-		}elseif(is_null($data)){
-			$this->assign("passed_error_info","无记录");
-		}else{
-			$this->assign("passed_error_info","查询错误");
-		}
-//		/dump($Apply->getLastSql());
-	}
 	//
 	private function jobApplyed(){
 		$Apply = M('Apply');
@@ -108,6 +92,35 @@ class UserCenterAction extends Action{
 			$this->assign('eval_error__info','还没有评论');
 		}else{
 			$this->assign('eval_error_info','查询错误');
+		}
+	}
+	//我的工作
+	protected function showMyJobList() {
+		$Work  = M('Working');
+		$field = "title,work_id,work_status,xm_working.ctime";
+		$where = "work_uid=" . session('uid');
+		$join  = "INNER JOIN xm_jobs ON xm_jobs.pub_oid=xm_working.work_oid";
+		$arr2  = $Work->field($field)->join($join)->where($where)->select();
+		if($arr2){
+			$this->assign('work_info',$arr2);
+		}elseif(is_null($arr2)){
+			$this->assign('work_error_info','还没有兼职可以做哦');
+		}else{
+			$this->assign('work_error_info','读取错误');
+		}
+	}
+	public function showMyJobDetail() {
+	$Work  = M('Working');
+		$field = "title,work_id,work_status,xm_working.ctime";
+		$where = "work_uid=" . session('uid');
+		$join  = "INNER JOIN xm_jobs ON xm_jobs.pub_oid=xm_working.work_oid";
+		$arr2  = $Work->field($field)->join($join)->where($where)->select();
+		if($arr2){
+			$this->assign('work_info',$arr2);
+		}elseif(is_null($arr2)){
+			$this->assign('work_error_info','还没有兼职可以做哦');
+		}else{
+			$this->assign('work_error_info','读取错误');
 		}
 	}
 }

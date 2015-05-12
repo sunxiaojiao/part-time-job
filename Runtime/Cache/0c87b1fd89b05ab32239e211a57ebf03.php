@@ -148,6 +148,32 @@ THINK;
         </div>
       </div>
       <div class="panel panel-default">
+        <div class="panel-heading">我的兼职</div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <td>兼职</td>
+              <td>状态</td>
+              <td>时间</td>
+            </thead>
+            <?php if($work_error_info): ?><tr>
+              <td><?php echo ($work_error_info); ?></td>
+            </tr>
+            <?php else: ?>
+            <?php if(is_array($work_info)): $i = 0; $__LIST__ = $work_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><tr>
+              <td><?php echo ($list["title"]); ?></td>
+              <td>
+                <?php switch($list["work_status"]): case "0": ?>待做<?php break;?>
+                <?php case "1": ?>正在进行<?php break;?>
+                <?php case "2": ?>做完了<?php break; endswitch;?>
+              </td>
+              <td><?php echo ($list["ctime"]); ?></td>
+            </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
         <div class="panel-heading">我的评论</div>
         <div class="panel-body">
           <table class="table">

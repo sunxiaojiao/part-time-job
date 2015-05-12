@@ -23,3 +23,6 @@ SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' A
 [ 2015-05-12T20:41:08+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-05-12T20:53:48+08:00 ] 127.0.0.1 /UserCenter/index.html
+ERR: Action:jobLists您所请求的方法不存在！
+
