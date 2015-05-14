@@ -94,20 +94,65 @@ class UserCenterAction extends Action{
 			$this->assign('eval_error_info','查询错误');
 		}
 	}
-	//我的工作
+	//我的兼职
 	protected function showMyJobList() {
 		$Work  = M('Working');
-		$field = "title,work_id,work_status,xm_working.ctime";
+		$field = "title,work_id,jid,work_status,xm_working.begin_time,end_time,xm_working.ctime";
 		$where = "work_uid=" . session('uid');
-		$join  = "INNER JOIN xm_jobs ON xm_jobs.pub_oid=xm_working.work_oid";
+		$join  = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
 		$arr2  = $Work->field($field)->join($join)->where($where)->select();
 		if($arr2){
 			$this->assign('work_info',$arr2);
 		}elseif(is_null($arr2)){
 			$this->assign('work_error_info','还没有兼职可以做哦');
 		}else{
-			$this->assign('work_error_info','读取错误');
+			$this->assign('work_error_info','读取错误'.$Work->getLastSql());
 		}
+	}
+	//我的兼职-handler
+	public function MyJobHandler() {
+		//检测登录
+		if(!session('?uid')){
+			return ;
+		}
+		$wid   = $this->_get('wid');
+		$flag  = $this->_get('f');
+		if($flag === null){
+			$this->ajaxReturn(0,'非法流程',1);
+			return;
+		}
+		$Work  = M('Working');
+		$where = "work_id=" . $wid;
+		//开始兼职
+		if($flag == '1'){
+			//检测是否为status=0
+			$status = $Work->where($where)->getField('work_status');
+			if($status === '1' || $status === '2'){
+				$this->ajaxReturn(0,'非法流程',1);
+				return;
+			}
+			$f = $Work->where($where)->save(array('work_status'=>1,'begin_time'=>time()));
+			if($f){
+				$this->ajaxReturn(1,'操作成功',1);
+			}else{
+				$this->ajaxReturn(0,'操作失败',1);
+			}
+		}
+		//结束兼职
+		if($flag == '2'){
+		//检测是否为status=0
+			$status = $Work->where($where)->getField('work_status');
+			if($status !== '1'){
+				$this->ajaxReturn(0,'非法流程',1);
+				return ;
+			}
+			$f = $Work->where($where)->save(array('work_status'=>2,'end_time'=>time()));
+			if($f){
+				$this->ajaxReturn(1,'操作成功',1);
+			}else{
+				$this->ajaxReturn(0,'操作失败',1);
+			}
+		}	
 	}
 	public function showMyJobDetail() {
 	$Work  = M('Working');
