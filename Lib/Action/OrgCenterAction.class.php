@@ -23,6 +23,8 @@ class OrgCenterAction extends Action{
 		}
 		//列出申请列表
 		$this->whoApplyed();
+		//
+		$this->showIngJob();
 		$this->display();
 	}
 	//显示发布的兼职
@@ -104,13 +106,52 @@ class OrgCenterAction extends Action{
 			$this->assign("apply_error_info","查询失败");
 		}
 	}
+	//显示正在进行中的兼职
+	protected function showIngJob() {
+		$Work   = M('Working');
+		$where  = "pub_oid=" . session('oid') . ' AND ' . 'xm_working.is_pass=2';
+		$field  = "work_uid,work_id,work_status,xm_working.ctime,username";
+		$join1  = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
+		$join2  = "INNER JOIN xm_users ON xm_users.uid=xm_working.work_uid";
+		$arr2   = $Work->where($where)->join($join1)->join($join2)->field($field)->select();
+		if($arr2){
+			$this->assign('work_info',$arr2);
+		}elseif(is_null($arr2)){
+			$this->assign('work_error_info','还没有进行中的兼职');
+		}else{
+			$this->assign('work_error_info','读取错误');
+		}
+	}
+	//兼职状态的确认
+	public function statusHandler() {
+		if(!session('?oid')){
+			$this->error('未登录',U("Login/index"));
+			return;
+		}
+		$f   = $this->_get('f');
+		$wid = $this->_get('wid');
+		$Work = M('Working');
+		$where = "work_id=" . $wid;
+		$arr = array();
+		if($f == '0'){
+			$arr = array('is_pass'=>1,'work_status'=>2);//通过
+		}elseif($f == '1'){
+			$arr = array('is_pass'=>0,'work_status'=>2);//不通过
+		}
+		$flag = $Work->where($where)->save($arr);
+		if($flag){
+			$this->ajaxReturn(1,'操作成功',1);
+		}else{
+			$this->ajaxReturn(2,'操作失败'.$Work->getLastSql(),1);
+		}
+		
+	}
 	//是否通过申请人的兼职申请
 	public function isPass(){
 		if(!session('?oid')){
 			$this->error("企业用户未登录",U('Login/index'));
 			return;
 		}
-
 		if($this->_get('ispass') == 'yes'){
 			$uid = $this->_get('uid');
 			$jid = $this->_get('jid');

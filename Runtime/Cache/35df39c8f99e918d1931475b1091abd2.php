@@ -179,6 +179,35 @@ THINK;
                     </div>
                 </div>
                 <!--./兼职申请列表-->
+                <!--进行中的兼职-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">进行中的兼职</div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <td>用户名</td>
+                                <td>状态</td>
+                                <td>时间</td>
+                            </thead>
+                            <?php if($work_error_info): ?><tr>
+                                    <td><?php echo ($work_error_info); ?></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            <?php else: ?>
+                            <?php if(is_array($work_info)): $i = 0; $__LIST__ = $work_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><tr>
+                                <td><?php echo ($info["username"]); ?></td>
+                                <td>
+                                <?php switch($info["work_status"]): case "0": ?>未开始<?php break;?>
+                                    <?php case "1": ?>正在进行<?php break;?>
+                                    <?php case "2": ?>已完成<a class="btn btn-success" id="btn_passed" data-wid="<?php echo ($info["work_id"]); ?>">符合</a><a class="btn btn-danger" id="btn_fail" data-wid="<?php echo ($info["work_id"]); ?>">不符合</a><?php break; endswitch;?>
+                                </td>
+                                <td><?php echo (date('m/d h:i',$info["ctime"])); ?></td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                        </table>
+                    </div>
+                </div>
+                <!--./进行中的兼职-->
                 <!--发布的兼职列表-->
                 <div class="panel panel-default">
                     <div class="panel-heading">发布的兼职</div>
@@ -227,6 +256,27 @@ THINK;
                 }
             });
 
+        });
+        //进行中的兼职
+        $("#btn_passed").on('click',function(){
+            $.ajax({
+                url:"<?php echo U("OrgCenter/statusHandler");?>",
+                data:{wid:$(this).attr('data-wid'),f:'0'},
+                type:"GET",
+                success:function(data){
+                    alert(data.info);
+                }
+            });
+        });
+        $("#btn_fail").on('click',function(){
+            $.ajax({
+                url:"<?php echo U("OrgCenter/statusHandler");?>",
+                 data:{wid:$(this).attr('data-wid'),f:'1'},
+                type:"GET",
+                success:function(data){
+                    alert(data.info);
+                }
+        });
         });
         </script>
         <!--./footer-->
