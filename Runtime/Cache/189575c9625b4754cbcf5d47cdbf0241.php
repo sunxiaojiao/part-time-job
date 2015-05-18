@@ -49,7 +49,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">小蜜蜂兼职</a>
+            <a class="navbar-brand" href="/">小蜜蜂兼职</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -66,6 +66,7 @@
                     <li class="dropdown">
                         <a href="<?php echo U('Admin/index');?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo session('username');?><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="<?php echo U("Admin/index");?>">管理中心</a></li>
                             <li><a href="#">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a href="<?php echo U('Admin/logout');?>">注销</a></li>
@@ -91,7 +92,7 @@
                     <a class="list-group-item" href="#publish-apply">兼职申请列表</a>
                     <a class="list-group-item" href="#auth-apply">认证申请列表</a>
                     <a class="list-group-item" href="#current-orgs">现有公司列表</a>
-                    <a class="list-group-item" href="#jobs-list">兼职列表</a>
+                    <a class="list-group-item" href="#advice">投诉建议</a>
                 </ul>
             </div>
             <div class="col-md-9 scroll-content" data-spy="scroll" data-target="#scroll-target">
@@ -126,7 +127,14 @@
                     </nav>
                 </div>
                 <div class="panel panel-primary">
-                    <div class="panel-heading" id="jobs-list">兼职列表</div>
+                    <div class="panel-heading" id="advice">投诉建议</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                        <?php if($error_advice_info): ?><li class="list-group-item"><?php echo ($error_advice_info); ?></li>
+                        <?php else: ?>
+                            <?php if(is_array($advice_info)): $i = 0; $__LIST__ = $advice_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><a href="<?php echo U("Admin/AdviceDetail");?>?ai=<?php echo ($info["advice_id"]); ?>" target="_blank" class="list-group-item" style="overflow:hidden;height:50px;"><div class="pull-left" style="overflow:hidden;width:400px;"><?php echo (htmlspecialchars_decode($info["content"])); ?></div><span class="pull-right"><?php echo (date('m/d h:i',$info["ctime"])); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,7 +144,7 @@
 <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="my-info text-center"><a href="#">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
     <!--./footer-->

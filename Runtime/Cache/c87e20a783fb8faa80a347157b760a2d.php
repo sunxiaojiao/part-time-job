@@ -128,7 +128,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">小蜜蜂兼职</a>
+            <a class="navbar-brand" href="/">小蜜蜂兼职</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -145,6 +145,7 @@
                     <li class="dropdown">
                         <a href="<?php echo U('Admin/index');?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo session('username');?><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="<?php echo U("Admin/index");?>">管理中心</a></li>
                             <li><a href="#">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a href="<?php echo U('Admin/logout');?>">注销</a></li>

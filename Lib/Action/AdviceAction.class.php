@@ -5,15 +5,24 @@ class AdviceAction extends Action {
 		$this->display();
 	}
 	public function push() {
+		load("extend");
+		$data = array();
 		if(session('?uid')){
-			$uid = session('');
+			$uid = session('uid');
+			$data['uid'] = $uid;
+		}elseif(session('?oid')){
+			$oid = session('oid');
+			$data['oid'] = $oid;
 		}
 		//提交到数据库
 		$Advice = M('Advice');
-			//过滤
+			//验证
 		$Advice->check('c', '1,200','length');
 		$content = $this->_post('c');
-		$data = array('content'=>$content);
+			//过滤
+		$content = remove_xss($content);
+		$data['content'] = $content;
+		$data['ctime']   = time();
 			//提交
 		if($Advice->add($data)){
 			$this->ajaxReturn(1,'提交成功',1);

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">投诉建议详细</div>
+                    <div class="panel-body">
+                    {:dump($advice_info)}
+                    <div class="alert alert-info">
+                        时间：{$advice_info.ctime|date='m月d号 h:i',###}
+                        &emsp;&emsp;
+                        用户：<if condition="$advice_info.uid neq '0'"><a href="{:U("UserInfo/index")}?uid={$advice_info.uid}" target="_blank">{$advice_info.username}</a>
+                                <elseif condition="$advice_info.oid neq '0'" /><a href="{:U("OrgInfo/index")}?oid={$advice_info.oid}" target="_blank">{$advice_info.orgname}</a>
+                                <else />未登录的用户
+                                </if>
+                    </div>
+                    <div style="overflow:auto">
+                    <if condition="$error_advice_info">
+                    {$error_advice_info}
+                        <else />
+                    {$advice_info.content|htmlspecialchars_decode}
+                    </if>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--./container-->
+    <!--footer-->
+    <include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+    <script>
+    </script>
+</body>
+
+</html>

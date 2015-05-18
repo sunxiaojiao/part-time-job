@@ -41,7 +41,7 @@
                     <a class="list-group-item" href="#publish-apply">兼职申请列表</a>
                     <a class="list-group-item" href="#auth-apply">认证申请列表</a>
                     <a class="list-group-item" href="#current-orgs">现有公司列表</a>
-                    <a class="list-group-item" href="#jobs-list">兼职列表</a>
+                    <a class="list-group-item" href="#advice">投诉建议</a>
                 </ul>
             </div>
             <div class="col-md-9 scroll-content" data-spy="scroll" data-target="#scroll-target">
@@ -88,7 +88,18 @@
                     </nav>
                 </div>
                 <div class="panel panel-primary">
-                    <div class="panel-heading" id="jobs-list">兼职列表</div>
+                    <div class="panel-heading" id="advice">投诉建议</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                        <if condition="$error_advice_info">
+                            <li class="list-group-item">{$error_advice_info}</li>
+                        <else />
+                            <volist name="advice_info" id="info">
+                                <a href="{:U("Admin/AdviceDetail")}?ai={$info.advice_id}" target="_blank" class="list-group-item" style="overflow:hidden;height:50px;"><div class="pull-left" style="overflow:hidden;width:400px;">{$info.content|htmlspecialchars_decode}</div><span class="pull-right">{$info.ctime|date='m/d h:i',###}</span></a>
+                            </volist>
+                        </if>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

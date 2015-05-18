@@ -1,0 +1,282 @@
+[ 2015-05-18T07:53:37+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T07:59:41+08:00 ] 127.0.0.1 /Admin/loginHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.056094s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000313s ]
+
+[ 2015-05-18T07:59:49+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:00:13+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:01:38+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:01:47+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:02:41+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:02:51+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:03:14+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:09:51+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:10:44+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:12:54+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:13:08+08:00 ] 127.0.0.1 /OrgInfo/index.html&oid=1
+ERR: 非法操作:index.html&oid=1
+
+[ 2015-05-18T08:13:28+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:14:15+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:14:35+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:15:22+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:15:30+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=5
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:15:53+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=6
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:31:22+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.005793s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-18T08:32:55+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.006511s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-18T08:34:30+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.005494s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-18T08:35:51+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.004897s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-18T08:36:05+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-18T08:36:15+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-18T08:42:24+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.005114s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-18T08:42:35+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.005665s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-18T08:45:44+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.004866s ]
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_advice` (`content`,`ctime`) VALUES ('&lt;p&gt;eee&lt;/p&gt;',1431909944) [ RunTime:0.182427s ]
+
+[ 2015-05-18T08:48:19+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.005204s ]
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_advice` (`content`,`ctime`) VALUES ('&lt;p&gt;\n    &lt;br/&gt;\n&lt;/p&gt;&lt;sc<x>ript&gt;alert(\'\')&lt;/sc<x>ript&gt;',1431910098) [ RunTime:0.175868s ]
+
+[ 2015-05-18T08:48:53+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=8
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:51:06+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=8
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:51:27+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=8
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:52:21+08:00 ] 127.0.0.1 /Admin/index.php
+ERR: 非法操作:index.php
+
+[ 2015-05-18T08:52:40+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=8
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:52:41+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:53:24+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:59:42+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T08:59:53+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:03:24+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:03:51+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:04:00+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:04:13+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:05:42+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:05:55+08:00 ] 127.0.0.1 /Login/login.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004938s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.005022s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT `oid` FROM `xm_orgs` WHERE ( email='123@qq.com' ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000215s ]
+
+[ 2015-05-18T09:06:05+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.004889s ]
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_advice` (`oid`,`content`,`ctime`) VALUES (1,'&lt;p&gt;dfasdf&lt;br/&gt;&lt;/p&gt;',1431911165) [ RunTime:0.117909s ]
+
+[ 2015-05-18T09:06:20+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:07:08+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=8
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:09:52+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=8
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:10:19+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=8
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:10:56+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:11:29+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:11:30+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:11:44+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:12:10+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:12:50+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:12:59+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:13:09+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:20:46+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:23:43+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:23:46+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:23:51+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:23:57+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T09:26:57+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+

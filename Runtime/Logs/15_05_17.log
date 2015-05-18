@@ -201,3 +201,51 @@ SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.043339s ]
 NOTIC: 建议使用I方法替代_post
 SQL: INSERT INTO `xm_advice` (`content`) VALUES ('&lt;p&gt;&lt;img src=&quot;http://www.test.com/Public/Upload/20150517/14318671174009.jpg&quot; _src=&quot;http://www.test.com/Public/Upload/20150517/14318671174009.jpg&quot;/&gt;&lt;/p&gt;') [ RunTime:0.100229s ]
 
+[ 2015-05-17T20:56:07+08:00 ] 127.0.0.1 /Admin/loginHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.006112s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.001029s ]
+
+[ 2015-05-17T21:43:19+08:00 ] 127.0.0.1 /Advice/push.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.005084s ]
+NOTIC: 建议使用I方法替代_post
+SQL: INSERT INTO `xm_advice` (`content`,`ctime`) VALUES ('&lt;p&gt;\n   &lt;script&gt;alert(\'\')&lt;/script&gt;\n&lt;/p&gt;',1431870199) [ RunTime:0.135660s ]
+
+[ 2015-05-17T22:24:50+08:00 ] 127.0.0.1 /Admin/showAdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-17T22:26:11+08:00 ] 127.0.0.1 /Admin/showAdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-17T22:26:12+08:00 ] 127.0.0.1 /Admin/showAdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-17T22:26:12+08:00 ] 127.0.0.1 /Admin/showAdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-17T22:26:13+08:00 ] 127.0.0.1 /Admin/showAdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-17T22:26:13+08:00 ] 127.0.0.1 /Admin/showAdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-17T22:26:13+08:00 ] 127.0.0.1 /Admin/showAdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-17T22:26:49+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+NOTIC: 建议使用I方法替代_get
+

@@ -10,6 +10,7 @@ class AdminAction extends Action {
 		$this->authApply();
 		$this->orgsList();
 		$this->publishApply();
+		$this->showAdvice();
 		$this->display();
 	}
 	//登录页面
@@ -52,10 +53,10 @@ class AdminAction extends Action {
 	//列出申请认证公司资料
 	public function authDetail() {
 		if(!session('?admin_id')){
-			
+			return ;
 		}
 //		$oid = $this->_post('oid') = 1 ;
-$oid =1;
+		$oid =1;
 		$Org   = M('orgs');
 		$where = "oid=" . $oid;
 		$field = "email,orgname,license_num,industry,nature,size,contact,org_address,phone,fixed_phone,org_intro";
@@ -72,6 +73,9 @@ $oid =1;
 	}
 	//处理认证申请列表
 	public function authHandler() {
+		if(!session('?admin_id')){
+			return ;
+		}
 		//接受参数
 		$is_pass = 0;
 		$is_validate = 0;
@@ -98,6 +102,41 @@ $oid =1;
 		}else{
 			$this->ajaxReturn(2,"操作失败",0);
 		}
+	}
+	//列出投诉建议
+	protected function showAdvice() {
+		$Advice = M('Advice');
+		$field  = "advice_id,content,uid,oid,ctime";
+		$where  = "";
+		$arr2   = $Advice->field($field)->where($where)->select();
+		if($arr2){
+			$this->assign('advice_info',$arr2);
+		}elseif(is_null($arr2)){
+			$this->assign('error_advice_info','还没有投诉建议');
+		}else{
+			$this->assign('error_advice_info','读取错误');
+		}
+	}
+	//投诉建议详细
+	public function AdviceDetail() {
+		//判断登录
+		if(!session('?admin_id')) {
+			$this->error("未登录",U('Index/index'));
+			return;
+		}
+		$advice_id = $this->_get('ai');
+		$Advice = M('Advice');
+		$field  = "content,xm_advice.uid,xm_advice.oid,xm_advice.ctime,username,orgname";
+		$join1  = "LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid";
+		$join2  = "LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid"; 
+		$where  = "advice_id=" . $advice_id;
+		$arr1   = $Advice->field($field)->join($join1)->join($join2)->where($where)->find();
+		if($arr1){
+			$this->assign('advice_info',$arr1);
+		}else{
+			$this->assign('error_advice_info','错误');
+		}
+		$this->display();
 	}
 	//列出兼职发布申请列表
 	protected function publishApply() {
