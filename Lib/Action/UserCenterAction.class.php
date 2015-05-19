@@ -64,7 +64,40 @@ class UserCenterAction extends Action{
 			$this->ajaxReturn(3,"更新失败",1);
 		}
 	}
-	//
+	//显示我的支付信息
+	public function showPayInfo() {
+		if(!session('?uid')){
+			$this->error('未登录',U('Login/index'),3);
+			return;
+		}
+		$field = "default_payway,pay_alipay_id,pay_ccard_id";
+		$where = "uid=" . session('uid');
+		$User  = M('Users');
+		$arr1  = $User->field($field)->where($where)->find();
+		if($arr1){
+			$this->assign('pay_info',$arr1);
+		}elseif(is_null($arr1)){
+			$this->assign('error_pay_info','还没有添加支付方式');
+		}else{
+			$this->assign('error_pay_info','读取错误');
+		}
+		$this->display('PayInfo');
+	}  
+	//更改我的支付信息
+	public function payInfoHandler() {
+		if(!session('?uid')){
+			$this->error('未登录',U('Login/index'),3);
+			return;
+		}
+		$User = M('Users');
+		$f    = $User->where($where)->save($data);
+		if($f){
+			
+		}else{
+			
+		}
+	}
+	//申请过的兼职
 	private function jobApplyed(){
 		$Apply = M('Apply');
 		$where = "app_uid=" . session('uid');

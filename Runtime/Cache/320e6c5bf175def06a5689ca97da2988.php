@@ -258,6 +258,7 @@ THINK;
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+
     <!--modal-->
     <div class="modal fade" id="m-apply">
         <div class="modal-dialog modal-lg">
@@ -289,6 +290,7 @@ THINK;
                 </div>
                 <div class="modal-footer">
                 <button class="btn btn-default"  id="goto-apply">确认申请</button>
+                </div>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -343,7 +345,7 @@ THINK;
     </script>
     <script type="text/javascript">
     //加载地图
-    $(".modal").on('show.bs.modal',function(){
+    $("#m-address").on('show.bs.modal',function(){
       var x= "<?php echo ($list["address"]["0"]); ?>",y = <?php echo (($list["address"]["1"])?($list["address"]["1"]):'true'); ?>;
       var map;
       if(y === true){

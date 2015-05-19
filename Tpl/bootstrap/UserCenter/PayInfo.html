@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>投诉建议</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <!--container-->
+    <div class="container">
+        <div class="rows">
+            <div class="col-md-8">
+	            <div class="page-header">
+				    <h1><small>我的支付信息<small></small></small></h1>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">我的支付方式</div>
+					<div class="panel-body">
+						<if condition="$error_pay_info">
+							{$error_pay_info}
+						<else />
+							{$pay_info.default_payway}
+							{$pay_info.pay_alipay_id}
+							{$pay_info.pay_ccard_id}
+						</if>
+					</div>
+				</div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <!--./container-->
+    <!--footer-->
+<include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+    <script>
+    </script>
+</body>
+
+</html>

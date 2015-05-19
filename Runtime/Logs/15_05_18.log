@@ -656,3 +656,148 @@ NOTIC: 建议使用I方法替代_get
 NOTIC: 建议使用I方法替代_get
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-05-18T19:08:50+08:00 ] 127.0.0.1 /ApplyJob/apply.html?apply_style=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-18T19:10:05+08:00 ] 127.0.0.1 /Search/s.html?wd=
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:07+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:08+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&style=10
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:09+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&style=11
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:12+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&style=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:14+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&style=1&wt=min:1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:18+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&wt=min:1&style=5
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:19+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&wt=min:1&style=10
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:21+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&wt=min:1&style=8
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:10:24+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&style=8
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:11:52+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:11:54+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=43
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:12:51+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:13:03+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=43
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:13:21+08:00 ] 127.0.0.1 /ApplyJob/apply.html?apply_style=2
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-18T19:13:29+08:00 ] 127.0.0.1 /Login/login.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-05-18T19:13:33+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:13:34+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=43
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T19:13:38+08:00 ] 127.0.0.1 /ApplyJob/apply.html?apply_style=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=43 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=43 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-05-18T22:38:43+08:00 ] 127.0.0.1 /ApplyJob/apply.html?apply_style=2
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:1.198069s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.067004s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=43 ) LIMIT 1   [ RunTime:0.254014s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=43 ) LIMIT 1   [ RunTime:0.051003s ]
+
+[ 2015-05-18T23:22:39+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T23:22:51+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T23:22:54+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=43
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-18T23:25:02+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=43
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+

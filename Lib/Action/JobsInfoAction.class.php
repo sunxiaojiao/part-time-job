@@ -9,7 +9,7 @@ class JobsInfoAction extends Action{
 		session("jid",$this->jid);
 		$this->display();
 	}
-
+	//显示兼职信息
 	protected function showInfo(){
 		$this->jid =  $this->_get('jid');
 		$Job = M('Jobs');
@@ -30,6 +30,7 @@ class JobsInfoAction extends Action{
 			$this->assign('error_info','查询错误，请稍后再试'.$Job->getLastSql());
 		}
 	}
+	//记录浏览量
 	protected function recordClickNum() {
 		$Job    = M('jobs');
 		$cookie = "hadclick";
@@ -46,6 +47,7 @@ class JobsInfoAction extends Action{
 			}
 		}
 	}
+	//显示已经申请的用户
 	protected function showApplyRecord() {
 		$Apply = M('apply');
 		$where = "app_jid=".$this->_get('jid');

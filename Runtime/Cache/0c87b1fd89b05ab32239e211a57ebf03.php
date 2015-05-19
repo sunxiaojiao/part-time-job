@@ -121,7 +121,7 @@ THINK;
         <div class="row">
             <div class="col-md-8">
                 <div class="panel panel-default">
-                    <div class="panel-heading">个人信息及求职简历<a href="<?php echo U("UserCenter/editInfo");?>" class="pull-right">编辑我的资料和简历</a></div>
+                    <div class="panel-heading">个人信息及求职简历<a href="<?php echo U("UserCenter/editInfo");?>" class="pull-right">编辑我的资料和简历</a><a href="<?php echo U("UserCenter/showPayInfo");?>" class="pull-right" style="margin:0 10px">我的支付信息</a></div>
                     <div class="panel-body">
                         <table class="table">
                             <tr>
