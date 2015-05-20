@@ -89,12 +89,48 @@ class UserCenterAction extends Action{
 			$this->error('未登录',U('Login/index'),3);
 			return;
 		}
-		$User = M('Users');
-		$f    = $User->where($where)->save($data);
-		if($f){
-			
+		$User  = M('Users');
+		$type = $this->_post('type');
+		$content = $this->_post('content');
+		//验证一下
+		if(!$User->check($type, '1,2,3','in')){
+			$this->ajaxReturn(0,'error',1);
+			return ;
+		}
+		$data; 
+		switch ($type){
+			case 1://支付宝
+				$f = $User->check($content, '/.{1,21}/');
+				if(!$f){
+					$this->ajaxReturn(1,'请输入支付宝信息',1);
+					return ;
+				}
+				$data = array('pay_alipay_id'=>$content);
+				break;
+			case 2://银行卡
+				$f = $User->check($content, '/\d{16,19}/');
+				if(!$f){
+					$this->ajaxReturn(1,'请输入正确的银行卡信息',1);
+					return ;
+				}
+				$data = array('pay_ccard_id'=>$content);
+				break;
+			case 3://默认支付方式
+				$f = $User->check($content, '1,2,3','in');
+				if(!$f){
+					$this->ajaxReturn(1,'error',1);
+					return ;
+				}
+				$data = array('default_payway'=>$content);
+				break;
+		}
+		$where = "uid=" . session('uid');
+		$f     = $User->where($where)->save($data);
+		$sql   = $User->getLastSql();
+		if($f || $f === 0){
+			$this->ajaxReturn(1,'操作成功',1);
 		}else{
-			
+			$this->ajaxReturn(0,'操作失败'.$sql,1);
 		}
 	}
 	//申请过的兼职
