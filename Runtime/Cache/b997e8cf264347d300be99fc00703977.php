@@ -197,6 +197,18 @@ THINK;
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2">付款方式：</label>
+                        <div class="col-sm-10">
+                            <select name="py" class="form-control">
+                                <option value="">请选择</option>
+                                <option value="1">支付宝</option>
+                                <option value="2">银行卡</option>
+                                <option value="3">现金</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
                         <label for="" class="col-sm-2 control-label">到岗时间：</label>
                         <div class="col-sm-10 input-group date form_datetime" id="begin_time">
                             <input name="begin_time" type="text" class="form-control" readonly="true" placeholder="到岗时间" />
@@ -288,7 +300,7 @@ THINK;
     <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="my-info text-center"><a href="#">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
     <!--./footer-->

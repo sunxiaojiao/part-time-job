@@ -17,18 +17,25 @@ class ApplyJobAction extends Action{
 			$this->ajaxReturn(0,"你已经申请过了",0);
 			return;
 		}
-		//记录用户的支付方式
-		$PayWay = M('PayWay');
-		$data   = array(
-			'pay_uid'=>session('uid'),
-			'pay_jid'=>session('jid'),
-			'pay_way'=>,
-			'ctime'  =>time(),
-		); 
-		if($PayWay->add($data)){
-			$this->ajaxReturn(1,'支付方式添加成功',1);	
-		}else{
-			$this->ajaxReturn(0,'支付方式添加失败，请稍后再试',1);
+		//判断用户是否已经添加企业要求的支付方式
+		$User = M('Users');
+		$Job  = M('Jobs');
+		$pay_field = 'default_payway';
+		$warning_info;
+		$pay_way = $Job->where('jid=' . session('jid'))->getField('pay_way');
+		switch ($pay_way){
+			case 1:
+				$pay_field = 'pay_aliay_id';
+				$warning_info = '您还未填写支付宝';
+				break;
+			case 2:
+				$pay_field = 'pay_ccard_id';
+				$warning_info = '你还未填写银行卡信息';
+				break;
+		}
+		$flag = $User->where('uid=' . session('uid'))->getField($pay_field);
+		if(!$flag){
+			$this->ajaxReturn(1,$warning_info,1);
 			return ;
 		}
 		//添加申请记录

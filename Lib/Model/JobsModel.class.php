@@ -12,6 +12,7 @@ class JobsModel extends Model{
 		array('addressname','require','请选择工作地点'),
 		array('money','number','请输入工资范围'),
 		array('m_s','number','请选择工资类型'),
+		array('py','1,2,3','请选择付款方式',0,'in'),
 		array('begin_time','require','请选择到岗时间'),
 		array('wk','number','请选择工作时长'),
 		array('expire_time','number','请输入过期时间'),
@@ -24,6 +25,7 @@ class JobsModel extends Model{
 	protected $_map = array(
 		'p_s' => 'peo_style',
 		'm_s' => 'money_style',
+		'py'  => 'pay_way',
 	);
 	
 }

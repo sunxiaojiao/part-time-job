@@ -157,10 +157,17 @@ THINK;
                                 <td>联系电话：<?php echo ($list["leader_phone"]); ?></td>
                             </tr>
                             <tr>
-                                <td>工作地址：<?php echo ($list["addressname"]); ?><a href="javascript:void(0);" data-toggle="modal" data-target="#m-address">点击查看地图</a></td>
+                                <td>支付方式：
+                                    <?php switch($list["pay_way"]): case "1": ?>支付宝<?php break;?>
+                                        <?php case "2": ?>银行卡<?php break;?>
+                                        <?php case "3": ?>现金<?php break; endswitch;?></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>工作地址：<?php echo ($list["addressname"]); ?><a href="javascript:void(0);" data-toggle="modal" data-target="#m-address">点击查看地图</a></td><td></td>
                             </tr>
                         </table>
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#m-apply">申请此兼职</button>
+                        <button type="button" class="btn btn-primary btn-lg" id="goto-apply">申请此兼职</button>
                         <?php if(session('?uid')): endif; ?>
                         <hr />
                         <div role="tabpanel">
@@ -258,46 +265,6 @@ THINK;
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-
-    <!--modal-->
-    <div class="modal fade" id="m-apply">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">申请此兼职</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                        选择工资支付方式
-                      </button>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="apply-list">
-                        <li role="presentation" data-id="1"><a role="menuitem" tabindex="-1">支付宝</a></li>
-                        <li role="presentation" data-id="2"><a role="menuitem" tabindex="-1">银行卡</a></li>
-                        <li role="presentation" data-id="3"><a role="menuitem" tabindex="-1">现金</a></li>
-                      </ul>
-                    </div>
-                    <div class="form-group hidden" id="apply-input">
-                    <div class="rows  clearfix">
-                    <div class="col-md-2">
-                    <label for=""></label>
-                    </div>
-                    <div class="col-md-10">
-                    <input class="form-control" />
-                    </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                <button class="btn btn-default"  id="goto-apply">确认申请</button>
-                </div>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
     <!--./container-->
     <!--footer-->
     <div class="container">
@@ -313,34 +280,10 @@ THINK;
         console.log(window.apply_style);
         $.ajax({
             url: "<?php echo U('ApplyJob/apply');?>",
-            data:{
-                apply_style:window.apply_style  ? apply_style : 1,
-                content:$("#apply-input>input").val()
-                },
             success: function(data) {
                 alert(data.info);
             }
         });
-    });
-    $("#apply-list>li").on('click',function(){
-        var input = $("#apply-input"); 
-        var id    = $(this).attr('data-id');
-        var btn   = $("#dropdownMenu1");
-        if(id == 1){
-            btn.text("支付宝");
-            input.find("label").text('支付宝号：');
-            input.removeClass('hidden');
-            window.apply_style = 1;
-        }else if(id == 2){
-            btn.text("银行卡");
-            input.find("label").text('银行卡号：');
-            input.removeClass('hidden');
-            window.apply_style = 2;
-        }else if(id == 3){
-            btn.text("现金");
-            input.addClass('hidden');
-            widnow.apply_style = 3;
-        }
     });
     </script>
     <script type="text/javascript">
