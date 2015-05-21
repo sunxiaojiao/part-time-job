@@ -332,3 +332,142 @@ INFO: [ app_begin ] --START--
 INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 
+[ 2015-05-21T08:58:21+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:01:05+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:08:37+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:11:43+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:11:44+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:11:46+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=2
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:11:47+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:11:48+08:00 ] 127.0.0.1 /SortSearch/&wage=100:200
+ERR: 非法操作:&wage=100:200
+
+[ 2015-05-21T09:18:07+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:18:12+08:00 ] 127.0.0.1 /SortSearch/&wage=1:50
+ERR: 非法操作:&wage=1:50
+
+[ 2015-05-21T09:18:19+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:18:52+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3&peonum=5:10
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:20:35+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3&peonum=5:10
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:22:30+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3&peonum=5:10
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:22:40+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3&peonum=5:10
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:23:07+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3&peonum=5:10
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:24:01+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3&peonum=5:10
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:24:05+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3&peonum=5:10&wage=100:200
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:24:13+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&py=3&peonum=5:10&wage=100:200
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:24:25+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=1
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:24:29+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=3
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:30:58+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=3
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:31:01+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=3
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:31:02+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=3
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:31:07+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:31:11+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=2
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:31:34+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=2
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:31:35+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=2
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-21T09:31:47+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&peonum=5:10&wage=100:200&py=2
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+

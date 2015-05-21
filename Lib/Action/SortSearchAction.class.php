@@ -3,7 +3,16 @@
  * 分类检索
  */
 class SortSearchAction extends Action{
-	protected $all_fields = array('style'=>'类型','wage'=>'工资','address'=>'地点','isvld'=>'公司验证','peonum'=>'需求人数','wt'=>'工作时长','time'=>'工作时间段'); 
+	protected $all_fields = array(
+							'style'   =>  '类型',
+							'wage'   =>  '工资',
+							'address' =>  '地点',
+							'isvld'   =>  '公司验证',
+							'peonum'  =>  '需求人数',
+							'wt'      =>  '工作时长',
+							'time'    =>  '工作时间段',
+							'py'      =>  '付款方式',
+							); 
 	public function index() {
 		$this->showMolds();
 		$this->showAddress();
@@ -17,6 +26,7 @@ class SortSearchAction extends Action{
 	 * @param isvld   认证
 	 * @param peonum  人数
 	 * @param wt 	     工作时间长
+	 * @param py      付款方式
 	 * @param time    时间段
 	 */
 	public function search() {
@@ -24,8 +34,8 @@ class SortSearchAction extends Action{
 		$this->showMolds();
 		$this->showAddress();
 		$this->showRouteNav();
-		//设置标签URL
-		$nurl = __SELF__;
+		//生成选项的URL
+		$nurl = __SELF__;//取得当前的URL
 		foreach($this->all_fields as $key=>$value){
 			$the_url = "";
 			if(strpos($nurl, $key)){
@@ -38,17 +48,18 @@ class SortSearchAction extends Action{
 			}else{
 				$the_url = $nurl;
 			}
+			//模板赋值
 			$this->assign("now_url_".$key,$the_url);
 		}
-		//获取get
-		$filter = "";
-		$arr_get;
+		//生成GET请求的数组
+		//$filter = "";
+		$arr_get = array();
 		foreach ($_GET as $key => $value){
 			//因为thinkphp中$_GET中存在_URL_
 			if($key == '_URL_'){
 				continue;
 			}
-			$arr_get[$key] = $this->_get($key,$filter);
+			$arr_get[$key] = $this->_get($key);
 		}
 		//转换范围为相应字段
 
@@ -60,6 +71,7 @@ class SortSearchAction extends Action{
 				$this->strongWhere($arr_get['wage'],"money","AND",'',":")      .
 				$this->strongWhere($arr_get['address'],"address","AND")        .
 				$this->strongWhere($arr_get['peonum'],"want_peo","AND",'',':') .
+				$this->strongWhere($arr_get['py'], 'pay_way', 'AND')           .
 				$this->strongWhere($arr_get['wt'],"work_time","AND",'',":")    .
 				$this->strongWhere($arr_get['time'],"begin_time","AND",'',":") . "1=1";
 		$field = "xm_jobs.title AS title,
@@ -91,7 +103,7 @@ class SortSearchAction extends Action{
 		}
 		$this->display('index');
 	}
-	
+	//页面中显示工作类型
 	protected function showMolds() {
 		$Mold = M('mold');
 		$field = "mid ,name";
@@ -102,7 +114,7 @@ class SortSearchAction extends Action{
 			//报错
 		}
 	}
-	
+	//页面中显示地区
 	protected function showAddress() {
 		$Address      = M('Address');
 		$where        = "";
@@ -159,6 +171,20 @@ class SortSearchAction extends Action{
 				//工资
 				if($value_arr[0] == 'wage'){
 					$value_arr[1] = str_replace(':','-',$value_arr[1]);
+				}
+				//付款方式
+				if($value_arr[0] == 'py'){
+					switch($value_arr[1]){
+						case 1:
+							$value_arr[1] = '支付宝';
+							break;
+						case 2:
+							$value_arr[1] = '银行卡';
+							break;
+						case 3:
+							$value_arr[1] = '现金';
+							break;
+					}
 				}
 				//认证
 				if($value_arr[0] == 'isvld'){

@@ -116,10 +116,17 @@ THINK;
                             </li>
                             <li class="list-group-item"><span class="my-title">工资：</span>
                                 <ul class="list-options">
-                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=1:50" class="">1-50</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=1:50">1-50</a></li>
                                     <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=50:100">50-100</a></li>
                                     <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=100:200">100-200</a></li>
                                     <li class="my-options"><a href="<?php echo ($now_url_wage); ?>&wage=200:max">200以上</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><span class="my-title">支付方式：</span>
+                                <ul class="list-options">
+                                    <li class="my-options"><a href="<?php echo ($now_url_py); ?>&py=1">支付宝</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_py); ?>&py=2">银行卡</a></li>
+                                    <li class="my-options"><a href="<?php echo ($now_url_py); ?>&py=3">现金</a></li>
                                 </ul>
                             </li>
                             <li class="list-group-item">
