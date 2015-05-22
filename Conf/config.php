@@ -20,11 +20,12 @@ return array(
     //session
     'SESSION_AUTO_START' =>true,
     //SMTP
-    'MAIL_ADDRESS'=>'admin@xiaojiaosun.com', // 邮箱地址  
-	'MAIL_LOGINNAME'=>'admin@xiaojiaosun.com', // 邮箱登录帐号
-	'MAIL_SMTP'=>'smtp.ym.163.com', // 邮箱SMTP服务器
-	'MAIL_PASSWORD'=>'6133698039', // 邮箱密码
-	'SHOW_PAGE_TRACE'=>true,
+    'MAIL_USERNAME'   =>  '小蜜蜂兼职',
+    'MAIL_ADDRESS'    =>  'no-reply@xiaomifengjob.com', // 邮箱地址  
+	'MAIL_LOGINNAME'  =>  'no-reply@xiaomifengjob.com', // 邮箱登录帐号
+	'MAIL_SMTP'       =>  'smtp.ym.163.com', // 邮箱SMTP服务器
+	'MAIL_PASSWORD'   =>  'xmfroot2015', // 邮箱密码
+	'SHOW_PAGE_TRACE' =>  true,
 	//认证执照和身份证照片上传路径
 	'UPLOAD_AUTH_PATH' => '/Uploads/auth', 
 );

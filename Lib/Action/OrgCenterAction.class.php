@@ -110,6 +110,22 @@ class OrgCenterAction extends Action{
 	protected function showIngJob() {
 		$Work   = M('Working');
 		$where  = "pub_oid=" . session('oid') . ' AND ' . 'xm_working.is_pass=2';
+		$field  = "work_id,work_jid,xm_working.ctime";
+		$join1  = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
+		$join2  = "INNER JOIN xm_users ON xm_users.uid=xm_working.work_uid";
+		$arr2   = $Work->where($where)->join($join1)->join($join2)->field($field)->select();
+		if($arr2){
+			$this->assign('work_info',$arr2);
+		}elseif(is_null($arr2)){
+			$this->assign('work_error_info','还没有进行中的兼职');
+		}else{
+			$this->assign('work_error_info','读取错误');
+		}
+	}
+	//显示进行中的兼职详情
+	public function showIngJobDetail() {
+	$Work   = M('Working');
+		$where  = "pub_oid=" . session('oid') . ' AND ' . 'xm_working.is_pass=2';
 		$field  = "work_uid,work_id,work_status,xm_working.ctime,username";
 		$join1  = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
 		$join2  = "INNER JOIN xm_users ON xm_users.uid=xm_working.work_uid";

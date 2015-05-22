@@ -24,7 +24,7 @@ function SendMail($address,$title,$message){
 	// 设置邮件头的From字段。
 	$mail->From=C('MAIL_ADDRESS');
 	// 设置发件人名字
-	$mail->FromName='sunxiaojiao';
+	$mail->FromName=C('MAIL_USERNAME');
 	// 设置邮件标题
 	$mail->Subject=$title;
 	// 设置SMTP服务器。
