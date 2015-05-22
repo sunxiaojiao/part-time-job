@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .panel-body {
+        position: relative;
+    }
+    
+    .my-perinfo {
+        margin-left: 26px;
+    }
+    
+    .my-perinfo>p>span {
+        margin-right: 18px;
+    }
+    
+    .my-perimg {
+        border: 1px solid #EEE;
+    }
+    
+    .my-select-address {}
+    
+    .my-select-address>select {
+        width: auto;
+        display: inline-block;
+    }
+    
+    .my-personimg {
+        width: 200px;
+       /* cursor: pointer;*/
+    }
+    
+    #swfwrapper {
+        width: 630px;
+    }
+    
+    .d-markup {
+        display: inline-block;
+        padding: 4px 6px;
+        background: #EEE;
+        font: 18px/24px "微软雅黑,黑体";
+        margin: 6px 2px;
+    }
+    
+    .d-markup:hover {
+        background: #DDD;
+        color: #111;
+    }
+    
+    td.table-field {
+        width: 148px;
+    }
+    
+    td.table-field+td {
+        min-width: 100px;
+    }
+    
+    .btn-content {
+        position: absolute;
+        right: 10px;
+        margin-top: -8px;
+    }
+    #btn_passed,#btn_fail{
+        cursor:pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header.html" />
+    <!--container-->
+    <div class="container">
+        <div class="page-header">
+            <h1> {$work_info[0].title}<small></small></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <!--信息-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    人员列表
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <td>用户</td>
+                                <td>状态</td>
+                                <td>时间</td>
+                            </thead>
+                            <if condition="$work_error_info">
+                                {$work_error_info}
+                            <else />
+                            <volist name="work_info" id="info">
+                            <tr>
+                                <td>{$info.username}</td>
+                                <td>
+                                <switch name="info.work_status">
+                                    <case value="0">待做</case>
+                                    <case value="1">进行中</case>
+                                    <case value="2">已完成(
+                                        <switch name="info.is_pass">
+                                        <case value="1">已通过</case>
+                                        <case value="0">已拒绝</case>
+                                        <case value="2">
+                                            <a style="margin: 0 10px;" id="btn_passed" data-wid="{$info.work_id}">确认</a><a style="margin: 0 10px" id="btn_fail" data-wid="{$info.work_id}">拒绝</a>
+                                        </case>
+                                        </switch>
+                                        )</case>
+                                </switch>
+                                </td>
+                                <td>{$info.ctime|date='m/d h:i',###}</td>
+                            </tr>
+                            </volist>
+                            </if>
+                        </table>
+                    </div>
+                </div>
+                <!--./信息-->
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img src="{$orgInfo.avatar}" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--./container-->
+        <!--footer-->
+        <include file="./Tpl/bootstrap/public/footer.html" />
+        <!--./footer-->
+        <script type="text/javascript">
+             //进行中的兼职
+        $("#btn_passed").on('click',function(){
+            $.ajax({
+                url:"{:U("OrgCenter/statusHandler")}",
+                data:{wid:$(this).attr('data-wid'),f:'0'},
+                type:"GET",
+                success:function(data){
+                    alert(data.info);
+                }
+            });
+        });
+        $("#btn_fail").on('click',function(){
+            $.ajax({
+                url:"{:U("OrgCenter/statusHandler")}",
+                 data:{wid:$(this).attr('data-wid'),f:'1'},
+                type:"GET",
+                success:function(data){
+                    alert(data.info);
+                }
+        });
+        });
+        </script>
+</body>
+
+</html>

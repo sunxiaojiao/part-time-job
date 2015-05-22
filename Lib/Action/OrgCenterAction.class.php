@@ -109,11 +109,11 @@ class OrgCenterAction extends Action{
 	//显示正在进行中的兼职
 	protected function showIngJob() {
 		$Work   = M('Working');
-		$where  = "pub_oid=" . session('oid') . ' AND ' . 'xm_working.is_pass=2';
-		$field  = "work_id,work_jid,xm_working.ctime";
-		$join1  = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
-		$join2  = "INNER JOIN xm_users ON xm_users.uid=xm_working.work_uid";
-		$arr2   = $Work->where($where)->join($join1)->join($join2)->field($field)->select();
+		$where  = '';
+		$field  = "work_jid,title,xm_working.ctime";
+		$join   = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
+		$group  = "work_jid";
+		$arr2   = $Work->where($where)->join($join)->field($field)->group($group)->select();
 		if($arr2){
 			$this->assign('work_info',$arr2);
 		}elseif(is_null($arr2)){
@@ -124,9 +124,10 @@ class OrgCenterAction extends Action{
 	}
 	//显示进行中的兼职详情
 	public function showIngJobDetail() {
-	$Work   = M('Working');
-		$where  = "pub_oid=" . session('oid') . ' AND ' . 'xm_working.is_pass=2';
-		$field  = "work_uid,work_id,work_status,xm_working.ctime,username";
+		$jid = $this->_get('jid');
+		$Work   = M('Working');
+		$where  = "work_jid=" . $jid;
+		$field  = "work_uid,work_id,work_status,xm_working.ctime,username,title,xm_working.is_pass";
 		$join1  = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
 		$join2  = "INNER JOIN xm_users ON xm_users.uid=xm_working.work_uid";
 		$arr2   = $Work->where($where)->join($join1)->join($join2)->field($field)->select();
@@ -137,6 +138,7 @@ class OrgCenterAction extends Action{
 		}else{
 			$this->assign('work_error_info','读取错误');
 		}
+		$this->display();
 	}
 	//兼职状态的确认
 	public function statusHandler() {
@@ -155,7 +157,7 @@ class OrgCenterAction extends Action{
 			$arr = array('is_pass'=>0,'work_status'=>2);//不通过
 		}
 		$flag = $Work->where($where)->save($arr);
-		if($flag){
+		if($flag || $flag === 0){
 			$this->ajaxReturn(1,'操作成功',1);
 		}else{
 			$this->ajaxReturn(2,'操作失败'.$Work->getLastSql(),1);

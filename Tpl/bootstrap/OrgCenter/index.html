@@ -123,34 +123,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">进行中的兼职</div>
                     <div class="panel-body">
-                        <table class="table">
-                            <thead>
-                                <td>用户名</td>
-                                <td>状态</td>
-                                <td>时间</td>
-                            </thead>
-                            <if condition="$work_error_info">
-                                <tr>
-                                    <td>{$work_error_info}</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            <else />
-                            <volist name="work_info" id="info">
-                            <tr>
-                                <td>{$info.username}</td>
-                                <td>
-                                <switch name="info.work_status">
-                                    <case value="0">未开始</case>
-                                    <case value="1">正在进行</case>
-                                    <case value="2">已完成<a class="btn btn-success" id="btn_passed" data-wid="{$info.work_id}">符合</a><a class="btn btn-danger" id="btn_fail" data-wid="{$info.work_id}">不符合</a></case>
-                                </switch>
-                                </td>
-                                <td>{$info.ctime|date='m/d h:i',###}</td>
-                            </tr>
+                        <ul class="list-group">
+                            <volist id="info" name="work_info">
+                            <a class="list-group-item" href="{:U("OrgCenter/showIngJobDetail")}?jid={$info.work_jid}">
+                                {$info.title}<span class="pull-right badge">{$info.ctime|date='m/d h:i',###}</span>
+                            </a>
                             </volist>
-                            </if>
-                        </table>
+                        </ul>
                     </div>
                 </div>
                 <!--./进行中的兼职-->
@@ -199,27 +178,6 @@
                 }
             });
 
-        });
-        //进行中的兼职
-        $("#btn_passed").on('click',function(){
-            $.ajax({
-                url:"{:U("OrgCenter/statusHandler")}",
-                data:{wid:$(this).attr('data-wid'),f:'0'},
-                type:"GET",
-                success:function(data){
-                    alert(data.info);
-                }
-            });
-        });
-        $("#btn_fail").on('click',function(){
-            $.ajax({
-                url:"{:U("OrgCenter/statusHandler")}",
-                 data:{wid:$(this).attr('data-wid'),f:'1'},
-                type:"GET",
-                success:function(data){
-                    alert(data.info);
-                }
-        });
         });
         </script>
         <!--./footer-->
