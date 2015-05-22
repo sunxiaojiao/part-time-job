@@ -14,16 +14,12 @@ class PublishJobsAction extends Action{
 		//创建并插入数据
 		if($info = $Job->create()){
 			$Job->pub_oid = session("oid");
-			//
 			$Job->ctime = time();
 			$Job->expire_time = $Job->ctime + $this->_post('expire_time')*3600;
 			$Job->begin_time  = strtotime($Job->begin_time);
-			//dump($info);
 			if($Job->add()){
 				$this->ajaxReturn(0,"发布成功",1);
 			}else{
-//				dump($info);
-//				echo $Job->getLastSql();
 				$this->ajaxReturn(1,"发布失败",1);
 			}
 			

@@ -23,9 +23,10 @@ class JobsModel extends Model{
 	);
 	//字段映射
 	protected $_map = array(
-		'p_s' => 'peo_style',
-		'm_s' => 'money_style',
-		'py'  => 'pay_way',
+		'p_s'  => 'peo_style',
+		'm_s'  => 'money_style',
+		'py'   => 'pay_way',
+		'style'=> 'mold_id',
 	);
 	
 }
