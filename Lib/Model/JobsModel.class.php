@@ -27,6 +27,7 @@ class JobsModel extends Model{
 		'm_s'  => 'money_style',
 		'py'   => 'pay_way',
 		'style'=> 'mold_id',
+		'phone'=> 'leader_phone',
 	);
 	
 }

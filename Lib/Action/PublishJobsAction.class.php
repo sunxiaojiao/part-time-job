@@ -36,5 +36,10 @@ class PublishJobsAction extends Action{
 			
 		}
 	}
+	protected function generatePhoneImage($phone_num = 0) {
+		import('ORG.Util.Image');
+		$img = new Image();
+		$img->buildString($phone_num, array(),'','png',0);
+	}
 }
 ?>
