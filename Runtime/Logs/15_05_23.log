@@ -396,3 +396,13 @@ SQL: SELECT `orgname` FROM `xm_orgs` WHERE ( email='123@qq.com'AND passwd='21232
 [ 2015-05-23T23:17:03+08:00 ] 127.0.0.1 /
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-05-23T23:32:24+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-23T23:32:28+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-23T23:32:36+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+NOTIC: 建议使用I方法替代_get
+

@@ -154,7 +154,7 @@ THINK;
                             </tr>
                             <tr>
                                 <td>联系人：<?php echo ($list["leader"]); ?></td>
-                                <td>联系电话：<?php echo ($list["leader_phone"]); ?></td>
+                                <td>联系电话：<img src="<?php echo U("JobsInfo/generatePhoneImage");?>" /></td>
                             </tr>
                             <tr>
                                 <td>支付方式：

@@ -13,6 +13,8 @@ class UserInfoAction extends Action{
 		$Users = M('Users');
 		$field = "uid,username,age,sex,avatar,phone,address,qq,school,exp,intent";
 		$list = $Users->where("uid=".$this->uid)->field($field)->find();
+		session('user_qq',$list['qq']);
+		session('user_phone',$list['phone']);
 		//查询mold表
 		$intent = unserialize($list['intent']);
 		$Mold = M('Mold');
@@ -60,6 +62,19 @@ class UserInfoAction extends Action{
 		}else{
 			$this->ajaxReturn(0,"评价失败".$Eval->getLastSql(),1);
 		}
+	}
+	//生成图片联系方式
+	public function generatePhoneImage($num = '') {
+		import('ORG.Util.Image');
+		$t = $this->_get('t');
+		if($t == 'phone'){
+			$num = session('user_phone');	
+		}elseif($t == 'qq'){
+			$num = session('user_qq');
+		}
+		$num = (string)$num;
+		$img = new Image();
+		$img->buildString($num, array(),'','png',1,false);
 	}
 }
 ?>

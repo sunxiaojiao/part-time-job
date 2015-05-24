@@ -158,10 +158,9 @@ THINK;
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">联系方式</div>
-                    <div class="panel-body">
-                        <p>QQ：<?php echo ($user_info["qq"]); ?></p>
-                        <p>电话：<?php echo ($user_info["phone"]); ?></p>
-                        <p>下载APP查看</p>
+                    <div class="panel-body">            
+                        <p>QQ：<img src="<?php echo U("UserInfo/generatePhoneImage","t=qq");?>" /></p>
+                        <p>电话：<img src="<?php echo U("UserInfo/generatePhoneImage","t=phone");?>" /></p>
                     </div>
                 </div>
             </div>

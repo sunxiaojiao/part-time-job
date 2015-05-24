@@ -18,8 +18,9 @@ class JobsInfoAction extends Action{
 		$join1 = "INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id";
 		$join2 = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid";
 		$list = $Job->where($where)->join($join1)->join($join2)->field($field)->find();
-		$list['address'] = explode(",", $list['address']); 
+		$list['address'] = explode(",", $list['address']);
 		session('pub_oid',$list['pub_oid']);
+		session('phone',$list['leader_phone']);
 
 		if($list){
 			$this->assign("list",$list);
@@ -76,6 +77,14 @@ class JobsInfoAction extends Action{
 		}else{
 			$this->assign("eval_error_info","查询错误");
 		}
+	}
+	//生成图片手机号
+	public function generatePhoneImage($phone_num = '') {
+		import('ORG.Util.Image');
+		$phone_num = session('phone');
+		$phone_num = (string)$phone_num;
+		$img = new Image();
+		$img->buildString($phone_num, array(),'','png',1,false);
 	}
 
 }
