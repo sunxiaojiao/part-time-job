@@ -555,3 +555,26 @@ NOTIC: 建议使用I方法替代_get
 NOTIC: 建议使用I方法替代_get
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-05-24T23:23:30+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+ERR: Access denied for user 'xiaojiaosun'@'localhost' (using password: YES)
+
+[ 2015-05-24T23:25:04+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+ERR: Access denied for user 'xiaojiaosun'@'localhost' (using password: YES)
+
+[ 2015-05-24T23:25:05+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+ERR: Access denied for user 'xiaojiaosun'@'localhost' (using password: YES)
+
+[ 2015-05-24T23:25:49+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+ERR: Access denied for user 'xiaojiaosun'@'localhost' (using password: YES)
+
+[ 2015-05-24T23:27:42+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-24T23:31:08+08:00 ] 127.0.0.1 /SortSearch/search.html?wd=34
+NOTIC: 建议使用I方法替代_get
+
