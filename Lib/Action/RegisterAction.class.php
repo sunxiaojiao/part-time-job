@@ -14,15 +14,21 @@ class RegisterAction extends Action{
 		$this->assign("email",session('reg_email'));
 		$this->display();
 	}
+	//发送邮箱界面
 	public function sendMail(){
 		$this->display('sendmail');
 	}
 	/**
 	 * 注册
 	 * 只取passwd 不取repasswd 两次密码验证 在客户端实现
-	 * return int 0：注册成功     1：验证码错误 	2：插入数据库失败
+	 * return int 0：注册成功     1：验证码错误 	2：插入数据库失败  3：数据验证失败
 	 */
 	public function reg(){
+		//是否已经验证链接
+		if(!session('?reg_email')){
+			return ;
+		}
+		//验证码
 		$this->confirmVcode();
 		//插入数据库，成功跳转到个人中心
 		$reger;
@@ -35,16 +41,20 @@ class RegisterAction extends Action{
 		$this->getAll();
 		$data['email']  = session('reg_email');
 		$data['passwd'] = md5($this->passwd);
-		$data['ctime'] = time();
+		$data['ctime']  = time();
 		if($this->orgname != '' && $this->address != ''){
-			$data['orgname'] = $this->orgname;
+			$data['orgname']     = $this->orgname;
 			$data['org_address'] = $this->address;
 		}
 		//插入数据库
-		if($flag = $reger->data($data)->add()){
-			$this->ajaxReturn(0,"注册成功",1);
+		if($reger->create($data)){
+			if($reger->add()){
+				$this->ajaxReturn(0,"注册成功",1);
+			}else{
+				$this->ajaxReturn(2,"注册失败",1);
+			}
 		}else{
-			$this->ajaxReturn(2,"注册失败",1);
+			$this->ajaxReturn(3,$reger->getError()/*.dump($data)*/,1);
 		}
 	}
 
@@ -99,6 +109,8 @@ class RegisterAction extends Action{
 			return ;
 		}
 		$this->email = $this->_post('email');
+		//验证邮箱的唯一性
+		//$this->confirmUnique($, $field, $value)
 		$vld_url = $this->buildUrl($this->email);
 		$title = "小蜜蜂兼职";
 		$message = <<<EOT
@@ -141,10 +153,8 @@ EOT;
 	private function getAll(){
 		if($this->isPost()){
 			//合法性检验
-			//			/if(){}
-			//$this->email  = $this->_post('email');
-			$this->email = session('email');
-			$this->passwd = $this->_post('passwd');
+			$this->email   = session('email');
+			$this->passwd  = $this->_post('passwd');
 			$this->address = $this->_post('org_address');
 			$this->orgname = $this->_post('org');
 		}
@@ -162,6 +172,15 @@ EOT;
 			return;
 		}
 	}
-
+	protected function confirmUnique($Model,$field,$value) {
+		$field = (string)$field;
+		$where = "$field=" . $value;
+		$f = $Model->where($where)->getField($field);
+		if($f === null){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
 ?>

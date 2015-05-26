@@ -37,7 +37,7 @@ class UserCenterAction extends Action{
 		$Mold =M('Mold');
 		$molds = $Mold->field("mid,name")->select();
 		$this->assign("molds",$molds);
-		
+
 		//dump($this->data);
 		session("userData",$this->data);
 	}
