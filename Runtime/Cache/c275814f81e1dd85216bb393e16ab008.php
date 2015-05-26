@@ -115,7 +115,6 @@ THINK;
                 <ul class="nav nav-pills" id="select-list">
                     <li role="presentation" class="active"><a>求职者</a></li>
                     <li role="presentation"><a>公司或机构组织</a></li>
-                    <li role="presentation"><a>学校</a></li>
                 </ul>
                 <form method="post" action="<?php echo U('Register/reg');?>" id="reg-form">
                     <div class="form-group input-group">
@@ -165,7 +164,7 @@ THINK;
         <!--end footer-->
         <script type="text/javascript">
         function tabShow(arg) {
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < 2; i++) {
                 $("#select-list>li").eq(i).removeClass("active");
             }
 
@@ -195,10 +194,6 @@ THINK;
         $("#select-list>li").eq(1).click(function() {
             tabShow(1);
             tabChange(1);
-        });
-        $("#select-list>li").eq(2).click(function() {
-            tabShow(2);
-            tabChange(2);
         });
         (function(){
         	$(".alert button").on('click',function(){

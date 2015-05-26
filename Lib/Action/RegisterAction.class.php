@@ -142,11 +142,15 @@ EOT;
 		if($reg_id){
 			session('reg_email',$email);
 			$MailReg = M('Mailreg_url');
-			$MailReg->where("email=".$email)->setField("ispass",1);
-			$this->success("邮箱验证成功",U("Register/index"),3);
+			$f = $MailReg->where("email=" . "'$email'")->delete();
+			if($f){
+				$this->success("邮箱验证成功",U("Register/index"),1);
+			}else{
+				$this->error('邮箱验证失败',"/",1);
+			}
+			
 		}else{
-			dump($reg->getLastSql());
-			$this->error('验证链接错误',"/",3);
+			$this->error('验证链接错误，请重新验证',"/",3);
 			return ;
 		}
 	}
