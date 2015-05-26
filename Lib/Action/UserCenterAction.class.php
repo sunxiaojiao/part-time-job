@@ -128,7 +128,7 @@ class UserCenterAction extends Action{
 		$f     = $User->where($where)->save($data);
 		$sql   = $User->getLastSql();
 		if($f || $f === 0){
-			$this->ajaxReturn(1,'操作成功',1);
+			$this->ajaxReturn(2,'操作成功',1);
 		}else{
 			$this->ajaxReturn(0,'操作失败'.$sql,1);
 		}

@@ -145,6 +145,9 @@
     			type:"POST",
     			success:function(data){
     				alert(data.info);
+    				if(data.data == 2){
+    					location.href = "";
+    				}
     			}
     		});
     	});
@@ -159,6 +162,9 @@
     			type:"POST",
     			success:function(data){
     				alert(data.info);
+    				if(data.data == 2){
+    					location.href = "";
+    				}
     			}
     		})
     	});
