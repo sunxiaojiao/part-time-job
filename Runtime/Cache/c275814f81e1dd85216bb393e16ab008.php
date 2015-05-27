@@ -129,7 +129,7 @@ THINK;
                         <label for="passwd">确认密码：</label>
                         <input id="repasswd" type="password" name="repasswd" class="form-control validate[required,equals[passwd]] text-input" data-prompt-position="topRight:-70" placeholder="再次输入密码" />
                     </div>
-                    <div class="form-group" id="verify">
+                    <div class="form-group clearfix" id="verify">
                         <div class="rows">
                             <div class="col-md-8" style="padding-left:0">
                                 <input class="form-control" type="text" name="vcode" placeholder="验证码" />
@@ -139,6 +139,9 @@ THINK;
                                 <button type="button" class="btn btn-default verify">刷新</button>
                             </div>
                         </div>
+                    </div>
+					<div class="form-group">
+                    	<input type="checkbox" name="" class="" id="our-article" /><label for="our-article">同意我们的条款</label>（<a href="<?php echo U("Register/ourArticle");?>" target="_blank">查看</a>）
                     </div>
                     <button type="button" class="btn btn-default" id="reg-goto">提交</button>
                 </form>
@@ -229,6 +232,14 @@ THINK;
                 $(".alert").removeClass("hidden");
                 return;
             }
+            //验证是否勾选用户条款
+            	var flagChecked = document.getElementById("our-article").checked;
+	            if( !flagChecked ){
+	            	$(".alert>p").text("您需要同意我们的协议，才能注册");
+	                $(".alert").removeClass("alert-success").addClass("alert-danger");
+	                $(".alert").removeClass("hidden");
+	            	return;
+	            }
             //ajax传输
             $.post(
                 "<?php echo U('Register/reg');?>",

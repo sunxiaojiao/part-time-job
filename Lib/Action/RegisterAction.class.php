@@ -176,6 +176,10 @@ EOT;
 			return;
 		}
 	}
+	//显示条款
+	public function ourArticle() {
+		$this->display();
+	}
 	protected function confirmUnique($Model,$field,$value) {
 		$field = (string)$field;
 		$where = "$field=" . $value;
