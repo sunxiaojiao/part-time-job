@@ -223,8 +223,7 @@
                     
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">确认</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确认</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -278,7 +277,7 @@
                     var url = "{:U('PublishJobs/index')}";
                     setTimeout(function() {
                         location.href = url;
-                    }, 2000)
+                    }, 3000)
 
                 } else {
                     $(".alert>p").text(data.info);
@@ -287,7 +286,7 @@
                 }
             },
             error: function() {
-                $(".alert>p").text("发布失败");
+                $(".alert>p").text("发布失败，请检查网络状况是否良好，稍后再试");
                 $(".alert").removeClass("alert-success").addClass("alert-danger");
                 $(".alert").removeClass("hidden");
             }

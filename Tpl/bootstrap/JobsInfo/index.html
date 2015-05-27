@@ -259,8 +259,8 @@
                 $("#m-payway .modal-body").html(data.info);
                 $("#m-payway").modal('show');
             },
-            fail:function(){
-                $("#m-payway .modal-body").text("申请失败");
+            error:function(){
+                $("#m-payway .modal-body").text("申请失败,请检查网络状况是否良好，稍后再试");
                 $("#m-payway").modal('show');
             }
         });
