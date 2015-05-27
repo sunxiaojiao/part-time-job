@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>搜索结果</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .red {
+        color: #F00;
+    }
+    
+    .panel-body {
+        position: relative;
+    }
+    
+    #login {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+    }
+    
+    #verify>input {
+        display: inline;
+        width: 216px;
+    }
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header.html" />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="alert alert-success">共搜索到{$count|default = 0}条</div>
+                <div class="panel panel-primary">
+                    <ul class="list-group">
+                        <if condition="isset($error_info)">
+                            <li class="list-group-item">{$error_info}</li>
+                            <else />
+                            <volist name="result" id="result">
+                                <a class="list-group-item" href="{:U('UserInfo/index')}?uid={$result.uid}">{$result.username}</a>
+                            </volist>
+                        </if>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--./container-->
+    <!--footer-->
+    <include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+    <script>
+    </script>
+</body>
+
+</html>

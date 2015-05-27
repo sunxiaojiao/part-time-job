@@ -1,11 +1,10 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<!doctype html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>兼职平台</title>
+    <title>搜索结果</title>
     <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
@@ -15,64 +14,23 @@
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
-    #banner {
-        height: 200px;
-        margin-bottom: 12px;
+    .red {
+        color: #F00;
     }
     
-    .my-explor {
+    .panel-body {
+        position: relative;
+    }
+    
+    #login {
         position: absolute;
-        right: 20px;
+        right: 16px;
+        bottom: 16px;
     }
     
-    .my-explor>.glyphicon {
-        margin-right: 6px;
-    }
-    
-    .my-partjob-address,
-    .my-partjob-people,
-    .my-partjob-money,
-    .my-explor {
-        position: absolute;
-    }
-    
-    .my-partjob-people {
-        left: 330px;
-    }
-    
-    .my-partjob-money {
-        left: 450px;
-    }
-    
-    .my-partjob-address {
-        left: 200px;
-    }
-    
-    .my-select-address {
-        display: inline-block;
-    }
-    
-    .my-select-address>select {
-        width: 130px;
-        display: inline-block;
-    }
-    
-    .my-zimu {
-        display: block;
-        padding: 4px 6px 4px 32px;
-        margin-bottom: 6px;
-    }
-    
-    .my-addr-list a {
-        display: inline-block;
-        padding: 4px 6px;
-        margin: 1px 20px 20px;
-        outline: 1px solid #EEE;
-        cursor: pointer;
-    }
-    
-    #map-container {
-        height: 500px;
+    #verify>input {
+        display: inline;
+        width: 216px;
     }
     </style>
 </head>
@@ -163,62 +121,26 @@ THINK;
   })();
 </script>
 <!--======导航条结束======--->
-    <!--container-->
-    <!--banner-->
-    <div class="container" id="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-            </div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-    <!--container-->
     <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                选择城市
-            </div>
-            <ul class="list-group addr-list">
-                <li class="list-group-item my-addr-list">
-                    <span class="bg-primary my-zimu">烟台</span>
-                    <ul>
-                        <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><a data-aid="<?php echo ($addr["aid"]); ?>"><?php echo ($addr["area"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="alert alert-success">共搜索到<?php echo (($count)?($count): 0); ?>条</div>
+                <div class="panel panel-primary">
+                    <ul class="list-group">
+                        <?php if(isset($error_info)): ?><li class="list-group-item"><?php echo ($error_info); ?></li>
+                            <?php else: ?>
+                            <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$result): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U('UserInfo/index');?>?uid=<?php echo ($result["uid"]); ?>"><?php echo ($result["username"]); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!--./container-->
@@ -229,23 +151,8 @@ THINK;
   <p class="my-info text-center"><a href="#">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
-    <!--footer-end-->
-    <script type="text/javascript">
-    $(".addr-list a").click(function() {
-        var aid = $(this).attr("data-aid");
-        //ajax
-        $.ajax({
-            url: "<?php echo U('ChangeCity/ChangeCity');?>",
-            data: {
-                aid: aid
-            },
-            contentType: 'text/json',
-            success: function(data) {
-                alert(data.info);
-                location.href = "<?php echo U('ChangeCity/index');?>";
-            }
-        });
-    });
+    <!--./footer-->
+    <script>
     </script>
 </body>
 

@@ -56,7 +56,14 @@
       </ul>
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
-        <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span>兼职</span><span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" id="search-f">
+            <li><a href="javascript:void(0)">用户</a></li>
+          </ul>
+        </div>
+          <input class="hidden" type="test" name="sf" value="job" id="hidden-f"/>
           <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
@@ -94,6 +101,26 @@ THINK;
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<script type="text/javascript">
+  (function(){
+    var sf_a   = $("#search-f>li a");
+    var sf_h   = $("#hidden-f");
+    var sf_a_b = $("#search-f").parent().find("button>span").eq(0);
+    var p;
+    sf_a.on('click',function(){
+      //切换字符串
+      p = sf_a_b.text();
+      sf_a_b.text(sf_a.text());
+      sf_a.text(p);
+      //改变表单数据
+      if(sf_h.val() == 'job'){
+        sf_h.val("user");
+      }else if(sf_h.val() == 'user'){
+        sf_h.val("job");
+      }
+    });
+  })();
+</script>
 <!--======导航条结束======--->
     <!--container-->
     <div class="container">
