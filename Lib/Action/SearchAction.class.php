@@ -1,6 +1,6 @@
 <?php
 /**
- * 首页中的search和header中的search
+ * header中的search
  */
 class SearchAction extends Action {
 	protected $word;

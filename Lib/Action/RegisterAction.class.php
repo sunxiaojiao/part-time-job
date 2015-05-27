@@ -73,21 +73,21 @@ class RegisterAction extends Action{
 	}
 	//创建邮箱验证链接
 	protected function buildUrl($email) {
-		//验证邮箱是否已经存在
-		$User = M('Users');
-		$where = "email="."'".$email."'";
-		$field = "email";
-		$flag = $User->field($field)->where($where)->find();
-		if(!$flag){
-			$this->ajaxReturn(2,"邮箱已存在",1);
-			return ;
-		}
-		$Org = M('Orgs');
-		$flag = $Org->field($field)->where($where)->find();
-		if(!$flag){
-			$this->ajaxReturn(2,"邮箱已存在",1);
-			return ;
-		}
+//		//验证邮箱是否已经存在
+//		$User = M('Users');
+//		$where = "email="."'".$email."'";
+//		$field = "email";
+//		$flag = $User->field($field)->where($where)->find();
+//		if($flag){
+//			$this->ajaxReturn(2,"邮箱已存在",1);
+//			return ;
+//		}
+//		$Org = M('Orgs');
+//		$flag = $Org->field($field)->where($where)->find();
+//		if(!$flag){
+//			$this->ajaxReturn(2,"邮箱已存在",1);
+//			return ;
+//		}
 		//插入数据库
 		$rand = ranVerify(8);
 		C('URL_MODEL', 0);
