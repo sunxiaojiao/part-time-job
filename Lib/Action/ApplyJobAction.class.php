@@ -25,7 +25,7 @@ class ApplyJobAction extends Action{
 		$pay_way = $Job->where('jid=' . session('jid'))->getField('pay_way');
 		switch ($pay_way){
 			case 1:
-				$pay_field = 'pay_aliay_id';
+				$pay_field = 'pay_alipay_id';
 				$warning_info = '您还未填写支付宝';
 				break;
 			case 2:
@@ -44,9 +44,9 @@ class ApplyJobAction extends Action{
 		$data['app_oid'] = $oid['pub_oid'];
 		$data['ctime'] = time();
 		if($Apply->add($data)){
-			$this->ajaxReturn(1,"申请成功",1);
+			$this->ajaxReturn(0,"申请成功",1);
 		}else{
-			$this->ajaxReturn(0,"申请失败",0);
+			$this->ajaxReturn(2,"申请失败",0);
 		}
 		
 	}

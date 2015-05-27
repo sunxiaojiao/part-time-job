@@ -344,7 +344,7 @@ THINK;
                     $(".alert").removeClass("hidden");
                     var url = "<?php echo U('PublishJobs/index');?>";
                     setTimeout(function() {
-                        //location.href = url;
+                        location.href = url;
                     }, 2000)
 
                 } else {

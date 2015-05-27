@@ -215,8 +215,24 @@
                     <div id="mapContainer"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!--modal-->
+    <div class="modal fade" id="m-payway">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">申请提示</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -235,7 +251,17 @@
         $.ajax({
             url: "{:U('ApplyJob/apply')}",
             success: function(data) {
-                alert(data.info);
+                //alert(data.info);
+                var i = "<a href=\"{:U("UserCenter/PayInfo")}\" target=\"_blank\">去填写</a>";
+                if(data.data == 1){
+                    data.info = data.info + i;
+                }
+                $("#m-payway .modal-body").html(data.info);
+                $("#m-payway").modal('show');
+            },
+            fail:function(){
+                $("#m-payway .modal-body").text("申请失败");
+                $("#m-payway").modal('show');
             }
         });
     });

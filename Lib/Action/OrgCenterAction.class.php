@@ -1,7 +1,7 @@
 <?php
 class OrgCenterAction extends Action{
 	public function index(){
-		header("charset=utf-8");
+		//header("charset=utf-8");
 		if(!session('?oid')){
 			//抛出错误页面
 			$this->error("企业用户未登录",U("Login/index"));

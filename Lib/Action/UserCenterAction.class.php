@@ -118,7 +118,7 @@ class UserCenterAction extends Action{
 			case 3://默认支付方式
 				$f = $User->check($content, '1,2,3','in');
 				if(!$f){
-					$this->ajaxReturn(1,'error',1);
+					$this->ajaxReturn(0,'error',1);
 					return ;
 				}
 				$data = array('default_payway'=>$content);

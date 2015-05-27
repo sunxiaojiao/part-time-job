@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <include file="./Tpl/bootstrap/public/header.html" />
     <!--container-->
     <div class="container">
         <div class="rows">
@@ -39,7 +39,7 @@
 							</div>
 							<if condition="$pay_info.pay_ccard_id neq ''">
 								<div class="alert alert-success">
-									你已经填写银行卡信息：{$pay_info.pay_ccard_id}<a href="#pay_ccard_id" class="pull-right" toggle="collapse">更换</a>
+									你已经填写银行卡信息：{$pay_info.pay_ccard_id}<a href="#pay_ccard_id" class="pull-right" data-toggle="collapse">更换</a>
 								</div>
 								<else />
 								<div class="alert alert-danger">
