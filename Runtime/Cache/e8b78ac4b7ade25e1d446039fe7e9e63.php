@@ -85,7 +85,7 @@
           </ul>
         </div>
           <input class="hidden" type="test" name="sf" value="job" id="hidden-f"/>
-          <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
+          <input type="text" class="form-control" name="wd" placeholder="兼职/用户...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
@@ -251,7 +251,7 @@ THINK;
 <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="#">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
     <!--footer-end-->

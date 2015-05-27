@@ -76,7 +76,7 @@
           </ul>
         </div>
           <input class="hidden" type="test" name="sf" value="job" id="hidden-f"/>
-          <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
+          <input type="text" class="form-control" name="wd" placeholder="兼职/用户...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
