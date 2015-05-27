@@ -17,18 +17,18 @@ class JobsInfoAction extends Action{
 		$where = "jid=".$this->jid;// . " AND " . 'is_pass=1';
 		$join1 = "INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id";
 		$join2 = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid";
-		$list = $Job->where($where)->join($join1)->join($join2)->field($field)->find();
-		$list['address'] = explode(",", $list['address']);
-		session('pub_oid',$list['pub_oid']);
-		session('phone',$list['leader_phone']);
-
-		if($list){
-			$this->assign("list",$list);
+		$arr1 = $Job->where($where)->join($join1)->join($join2)->field($field)->find();
+		$arr1['address'] = explode(",", $arr1['address']);
+		session('pub_oid',$arr1['pub_oid']);
+		session('phone',$arr1['leader_phone']);
+		//dump($arr1['address']);
+		if($arr1){
+			$this->assign("list",$arr1);
 			return;
-		}else if(is_null($list)){
+		}else if(is_null($arr1)){
 			$this->assign('error_info','没有此兼职');
 		}else{
-			$this->assign('error_info','查询错误，请稍后再试'.$Job->getLastSql());
+			$this->assign('error_info','查询错误，请稍后再试');
 		}
 	}
 	//记录浏览量

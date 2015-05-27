@@ -134,41 +134,35 @@ THINK;
                                 <?php else: ?>
                                 <span class="glyphicon glyphicon-ok-sign vlded-color"></span><span class="vlded-color">已认证</span><?php endif; ?>
                         </div>
-                        <table class="table">
-                            <tr>
-                                <td>工资待遇：<?php echo ($list["money"]); ?>
-                                    <?php switch($list["money_style"]): case "1": ?>元每小时<?php break;?>
-                                        <?php case "2": ?>元每天<?php break;?>
-                                        <?php case "3": ?>元每次<?php break;?>
-                                        <?php default: ?>元<?php endswitch;?>
-                                </td>
-                                <td>招聘人数：<?php echo ($list["want_peo"]); ?>
-                                    <?php switch($list["peo_style"]): case "1": ?>个人<?php break;?>
-                                        <?php case "2": ?>人左右<?php break;?>
-                                        <?php default: ?>个人<?php endswitch;?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>到岗时间：<?php echo (date("m月d日h:i",$list["begin_time"])); ?></td>
-                                <td>工作时长：<?php echo ($list["work_time"]); ?>小时</td>
-                            </tr>
-                            <tr>
-                                <td>联系人：<?php echo ($list["leader"]); ?></td>
-                                <td>联系电话：<img src="<?php echo U("JobsInfo/generatePhoneImage");?>" /></td>
-                            </tr>
-                            <tr>
-                                <td>支付方式：
-                                    <?php switch($list["pay_way"]): case "1": ?>支付宝<?php break;?>
-                                        <?php case "2": ?>银行卡<?php break;?>
-                                        <?php case "3": ?>现金<?php break; endswitch;?></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>工作地址：<?php echo ($list["addressname"]); ?><a href="javascript:void(0);" data-toggle="modal" data-target="#m-address">点击查看地图</a></td><td></td>
-                            </tr>
-                        </table>
+                        <!--基本信息-->
+                        <div class="rows clearfix">
+                            <div class="col-md-4">
+                            <ul class="list-group">
+                                <li class="list-group-item">工资待遇：<?php echo ($list["money"]); ?>
+                                        <?php switch($list["money_style"]): case "1": ?>元每小时<?php break;?>
+                                            <?php case "2": ?>元每天<?php break;?>
+                                            <?php case "3": ?>元每次<?php break;?>
+                                            <?php default: ?>元<?php endswitch;?></li>
+                                        <li class="list-group-item">招聘人数：<?php echo ($list["want_peo"]); ?>
+                                        <?php switch($list["peo_style"]): case "1": ?>个人<?php break;?>
+                                            <?php case "2": ?>人左右<?php break;?>
+                                            <?php default: ?>个人<?php endswitch;?></li>
+                                        <li class="list-group-item">到岗时间：<?php echo (date("m月d日h:i",$list["begin_time"])); ?></li>
+                                        <li class="list-group-item">工作时长：<?php echo ($list["work_time"]); ?>小时</li>
+                                        <li class="list-group-item">联系人：<?php echo ($list["leader"]); ?></li>
+                                        <li class="list-group-item">联系电话：<img src="<?php echo U("JobsInfo/generatePhoneImage");?>" /></li>
+                                        <li class="list-group-item">
+                                        结算方式：
+                                        <?php switch($list["pay_way"]): case "1": ?>支付宝<?php break;?>
+                                            <?php case "2": ?>银行卡<?php break;?>
+                                            <?php case "3": ?>现金<?php break; endswitch;?></li>
+                                        <li class="list-group-item">工作地址：<?php echo ($list["addressname"]); ?></li>
+                            </ul>
+                            </div>
+                            <div class="col-md-6"><div id="mapContainer" style="width:100%;height:350px;" class="pull-right"></div></div>
+                        </div>
+                        <!--./基本信息-->
                         <button type="button" class="btn btn-primary btn-lg" id="goto-apply">申请此兼职</button>
-                        <?php if(session('?uid')): endif; ?>
                         <hr />
                         <div role="tabpanel">
                             <!-- Nav tabs -->
@@ -191,10 +185,10 @@ THINK;
                                     <thead><td>名字</td><td>内容</td><td>时间</td></thead>
                                     <?php if($eval_error_info): ?><tr><td><?php echo ($eval_error_info); ?></td></tr>
                                     <?php else: ?>
-                                        <?php if(is_array($eval_list)): $i = 0; $__LIST__ = $eval_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><tr>
-                                            <td><?php echo ($list["username"]); ?></td>
-                                            <td><?php echo ($list["content"]); ?></td>
-                                            <td><?php echo (date("m/d",$list["ctime"])); ?></td>
+                                        <?php if(is_array($eval_list)): $i = 0; $__LIST__ = $eval_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$lists): $mod = ($i % 2 );++$i;?><tr>
+                                            <td><?php echo ($lists["username"]); ?></td>
+                                            <td><?php echo ($lists["content"]); ?></td>
+                                            <td><?php echo (date("m/d",$lists["ctime"])); ?></td>
                                         </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                                     </table>
                                     <form class="">
@@ -245,25 +239,6 @@ THINK;
         </div>
     </div>
     <!--modal-->
-    <div class="modal fade" id="m-address">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">选择地点</h4>
-                </div>
-                <div class="modal-body">
-                    <div id="mapContainer"></div>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-    <!--modal-->
     <div class="modal fade" id="m-payway">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -305,8 +280,8 @@ THINK;
                 $("#m-payway .modal-body").html(data.info);
                 $("#m-payway").modal('show');
             },
-            fail:function(){
-                $("#m-payway .modal-body").text("申请失败");
+            error:function(){
+                $("#m-payway .modal-body").text("申请失败,请检查网络状况是否良好，稍后再试");
                 $("#m-payway").modal('show');
             }
         });
@@ -314,14 +289,14 @@ THINK;
     </script>
     <script type="text/javascript">
     //加载地图
-    $("#m-address").on('show.bs.modal',function(){
+    (function(){
       var x= "<?php echo ($list["address"]["0"]); ?>",y = <?php echo (($list["address"]["1"])?($list["address"]["1"]):'true'); ?>;
       var map;
       if(y === true){
         (function(exprots){
           map = new AMap.Map('mapContainer',{
             view:new AMap.View2D({
-              zoom: 12
+              zoom: 13
             })
           });
         })(window);
@@ -341,7 +316,7 @@ THINK;
         position:new AMap.LngLat(x,y)
       });
       marker.setMap(map);  //在地图上添加点
-    });
+    })();
     $("#assess-btn").on('click',function(){
         $.ajax({
             url: "<?php echo U("OrgEvalute/index");?>",

@@ -74,41 +74,48 @@
                                 <span class="glyphicon glyphicon-ok-sign vlded-color"></span><span class="vlded-color">已认证</span>
                             </if>
                         </div>
-                        <!--基本信息-->
-                        <div class="rows clearfix">
-                            <div class="col-md-4">
-                            <ul class="list-group">
-                                <li class="list-group-item">工资待遇：{$list.money}
-                                        <switch name="list.money_style">
-                                            <case value="1">元每小时</case>
-                                            <case value="2">元每天</case>
-                                            <case value="3">元每次</case>
-                                            <default />元
-                                        </switch></li>
-                                        <li class="list-group-item">招聘人数：{$list.want_peo}
-                                        <switch name="list.peo_style">
-                                            <case value="1">个人</case>
-                                            <case value="2">人左右</case>
-                                            <default />个人
-                                        </switch></li>
-                                        <li class="list-group-item">到岗时间：{$list.begin_time|date="m月d日h:i",###}</li>
-                                        <li class="list-group-item">工作时长：{$list.work_time}小时</li>
-                                        <li class="list-group-item">联系人：{$list.leader}</li>
-                                        <li class="list-group-item">联系电话：<img src="{:U("JobsInfo/generatePhoneImage")}" /></li>
-                                        <li class="list-group-item">
-                                        结算方式：
-                                        <switch name="list.pay_way">
-                                            <case value="1">支付宝</case>
-                                            <case value="2">银行卡</case>
-                                            <case value="3">现金</case>
-                                        </switch></li>
-                                        <li class="list-group-item">工作地址：{$list.addressname}</li>
-                            </ul>
-                            </div>
-                            <div class="col-md-6"><div id="mapContainer" style="width:100%;height:350px;" class="pull-right"></div></div>
-                        </div>
-                        <!--./基本信息-->
+                        <table class="table">
+                            <tr>
+                                <td>工资待遇：{$list.money}
+                                    <switch name="list.money_style">
+                                        <case value="1">元每小时</case>
+                                        <case value="2">元每天</case>
+                                        <case value="3">元每次</case>
+                                        <default />元
+                                    </switch>
+                                </td>
+                                <td>招聘人数：{$list.want_peo}
+                                    <switch name="list.peo_style">
+                                        <case value="1">个人</case>
+                                        <case value="2">人左右</case>
+                                        <default />个人
+                                    </switch>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>到岗时间：{$list.begin_time|date="m月d日h:i",###}</td>
+                                <td>工作时长：{$list.work_time}小时</td>
+                            </tr>
+                            <tr>
+                                <td>联系人：{$list.leader}</td>
+                                <td>联系电话：<img src="{:U("JobsInfo/generatePhoneImage")}" /></td>
+                            </tr>
+                            <tr>
+                                <td>支付方式：
+                                    <switch name="list.pay_way">
+                                        <case value="1">支付宝</case>
+                                        <case value="2">银行卡</case>
+                                        <case value="3">现金</case>
+                                    </switch></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>工作地址：{$list.addressname}<a href="javascript:void(0);" data-toggle="modal" data-target="#m-address">点击查看地图</a></td><td></td>
+                            </tr>
+                        </table>
                         <button type="button" class="btn btn-primary btn-lg" id="goto-apply">申请此兼职</button>
+                        <if condition="session('?uid')">
+                        </if>
                         <hr />
                         <div role="tabpanel">
                             <!-- Nav tabs -->
@@ -197,6 +204,25 @@
         </div>
     </div>
     <!--modal-->
+    <div class="modal fade" id="m-address">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">查看地图</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="mapContainer"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!--modal-->
     <div class="modal fade" id="m-payway">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -242,14 +268,14 @@
     </script>
     <script type="text/javascript">
     //加载地图
-    (function(){
+    $("#m-address").on('show.bs.modal',function(){
       var x= "{$list.address.0}",y = {$list.address.1|default='true'};
       var map;
       if(y === true){
         (function(exprots){
           map = new AMap.Map('mapContainer',{
             view:new AMap.View2D({
-              zoom: 13
+              zoom: 12
             })
           });
         })(window);
@@ -269,7 +295,7 @@
         position:new AMap.LngLat(x,y)
       });
       marker.setMap(map);  //在地图上添加点
-    })();
+    });
     $("#assess-btn").on('click',function(){
         $.ajax({
             url: "{:U("OrgEvalute/index")}",

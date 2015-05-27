@@ -42,10 +42,12 @@ class IndexAction extends Action{
 		}
 		
 		$this->assign("arr_sort",$arr_sort);
+		//显示兼职
+		//$city = session('city') ? session('city') : '芝罘区';
 		$Jobs = M('Jobs');
 		$Jobs->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
 		import('ORG.Util.Page');
-		//$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
+		//$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0" . " AND " . "city=" . $city;
 		$count = $Jobs->where($where)->count();
 		$Page  = new Page($count,10);
 		$list  = $Jobs->order('pv desc')->order($order/*.","."ctime desc"*/)
@@ -60,15 +62,8 @@ class IndexAction extends Action{
 		$show = $Page->show();
 		$this->assign('list',$list);
 		$this->assign('page',$show);
-		//dump($Jobs->getLastSql());
 		$this->display();
 
 	}
-//	protected function toggle() {
-//
-//	}
-//	protected function showInfo() {
-//		
-//	}
 }
 ?>
