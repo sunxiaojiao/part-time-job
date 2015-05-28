@@ -30,6 +30,9 @@
     
     #verify>img,
     #verify>button {}
+    #reg-form{
+    	margin-top:16px;
+    }
     </style>
     <script>
     </script>
@@ -46,38 +49,53 @@
             <div class="col-md-7">
                 <div class="alert alert-success hidden" role="alert">
                     <button type="button" class="close" aria-hidden="true">&times;</button>
-                    <p>注册成功,等待跳转...</p>
+                    <p></p>
                 </div>
                 <ul class="nav nav-pills" id="select-list">
                     <li role="presentation" class="active"><a>求职者</a></li>
                     <li role="presentation"><a>公司或机构组织</a></li>
                 </ul>
-                <form method="post" action="{:U('Register/reg')}" id="reg-form">
-                    <div class="form-group input-group">
-                        <label for="email">邮箱：</label>
-                        <input id="email" type="text" name="email" class="form-control" disabled="true" placeholder="" value="{$email}" />
+                <form method="post" action="{:U('Register/reg')}" id="reg-form" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="phone_num" class="col-sm-2">手机号：</label>
+                        <div class="col-sm-8">
+                        	<input id="phone_num" type="text" name="phone_num" class="form-control" placeholder="手机号" />
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="passwd">密码：</label>
-                        <input id="passwd" type="password" name="passwd" class="form-control validate[required] text-input" data-prompt-position="topRight:-70" placeholder="请输入密码" />
+                        <label for="username" class="col-sm-2">用户名：</label>
+                        <div class="col-sm-8">
+                        	<input id="username" type="text" name="username" class="form-control" placeholder="用户名" />
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="passwd">确认密码：</label>
-                        <input id="repasswd" type="password" name="repasswd" class="form-control validate[required,equals[passwd]] text-input" data-prompt-position="topRight:-70" placeholder="再次输入密码" />
+                        <label for="passwd" class="col-sm-2">密码：</label>
+                        <div class="col-sm-8">
+                        	<input id="passwd" type="password" name="passwd" class="form-control" placeholder="请输入密码" />
+                        </div>
                     </div>
-                    <div class="form-group clearfix" id="verify">
-                        <div class="rows">
-                            <div class="col-md-8" style="padding-left:0">
+                    <div class="form-group">
+                        <label for="repasswd" class="col-sm-2">确认密码：</label>
+                        <div class="col-sm-8">
+                        	<input id="repasswd" type="password" name="repasswd" class="form-control" placeholder="再次输入密码" />
+                        </div>
+                    </div>
+                    <div class="form-group" id="verify">
+                    		<label for="" class="col-sm-2 col-xs-12">验证码：</label>
+                            <div class="col-sm-5 col-xs-6">
                                 <input class="form-control" type="text" name="vcode" placeholder="验证码" />
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4 col-xs-6" id="verify">
                                 <img src="{:U("Register/vCode")}" class="verify" />
                                 <button type="button" class="btn btn-default verify">刷新</button>
                             </div>
-                        </div>
+                    </div>
+                    <div id="org-container">
                     </div>
 					<div class="form-group">
-                    	<input type="checkbox" name="" class="" id="our-article" /><label for="our-article">同意我们的条款</label>（<a href="{:U("Register/ourArticle")}" target="_blank">查看</a>）
+                    	<div class="col-sm-12">
+                    	<input type="checkbox" class="" id="our-article" /><label for="our-article">同意我们的条款</label>（<a href="{:U("Register/ourArticle")}" target="_blank">查看</a>）
+                    	</div>
                     </div>
                     <button type="button" class="btn btn-default" id="reg-goto">提交</button>
                 </form>
@@ -113,15 +131,14 @@
 
 
         function tabChange(arg) {
-                var str = new String('<div class="form-group input-org"><label for="org">组织名称：</label><input id="org" type="text" name="org" class="form-control" placeholder="组织机构学校名称" /></div><div class="form-group input-org"><label for="org_address">所在地：</label><input id="org_address" type="text" name="org_address" class="form-control" placeholder="组织机构学校所在地" /></div>');
+                var str = new String('<div class="form-group input-org"><label for="org" class="col-sm-2">组织名称：</label><div class="col-sm-8"><input id="org" type="text" name="org" class="form-control" placeholder="组织机构名称" /></div></div><div class="form-group input-org"><label for="org_address" class="col-sm-2">所在地：</label><div class="col-sm-8"><input id="org_address" type="text" name="org_address" class="form-control" placeholder="组织机构所在地" /></div></div>');
                 if (arg == 0) {
-                    console.log(0)
                     if ($(".input-org")) {
                         $(".input-org").remove();
                     }
                 } else {
                     if ($(".input-org").length != 0) {} else {
-                        $("#reg-goto").before(str);
+                        $("#org-container").html(str);
                     }
                 }
             }
@@ -143,7 +160,14 @@
         $("#reg-goto").click(function() {
             //获取数据
             var info = getFromInput("#reg-form");
-            //验证两次密码
+            console.log(info);
+            //客户端验证
+            if(info.phone_num === ''){
+            	$(".alert>p").text("您忘记填写手机号啦");
+                $(".alert").removeClass("alert-success").addClass("alert-danger");
+                $(".alert").removeClass("hidden");
+                return;
+            }
             if (info.passwd === '') {
                 $(".alert>p").text("您忘记填写密码啦");
                 $(".alert").removeClass("alert-success").addClass("alert-danger");
@@ -177,17 +201,17 @@
 	            	return;
 	            }
             //ajax传输
-            $.post(
-                "{:U('Register/reg')}",
-                info,
-                function(data) {
+            $.ajax({
+                url:"{:U('Register/reg')}",
+                data:info,
+                type:"POST",
+                success:function(data) {
                 	$(".alert").removeClass("alert-danger").addClass("alert-success");
                     $(".alert>p").text(data.info);
                     if (data.data == 0) {
                         setTimeout(function() {
-                            location.href = '{:U("Login/index")}';
+                            location.href = '{:U("UserCenter/index")}';
                         }, 3000);
-
                     } else {
                     	$(".alert").removeClass("alert-success").addClass("alert-danger");
                         setTimeout(function() {
@@ -197,9 +221,11 @@
 
                     $(".alert").removeClass("hidden");
 
+                },
+                error:function(){
+
                 }
-            );
+            });
         });
-        //表单验证
         </script>
 </body>

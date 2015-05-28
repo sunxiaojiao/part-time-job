@@ -12,7 +12,7 @@ class UserCenterAction extends Action{
 	public function index(){
 		//判断登录
 		if(!session("?uid")){
-			$this->error('您还未登录','index.php',3);
+			$this->error('您还未登录',U("Login/index"),3);
 		}
 		$this->showInfo();
 		//显示工作申请信息

@@ -7,11 +7,11 @@ class RegisterAction extends Action{
 	private $orgname;
 
 	public function index(){
-		if(!session("?reg_email")){
-			$this->error('未认证邮箱',U("Register/sendMail"),3);
-			return;
-		}
-		$this->assign("email",session('reg_email'));
+//		if(!session("?reg_email")){
+//			$this->error('未认证邮箱',U("Register/sendMail"),3);
+//			return;
+//		}
+//		$this->assign("email",session('reg_email'));
 		$this->display();
 	}
 	//发送邮箱界面
@@ -24,37 +24,38 @@ class RegisterAction extends Action{
 	 * return int 0：注册成功     1：验证码错误 	2：插入数据库失败  3：数据验证失败
 	 */
 	public function reg(){
-		//是否已经验证链接
-		if(!session('?reg_email')){
-			return ;
-		}
 		//验证码
 		$this->confirmVcode();
-		//插入数据库，成功跳转到个人中心
-		$reger;
+
+		$Reger;
 		if($this->isOrg()){
-			$reger = D('Orgs');//orgs表
+			$Reger = D('Orgs');//orgs表
 		}else{
-			$reger = D('Users');//users表
+			$Reger = D('Users');//users表
 		}
 		//获取数据
-		$this->getAll();
-		$data['email']  = session('reg_email');
-		$data['passwd'] = md5($this->passwd);
+		$data['phone']  = $this->_post('phone_num');
+		$data['passwd'] = md5($this->_post('passwd'));
 		$data['ctime']  = time();
-		if($this->orgname != '' && $this->address != ''){
-			$data['orgname']     = $this->orgname;
-			$data['org_address'] = $this->address;
+		if($this->_post('orgname') != '' && $this->_post('org_address') != ''){
+			$data['orgname']     = $this->_post('orgname');
+			$data['org_address'] = $this->_post('address');
 		}
-		//插入数据库
-		if($reger->create($data)){
-			if($reger->add()){
-				$this->ajaxReturn(0,"注册成功",1);
+		//验证，插入数据库
+		if($Reger->create($data)){
+			if($primary_id = $Reger->add()){
+				//设置session
+				if($this->isOrg()){
+					session('oid',$primary_id);
+				}else{
+					session('uid',$primary_id);
+				}
+				$this->ajaxReturn(0,"注册成功，等待跳转",1);
 			}else{
-				$this->ajaxReturn(2,"注册失败",1);
+				$this->ajaxReturn(2,"注册失败，请重试",1);
 			}
 		}else{
-			$this->ajaxReturn(3,$reger->getError()/*.dump($data)*/,1);
+			$this->ajaxReturn(3,$Reger->getError(),1);
 		}
 	}
 
@@ -152,15 +153,6 @@ EOT;
 		}else{
 			$this->error('验证链接错误，请重新验证',"/",3);
 			return ;
-		}
-	}
-	private function getAll(){
-		if($this->isPost()){
-			//合法性检验
-			$this->email   = session('email');
-			$this->passwd  = $this->_post('passwd');
-			$this->address = $this->_post('org_address');
-			$this->orgname = $this->_post('org');
 		}
 	}
 	//设置验证码
