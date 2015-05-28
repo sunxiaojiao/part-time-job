@@ -175,3 +175,99 @@ NOTIC: 建议使用I方法替代_get
 [ 2015-05-28T00:32:44+08:00 ] 127.0.0.1 /UserInfo/generatePhoneImage/t/phone.html
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-05-28T10:18:09+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T10:24:29+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:24:29+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:24:30+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:24:35+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.178010s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`,`ctime`) VALUES ('1451583383@qq.com','2ap5rU7w',1432779874) [ RunTime:0.323019s ]
+NOTIC: [8] Undefined variable: verify D:\wamp\www\ThinkPHP3.1\Lib\Action\RegisterAction.class.php 第 122 行.
+
+[ 2015-05-28T10:24:48+08:00 ] 127.0.0.1 /?m=Register&a=confirm&email=1451583383@qq.com&code=2ap5rU7w
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T10:24:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:24:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:24:53+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:24:54+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:25:33+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:25:33+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:25:33+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:07+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:07+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:08+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:18+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:19+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:51+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:52+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:26:52+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:29:25+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:29:25+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:29:26+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:30:00+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:30:00+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T10:30:01+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
