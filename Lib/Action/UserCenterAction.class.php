@@ -237,6 +237,8 @@ class UserCenterAction extends Action{
 			$this->assign('work_error_info','读取错误');
 		}
 	}
+	
+	
 }
 
 ?>

@@ -728,3 +728,743 @@ ERR: 非法操作:Tpl
 [ 2015-05-28T13:18:23+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
 ERR: 非法操作:Tpl
 
+[ 2015-05-28T14:35:16+08:00 ] 127.0.0.1 /Index/index.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T14:35:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:46:29+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:46:37+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:51:03+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:51:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:51:42+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:51:43+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:53:33+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:53:41+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:53:50+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:53:59+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:54:20+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:54:44+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T14:55:38+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T15:04:14+08:00 ] 127.0.0.1 /Register/reg.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-28T15:04:20+08:00 ] 127.0.0.1 /Register/reg.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-05-28T15:04:26+08:00 ] 127.0.0.1 /Register/reg.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.010001s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SELECT * FROM `xm_users` WHERE ( `phone` = '13256999999' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_users` (`phone`,`passwd`,`ctime`,`username`) VALUES ('13256999999','96e79218965eb72c92a549dd5a330112',1432796665,'sxj') [ RunTime:0.091005s ]
+
+[ 2015-05-28T15:05:34+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T15:05:47+08:00 ] 127.0.0.1 /Register/reg.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.011001s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SELECT * FROM `xm_users` WHERE ( `phone` = '13256999991' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `xm_users` (`phone`,`passwd`,`ctime`,`username`) VALUES ('13256999991','b59c67bf196a4758191e42f76670ceba',1432796747,'sxj') [ RunTime:0.118006s ]
+
+[ 2015-05-28T15:06:57+08:00 ] 127.0.0.1 /Register/reg.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.009001s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SELECT * FROM `xm_users` WHERE ( `phone` = '13256999992' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_users` (`phone`,`passwd`,`ctime`,`username`) VALUES ('13256999992','b59c67bf196a4758191e42f76670ceba',1432796817,'sxj') [ RunTime:0.080004s ]
+
+[ 2015-05-28T15:07:06+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T15:07:07+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T15:07:28+08:00 ] 127.0.0.1 /Register/reg.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SELECT * FROM `xm_users` WHERE ( `phone` = '13211112222' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `xm_users` (`phone`,`passwd`,`ctime`,`username`) VALUES ('13211112222','74b87337454200d4d33f80c4663dc5e5',1432796848,'aaaa') [ RunTime:0.084005s ]
+
+[ 2015-05-28T15:10:04+08:00 ] 127.0.0.1 /UserCenter/updateInfo.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.008001s ]
+SQL: SELECT * FROM `xm_users` WHERE ( `phone` = '13211112222' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2015-05-28T15:16:51+08:00 ] 127.0.0.1 /UserCenter/updateInfo.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007000s ]
+SQL: UPDATE `xm_users` SET `username`='aaaa',`sex`=1,`age`=19,`school`='鲁东大学',`qq`='11111',`exp`='ADSFASD',`intent`='a:6:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";i:3;s:1:\"4\";i:4;s:1:\"5\";i:5;s:1:\"6\";}' WHERE ( uid=19 ) [ RunTime:0.125007s ]
+
+[ 2015-05-28T16:57:12+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:00+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:09+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:23+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:54+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:54+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:55+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:55+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:55+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T16:58:55+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:02:23+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:02:51+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:02:51+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:02:52+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:02:52+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:04:01+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:04:02+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:04:02+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:04:03+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:04:20+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:09:32+08:00 ] 127.0.0.1 /AttachEmail/index.html
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:09:36+08:00 ] 127.0.0.1 /AttachEmail
+ERR: 无法加载模块:AttachEmail
+
+[ 2015-05-28T17:09:41+08:00 ] 127.0.0.1 /AttachEmailAction
+ERR: 无法加载模块:AttachEmailAction
+
+[ 2015-05-28T17:10:16+08:00 ] 127.0.0.1 /AttachEmailAction
+ERR: 无法加载模块:AttachEmailAction
+
+[ 2015-05-28T17:10:19+08:00 ] 127.0.0.1 /Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 无法加载模块:Tpl
+
+[ 2015-05-28T17:10:19+08:00 ] 127.0.0.1 /Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 无法加载模块:Tpl
+
+[ 2015-05-28T17:10:19+08:00 ] 127.0.0.1 /Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 无法加载模块:Tpl
+
+[ 2015-05-28T19:16:35+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T19:16:41+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T19:16:41+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/js/jquery.validationEngine-zh_CN.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T19:16:42+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/js/jquery.validationEngine.js
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T19:16:48+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:sendEmailHandler
+
+[ 2015-05-28T19:26:05+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T19:26:22+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T19:26:27+08:00 ] 127.0.0.1 /Register/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:sendEmailHandler
+
+[ 2015-05-28T19:28:43+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T19:28:52+08:00 ] 127.0.0.1 /AttachEmail/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.011000s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`,`ctime`) VALUES ('1451583383@qq.com','4L0M78ud',1432812531) [ RunTime:0.223013s ]
+NOTIC: [8] Undefined variable: verify D:\wamp\www\ThinkPHP3.1\Lib\Action\AttachEmailAction.class.php 第 37 行.
+
+[ 2015-05-28T19:29:34+08:00 ] 127.0.0.1 /?m=Register&a=confirm&email=1451583383@qq.com&code=4L0M78ud
+ERR: 非法操作:confirm
+
+[ 2015-05-28T19:30:16+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T19:30:19+08:00 ] 127.0.0.1 /AttachEmail/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.009001s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`,`ctime`) VALUES ('1451583383@qq.com','5DaxyvVB',1432812618) [ RunTime:0.068004s ]
+NOTIC: [8] Undefined variable: verify D:\wamp\www\ThinkPHP3.1\Lib\Action\AttachEmailAction.class.php 第 37 行.
+
+[ 2015-05-28T19:30:31+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:32+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:42+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:44+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:44+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:44+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:45+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:45+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:45+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:46+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:46+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:46+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:47+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:47+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:47+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:48+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:48+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:48+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:48+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:49+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:49+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:50+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:50+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:51+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:51+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:52+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:53+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:53+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:54+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:55+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:55+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:56+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:56+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=5DaxyvVB
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T19:30:59+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T20:17:07+08:00 ] 127.0.0.1 /Index/index.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T20:17:11+08:00 ] 127.0.0.1 /Register/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T20:27:19+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:07:26+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:07:52+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-28T21:08:16+08:00 ] 127.0.0.1 /Login/login.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: passwd D:\wamp\www\ThinkPHP3.1\Lib\Action\LoginAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009001s ]
+SQL: SELECT `uid` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `uid`,`username` FROM `xm_users` WHERE ( email='1451583383@qq.com' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-05-28T21:08:20+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:08:22+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:08:24+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=56 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-05-28T21:08:34+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:08:36+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=55
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:08:38+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.009000s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=55 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `pay_ccard_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-05-28T21:08:57+08:00 ] 127.0.0.1 /UserCenter/payInfoHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.057003s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: UPDATE `xm_users` SET `pay_ccard_id`='6217002190002680333' WHERE ( uid=1 ) [ RunTime:0.108007s ]
+
+[ 2015-05-28T21:09:23+08:00 ] 127.0.0.1 /UserCenter/payInfoHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.015001s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: UPDATE `xm_users` SET `default_payway`=2 WHERE ( uid=1 ) [ RunTime:0.061004s ]
+
+[ 2015-05-28T21:09:36+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:09:38+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=50
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:09:42+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=51
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:09:47+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=47
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T21:09:51+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.008001s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=47 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007001s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=47 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pay_ccard_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=47 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,47,1,1432818591) [ RunTime:0.163010s ]
+
+[ 2015-05-28T21:10:15+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=47 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-05-28T21:10:44+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=56
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T22:04:02+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T22:04:07+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=55
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T22:04:11+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007001s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pay_ccard_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_uid`,`app_jid`,`app_oid`,`ctime`) VALUES (1,55,1,1432821851) [ RunTime:0.108006s ]
+
+[ 2015-05-28T22:11:19+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T22:11:23+08:00 ] 127.0.0.1 /AttachEmail/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.011001s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`,`ctime`) VALUES ('1451583383@qq.com','TcDhe08K',1432822282) [ RunTime:0.108006s ]
+NOTIC: [8] Undefined variable: verify D:\wamp\www\ThinkPHP3.1\Lib\Action\AttachEmailAction.class.php 第 37 行.
+
+[ 2015-05-28T22:12:34+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=TcDhe08K
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T22:12:35+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T22:39:30+08:00 ] 127.0.0.1 /AttachEmail/Tpl/bootstrap/css/validationEngine.jquery.css
+ERR: 非法操作:Tpl
+
+[ 2015-05-28T22:39:35+08:00 ] 127.0.0.1 /AttachEmail/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.012001s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`,`ctime`) VALUES ('1451583383@qq.com','QVYctaJY',1432823973) [ RunTime:0.128007s ]
+NOTIC: [8] Undefined variable: verify D:\wamp\www\ThinkPHP3.1\Lib\Action\AttachEmailAction.class.php 第 37 行.
+
+[ 2015-05-28T22:39:43+08:00 ] 127.0.0.1 /?m=AttachEmail&a=confirm&email=1451583383@qq.com&code=QVYctaJY
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-05-28T22:39:44+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+

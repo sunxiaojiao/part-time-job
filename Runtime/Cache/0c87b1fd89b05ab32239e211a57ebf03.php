@@ -143,10 +143,11 @@ THINK;
     <!--container-->
     <div class="container">
         <div class="page-header">
-            <h1><small>我的小蜜蜂<small>(<?php echo ($userinfo["email"]); ?>)</small></small></h1>
+            <h1><small>我的小蜜蜂<small>(<?php echo ($userinfo["username"]); ?>)</small></small></h1>
         </div>
         <div class="row">
             <div class="col-md-8">
+                <?php if($userinfo["email"] == ''): ?><div class="alert alert-danger"><a href="<?php echo U("AttachEmail/index");?>">你还未绑定邮箱，请立刻绑定邮箱，方便找回密码等业务</a></div><?php endif; ?>
                 <div class="panel panel-default">
                     <div class="panel-heading">个人信息及求职简历<a href="<?php echo U("UserCenter/editInfo");?>" class="pull-right">编辑我的资料和简历</a><a href="<?php echo U("UserCenter/showPayInfo");?>" class="pull-right" style="margin:0 10px">我的支付信息</a></div>
                     <div class="panel-body">
@@ -168,6 +169,10 @@ THINK;
                                 <td><?php echo ($userinfo["phone"]); ?></td>
                             </tr>
                             <tr>
+                                <td>邮箱</td>
+                                <td><?php if($userinfo["email"] == ''): ?><a href="<?php echo U("AttachEmail/index");?>">绑定邮箱</a>
+                                    <?php else: echo ($userinfo["email"]); endif; ?>
+                                </td>
                                 <td>地址：</td>
                                 <td><?php echo ($userinfo["address"]); ?></td>
                             </tr>

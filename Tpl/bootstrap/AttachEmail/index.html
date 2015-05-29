@@ -7,8 +7,6 @@
     <title>注册</title>
     <link rel="stylesheet" href="./__GROUP__/css/validationEngine.jquery.css" type="text/css" />
     <include file="./Tpl/bootstrap/public/static.html" />
-    <script src="./__GROUP__/js/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./__GROUP__/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
     form {
         margin-top: 50px;
@@ -23,7 +21,7 @@
     <!--container-->
     <div class="container">
         <div class="page-header">
-            <h1>验证邮箱<small>小蜜蜂兼职</small></h1>
+            <h1>绑定邮箱<small>小蜜蜂兼职</small></h1>
         </div>
         <div class="row">
             <div class="col-md-7">
@@ -84,7 +82,7 @@
             var btnLoading = $(this).button('loading');
             console.log(email);
             $.ajax({
-                url: "{:U('Register/sendEmailHandler')}",
+                url: "{:U('AttachEmail/sendEmailHandler')}",
                 data: {
                     'email': email
                 },
@@ -94,14 +92,10 @@
                         $("#alert-failed").addClass("hidden");
                         $("#alert-success").removeClass("hidden");
                         btn.text("发送成功");
-                    } else if (data.data == 0) {
+                    } else {
                         $("#alert-success").addClass("hidden");
                         $("#alert-failed").removeClass("hidden");
-                        btn.button('reset');
-                    } else if(data.data == 2) {
-                    	$("#alert-failed>p").text("邮箱已存在	");
-                    	$("#alert-success").addClass("hidden");
-                        $("#alert-failed").removeClass("hidden");
+                        $("#alert-failed p").text(data.info);
                         btn.button('reset');
                     }
                 },

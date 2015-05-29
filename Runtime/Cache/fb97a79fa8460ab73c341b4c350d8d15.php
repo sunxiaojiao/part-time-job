@@ -1,11 +1,11 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<!doctype html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>兼职平台</title>
+    <title>注册</title>
+    <link rel="stylesheet" href="./__GROUP__/css/validationEngine.jquery.css" type="text/css" />
     <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
@@ -15,66 +15,12 @@
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
-    #banner {
-        height: 200px;
-        margin-bottom: 12px;
-    }
-    
-    .my-explor {
-        position: absolute;
-        right: 20px;
-    }
-    
-    .my-explor>.glyphicon {
-        margin-right: 6px;
-    }
-    
-    .my-partjob-address,
-    .my-partjob-people,
-    .my-partjob-money,
-    .my-explor {
-        position: absolute;
-    }
-    
-    .my-partjob-people {
-        left: 330px;
-    }
-    
-    .my-partjob-money {
-        left: 450px;
-    }
-    
-    .my-partjob-address {
-        left: 200px;
-    }
-    
-    .my-select-address {
-        display: inline-block;
-    }
-    
-    .my-select-address>select {
-        width: 130px;
-        display: inline-block;
-    }
-    
-    .my-zimu {
-        display: block;
-        padding: 4px 6px 4px 32px;
-        margin-bottom: 6px;
-    }
-    
-    .my-addr-list a {
-        display: inline-block;
-        padding: 4px 6px;
-        margin: 1px 20px 20px;
-        outline: 1px solid #EEE;
-        cursor: pointer;
-    }
-    
-    #map-container {
-        height: 500px;
+    form {
+        margin-top: 50px;
     }
     </style>
+    <script>
+    </script>
 </head>
 
 <body>
@@ -164,89 +110,92 @@ THINK;
 </script>
 <!--======导航条结束======--->
     <!--container-->
-    <!--banner-->
-    <div class="container" id="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
+    <div class="container">
+        <div class="page-header">
+            <h1>绑定邮箱<small>小蜜蜂兼职</small></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="alert alert-success alert-dismissable hidden" id="alert-success">
+                    <button type="button" class="close" aria-hidden="true">&times;</button><p>发送成功</p></div>
+                <div class="alert alert-danger alert-dismissable hidden" id="alert-failed">
+                    <button type="button" class="close" aria-hidden="true">&times;</button><p>发送失败</p></div>
+                <form id="reg-form" class="form-inline">
+                    <div class="form-group input-group">
+                        <label for="email" class="sr-only">邮箱：</label>
+                        <input id="email" type="text" name="email" class="form-control text-input" placeholder="请输入邮箱" />
+                        <input class="hidden" />
                     </div>
-                </div>
-                <div class="item">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
+                    <button type="button" class="btn btn-primary" id="email-goto" data-loading-text="发送中..." autocomplete="off">发送</button>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">关于小蜜蜂</div>
+                    <div class="panel-body">
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
                     </div>
                 </div>
             </div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-    </div>
-    <!--container-->
-    <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                选择城市
-            </div>
-            <ul class="list-group addr-list">
-                <li class="list-group-item my-addr-list">
-                    <span class="bg-primary my-zimu">烟台</span>
-                    <ul>
-                        <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><a data-aid="<?php echo ($addr["aid"]); ?>"><?php echo ($addr["area"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
-                    </ul>
-                </li>
-            </ul>
+        <!--end container-->
+        <!--footer-->
+        <div class="container">
+            <hr />
+            <p class="text-center">小蜜蜂兼职</p>
+            <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+            <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
         </div>
-    </div>
-    <!--./container-->
-    <!--footer-->
-    <div class="container">
-  <hr />
-  <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
-  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-</div>
-    <!--footer-end-->
-    <script type="text/javascript">
-    $(".addr-list a").click(function() {
-        var aid = $(this).attr("data-aid");
-        //ajax
-        $.ajax({
-            url: "<?php echo U('ChangeCity/ChangeCity');?>",
-            data: {
-                aid: aid
-            },
-            contentType: 'text/json',
-            success: function(data) {
-                alert(data.info);
-                location.href = "<?php echo U('ChangeCity/index');?>";
+        <!--end footer-->
+        <script type="text/javascript">
+        (function(){
+        	$(".alert button").on('click',function(){
+        		$(this).parent().addClass("hidden");
+        	});
+        })();
+        enterKey($("#reg-form input"),$("#email-goto"));
+        $("#email-goto").click(function() {
+            var btn = $("#email-goto");
+            var email = $("#email").val();
+            console.log(email);
+            //验证邮箱格式
+            var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            var flag = re.exec(email);
+            //var flag = 1;
+            console.log(flag);
+            if (!flag) {
+            	$("#alert-failed>p").text("请填写正确的邮箱格式");
+                $("#alert-success").addClass("hidden");
+                $("#alert-failed").removeClass("hidden");
+                return;
             }
+            var btnLoading = $(this).button('loading');
+            console.log(email);
+            $.ajax({
+                url: "<?php echo U('AttachEmail/sendEmailHandler');?>",
+                data: {
+                    'email': email
+                },
+                type: "POST",
+                success: function(data) {
+                    if (data.data == 1) {
+                        $("#alert-failed").addClass("hidden");
+                        $("#alert-success").removeClass("hidden");
+                        btn.text("发送成功");
+                    } else {
+                        $("#alert-success").addClass("hidden");
+                        $("#alert-failed").removeClass("hidden");
+                        $("#alert-failed p").text(data.info);
+                        btn.button('reset');
+                    }
+                },
+                error: function() {
+                    $("#alert-success").addClass("hidden");
+                    $("#alert-failed").removeClass("hidden");
+                    btn.button('reset');
+                }
+            });
         });
-    });
-    </script>
+        </script>
 </body>
-
-</html>

@@ -62,11 +62,13 @@
                         	<input id="phone_num" type="text" name="phone_num" class="form-control" placeholder="手机号" />
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="username" class="col-sm-2">用户名：</label>
-                        <div class="col-sm-8">
-                        	<input id="username" type="text" name="username" class="form-control" placeholder="用户名" />
-                        </div>
+                    <div id="username-container">
+	                    <div class="form-group">
+	                        <label for="username" class="col-sm-2">用户名：</label>
+	                        <div class="col-sm-8">
+	                        	<input id="username" type="text" name="username" class="form-control" placeholder="用户名" />
+	                        </div>
+	                    </div>
                     </div>
                     <div class="form-group">
                         <label for="passwd" class="col-sm-2">密码：</label>
@@ -124,32 +126,34 @@
             for (var i = 0; i < 2; i++) {
                 $("#select-list>li").eq(i).removeClass("active");
             }
-
             $("#select-list>li").eq(arg).addClass("active");
             whatToSelect = arg;
         }
-
-
-        function tabChange(arg) {
-                var str = new String('<div class="form-group input-org"><label for="org" class="col-sm-2">组织名称：</label><div class="col-sm-8"><input id="org" type="text" name="org" class="form-control" placeholder="组织机构名称" /></div></div><div class="form-group input-org"><label for="org_address" class="col-sm-2">所在地：</label><div class="col-sm-8"><input id="org_address" type="text" name="org_address" class="form-control" placeholder="组织机构所在地" /></div></div>');
-                if (arg == 0) {
-                    if ($(".input-org")) {
+        function showChange(arg) {
+                var strorg = new String('<div class="form-group input-org"><label for="org" class="col-sm-2">组织名称：</label><div class="col-sm-8"><input id="org" type="text" name="org" class="form-control" placeholder="组织机构名称" /></div></div><div class="form-group input-org"><label for="org_address" class="col-sm-2">所在地：</label><div class="col-sm-8"><input id="org_address" type="text" name="org_address" class="form-control" placeholder="组织机构所在地" /></div></div>');
+                var struser = new String('<div class="form-group"><label for="username" class="col-sm-2">用户名：</label><div class="col-sm-8"><input id="username" type="text" name="username" class="form-control" placeholder="用户名" /></div></div>');
+                if(arg == 0){
+                	//求职者注册
+                    if($(".input-org")){
                         $(".input-org").remove();
+                       	$("#username-container").html(struser);
                     }
-                } else {
-                    if ($(".input-org").length != 0) {} else {
-                        $("#org-container").html(str);
+                }else{
+                	//企业注册
+                    if($(".input-org").length == 0){
+                    	$("#username-container").html(null);
+                        $("#org-container").html(strorg);
                     }
                 }
             }
             //绑定事件
         $("#select-list>li").eq(0).click(function() {
             tabShow(0);
-            tabChange(0);
+            showChange(0);
         });
         $("#select-list>li").eq(1).click(function() {
             tabShow(1);
-            tabChange(1);
+            showChange(1);
         });
         (function(){
         	$(".alert button").on('click',function(){
@@ -168,6 +172,12 @@
                 $(".alert").removeClass("hidden");
                 return;
             }
+           	if(info.username === ''){
+           		$(".alert>p").text("请填写用户名");
+                $(".alert").removeClass("alert-success").addClass("alert-danger");
+                $(".alert").removeClass("hidden");
+                return;
+           	}
             if (info.passwd === '') {
                 $(".alert>p").text("您忘记填写密码啦");
                 $(".alert").removeClass("alert-success").addClass("alert-danger");
@@ -210,7 +220,7 @@
                     $(".alert>p").text(data.info);
                     if (data.data == 0) {
                         setTimeout(function() {
-                            location.href = '{:U("UserCenter/index")}';
+                            location.href = '{:U("UserCenter/editInfo")}';
                         }, 3000);
                     } else {
                     	$(".alert").removeClass("alert-success").addClass("alert-danger");

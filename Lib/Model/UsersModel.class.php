@@ -27,6 +27,13 @@ class UsersModel extends Model{
 			return true;
 		}
 	}
+//	public function checkEmialUnique(){
+//		$this->validate()
+//	}
+//	protected function phoneUpdateValidate(){
+//		$User = M('Users');
+//		$User->where($where)->find();
+//	}
 	//自动完成
 	protected $_auto = array(
 	);

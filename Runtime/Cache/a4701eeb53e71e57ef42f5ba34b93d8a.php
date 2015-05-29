@@ -123,7 +123,7 @@ THINK;
 <!--container-->
 <div class="container">
   <div class="page-header">
-      <h1><small>编辑个人简历<small>(<?php echo ($userinfo["email"]); ?>)</small></small></h1>
+      <h1><small>编辑个人简历<small>(<?php echo ($userinfo["username"]); ?>)</small></small></h1>
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -176,7 +176,11 @@ THINK;
         </div>
         <div class="form-group">
           <label for="phone"><span class="must-input">*</span>联系电话：</label>
-          <input type="text" id="phone" name="phone" class="form-control" value="<?php echo ($userinfo["phone"]); ?>" placeholder="填写联系电话" />
+          <input type="text" id="phone" class="form-control" value="<?php echo ($userinfo["phone"]); ?>" disabled placeholder="填写联系电话" />
+        </div>
+        <div class="form-group">
+          <label for="email"><span class="must-input">*</span>邮箱：</label>
+          <input type="text" id="email" class="form-control" value="<?php echo ($userinfo["email"]); ?>" placeholder="填写联系邮箱" />
         </div>
         <div class="form-group">
           <label for="qq">QQ：</label>
