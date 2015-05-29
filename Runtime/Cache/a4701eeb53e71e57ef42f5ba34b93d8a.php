@@ -179,10 +179,6 @@ THINK;
           <input type="text" id="phone" class="form-control" value="<?php echo ($userinfo["phone"]); ?>" disabled placeholder="填写联系电话" />
         </div>
         <div class="form-group">
-          <label for="email"><span class="must-input">*</span>邮箱：</label>
-          <input type="text" id="email" class="form-control" value="<?php echo ($userinfo["email"]); ?>" placeholder="填写联系邮箱" />
-        </div>
-        <div class="form-group">
           <label for="qq">QQ：</label>
           <input type="text" id="qq" name="qq" class="form-control" value="<?php echo ($userinfo["qq"]); ?>" placeholder="填写联系QQ" />
         </div>
