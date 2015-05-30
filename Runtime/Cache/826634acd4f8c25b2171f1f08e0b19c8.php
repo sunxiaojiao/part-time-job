@@ -18,7 +18,7 @@
         color: #F00;
     }
     
-    .panel-body {
+    .panel-body,.panel{
         position: relative;
     }
     
@@ -131,6 +131,14 @@ THINK;
                               <button type="button" class="close" aria-hidden="true">&times;</button>
                               <p></p>
                           </div>
+                          <div class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+                              </label>
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+                              </label>
+                            </div>
                             <div class="form-group">
                                 <input type="text" id="email" name="email" class="form-control" placeholder="登录邮箱" />
                             </div>
@@ -142,11 +150,11 @@ THINK;
                                 <input type="text" class="form-control" placeholder="验证码" />
                                 <button class="btn btn-default verify" type="button">刷新</button>
                             </div>
-                            <!--       <div class="checkbox">
-        <label>
-          <input type="checkbox" id="pwdmem" value="1">三天内免登录
-        </label>
-      </div> -->
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" id="pwdmem" value="1">三天内免登录
+                                    </label>
+                                  </div>
                             <div class="form-group">
                                 <button type="button" class="btn btn-default pull-right" id="login">登录</button>
                             </div>
