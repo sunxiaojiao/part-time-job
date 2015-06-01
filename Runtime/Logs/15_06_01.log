@@ -1,0 +1,198 @@
+[ 2015-06-01T07:52:57+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T07:53:23+08:00 ] 127.0.0.1 /Login/login.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.080004s ]
+SQL: SELECT `oid`,`orgname` FROM `xm_orgs` WHERE ( phone='13256929238' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-01T07:53:47+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T09:12:59+08:00 ] 127.0.0.1 /Index/index.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T09:13:42+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T09:13:45+08:00 ] 127.0.0.1 /Index/index/p/2.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T09:18:18+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T17:31:57+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T19:24:04+08:00 ] 127.0.0.1 /PasswdFind/vcode.html
+ERR: 非法操作:vcode
+
+[ 2015-06-01T19:24:41+08:00 ] 127.0.0.1 /PasswdFind/vcode.html
+ERR: 非法操作:vcode
+
+[ 2015-06-01T19:24:41+08:00 ] 127.0.0.1 /PasswdFind/vcode.html
+ERR: 非法操作:vcode
+
+[ 2015-06-01T19:25:16+08:00 ] 127.0.0.1 /PasswdFind/vcode.html
+ERR: 非法操作:vcode
+
+[ 2015-06-01T19:25:16+08:00 ] 127.0.0.1 /PasswdFind/vcode.html
+ERR: 非法操作:vcode
+
+[ 2015-06-01T19:25:21+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+ERR: Action:checkEmailUnique您所请求的方法不存在！
+
+[ 2015-06-01T19:25:28+08:00 ] 127.0.0.1 /PasswdFind/vcode.html
+ERR: 非法操作:vcode
+
+[ 2015-06-01T19:25:29+08:00 ] 127.0.0.1 /PasswdFind/vcode.html
+ERR: 非法操作:vcode
+
+[ 2015-06-01T19:36:20+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:3.290188s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`,`ctime`) VALUES ('1451583383@qq.com','bjpYi7tD',1433158579) [ RunTime:0.041002s ]
+
+[ 2015-06-01T19:37:00+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=&code=bjpYi7tD
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+ERR: Action:attach您所请求的方法不存在！
+
+[ 2015-06-01T19:42:39+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=&code=bjpYi7tD
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T19:42:42+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T20:27:01+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_mailreg_url` [ RunTime:0.010001s ]
+SQL: INSERT INTO `xm_mailreg_url` (`email`,`vld_code_value`,`ctime`) VALUES ('1451583383@qq.com','XHi4xOgZ',1433161620) [ RunTime:0.068004s ]
+
+[ 2015-06-01T20:27:57+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=&code=XHi4xOgZ
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+ERR: Action:attach您所请求的方法不存在！
+
+[ 2015-06-01T20:52:24+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=&code=XHi4xOgZ
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T20:52:27+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T20:52:52+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [2] Missing argument 2 for PasswdFindAction::buildUrl(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php on line 42 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php 第 12 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.008000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`) VALUES ('1451583383@qq.com','U4PjplQc',1433163171) [ RunTime:0.087005s ]
+
+[ 2015-06-01T20:53:01+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=&code=U4PjplQc
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T20:53:03+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-01T20:54:13+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [2] Missing argument 2 for PasswdFindAction::buildUrl(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php on line 42 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php 第 12 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.008001s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`) VALUES ('1451583383@qq.com','jCCrpm6T',1433163252) [ RunTime:0.076004s ]
+
+[ 2015-06-01T20:56:51+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-06-01T20:56:56+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [2] Missing argument 2 for PasswdFindAction::buildUrl(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php on line 42 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php 第 12 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\ThinkPHP3.1\Lib\Action\PasswdFindAction.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.013001s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`) VALUES ('1451583383@qq.com','MUNbQGga',1433163416) [ RunTime:0.094005s ]
+

@@ -68,7 +68,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">小蜜蜂兼职</a>
+      <a class="" href="/"><img src="/Public/logo/logo.png" height="50" alt="小蜜蜂兼职logo" /></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -116,7 +116,7 @@ THINK;
           </ul>
         </li><!--/.dropdown-->
 THINK;
- if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/sendMail') . ">注册</a></li>
+ if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->
