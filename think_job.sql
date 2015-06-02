@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2015 年 05 月 28 日 00:37
+-- 生成日期: 2015 年 06 月 02 日 17:16
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -34,17 +34,6 @@ CREATE TABLE IF NOT EXISTS `xm_address` (
   PRIMARY KEY (`aid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
---
--- 转存表中的数据 `xm_address`
---
-
-INSERT INTO `xm_address` (`aid`, `province`, `city`, `area`) VALUES
-(1, '山东', '烟台', '芝罘区'),
-(2, '山东', '烟台', '开发区'),
-(3, '山东', '烟台', '福山区'),
-(4, '山东', '烟台', '莱山区'),
-(5, '山东', '烟台', '牟平区');
-
 -- --------------------------------------------------------
 
 --
@@ -58,13 +47,6 @@ CREATE TABLE IF NOT EXISTS `xm_admin` (
   `ctime` int(10) NOT NULL,
   PRIMARY KEY (`admin_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员表' AUTO_INCREMENT=2 ;
-
---
--- 转存表中的数据 `xm_admin`
---
-
-INSERT INTO `xm_admin` (`admin_id`, `username`, `passwd`, `ctime`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1428755880);
 
 -- --------------------------------------------------------
 
@@ -81,21 +63,6 @@ CREATE TABLE IF NOT EXISTS `xm_advice` (
   PRIMARY KEY (`advice_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
---
--- 转存表中的数据 `xm_advice`
---
-
-INSERT INTO `xm_advice` (`advice_id`, `content`, `uid`, `oid`, `ctime`) VALUES
-(1, '&lt;p&gt;上的发达省份&lt;/p&gt;', 0, 0, 0),
-(2, '&lt;p&gt;大嵩岛&lt;/p&gt;', 0, 0, 0),
-(3, '&lt;p&gt;大嵩岛&lt;img src=&quot;https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin/485.jpg&quot; _src=&quot;https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin/485.jpg&quot;/&gt;&lt;/p&gt;', 0, 0, 0),
-(4, '&lt;p&gt;dfsdfds&lt;/p&gt;', 0, 0, 0),
-(5, '&lt;p&gt;&lt;img src=&quot;http://www.test.com/Public/Upload/20150517/14318671174009.jpg&quot; _src=&quot;http://www.test.com/Public/Upload/20150517/14318671174009.jpg&quot;/&gt;&lt;/p&gt;', 0, 0, 0),
-(6, '&lt;p&gt;\r\n', 0, 0, 1431870199),
-(7, '&lt;p&gt;eee&lt;/p&gt;', 0, 0, 1431909944),
-(8, '&lt;p&gt;\n    &lt;br/&gt;\n&lt;/p&gt;&lt;sc<x>ript&gt;alert('''')&lt;/sc<x>ript&gt;', 0, 0, 1431910098),
-(9, '&lt;p&gt;dfasdf&lt;br/&gt;&lt;/p&gt;', 0, 1, 1431911165);
-
 -- --------------------------------------------------------
 
 --
@@ -110,14 +77,7 @@ CREATE TABLE IF NOT EXISTS `xm_apply` (
   `is_pass` int(3) unsigned NOT NULL DEFAULT '1' COMMENT '1为未处理，2为通过，3为拒绝',
   `ctime` int(10) unsigned NOT NULL,
   PRIMARY KEY (`app_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- 转存表中的数据 `xm_apply`
---
-
-INSERT INTO `xm_apply` (`app_id`, `app_oid`, `app_jid`, `app_uid`, `is_pass`, `ctime`) VALUES
-(1, 1, 56, 1, 1, 1432687497);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 -- --------------------------------------------------------
 
@@ -130,90 +90,6 @@ CREATE TABLE IF NOT EXISTS `xm_industry` (
   `name` varchar(20) NOT NULL,
   PRIMARY KEY (`ind_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=79 ;
-
---
--- 转存表中的数据 `xm_industry`
---
-
-INSERT INTO `xm_industry` (`ind_id`, `name`) VALUES
-(1, '房地产'),
-(2, '建筑'),
-(3, '物业管理'),
-(4, 'IT/互联网/网络'),
-(5, '电子/半导体/电器/仪表'),
-(6, '计算机软硬件'),
-(7, '通信'),
-(8, '服务业'),
-(9, '贸易/物流'),
-(10, '市场/策划/公关'),
-(11, '销售贸易'),
-(12, '保险'),
-(13, '财务/审计/税务'),
-(14, '证券/金融/投资/银行'),
-(15, '技术工人'),
-(16, '玩具礼品'),
-(17, '家居用品'),
-(18, '法律'),
-(19, '办公文教'),
-(20, '医药卫生'),
-(21, '服务咨询'),
-(22, '行政/后勤'),
-(23, '经营管理'),
-(24, '人力资源'),
-(25, '广告'),
-(26, '新闻/出版'),
-(27, '艺术设计'),
-(28, '影视/媒体'),
-(29, '电力/能源'),
-(30, '电子电工'),
-(31, '石油化工'),
-(32, '百货/零售'),
-(33, '餐饮/旅游/娱乐'),
-(34, '美容/健身'),
-(35, '物流/交通/仓储'),
-(36, '服装/纺织品'),
-(37, '机械'),
-(38, '汽车'),
-(39, '其他行业'),
-(40, '房地产'),
-(41, '建筑'),
-(42, '物业管理'),
-(43, 'IT/互联网/网络'),
-(44, '电子/半导体/电器/仪表'),
-(45, '计算机软硬件'),
-(46, '通信'),
-(47, '服务业'),
-(48, '贸易/物流'),
-(49, '市场/策划/公关'),
-(50, '销售贸易'),
-(51, '保险'),
-(52, '财务/审计/税务'),
-(53, '证券/金融/投资/银行'),
-(54, '技术工人'),
-(55, '玩具礼品'),
-(56, '家居用品'),
-(57, '法律'),
-(58, '办公文教'),
-(59, '医药卫生'),
-(60, '服务咨询'),
-(61, '行政/后勤'),
-(62, '经营管理'),
-(63, '人力资源'),
-(64, '广告'),
-(65, '新闻/出版'),
-(66, '艺术设计'),
-(67, '影视/媒体'),
-(68, '电力/能源'),
-(69, '电子电工'),
-(70, '石油化工'),
-(71, '百货/零售'),
-(72, '餐饮/旅游/娱乐'),
-(73, '美容/健身'),
-(74, '物流/交通/仓储'),
-(75, '服装/纺织品'),
-(76, '机械'),
-(77, '汽车'),
-(78, '其他行业');
 
 -- --------------------------------------------------------
 
@@ -247,32 +123,6 @@ CREATE TABLE IF NOT EXISTS `xm_jobs` (
   PRIMARY KEY (`jid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
 
---
--- 转存表中的数据 `xm_jobs`
---
-
-INSERT INTO `xm_jobs` (`jid`, `title`, `detail`, `mold_id`, `is_pass`, `pub_oid`, `pay_way`, `money`, `money_style`, `work_time`, `begin_time`, `want_peo`, `peo_style`, `current_peo`, `crowd_uids`, `address`, `addressname`, `leader`, `leader_phone`, `expire_time`, `ctime`, `pv`) VALUES
-(37, '测试', '结合扫', 11, 0, 1, 3, '100', 1, 0, 1430378100, 10, 1, 0, '', '121.357984,37.511432', '', '孙小蛟', '', 1430375801, 1430361401, 1),
-(38, '测试', '结合扫', 11, 0, 1, 3, '100', 1, 0, 1430378100, 10, 1, 0, '', '121.357984,37.511432', '', '孙小蛟', '', 1430375841, 1430361441, 1),
-(39, '测试', '结合扫', 11, 0, 1, 3, '100', 1, 0, 1430378100, 10, 1, 0, '', '121.357984,37.511432', '', '孙小蛟', '', 1430375898, 1430361498, 1),
-(40, '测试2', '结合扫的', 11, 0, 1, 3, '10', 1, 0, 1430361300, 10, 1, 0, '', '121.357984,37.514155', '芝罘区', '孙小蛟', '', 1430369180, 1430361980, 6),
-(41, '测试三', '戒杀破', 11, 0, 1, 3, '12', 1, 0, 1430154300, 1, 2, 0, '', '121.37927,37.512521', '', '伞形科', '', 1430424495, 1430410095, 5),
-(42, 'sss', '结合扫', 11, 0, 1, 3, '1', 1, 0, 1431395100, 10, 1, 0, '', '121.38545,37.541927', '121.38545,37.541927', '鹅鹅鹅', '', 1430428601, 1430410601, 4),
-(43, '我是', '介绍', 11, 0, 1, 1, '2', 2, 0, 1430774700, 1, 2, 0, '', '121.37721,37.516061', '烟台市芝罘区', '问问', '', 1430418176, 1430410976, 27),
-(44, '111', 'asdfsdfsdfsdfsdf', 11, 0, 1, 1, '10', 1, 0, 1432086300, 1, 1, 0, '', '121.429834,37.4216', '烟台市芝罘区', '222', '', 1432194971, 1432169771, 2),
-(45, '谁是谁', '阿瓦达芙洒洒的', 11, 0, 1, 2, '10', 1, 0, 1430790300, 10, 1, 0, '', '119.114465,36.718137', '潍坊市昌邑市', '111', '', 1432239287, 1432214087, 2),
-(46, '趣味额', '打发打发', 11, 0, 1, 1, '1', 1, 0, 1430185500, 10, 1, 0, '', '121.193628,37.508801', '烟台市芝罘区', '趣味额', '', 1432335730, 1432310530, 1),
-(47, '哦趣味额', '大法的事', 11, 0, 1, 2, '1', 1, 0, 1430790300, 19, 1, 0, '', '121.455412,37.474614', '烟台市莱山区', '撒旦', '', 1432321489, 1432310689, 0),
-(48, '阿斯顿飞', '阿斯顿飞撒旦', 11, 0, 1, 2, '1', 1, 0, 1432100700, 1, 1, 0, '', '120.758467,37.815915', '烟台市蓬莱市', '阿道夫', '', 1432325184, 1432310784, 2),
-(49, '阿斯顿飞', '阿斯顿飞撒旦', 11, 0, 1, 2, '1', 1, 0, 1432100700, 1, 1, 0, '', '120.758467,37.815915', '烟台市蓬莱市', '阿道夫', '', 1432325352, 1432310952, 0),
-(50, '阿斯顿飞', '阿斯顿飞撒旦搜索', 11, 0, 1, 2, '1', 1, 0, 1432100700, 1, 1, 0, '', '120.758467,37.815915', '烟台市蓬莱市', '阿道夫', '', 1432325376, 1432310976, 1),
-(51, '阿斯顿飞', '阿斯顿飞撒旦搜索', 11, 0, 1, 2, '1', 1, 0, 1432100700, 1, 1, 0, '', '120.758467,37.815915', '烟台市蓬莱市', '阿道夫', '', 1432325452, 1432311052, 0),
-(52, '阿斯顿飞', '阿斯顿飞撒旦搜索', 11, 0, 1, 2, '1', 1, 0, 1432100700, 1, 1, 0, '', '120.758467,37.815915', '烟台市蓬莱市', '阿道夫', '', 1432325464, 1432311064, 1),
-(53, '阿斯顿飞', '阿斯顿飞撒旦搜索', 11, 0, 1, 2, '1', 1, 0, 1432100700, 1, 1, 0, '', '120.758467,37.815915', '烟台市蓬莱市', '阿道夫', '', 1432325811, 1432311411, 1),
-(54, '阿斯顿飞', '阿斯顿飞撒旦搜索', 6, 0, 1, 2, '1', 1, 0, 1432100700, 1, 1, 0, '', '120.758467,37.815915', '烟台市蓬莱市', '阿道夫', '', 1432325819, 1432311419, 1),
-(55, '阿斯顿飞', '阿斯顿飞撒旦搜索', 1, 0, 1, 2, '1', 1, 0, 1432100700, 1, 1, 0, '', '120.758467,37.815915', '烟台市蓬莱市', '阿道夫', '', 1432325843, 1432311443, 3),
-(56, '趣味额', '阿斯顿发大水', 2, 0, 1, 1, '10', 2, 0, 1431499800, 10, 2, 0, '', '120.519342,37.641586', '烟台市龙口市', '权威', '13256929238', 1432334149, 1432312549, 4);
-
 -- --------------------------------------------------------
 
 --
@@ -287,14 +137,7 @@ CREATE TABLE IF NOT EXISTS `xm_mailreg_url` (
   `ispass` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0为未通过，1未通过',
   `ctime` int(10) NOT NULL,
   PRIMARY KEY (`reg_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='邮箱验证链接' AUTO_INCREMENT=2 ;
-
---
--- 转存表中的数据 `xm_mailreg_url`
---
-
-INSERT INTO `xm_mailreg_url` (`reg_id`, `email`, `vld_code_value`, `vld_code_key`, `ispass`, `ctime`) VALUES
-(1, '1451583383@qq.com', 'kwIHTWlU', 0, 0, 1432735597);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='邮箱验证链接' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -307,23 +150,6 @@ CREATE TABLE IF NOT EXISTS `xm_mold` (
   `name` varchar(10) NOT NULL,
   PRIMARY KEY (`mid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
-
---
--- 转存表中的数据 `xm_mold`
---
-
-INSERT INTO `xm_mold` (`mid`, `name`) VALUES
-(1, '家教'),
-(2, '促销员'),
-(3, '服务生'),
-(4, '发单员'),
-(5, '礼仪'),
-(6, '钟点工'),
-(7, '会计'),
-(8, '网站建设'),
-(9, '翻译'),
-(10, '设计制图'),
-(11, '其他兼职');
 
 -- --------------------------------------------------------
 
@@ -346,21 +172,6 @@ CREATE TABLE IF NOT EXISTS `xm_orgs` (
   `ctime` int(10) unsigned NOT NULL,
   PRIMARY KEY (`oid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
-
---
--- 转存表中的数据 `xm_orgs`
---
-
-INSERT INTO `xm_orgs` (`oid`, `email`, `passwd`, `orgname`, `is_validate`, `avatar`, `org_address`, `website`, `phone`, `fixed_phone`, `org_intro`, `ctime`) VALUES
-(1, '123@qq.com', '21232f297a57a5a743894a0e4a801fc3', '百度', 1, '/Uploads/xm_1_20150420234949_796_HHR1TDKS.jpg', '芝罘区', 'http://www.baidu.com', '13256929238', '64449872', '百度（Nasdaq：BIDU）是全球最大的中文搜索引擎、最大的中文网站。2000年1月由李彦宏创立于北京中关村，致力于向人们提供“简单，可依赖”的信息获取方式。“百度”二字源于中国宋朝词人辛弃疾的《青玉案·元夕》词句“众里寻他千百度”，...', 1428928216),
-(2, '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0, '', '', 'http://www.baidu.com', '13256929238', '', '公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍', 1428928216),
-(3, '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0, '', '', 'http://www.baidu.com', '13256929238', '', '公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍', 1428928216),
-(4, '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0, '', '', 'http://www.baidu.com', '13256929238', '', '公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍', 1428928216),
-(5, '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0, '', '', 'http://www.baidu.com', '13256929238', '', '公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍', 1428928216),
-(6, '', '062af77ea3850e6078c64c71ff142b2e', '', 0, '', '', 'http://www.baidu.com', '13256929238', '', '公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍', 1428928216),
-(7, '', '062af77ea3850e6078c64c71ff142b2e', 'sunxiaojiao', 0, '', 'sunxiajiao', 'http://www.baidu.com', '13256929238', '', '公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍', 1428928216),
-(8, 'sunxiaojiao001@sina.com', 'c5df4f4eabf1cbcfeb50fbbf97c5289f', '鲁东', 0, '', '鲁东大学', 'http://www.baidu.com', '13256929238', '', '公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍', 1428928216),
-(10, '1451583383@qq.com', '81dc9bdb52d04dc20036dbd8313ed055', 'asdfasd', 1, '', 'asdfasd', '', '', '', '', 1432644397);
 
 -- --------------------------------------------------------
 
@@ -386,13 +197,6 @@ CREATE TABLE IF NOT EXISTS `xm_orgs_auth` (
   PRIMARY KEY (`auth_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
---
--- 转存表中的数据 `xm_orgs_auth`
---
-
-INSERT INTO `xm_orgs_auth` (`auth_id`, `auth_oid`, `license_num`, `industry`, `nature`, `size`, `contact`, `idcard_num`, `phone`, `is_pass`, `license_img`, `idcard_img1`, `idcard_img2`, `ctime`) VALUES
-(5, 1, '1', 5, '私营企业', '50-100', 'sxj', '370782199412130838', '13256929238', 3, 'Uploads/auth/20150505/55489d242d240.png', 'Uploads/auth/20150505/55489d3f128eb.png', 'Uploads/auth/20150505/55489d3f17de2.png', 1430822211);
-
 -- --------------------------------------------------------
 
 --
@@ -408,20 +212,20 @@ CREATE TABLE IF NOT EXISTS `xm_org_evalute` (
   PRIMARY KEY (`eva_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='公司评价' AUTO_INCREMENT=11 ;
 
+-- --------------------------------------------------------
+
 --
--- 转存表中的数据 `xm_org_evalute`
+-- 表的结构 `xm_passwd_find`
 --
 
-INSERT INTO `xm_org_evalute` (`eva_id`, `to_oid`, `content`, `from_uid`, `ctime`) VALUES
-(1, 1, '', 1, 0),
-(2, 1, '', 1, 0),
-(3, 1, '纳尼好哈好哦ihaohaohoahaohaohoahohaohohohaohaohohoho  ', 1, 0),
-(4, 1, '长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办长度太长怎么办', 1, 0),
-(6, 1, '', 1, 1430464883),
-(7, 1, '', 1, 1430464895),
-(8, 1, '11', 1, 1430464986),
-(9, 1, '11', 1, 1430465329),
-(10, 1, '11', 1, 1430465348);
+CREATE TABLE IF NOT EXISTS `xm_passwd_find` (
+  `pfind_id` int(255) unsigned NOT NULL AUTO_INCREMENT,
+  `pfind_code` varchar(20) NOT NULL,
+  `pfind_email` varchar(20) NOT NULL,
+  `pfind_utype` int(1) unsigned NOT NULL COMMENT '1user,2org',
+  `ctime` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`pfind_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='密码找回表' AUTO_INCREMENT=21 ;
 
 -- --------------------------------------------------------
 
@@ -463,24 +267,7 @@ CREATE TABLE IF NOT EXISTS `xm_users` (
   `pay_ccard_id` varchar(19) NOT NULL COMMENT '银行卡号',
   `ctime` int(10) unsigned NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='普通用户' AUTO_INCREMENT=12 ;
-
---
--- 转存表中的数据 `xm_users`
---
-
-INSERT INTO `xm_users` (`uid`, `avatar`, `passwd`, `username`, `email`, `phone`, `qq`, `school`, `age`, `sex`, `address`, `exp`, `intent`, `default_payway`, `pay_alipay_id`, `pay_ccard_id`, `ctime`) VALUES
-(1, '/Uploads/xm_1_20150519133301_677_R9MZGV64.jpg', '21232f297a57a5a743894a0e4a801fc3', '1451583383', '1451583383@qq.com', '13256929238', '962783114', '鲁东大学', 100, 1, 0, '干过兼职，干过保姆，干过小蜜', 'a:3:{i:0;s:1:"1";i:1;s:1:"2";i:7;s:1:"8";}', 2, '111111111111111', '', 2015),
-(2, '/Public/person.png', 'c5df4f4eabf1cbcfeb50fbbf97c5289f', '孙小蛟', 'sunxiaojiao001@sina.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 2015),
-(3, '/Public/person.png', 'd41d8cd98f00b204e9800998ecf8427e', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 0),
-(4, '/Public/person.png', 'd41d8cd98f00b204e9800998ecf8427e', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 1430105164),
-(5, '/Public/person.png', '21232f297a57a5a743894a0e4a801fc3', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 1430189410),
-(6, '/Public/person.png', '21232f297a57a5a743894a0e4a801fc3', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 1430189802),
-(7, '/Public/person.png', 'c5df4f4eabf1cbcfeb50fbbf97c5289f', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 1430190007),
-(8, '/Public/person.png', 'd41d8cd98f00b204e9800998ecf8427e', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 1430202732),
-(9, '/Public/person.png', 'd41d8cd98f00b204e9800998ecf8427e', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 1430202800),
-(10, '/Public/person.png', 'd41d8cd98f00b204e9800998ecf8427e', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 1430202810),
-(11, '/Public/person.png', 'b59c67bf196a4758191e42f76670ceba', '孙小蛟', '1451583383@qq.com', '', '', '', 0, 0, 0, '', '', 3, '', '', 1430204753);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='普通用户' AUTO_INCREMENT=20 ;
 
 -- --------------------------------------------------------
 
@@ -496,18 +283,6 @@ CREATE TABLE IF NOT EXISTS `xm_user_evalute` (
   `ctime` int(10) unsigned NOT NULL,
   PRIMARY KEY (`eva_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='公司对普通用户的评价' AUTO_INCREMENT=7 ;
-
---
--- 转存表中的数据 `xm_user_evalute`
---
-
-INSERT INTO `xm_user_evalute` (`eva_id`, `from_oid`, `to_uid`, `content`, `ctime`) VALUES
-(1, 0, 0, 'nihao', 0),
-(2, 0, 0, 'ssss', 0),
-(3, 1, 0, 'eeee', 0),
-(4, 1, 1, 'www', 1430931279),
-(5, 1, 1, '', 1430960969),
-(6, 1, 1, '来了', 1431776975);
 
 -- --------------------------------------------------------
 
@@ -526,13 +301,6 @@ CREATE TABLE IF NOT EXISTS `xm_working` (
   `ctime` int(10) NOT NULL,
   PRIMARY KEY (`work_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='工作进行的状态' AUTO_INCREMENT=2 ;
-
---
--- 转存表中的数据 `xm_working`
---
-
-INSERT INTO `xm_working` (`work_id`, `work_uid`, `work_jid`, `work_status`, `begin_time`, `end_time`, `is_pass`, `ctime`) VALUES
-(1, 1, 1, 2, 1431594405, 1431594523, 1, 2015);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -792,3 +792,6 @@ NOTIC: 建议使用I方法替代_post
 SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.011000s ]
 SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
 
+[ 2015-06-02T17:17:22+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
