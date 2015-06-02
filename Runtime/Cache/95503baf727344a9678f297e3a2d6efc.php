@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>登录</title>
+    <title>找回密码</title>
     <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
 <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
@@ -16,15 +16,6 @@
     <style type="text/css">
     .panel-body {
         position: relative;
-    }
-    
-    #verify>input {
-        display: inline;
-        width: 216px;
-    }
-    
-    .alert-sm {
-        padding: 10px;
     }
     </style>
 </head>
@@ -117,52 +108,59 @@ THINK;
 <!--======导航条结束======--->
     <div class="container">
         <div class="row">
-            <div class="col-md-8"></div>
-            <div class="col-md-4">
-            
-              <div class="panel panel-default">
-                    <div class="panel-heading">登录</div>
-                    <div role="tabpanel">
-              <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active user"><a href="#login-content" role="tab" data-toggle="tab">求职者</a></li>
-                <li role="presentation" class="org"><a href="#login-content" role="tab" data-toggle="tab">公司机构</a></li>
-              </ul>
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="login-content">
-                    <div class="panel-body">
-                        <form id="login-form">
-                            <div class="alert alert-success alert-dismissable hidden" id="alert-success">
-                                <button type="button" class="close" aria-hidden="true">&times;</button><p>发送成功</p></div>
+            <div class="col-md-8">
+                <div class="page-header">
+                    <h1>重置密码</h1>
+                </div>
+                <div class="">
+                    <form class="form-horizontal" id="reset-form">
+                        <div class="alert alert-success alert-dismissable hidden" id="alert-success">
+                                <button type="button" class="close" aria-hidden="true">&times;</button><p></p></div>
                             <div class="alert alert-danger alert-dismissable hidden" id="alert-failed">
-                                <button type="button" class="close" aria-hidden="true">&times;</button><p>发送失败</p></div>
-                            <div class="form-group">
-                                <label>手机号：</label>
-                                <input type="text" name="phone" class="form-control" placeholder="手机号" />
+                                <button type="button" class="close" aria-hidden="true">&times;</button><p></p></div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2">当前邮箱：</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" disabled value="<?php if(session('?user_email')): echo session("user_email"); elseif(session('?org_email')): echo session("org_email"); endif; ?>" />
                             </div>
-                            <div class="form-group">
-                                <label>密码：</label>
-                                <input type="password" name="passwd" class="form-control" placeholder="密码" />
-                                <input type="text" class="hidden" name="login_type" value="user" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2">新密码：</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" name="passwd" />
                             </div>
-                            <div class="form-group" id="verify">
-                                <img src="<?php echo U('Login/vCode');?>" class="verify" />
-                                <input type="text" class="form-control" name="verify" placeholder="验证码" />
-                                <button class="btn btn-default verify" type="button">刷新</button>
+                        </div>
+                        <div class="form-group" id="verify">
+                            <label for="" class="col-md-2">验证码：</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="verify_r" />
                             </div>
-                            <div class="checkbox">
-                                <label>
-                                  <input type="checkbox" id="pwdmem">记住密码
-                                </label>
-                                <button type="button" class="btn btn-default pull-right" id="login">登录</button>
+                            <div class="col-md-2">
+                                <img src="<?php echo U("PasswdFind/vCode_r");?>" class="verify" />
                             </div>
-                        </form>
-                    </div>
-                </div>
-              </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-default" type="button" class="verify">刷新</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <button class="btn btn-default" type="button" id="reset-goto">提交</button>
+                            </div>
+                        </div>
 
-            </div>
-                    <div class="panel-footer">xiaomifengjob.com <a class="pull-right" href="<?php echo U("PasswdFind/index");?>">忘记密码？</a></div>
+                    </form>
                 </div>
+            </div>
+            <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    小蜜蜂
+                </div>
+                <div class="panel-body">
+                    <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -176,71 +174,50 @@ THINK;
 </div>
     <!--./footer-->
     <script>
-    (function() {
-        $(".alert button").on('click', function() {
-            $(this).parent().addClass("hidden");
-        });
-    })();
-    //切换登录类型
-    $(".user,.org").on('click',function(){
-        if($(this).hasClass('user')){
-            $("input[name='login_type']").val('user');
-        }else if($(this).hasClass('org')){
-            $("input[name='login_type']").val('org');
-        }
-    });
-    //按钮点击时触发ajax
-    $("#login").click(function() {
-        //获取字段值
-        var info = getFromInput('#login-form');
-        //checkbox判断
-        var pwdmem = $("#pwdmem").is(":checked");
-        info.pwdmem = pwdmem ? 1 : 0;
-        //检测字段是否为空
-        if (info.phone == "") {
-            $("input[name='phone']").focus();
-            $(".alert>p").text("您忘记填写手机号啦"); $(".alert").removeClass("alert-success").addClass("alert-danger"); $(".alert").removeClass("hidden");
-
-            return;
-        }
-        if (info.passwd == "") {
-            $("input[name='passwd']").focus();
-            $(".alert>p").text("您忘记填写密码啦"); $(".alert").removeClass("alert-success").addClass("alert-danger"); $(".alert").removeClass("hidden");
-            return;
-        }
-        if(info.verify == ''){
-            $("input[name='verify']").focus();
-            $(".alert>p").text("您忘记填写验证码啦"); $(".alert").removeClass("alert-success").addClass("alert-danger"); $(".alert").removeClass("hidden");
-            return;
-        }
-        //AJAX
-        $.post(
-            "<?php echo U('Login/login');?>",
-            info,
-            function(data) {
-              var org = "<?php echo U("OrgCenter/index");?>",user = "<?php echo U("UserCenter/index");?>";
-              if(data.data == 1){
-                $(".alert").removeClass("alert-danger").addClass("alert-success");
-                if(data.status == 0){
-                  setTimeout(function(){location.href = user},1000);
-                }else if(data.status == 1){
-                  setTimeout(function(){location.href = org},1000);
-                }
-              }else{
-                setTimeout(function() {
-                            $("#verify>img").click()
-                        }, 500);
-                $(".alert").removeClass("alert-success").addClass("alert-danger");
-              }
-              $(".alert>p").text(data.info);
-              $(".alert").removeClass("hidden");
+        $("#reset-goto").click(function() {
+            var btn = $(this);
+            var info = getFromInput("#reset-form");
+            console.log(info);
+            if(info.passwd == ''){
+                $("#alert-failed>p").text("请填写密码");
+                $("#alert-success").addClass("hidden");
+                $("#alert-failed").removeClass("hidden");
+                return;  
             }
-        );
-    });
-enterKey($("#verify input"),$("#login"));
-//记住密码
-
+            if(info.verify_r == ''){
+                $("#alert-failed>p").text("请填写验证码");
+                $("#alert-success").addClass("hidden");
+                $("#alert-failed").removeClass("hidden");
+                return;   
+            }
+            var btnLoading = $(this).button('loading');
+            $.ajax({
+                url: "<?php echo U('PasswdFind/resetHandler');?>",
+                data:info,
+                type: "POST",
+                success: function(data) {
+                    if (data.data == 1) {
+                        $("#alert-failed").addClass("hidden");
+                        $("#alert-success").removeClass("hidden").text(data.info);
+                        btn.text("发送成功");
+                    } else {
+                        $("#alert-success").addClass("hidden");
+                        $("#alert-failed").removeClass("hidden");
+                        $("#alert-failed p").text(data.info);
+                        btn.button('reset');
+                        $("#verify img.verify").click();
+                    }
+                },
+                error: function() {
+                    $("#alert-success").addClass("hidden");
+                    $("#alert-failed").removeClass("hidden");
+                    btn.button('reset');
+                    $("#verify img.verify").click();
+                }
+            });
+        });
+    enterKey($("input[name='verify']"),$("#reset-goto"));
     </script>
-</body>
+    </body>
 
 </html>

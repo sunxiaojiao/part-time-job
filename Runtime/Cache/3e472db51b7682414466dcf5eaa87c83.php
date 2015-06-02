@@ -242,7 +242,7 @@ THINK;
                 }
             });
         });
-enterKey($("input[name='verify']"),$("#email-goto"));
+    enterKey($("input[name='verify']"),$("#email-goto"));
     </script>
     </body>
 

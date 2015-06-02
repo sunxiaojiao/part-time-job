@@ -74,7 +74,7 @@ EOT;
 							->find();
 		if($pfind){
 			//删除验证表中的记录
-			$f = $PasswdF->where("pfind_email=" . "'$email'" . ' AND ' . "pfind_code={$vld_code}")->delete();
+			$f = $PasswdF->where("pfind_email=" . "'$email'" . ' AND ' . "pfind_code='{$vld_code}'")->delete();
 			if($f){
 				//成功，并跳转到修改密码的页面
 				if($pfind['pfind_utype'] == 1){
@@ -86,6 +86,7 @@ EOT;
 				$this->success("验证成功，正在跳转",U("PasswdFind/showReset"),1);
 			}else{
 				$this->error('链接验证失败，请重新验证',"/",1);
+				//echo $PasswdF->getLastSql();
 			}
 		}else{
 			$this->error('验证链接错误，请重新验证',"/",3);
@@ -94,20 +95,55 @@ EOT;
 	}
 	public function showReset() {
 		if(!session('user_email') && !session('org_email')){
-			echo 'error';
+			$this->error('跳转中...','/',1);
 			return ;
 		}
 		$this->display();
 	}
-	public function reset() {
-		
+	//重置Handler
+	public function resetHandler() {
+		//检验登录
+		if(!session('user_email') && !session('org_email')){
+			echo 'error';
+			return ;
+		}
+		//验证码
+		$verify = strtoupper($this->_post('verify_r'));
+		if(md5($verify) !== session('verify_r')){
+			$this->ajaxReturn(0,'验证码错误',1);
+			return ;
+		}
+		$passwd = md5($this->_post('passwd'));
+		$M;
+		$email = '';
+		if(session('?user_email')){
+			$M = M('Users');
+			$email = session('user_email');
+		}elseif(session('?org_email')){
+			$M = M('Orgs');
+			$email = session('org_email');
+		}
+		$data = array('passwd'=>$passwd);
+		$where = "email=" . "'" . $email . "'";
+		$f = $M->where($where)->save($data);
+		if($f || $f === 0){
+			session('user_email',null);
+			session('org_email',null);
+			$this->ajaxReturn(1,'修改密码成功',1);
+		}else{
+			$this->ajaxReturn(2,'修改密码失败',1);
+		}
 	}
 	//设置验证码
 	public function vCode(){
 		import('ORG.Util.Image');
 		Image::buildImageVerify(4,2,'png',0,32);
 	}
-
+	//设置重置页验证码
+	public function vCode_r() {
+		import('ORG.Util.Image');
+		Image::buildImageVerify(4,2,'png',0,32,'verify_r');
+	}
 
 
 
