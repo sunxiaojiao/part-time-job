@@ -198,12 +198,11 @@ THINK;
         $("#email-goto").click(function() {
             var btn = $(this);
             var info = getFromInput("#byemail-form");
-            console.log(info);
+            var u_type_checked = $("input[name='u_type']").eq(0).is(':checked');
+            info.u_type = u_type_checked ? 'user' : 'org'
             //验证邮箱格式
             var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             var flag = re.exec(info.email);
-            //var flag = 1;
-            console.log(flag);
             if (!flag) {
                 $("#alert-failed>p").text("请填写正确的邮箱格式");
                 $("#alert-success").addClass("hidden");

@@ -233,3 +233,562 @@ NOTIC: 建议使用I方法替代_post
 SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.009001s ]
 SQL: UPDATE `xm_users` SET `passwd`='e00cf25ad42683b3df678c61f42c6bda' WHERE ( email='1451583383@qq.com' ) [ RunTime:0.083005s ]
 
+[ 2015-06-02T15:56:19+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T15:56:34+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-06-02T15:56:42+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.010001s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.007000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','xal67dUY',1433231801,0) [ RunTime:0.127008s ]
+
+[ 2015-06-02T15:56:52+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=xal67dUY
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:00:55+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.012000s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.007001s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','XtkdKtXa',1433232052,0) [ RunTime:0.086005s ]
+
+[ 2015-06-02T16:02:25+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.012001s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.009000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','qzBHx0WU',1433232144,0) [ RunTime:0.067004s ]
+
+[ 2015-06-02T16:02:46+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-06-02T16:03:01+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.007000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','rh2v05BD',1433232180,0) [ RunTime:0.071004s ]
+
+[ 2015-06-02T16:03:26+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-06-02T16:23:38+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008001s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.007000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`) VALUES ('1451583383@qq.com','JLgYN7eK',1433233417) [ RunTime:0.100006s ]
+
+[ 2015-06-02T16:24:34+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009001s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.030002s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.007000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','ThU687NZ',1433233473,0) [ RunTime:0.049003s ]
+
+[ 2015-06-02T16:25:21+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.007001s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','EJ83cz3a',1433233520,0) [ RunTime:0.132007s ]
+
+[ 2015-06-02T16:26:44+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009001s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.010000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','WdP7XeI3',1433233603,2) [ RunTime:0.099006s ]
+
+[ 2015-06-02T16:26:54+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:26:57+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:27:20+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:27:24+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:27:30+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:12+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:13+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:13+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:14+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:16+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:16+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:17+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:18+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:29:21+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:30:04+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:30:04+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&type=org&code=WdP7XeI3INSERT
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:30:07+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:30:26+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:30:31+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:30:59+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.006000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','9akLsAvp',1433233858,2) [ RunTime:0.142008s ]
+
+[ 2015-06-02T16:31:05+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&code=9akLsAvp
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:33:06+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.012000s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.007001s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','v91Es0Hk',1433233984,2) [ RunTime:0.111006s ]
+
+[ 2015-06-02T16:42:26+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009001s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.010001s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','qTd03Tqh',1433234545,2) [ RunTime:0.089005s ]
+
+[ 2015-06-02T16:42:37+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&code=qTd03Tqh
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:43:14+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009001s ]
+SQL: SELECT * FROM `xm_orgs` WHERE ( `email` = '1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.008000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','upWMDjRV',1433234592,2) [ RunTime:0.095006s ]
+
+[ 2015-06-02T16:43:28+08:00 ] 127.0.0.1 /?m=PasswdFind&a=confirm&email=1451583383@qq.com&code=upWMDjRV
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-02T16:47:20+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.011001s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.010000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','hIvQX4Cc',1433234838,2) [ RunTime:0.096006s ]
+
+[ 2015-06-02T16:51:19+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.010000s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-02T16:52:09+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009000s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-02T16:52:50+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.011001s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2015-06-02T16:53:04+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007001s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-02T16:53:33+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008001s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-02T16:54:06+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009001s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-02T16:56:04+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009000s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2015-06-02T16:56:51+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.010001s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2015-06-02T17:00:16+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.069003s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001001s ]
+
+[ 2015-06-02T17:00:42+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.008001s ]
+SQL: SELECT `email` FROM `xm_users` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_passwd_find` [ RunTime:0.009000s ]
+SQL: INSERT INTO `xm_passwd_find` (`pfind_email`,`pfind_code`,`ctime`,`pfind_utype`) VALUES ('1451583383@qq.com','1phB0ywH',1433235639,1) [ RunTime:0.080005s ]
+
+[ 2015-06-02T17:00:54+08:00 ] 127.0.0.1 /PasswdFind/sendEmailHandler.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.011000s ]
+SQL: SELECT `email` FROM `xm_orgs` WHERE ( email='1451583383@qq.com' ) LIMIT 1   [ RunTime:0.001000s ]
+

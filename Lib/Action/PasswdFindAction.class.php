@@ -12,21 +12,26 @@ class PasswdFindAction extends Action{
 	protected function buildUrl($email,$type) {
 		$rand = ranVerify(8);
 		C('URL_MODEL', 0);
-		$url = U("PasswdFind/confirm","email=$email&type={$type}&code=$rand",'',false,true);
+		$url = U("PasswdFind/confirm","email=$email&code=$rand",'',false,true);
 		$PasswdF = M('PasswdFind');
 		//插入数据库
 		$data = array('pfind_email'=>$email,'pfind_code'=>$rand,'ctime'=>time());
 		if($type == 'user'){
-			$data['pfind_utype'] = 'user';
+			$data['pfind_utype'] = 1;
 		}elseif($type == 'org'){
-			$data['pfind_utype'] = 'org';
+			$data['pfind_utype'] = 2;
 		}else{
 			exit();
 		}
 		$PasswdF->add($data);
 		return $url;
 	}
-	//发送邮箱
+	
+	/**
+	 * Main
+	 * 
+	 * 发送邮件
+	 */
 	public function sendEmailHandler(){
 		//判断验证码
 		$verify = strtoupper($this->_post('verify'));
@@ -41,6 +46,11 @@ class PasswdFindAction extends Action{
 		}
 		$email = $this->_post('email');
 		$type  = $this->_post('u_type');
+		//验证邮箱是否存在
+		if(!$this->checkEmail($email,$type)){
+			$this->ajaxReturn(4,'邮箱不存在',1);
+			return;
+		}
 		$vld_url = $this->buildUrl($email,$type);
 		$title = "小蜜蜂兼职";
 		$message = <<<EOT
@@ -82,7 +92,6 @@ EOT;
 				}elseif($pfindp['pfind_utype'] == 2){
 					session('org_email',$email);
 				}
-				session('user_email',$email);
 				$this->success("验证成功，正在跳转",U("PasswdFind/showReset"),1);
 			}else{
 				$this->error('链接验证失败，请重新验证',"/",1);
@@ -134,6 +143,27 @@ EOT;
 			$this->ajaxReturn(2,'修改密码失败',1);
 		}
 	}
+	//验证邮箱是否存在
+	protected function checkEmail($email='',$type){
+		if($email == ''){
+			return false;
+		}
+		$M;
+		if($type == 'user'){
+			$M = M('Users');	
+		}elseif($type == 'org'){
+			$M = M('Orgs');
+		}
+		$data = array('email'=>$email);
+		$where = "email=" . "'" . $email ."'";
+		$f = $M->field('email')->where($where)->find();
+		//$this->ajaxReturn(1,$M->getLastSql(),1);
+		if($f){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	//设置验证码
 	public function vCode(){
 		import('ORG.Util.Image');
@@ -144,7 +174,6 @@ EOT;
 		import('ORG.Util.Image');
 		Image::buildImageVerify(4,2,'png',0,32,'verify_r');
 	}
-
 
 
 
