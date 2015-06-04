@@ -38,15 +38,18 @@ class RegisterAction extends Action{
 		//验证，插入数据库
 		if($Reger->create($data)){
 			if($primary_id = $Reger->add()){
+				$f;
 				//设置session
 				if($this->isOrg()){
 					session('oid',$primary_id);
 					session('orgname',$data['orgname']);
+					$f = 2;
 				}else{
 					session('uid',$primary_id);
 					session('username',$data['username']);
+					$f = 1;
 				}
-				$this->ajaxReturn(0,"注册成功，等待跳转",1);
+				$this->ajaxReturn(0,"注册成功，等待跳转",$f);
 			}else{
 				$this->ajaxReturn(2,"注册失败，请重试",1);
 			}

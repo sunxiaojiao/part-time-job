@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">小蜜蜂兼职</a>
+            <a class="navbar-brand" href="/">小蜜蜂兼职</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -45,6 +45,7 @@
                     <li class="dropdown">
                         <a href="<?php echo U('Admin/index');?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo session('username');?><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="<?php echo U("Admin/index");?>">管理中心</a></li>
                             <li><a href="#">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a href="<?php echo U('Admin/logout');?>">注销</a></li>
@@ -91,7 +92,7 @@
 <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="#">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
     <!--./footer-->

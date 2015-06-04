@@ -15,6 +15,7 @@
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/fullAvatarEditor.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/swfobject.js"></script>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=8d8574dfcfd097659736c026a6921ca5"></script>
 
 <style type="text/css">
   .panel-body{position: relative;}
@@ -22,7 +23,7 @@
   .my-perinfo>p>span{margin-right:18px;}
   .my-perimg{border:1px solid #EEE;}
   .my-select-address{}
-  .my-select-address>select{width:auto;display: inline-block;}
+  .my-select-address>select{width:auto;display: inline-block; width: 160px;}
   .my-personimg{width:200px; cursor: pointer;}
   #swfwrapper{width:630px;}
   .must-input {
@@ -159,14 +160,14 @@ THINK;
         <div class="form-group">
           <label for="username"><span class="must-input">*</span>居住地：</label>
           <div class="my-select-address">
-            <select name="province" id="" class="form-control">
-              <option>山东</option>
+            <select name="province" id="province" class="form-control" onchange='search(this)'>
+
             </select>
-            <select name="city" id="" class="form-control">
-              <option>烟台</option>
+            <select name="city" id="city" class="form-control" onchange='search(this)'>
+              <option value=""><?php echo ($address["city"]); ?></option>
             </select>
-            <select name="area" id="" class="form-control">
-              <option>芝罘区</option>
+            <select name="area" id="district" class="form-control" onchange='search(this)'>
+              <option value=""><?php echo ($address["area"]); ?></option>
             </select>
           </div>
         </div>
@@ -286,8 +287,93 @@ $("#goto-info").click(function(){
 		}
 		});
 });
+</script>
 
+<script>
+    var mapObj, district, polygons=[], citycode;
+    var citySelect = document.getElementById('city');
+    var districtSelect = document.getElementById('district');
+    var areaSelect = document.getElementById('biz_area');;
+    
+    mapObj = new AMap.Map('mapContainer');
 
+    var provinceList = ['北京市', '天津市', '河北省', '山西省', '内蒙古自治区', '辽宁省', '吉林省','黑龙江省', '上海市', '江苏省', '浙江省', '安徽省', '福建省', '江西省', '山东省','河南省', '湖北省', '湖南省', '广东省', '广西壮族自治区', '海南省', '重庆市','四川省', '贵州省', '云南省', '西藏自治区', '陕西省', '甘肃省', '青海省', '宁夏回族自治区', '新疆维吾尔自治区', '台灣', '香港特别行政区', '澳门特别行政区'];
+    var provinceSelect = document.getElementById('province');
+    var content = '<option value=""><?php echo ($address["province"]); ?></option>';
+    for(var i =0, l = provinceList.length; i < l; i++){
+      content += '<option>'+provinceList[i]+'</option>';
+      provinceSelect.innerHTML = content;
+    }
+    
+    //行政区划查询
+       
+    AMap.service(["AMap.DistrictSearch"], function() {
+        var opts = {
+            subdistrict: 1,   //返回下一级行政区
+            extensions: 'all',  //返回行政区边界坐标组等具体信息
+            level:'city'  //查询行政级别为 市
+        };
+    
+        //实例化DistrictSearch
+        district = new AMap.DistrictSearch(opts);
+    });
+    
+    
+    
+    function getData(e){
+        var dList = e.districtList;
+          for(var m = 0,ml = dList.length; m < ml; m++){
+            var data = e.districtList[m].level;
+            var list = e.districtList || [],
+                subList =[], level, nextLevel;
+            if(list.length >= 1) {
+              subList = list[0].districtList;
+              level = list[0].level;
+            }
+    
+            //清空下一级别的下拉列表
+            if(level === 'province'){
+              
+              nextLevel = 'city';
+              citySelect.innerHTML = '';
+              districtSelect.innerHTML = '';
+              //areaSelect.innerHTML = '';
+            }else if(level === 'city'){
+    
+              nextLevel = 'district';
+              districtSelect.innerHTML = '';
+              //areaSelect.innerHTML = '';
+            } else if(level === 'district') {
+                
+                nextLevel = 'biz_area';
+                //areaSelect.innerHTML = '';
+            }
+    
+            if(subList){
+              var contentSub = '<option value="">--请选择--</option>';
+              for(var i=0,l=subList.length; i<l; i++){
+                var name = subList[i].name; 
+                var levelSub = subList[i].level;
+                var cityCode = subList[i].citycode;
+                contentSub += '<option>'+name+'</option>';
+                document.querySelector('#'+levelSub).innerHTML = contentSub;
+              }
+            }
+          } 
+    }
+    function search(obj){
+      var option = obj[obj.options.selectedIndex];
+      var arrTemp = option.value.split('|');
+      var level = arrTemp[0];//行政级别
+      citycode = arrTemp[1];// 城市编码
+      var keyword = option.text; //关键字
+    
+      district.setLevel(level); //行政区级别
+      //行政区查询
+      district.search(keyword, function(status, result){
+        getData(result);
+      }); 
+    }  
 </script>
 </body>
 </html>

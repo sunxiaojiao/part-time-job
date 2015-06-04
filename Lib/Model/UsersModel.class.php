@@ -12,9 +12,7 @@ class UsersModel extends Model{
 		array('school','require','请输入学校'),
 		array('sex','1,3','请选择性别',0,'between'),
 		array('age','1,150','请输入正确的年龄',0,'between'),
-//		array('province'),
-//		array('city'),
-//		array('area'),
+		array('area','require','请选择居住地'),
 		array('exp','1,50','字数不符合要求',0,'length'),
 		array('intent','isHave','请至少选择一项求职意向',0,'callback'),
 		

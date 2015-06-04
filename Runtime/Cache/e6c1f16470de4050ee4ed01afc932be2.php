@@ -49,7 +49,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">小蜜蜂兼职</a>
+      <a class="" href="/"><img src="/Public/logo/logo.png" height="50" alt="小蜜蜂兼职logo" /></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -58,8 +58,15 @@
       </ul>
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
-        <div class="form-group">
-          <input type="text" class="form-control" name="wd" placeholder="兼职/地点/工资...">
+        <div class="input-group">
+          <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span>兼职</span><span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" id="search-f">
+            <li><a href="javascript:void(0)">用户</a></li>
+          </ul>
+        </div>
+          <input class="hidden" type="test" name="sf" value="job" id="hidden-f"/>
+          <input type="text" class="form-control" name="wd" placeholder="兼职/用户...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
@@ -90,12 +97,32 @@ THINK;
           </ul>
         </li><!--/.dropdown-->
 THINK;
- if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/sendMail') . ">注册</a></li>
+ if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<script type="text/javascript">
+  (function(){
+    var sf_a   = $("#search-f>li a");
+    var sf_h   = $("#hidden-f");
+    var sf_a_b = $("#search-f").parent().find("button>span").eq(0);
+    var p;
+    sf_a.on('click',function(){
+      //切换字符串
+      p = sf_a_b.text();
+      sf_a_b.text(sf_a.text());
+      sf_a.text(p);
+      //改变表单数据
+      if(sf_h.val() == 'job'){
+        sf_h.val("user");
+      }else if(sf_h.val() == 'user'){
+        sf_h.val("job");
+      }
+    });
+  })();
+</script>
 <!--======导航条结束======--->
     <div class="container">
         <div class="row">
@@ -221,7 +248,7 @@ THINK;
     <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="#">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
+  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
     <!--./footer-->

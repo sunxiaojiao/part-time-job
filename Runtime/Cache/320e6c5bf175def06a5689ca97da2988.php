@@ -176,7 +176,7 @@ THINK;
                                             <?php default: ?>个人<?php endswitch;?></li>
                                         <li class="list-group-item">到岗时间：<?php echo (date("m月d日h:i",$list["begin_time"])); ?></li>
                                         <li class="list-group-item">工作时长：<?php echo ($list["work_time"]); ?>小时</li>
-                                        <li class="list-group-item">联系人：<?php echo ($list["leader"]); ?></li>
+                                        <li class="list-group-item">联系人：<?php echo ($list["leader"]); ?><small>（联系我时，请说是在小蜜蜂上看到的）</small></li>
                                         <li class="list-group-item">联系电话：<img src="<?php echo U("JobsInfo/generatePhoneImage");?>" /></li>
                                         <li class="list-group-item">
                                         结算方式：
@@ -295,14 +295,14 @@ THINK;
     <script type="text/javascript">
     //申请
     $("#goto-apply").click(function() {
-        console.log(window.apply_style);
         $.ajax({
             url: "<?php echo U('ApplyJob/apply');?>",
             success: function(data) {
-                //alert(data.info);
                 var i = "<a href=\"<?php echo U("UserCenter/PayInfo");?>\" target=\"_blank\">去填写</a>";
                 if(data.data == 1){
-                    data.info = data.info + i;
+                    data.info += i;
+                }else if(data.data ==4){
+                    data.info += '<br /><small>(为了让您的申请可以被及时看到，请及时联系一下兼职的发布者)</small>';
                 }
                 $("#m-payway .modal-body").html(data.info);
                 $("#m-payway").modal('show');

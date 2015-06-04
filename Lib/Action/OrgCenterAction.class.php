@@ -1,30 +1,20 @@
 <?php
 class OrgCenterAction extends Action{
 	public function index(){
-		//header("charset=utf-8");
 		if(!session('?oid')){
 			//抛出错误页面
 			$this->error("企业用户未登录",U("Login/index"));
 			return;
 		}
-		$publiced_jobs = $this->showPublicedJob();
-		if($publiced_jobs){
-			$this->assign("publicedJobs",$publiced_jobs);
-		}else{
-			$this->ajaxReturn(0,"获取发布的兼职失败",0);
-		}
-		//dump($publiced_jobs);
-		$org_info = $this->showOrgInfo();
-		//dump($org_info);
-		if($org_info){
-			$this->assign("orgInfo",$org_info);
-		}else{
-			$this->ajaxReturn(0,"获取企业信息失败",0);
-		}
+		//显示企业信息
+		$this->showOrgInfo();
 		//列出申请列表
 		$this->whoApplyed();
-		//
+		//发布的兼职
+		$this->showPublicedJob();
+		//进行中的兼职
 		$this->showIngJob();
+		
 		$this->display();
 	}
 	//显示发布的兼职
@@ -34,21 +24,25 @@ class OrgCenterAction extends Action{
 		$field = "";
 		$arr2_jobs = $Jobs->where($where)->field($field)->select();
 		if($arr2_jobs){
-			return $arr2_jobs;
+			$this->assign("publicedJobs",$publiced_jobs);
+		}elseif(is_null($arr2_jobs)){
+			$this->assign('publicjob_error_info','还没有发布兼职');
 		}else{
-			echo $Jobs->getLastSql();
-			return false;
+			$this->assign('publicjob_error_info','读取错误');
 		}
 	}
+	//显示企业信息
 	private function showOrgInfo(){
 		$Orgs = M('Orgs');
 		$where = "oid=".session('oid');
 		$field = "mid,passwd";
 		$arr2_org = $Orgs->where($where)->field($field,true)->find();
 		if($arr2_org){
-			return $arr2_org;
+			$this->assign('org_info',$arr2_org);
+		}elseif(is_null($arr2_org)){
+			$this->assign('org_error_info','无');
 		}else{
-			return false;
+			$this->assign('org_error_info','读取错误');
 		}
 	}
 	//编辑页面显示企业信息

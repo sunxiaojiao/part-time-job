@@ -164,7 +164,8 @@ THINK;
     <!--container-->
     <div class="container">
         <div class="page-header">
-            <h1><small><?php echo ($orgInfo["orgname"]); ?></small></h1>
+            <h1><small><?php echo ($org_info["orgname"]); ?></small></h1>
+            <?php if($org_error_info): echo ($org_error_info); endif; ?>
         </div>
         <div class="row">
             <div class="col-md-8">
@@ -177,21 +178,21 @@ THINK;
                         <tr>
                             <td class="table-field">公司资质：</td>
                             <td>
-                                <?php if($orgInfo["is_validate"] == 1): ?>已验证
+                                <?php if($org_info["is_validate"] == 1): ?>已验证
                                     <?php else: ?>未验证<?php endif; ?>
                             </td>
                             <td class="table-field">登录邮箱：</td>
-                            <td><?php echo ($orgInfo["email"]); ?></td>
+                            <td><?php echo ($org_info["email"]); ?></td>
                         </tr>
                         <tr>
                             <td class="table-field">客服电话：</td>
-                            <td><?php echo ($orgInfo["phone"]); ?></td>
+                            <td><?php echo ($org_info["phone"]); ?></td>
                             <td class="table-field">公司网址：</td>
-                            <td><?php echo ($orgInfo["website"]); ?></td>
+                            <td><?php echo ($org_info["website"]); ?></td>
                         </tr>
                         </tr>
                         <td class="table-field">公司地址：</td>
-                        <td><?php echo ($orgInfo["org_address"]); ?></td>
+                        <td><?php echo ($org_info["org_address"]); ?></td>
                         </tr>
                     </table>
                 </div>
@@ -211,9 +212,11 @@ THINK;
                     <div class="panel-heading">进行中的兼职</div>
                     <div class="panel-body">
                         <ul class="list-group">
+                            <?php if($work_error_info): ?><li class="list-group-item"><?php echo ($work_error_info); ?></li>
+                            <?php else: ?>
                             <?php if(is_array($work_info)): $i = 0; $__LIST__ = $work_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U("OrgCenter/showIngJobDetail");?>?jid=<?php echo ($info["work_jid"]); ?>">
                                 <?php echo ($info["title"]); ?><span class="pull-right badge"><?php echo (date('m/d h:i',$info["ctime"])); ?></span>
-                            </a><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -230,7 +233,7 @@ THINK;
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img src="<?php echo ($orgInfo["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+                        <img src="<?php echo ($org_info["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
                     </div>
                 </div>
             </div>

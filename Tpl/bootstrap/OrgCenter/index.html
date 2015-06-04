@@ -73,7 +73,10 @@
     <!--container-->
     <div class="container">
         <div class="page-header">
-            <h1><small>{$orgInfo.orgname}</small></h1>
+            <h1><small>{$org_info.orgname}</small></h1>
+            <if condition="$org_error_info">
+                {$org_error_info}
+            </if>
         </div>
         <div class="row">
             <div class="col-md-8">
@@ -86,21 +89,21 @@
                         <tr>
                             <td class="table-field">公司资质：</td>
                             <td>
-                                <if condition="$orgInfo.is_validate eq 1">已验证
+                                <if condition="$org_info.is_validate eq 1">已验证
                                     <else />未验证</if>
                             </td>
                             <td class="table-field">登录邮箱：</td>
-                            <td>{$orgInfo.email}</td>
+                            <td>{$org_info.email}</td>
                         </tr>
                         <tr>
                             <td class="table-field">客服电话：</td>
-                            <td>{$orgInfo.phone}</td>
+                            <td>{$org_info.phone}</td>
                             <td class="table-field">公司网址：</td>
-                            <td>{$orgInfo.website}</td>
+                            <td>{$org_info.website}</td>
                         </tr>
                         </tr>
                         <td class="table-field">公司地址：</td>
-                        <td>{$orgInfo.org_address}</td>
+                        <td>{$org_info.org_address}</td>
                         </tr>
                     </table>
                 </div>
@@ -124,11 +127,15 @@
                     <div class="panel-heading">进行中的兼职</div>
                     <div class="panel-body">
                         <ul class="list-group">
+                            <if condition="$work_error_info">
+                                <li class="list-group-item">{$work_error_info}</li>
+                            <else />
                             <volist id="info" name="work_info">
                             <a class="list-group-item" href="{:U("OrgCenter/showIngJobDetail")}?jid={$info.work_jid}">
                                 {$info.title}<span class="pull-right badge">{$info.ctime|date='m/d h:i',###}</span>
                             </a>
                             </volist>
+                            </if>
                         </ul>
                     </div>
                 </div>
@@ -147,7 +154,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img src="{$orgInfo.avatar}" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+                        <img src="{$org_info.avatar}" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
                     </div>
                 </div>
             </div>

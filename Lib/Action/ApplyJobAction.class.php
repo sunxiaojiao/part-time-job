@@ -6,7 +6,7 @@ class ApplyJobAction extends Action{
 	public function apply(){
 		//判断登录
 		if(!session("?uid")){
-			$this->ajaxReturn(0,"未登录",0);
+			$this->ajaxReturn(0,"未登录",1);
 		}
 		//判断是否已经申请过了
 		$Apply = M('Apply');
@@ -14,7 +14,7 @@ class ApplyJobAction extends Action{
 		$data['app_jid'] = session("jid");
 		$where = "app_uid=".$data['app_uid']." AND app_jid=".$data['app_jid'];
 		if($Apply->where($where)->find()){
-			$this->ajaxReturn(0,"你已经申请过了",0);
+			$this->ajaxReturn(3,"你已经申请过了",1);
 			return;
 		}
 		//判断用户是否已经添加企业要求的支付方式
@@ -44,9 +44,9 @@ class ApplyJobAction extends Action{
 		$data['app_oid'] = $oid['pub_oid'];
 		$data['ctime'] = time();
 		if($Apply->add($data)){
-			$this->ajaxReturn(0,"申请成功",1);
+			$this->ajaxReturn(4,"申请成功",1);
 		}else{
-			$this->ajaxReturn(2,"申请失败",0);
+			$this->ajaxReturn(2,"申请失败",1);
 		}
 		
 	}

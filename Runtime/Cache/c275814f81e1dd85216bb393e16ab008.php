@@ -310,9 +310,15 @@ THINK;
                 	$(".alert").removeClass("alert-danger").addClass("alert-success");
                     $(".alert>p").text(data.info);
                     if (data.data == 0) {
+                        var f = '';
+                        if(data.status == 1){
+                            f = '<?php echo U("UserCenter/editInfo");?>';
+                        }else if(data.status == 2){
+                            f = '<?php echo U("OrgCenter/index");?>';
+                        }
                         setTimeout(function() {
-                            location.href = '<?php echo U("UserCenter/editInfo");?>';
-                        }, 3000);
+                                location.href = f;
+                            }, 3000);
                     } else {
                     	$(".alert").removeClass("alert-success").addClass("alert-danger");
                         setTimeout(function() {

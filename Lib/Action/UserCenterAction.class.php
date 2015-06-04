@@ -37,24 +37,32 @@ class UserCenterAction extends Action{
 		$Mold =M('Mold');
 		$molds = $Mold->field("mid,name")->select();
 		$this->assign("molds",$molds);
-
-		//dump($this->data);
+		//居住地
+		$address = unserialize($this->data['address']);
+		$this->assign('address',$address);
 		session("userData",$this->data);
 	}
 	//更改用户信息
 	public function updateInfo(){
 		$User = D('Users');
 		if(!$User->create()){
-			//dump($this->_post());
 			$this->ajaxReturn(0,$User->getError(),1);
 			return ;
 		}
-		//dump($_POST['intent']);
 		//默认得到intent中的数据为数组，将它将换为可存储字符串
 		$User->intent = serialize($User->intent);
-		//$this->form['intent'] = serialize($this->form["intent"]);
-		$where = "uid=" . session('uid');
+		//序列化地址
+		if($this->_post('province') == '' || $this->_post('city') == '' || $this->_post('area') == ''){
+			$this->ajaxReturn(0,'请选择居住地',1);
+		}
+		$address = array(
+					'province'=>$this->_post('province'),
+					'city'    =>$this->_post('city'),
+					'area'    =>$this->_post('area'),
+					);
+		$User->address = serialize($address);
 		//修改数据库中的用户信息
+		$where = "uid=" . session('uid');
 		$flag = $User->where($where)->save();
 		if($flag){
 			$this->ajaxReturn(1,"更改成功",1);
