@@ -199,6 +199,25 @@ class AdminAction extends Action {
 		$this->error("注销成功",U('Admin/login'),1);
 		
 	}
+	//管理城市--显示城市
+	protected function showNowCity() {
+		
+	}
+	//管理城市--处理
+	public function CityHandler() {
+		$type = $this->_get('type');
+		$Address = M('Address');
+		if($type == 'add'){			//添加
+			$this->_get('province');
+			$this->_get('city');
+			$this->_get('area');
+		}elseif($type == 'update'){	//修改
+			$this->_get('');
+		}elseif($type == 'del'){	//删除
+			
+		}
+		
+	}
 	/**
 	 * 
 	 * 分页方法

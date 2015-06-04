@@ -174,7 +174,7 @@ THINK;
                                     <?php else: echo ($userinfo["email"]); endif; ?>
                                 </td>
                                 <td>地址：</td>
-                                <td><?php echo ($userinfo["address"]); ?></td>
+                                <td><?php echo ($address); ?></td>
                             </tr>
                         </table>
                     </div>
@@ -189,7 +189,9 @@ THINK;
                                 <td>是否通过</td>
                             </thead>
                             <?php if($apply_error_info): ?><tr>
-                                    <td class="list-group-item"><?php echo ($apply_error_info); ?></td>
+                                    <td><?php echo ($apply_error_info); ?></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <?php else: ?>
                                 <?php if(is_array($apply)): $i = 0; $__LIST__ = $apply;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><tr>
@@ -242,6 +244,8 @@ THINK;
                             </thead>
                             <?php if($eval_error_info): ?><tr>
                                     <td><?php echo ($eval_error_info); ?></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <?php else: ?>
                                 <?php if(is_array($eval_info)): $i = 0; $__LIST__ = $eval_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><tr>

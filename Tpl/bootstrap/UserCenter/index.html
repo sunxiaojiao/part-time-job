@@ -89,7 +89,7 @@
                                     </if>
                                 </td>
                                 <td>地址：</td>
-                                <td>{$userinfo.address}</td>
+                                <td>{$address}</td>
                             </tr>
                         </table>
                     </div>
@@ -105,7 +105,9 @@
                             </thead>
                             <if condition="$apply_error_info">
                                 <tr>
-                                    <td class="list-group-item">{$apply_error_info}</td>
+                                    <td>{$apply_error_info}</td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <else />
                                 <volist name="apply" id="apply">
@@ -170,6 +172,8 @@
                             <if condition="$eval_error_info">
                                 <tr>
                                     <td>{$eval_error_info}</td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <else />
                                 <volist name="eval_info" id="list">

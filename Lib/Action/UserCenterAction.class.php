@@ -39,13 +39,13 @@ class UserCenterAction extends Action{
 		$this->assign("molds",$molds);
 		//居住地
 		$address = unserialize($this->data['address']);
-		$this->assign('address',$address);
+		$this->assign('address',$address['province'].$address['city'].$address['area']);
 		session("userData",$this->data);
 	}
 	//更改用户信息
 	public function updateInfo(){
 		$User = D('Users');
-		if(!$User->create()){
+		if(!$User->create($_POST,2)){
 			$this->ajaxReturn(0,$User->getError(),1);
 			return ;
 		}
@@ -151,7 +151,7 @@ class UserCenterAction extends Action{
 		if($data){
 			$this->assign("apply",$data);	
 		}elseif(is_null($data)){
-			$this->assign("apply_error_info","无记录");
+			$this->assign("apply_error_info","还没有申请兼职");
 		}else{
 			$this->assign("apply_error_info","查询错误");
 		}
@@ -166,7 +166,7 @@ class UserCenterAction extends Action{
 		if($arr2){
 			$this->assign('eval_info',$arr2);
 		}elseif(is_null($arr2)){
-			$this->assign('eval_error__info','还没有评论');
+			$this->assign('eval_error_info','还没有评论');
 		}else{
 			$this->assign('eval_error_info','查询错误');
 		}
@@ -181,7 +181,7 @@ class UserCenterAction extends Action{
 		if($arr2){
 			$this->assign('work_info',$arr2);
 		}elseif(is_null($arr2)){
-			$this->assign('work_error_info','还没有兼职可以做哦');
+			$this->assign('work_error_info','还没有兼职可以做');
 		}else{
 			$this->assign('work_error_info','读取错误'.$Work->getLastSql());
 		}

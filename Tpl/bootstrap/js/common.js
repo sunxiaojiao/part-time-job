@@ -10,7 +10,9 @@ function getFromInput(form) {
             if (list.eq(i).attr("name") == undefined) {
                 continue;
             }
-            info[list.eq(i).attr("name")] = list.eq(i).val();
+            if(list.eq(i).val() != ''){
+                info[list.eq(i).attr("name")] = list.eq(i).val();
+            }
         }
         return info;
     }

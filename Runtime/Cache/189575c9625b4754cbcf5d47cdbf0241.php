@@ -17,11 +17,6 @@
     .scroll-content {
         position: relative;
     }
-    
-    #scroll-target {
-        position: fixed;
-    }
-    
     .panel-body {
         position: relative;
     }
@@ -88,7 +83,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <ul class="list-group nav" id="scroll-target">
+                <ul class="list-group nav">
                     <a class="list-group-item" href="#publish-apply">兼职申请列表</a>
                     <a class="list-group-item" href="#auth-apply">认证申请列表</a>
                     <a class="list-group-item" href="#current-orgs">现有公司列表</a>
@@ -134,6 +129,14 @@
                         <?php else: ?>
                             <?php if(is_array($advice_info)): $i = 0; $__LIST__ = $advice_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><a href="<?php echo U("Admin/AdviceDetail");?>?ai=<?php echo ($info["advice_id"]); ?>" target="_blank" class="list-group-item" style="overflow:hidden;height:50px;"><div class="pull-left" style="overflow:hidden;width:400px;"><?php echo (htmlspecialchars_decode($info["content"])); ?></div><span class="pull-right"><?php echo (date('m/d h:i',$info["ctime"])); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                         </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        管理地址
+                    </div>
+                    <div class="panel-body">
+                        
                     </div>
                 </div>
             </div>
