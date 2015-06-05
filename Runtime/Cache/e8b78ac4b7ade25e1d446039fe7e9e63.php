@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>兼职平台</title>
-    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
-<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
+<link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
