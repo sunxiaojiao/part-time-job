@@ -42,12 +42,15 @@ class IndexAction extends Action{
 		}
 		
 		$this->assign("arr_sort",$arr_sort);
-		//显示兼职
-		//$city = session('city') ? session('city') : '芝罘区';
+
 		$Jobs = M('Jobs');
+		//获取当前城市
+		$city = session('city') ? session('city') : '烟台市';
+		
 		$Jobs->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
 		import('ORG.Util.Page');
-		//$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0" . " AND " . "city=" . $city;
+		//限制显示未过期的，通过的，当前城市的兼职
+		$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0" . " AND " . "city=" . $city;
 		$count = $Jobs->where($where)->count();
 		$Page  = new Page($count,10);
 		$list  = $Jobs->order('pv desc')->order($order/*.","."ctime desc"*/)

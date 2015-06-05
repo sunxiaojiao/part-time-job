@@ -3,8 +3,8 @@ var mapObj, district, polygons = [],
 var citySelect = document.getElementById('city');
 var districtSelect = document.getElementById('district');
 var areaSelect = document.getElementById('biz_area');
-var address = "";
-var addressname = "";
+var address = new Array();
+var addressname = addresscity = "";
 mapObj = new AMap.Map('mapContainer', {
     resizeEnable: true,
     // layers: [
@@ -18,9 +18,9 @@ mapObj = new AMap.Map('mapContainer', {
 
 var provinceList = ['北京市', '天津市', '河北省', '山西省', '内蒙古自治区', '辽宁省', '吉林省', '黑龙江省', '上海市', '江苏省', '浙江省', '安徽省', '福建省', '江西省', '山东省', '河南省', '湖北省', '湖南省', '广东省', '广西壮族自治区', '海南省', '重庆市', '四川省', '贵州省', '云南省', '西藏自治区', '陕西省', '甘肃省', '青海省', '宁夏回族自治区', '新疆维吾尔自治区', '台灣', '香港特别行政区', '澳门特别行政区'];
 var provinceSelect = document.getElementById('province');
-var content = '<option>--请选择--</option>';
+var content = '<option value="">--请选择--</option>';
 for (var i = 0, l = provinceList.length; i < l; i++) {
-    content += '<option value="province">' + provinceList[i] + '</option>';
+    content += '<option>' + provinceList[i] + '</option>';
     provinceSelect.innerHTML = content;
 }
 
@@ -94,7 +94,7 @@ function getData(e) {
         }
 
         if (subList) {
-            var contentSub = '<option>--请选择--</option>';
+            var contentSub = '<option value="">--请选择--</option>';
             for (var i = 0, l = subList.length; i < l; i++) {
                 var name = subList[i].name;
                 var levelSub = subList[i].level;
@@ -147,13 +147,18 @@ function search(obj) {
 				icon:"http://webapi.amap.com/images/marker_sprite.png", //marker图标，直接传递地址url
 				offset:{x:-8,y:-34} //相对于基点的位置
 			});
+            //获取经纬度数组
 			address    = {x:contextMenuPositon.getLng(),y:contextMenuPositon.getLat()};
             mapObj.getCity(function(result){
+                //获取位置字符串（城市+区）
                 addressname = result.city + result.district;
+                addresscity = result.city;
                 console.log(result);
             })
             console.log(address);
 			console.log(addressname);
+            //关闭modal
+            setTimeout(function(){$(".modal").modal('toggle');},1000);
 		},3);
 		//地图绑定鼠标右击事件——弹出右键菜单
 		AMap.event.addListener(mapObj,'rightclick',function(e){

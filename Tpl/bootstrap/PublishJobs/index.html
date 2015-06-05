@@ -70,7 +70,7 @@
                     <button type="button" class="close" aria-hidden="true">&times;</button>
                     <p>不符合</p>
                 </div>
-                <form id="jobinfo" class="form-horizontal">
+                <form id="jobinfo" class="form-horizontal clearfix">
                     <div class="form-group">
                         <label for="job-name" class="col-sm-2 control-label">兼职标题：</label>
                         <div class="col-sm-10">
@@ -257,12 +257,13 @@
         var info = getFromInput("#jobinfo");
         info['detail'] = $("textarea[name='detail']").val();
         if(address.x && address.y){
-          info.address   = address.x + "," +address.y;
+          info.address = address.x + "," +address.y;
         }else if($("#address").val()){
           info.address = $("#address").val();
         }else{
           address = '';
         }
+        info.addresscity = addresscity;
         console.log(info);
         //ajax
         $.ajax({

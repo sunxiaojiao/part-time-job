@@ -1001,7 +1001,7 @@ class Model {
             if($this->patchValidate) {
                 $this->error[$val[0]]   =   $val[2];
             }else{
-                $this->error            =   $val[2];
+                $this->error            =   $val[2]; 
                 return false;
             }
         }
@@ -1054,7 +1054,7 @@ class Model {
                 if($this->where($map)->find())   return false;
                 return true;
             default:  // 检查附加规则
-                return $this->check($data[$val[0]],$val[1],$val[4]);
+                 return $this->check($data[$val[0]],$val[1],$val[4]);
         }
     }
 
