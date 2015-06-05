@@ -1287,3 +1287,89 @@ SQL: INSERT INTO `xm_jobs` (`title`,`leader`,`want_peo`,`address`,`addressname`,
 [ 2015-06-05T12:48:28+08:00 ] 127.0.0.1 /
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-06-05T13:09:39+08:00 ] 127.0.0.1 /ChangeCity/ChangeCity.html?aid=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city`,`area` FROM `xm_address` WHERE ( aid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `city`,`area` FROM `xm_address` WHERE ( aid=1 ) LIMIT 1  
+
+[ 2015-06-05T13:10:18+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-05T13:10:21+08:00 ] 127.0.0.1 /ChangeCity/ChangeCity.html?aid=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.006000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city`,`area` FROM `xm_address` WHERE ( aid=1 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `city`,`area` FROM `xm_address` WHERE ( aid=1 ) LIMIT 1  
+
+[ 2015-06-05T13:11:02+08:00 ] 127.0.0.1 /ChangeCity/ChangeCity.html?aid=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city` FROM `xm_address` WHERE ( aid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-05T13:11:50+08:00 ] 127.0.0.1 /ChangeCity/ChangeCity.html?aid=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007001s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city` FROM `xm_address` WHERE ( aid=1 ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2015-06-05T13:12:30+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-05T13:13:14+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-05T13:13:28+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-05T13:14:28+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-05T13:15:32+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-05T13:15:40+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=60
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-05T13:15:50+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+

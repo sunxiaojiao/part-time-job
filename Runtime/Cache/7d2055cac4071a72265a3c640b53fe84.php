@@ -93,7 +93,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
@@ -213,9 +213,9 @@ THINK;
             </div>
             <ul class="list-group addr-list">
                 <li class="list-group-item my-addr-list">
-                    <span class="bg-primary my-zimu">烟台</span>
+                    <span class="bg-primary my-zimu"></span>
                     <ul>
-                        <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><a data-aid="<?php echo ($addr["aid"]); ?>"><?php echo ($addr["area"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><a data-aid="<?php echo ($addr["aid"]); ?>"><?php echo ($addr["city"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul>
                 </li>
             </ul>

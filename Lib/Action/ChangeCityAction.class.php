@@ -11,11 +11,10 @@ class ChangeCityAction extends Action{
 //			
 //		}
 		$Addr = M('address');
-		$data = $Addr->where()->field("aid,province,city,area")->select();
+		$data = $Addr->where()->field("aid,province,city")->select();
 		if($data){
 			$this->assign("addr",$data);
 		}
-		//dump($data);
 		$this->display();
 	}
 	//切换城市
@@ -23,12 +22,12 @@ class ChangeCityAction extends Action{
 		//设置session
 		session("aid",$this->_get("aid"));
 		$Addr = M('address');
-		$data = $Addr->where("aid=".$this->_get('aid'))->field("city,area")->find();
+		$data = $Addr->where("aid=".$this->_get('aid'))->field("city")->find();
 		session('city',$data['city']);
-		session('area',$data['area']);
-		$this->ajaxReturn(session('aid'),"已切换到".session('area'),1);
+		$this->ajaxReturn(session('aid'),"已切换到".$data['city'],1);
 		//
 	}
+	//搜索城市
 	public function s(){
 		
 	}
