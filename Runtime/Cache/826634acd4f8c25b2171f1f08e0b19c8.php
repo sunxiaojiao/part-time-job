@@ -45,7 +45,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
@@ -149,7 +149,7 @@ THINK;
                             </div>
                             <div class="checkbox">
                                 <label>
-                                  <input type="checkbox" id="pwdmem">记住密码
+                                  <input type="checkbox" id="pwdmem">三天内免登录
                                 </label>
                                 <button type="button" class="btn btn-default pull-right" id="login">登录</button>
                             </div>

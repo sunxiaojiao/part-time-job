@@ -10,6 +10,8 @@ class IndexAction extends Action{
 	 * 默认30分钟内添加的显示 NEW 徽章
 	 */
 	public function index(){
+		//自动登录
+		$this->autoLogin();
 		//设置分类排序
 		$order_flag = $this->_get('sort');
 		$order = "ctime desc";
@@ -58,7 +60,6 @@ class IndexAction extends Action{
 		->field("jid,title,money,want_peo,current_peo,addressname,pv,ctime")
 		->where($where)
 		->select();
-		dump($Jobs->getLastSql());
 		//设置分页样式
 		//		$Page->setConfig('header','条');
 		//		$Page->setConfig('prev', '&laquo;');
@@ -68,6 +69,19 @@ class IndexAction extends Action{
 		$this->assign('page',$show);
 		$this->display();
 
+	}
+	protected function autoLogin() {
+		//判断客户端是否设置了cookie
+		if(cookie('userphone') && cookie('utype') && cookie('xmf')){
+			//判断
+			import('@.Action.LoginAction');
+			$Login = new LoginAction();
+			if(cookie('utype') == 'user'){
+				$Login->userLogin();
+			}elseif(cookie('utype') == 'org'){
+				$Login->orgLogin();	
+			}
+		}
 	}
 }
 ?>

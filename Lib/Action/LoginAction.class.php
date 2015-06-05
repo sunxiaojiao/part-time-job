@@ -27,16 +27,24 @@ class LoginAction extends Action{
 		//与数据库比对
 		$f = $this->_post('login_type');
 		if($f == 'user'){
-			$this->userLogin($phone, $passwd);
+			if($this->userLogin($phone, $passwd)){
+				$this->ajaxReturn(1,'登录成功',0);	
+			}else{
+				$this->ajaxReturn(2,'用户名或密码错误',0);
+			}
 		}elseif($f == 'org'){
-			$this->orgLogin($phone, $passwd);
+			if($this->orgLogin($phone, $passwd)){
+				$this->ajaxReturn(1,'登录成功',1);	
+			}else{
+				$this->ajaxReturn(2,'用户名或密码错误',1);
+			}
 		}
 	}
 	//求职者登录
-	protected function userLogin($name,$passwd){
+	public function userLogin($name,$passwd){
 		$User = M('Users');
 		$where = "phone='{$name}' AND passwd='" . md5($passwd) . "'";
-		$field = 'uid,username';
+		$field = 'uid,username,phone';
 		$arr1 = $User->field($field)->where($where)->find();
 		if($arr1){
 			//设置session
@@ -44,41 +52,42 @@ class LoginAction extends Action{
 			session('orgname',null);
 			session('uid',$arr1['uid']);
 			session('username',$arr1['username']);
-			$this->ajaxReturn(1,'登录成功',0);
+			$this->loginKeeping($arr1['phone'],$arr1['passwd'],'user');
+			return true;
 		}else{
-			$this->ajaxReturn(2,'用户名或密码错误',0);
+			return false;
 		}
 		
 	}
 	//公司登录
-	protected function orgLogin($name,$passwd){
+	public function orgLogin($name,$passwd){
 		$Org = M('Orgs');
 		$where = "phone='{$name}' AND passwd='" . md5($passwd) . "'";
-		$field = 'oid,orgname';
+		$field = 'oid,orgname,phone';
 		$arr1 = $Org->field($field)->where($where)->find();
 		if($arr1){
 			session('uid',null);
 			session('username',null);
 			session('oid',$arr1['oid']);
 			session('orgname',$arr1['orgname']);
-			$this->ajaxReturn(1,'登录成功',1);
+			$this->loginKeeping($arr1['phone'],$arr1['passwd'],'org');
+			return true;
 		}else{
-			$this->ajaxReturn(2,'用户名或密码错误'.$Org->getLastSql(),1);
+			return false;
 		}
 		
 	}
 	//保持登录
-	private function getPwdmem(){
-		if($this->isPost()){
-			$this->pwdmem = $this->_post('pwdmem');
-			if($this->pwdmem){
-				$this->pwdmem = true;
-			}else{
-				$this->pwdmem = false;
+	private function loginKeeping($uname,$passwd,$utype){
+			$pwdmem = $this->_post('pwdmem');
+			if($pwdmem){
+				//设置cookie
+				$expire = 3600*24*3;
+				$passwd = md5($passwd . 'xiaomifeng');//$passwd为数据库取出的密码，再进行一次加密
+				cookie('userphone',$uname,$expire);
+				cookie('xmf',$passwd,$expire);
+				cookie('utype',$utype,$expire);
 			}
-		}else{
-			return 1;
-		}
 	}
 
 	//设置验证码
