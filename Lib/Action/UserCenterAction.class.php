@@ -40,6 +40,7 @@ class UserCenterAction extends Action{
 		//居住地
 		$address = unserialize($this->data['address']);
 		$this->assign('address',$address['province'].$address['city'].$address['area']);
+		$this->assign('arr_address',$address);
 		session("userData",$this->data);
 	}
 	//更改用户信息
