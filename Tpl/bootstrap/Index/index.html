@@ -7,39 +7,15 @@
     <title>兼职平台</title>
     <include file="./Tpl/bootstrap/public/static.html" />
     <style type="text/css">
-    #banner {
-        height: 200px;
-        margin-bottom: 12px;
+    #banner{
+        margin-bottom:16px;
     }
-    
-    .my-explor {
-        position: absolute;
-        right: 20px;
+    #banner .right {
+        right:14px;
     }
-    
-    .my-explor>.glyphicon {
-        margin-right: 6px;
+    #banner .carousel-control{
+        left:auto;
     }
-    
-    .my-partjob-address,
-    .my-partjob-people,
-    .my-partjob-money,
-    .my-explor {
-        position: absolute;
-    }
-    
-    .my-partjob-people {
-        left: 330px;
-    }
-    
-    .my-partjob-money {
-        left: 450px;
-    }
-    
-    .my-partjob-address {
-        left: 200px;
-    }
-    
     .assort {
         overflow: hidden;
     }
@@ -47,6 +23,25 @@
     .assort>li>a {
         display: inline-block;
     }
+    .list-grid{
+        float:left;
+        margin-left: 16%;
+        display: block;
+    }
+    .list-grid-left{
+        float:left;
+        display: block;
+    }
+    .list-grid-right{
+        float:right;
+        display: block;
+    }
+    @media screen and (max-width: 600px){
+        .list-grid{
+            margin-left:6%;
+        }
+    }
+
     </style>
 </head>
 
@@ -54,13 +49,12 @@
     <include file="./Tpl/bootstrap/public/header.html" />
     <!--container-->
     <!--banner-->
-    <div class="container" id="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div id="banner" class="carousel slide container" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#banner" data-slide-to="0" class="active"></li>
+                <li data-target="#banner" data-slide-to="1"></li>
+                <li data-target="#banner" data-slide-to="2"></li>
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
@@ -84,16 +78,15 @@
                 </div>
             </div>
             <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <a class="left carousel-control" href="#banner" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <a class="right carousel-control" href="#banner" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -110,32 +103,38 @@
                             <div role="tabpanel" class="tab-pane active" id="newest">
                                 <!--分类选择-->
                                 <ul class="list-group assort">
-                                    <li class="list-group-item">
-                                        <a href="index.php?	sort={$arr_sort.ctime}" class="my-partjob-time">默认<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort={$arr_sort.address}" class="my-partjob-address">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort={$arr_sort.money}" class="my-partjob-money">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort={$arr_sort.pv}" class="my-explor">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                    <li class="list-group-item clearfix">
+                                        <a class="list-grid-left">&emsp;</a>
+                                        <a href="index.php?sort={$arr_sort.address}" class="list-grid">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?sort={$arr_sort.money}" class="list-grid">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?sort={$arr_sort.pv}" class="list-grid">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php? sort={$arr_sort.ctime}" class="list-grid-right">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
                                     </li>
                                 </ul>
                                 <!--/分类选择-->
                                 <!-- 兼职列表 -->
                                 <ul class="list-group">
                                     <volist name="list" id="job">
-                                        <a href="{:U('JobsInfo/index')}?jid={$job.jid}" class="list-group-item">{$job.title}
-					    	{//新增的一个小时内，显示new，3600为一个小时}
-					    	<if condition="time()-$job['ctime'] elt 3600">
-						    <span class="label label-danger">New</span>
-							</if>
-						    <span class="my-partjob-address">
-						    	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{$job.addressname}</span>
-						    <span class="my-partjob-money">
-						    	<span class="glyphicon glyphicon-yen" aria-hidden="true"></span>{$job.money}
-						    </span>
-						    <span class="my-partjob-people"></span>{$job.current_peo}/{$job.want_peo}
-						    <span class="my-explor">
-						    	<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{$job.pv}
-						    </span>
-					    </a>
+                        <a href="{:U('JobsInfo/index')}?jid={$job.jid}" class="list-group-item clearfix">
+                            <span class="list-grid-left" style="margin-left:0;">
+                            {$job.title}
+                            {//新增的一个小时内，显示new，3600为一个小时}
+                            <if condition="time()-$job['ctime'] elt 3600">
+                            <span class="label label-danger">New</span>
+                            </if>
+                            </span>
+                            <span class="list-grid">
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{$job.addressname}</span>
+                            <span class="list-grid">
+                                <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>{$job.money}
+                            </span>
+                            <span class="list-grid">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{$job.pv}
+                            </span>
+                            <span class="list-grid-right">
+                                <span class="glyphicon glyphicon-time"></span>{$job.ctime|ftime}
+                            </span>
+                        </a>
                                     </volist>
                                 </ul>
                                 <!--./兼职列表-->

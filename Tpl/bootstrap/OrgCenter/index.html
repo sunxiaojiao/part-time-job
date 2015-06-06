@@ -125,7 +125,6 @@
                 <!--进行中的兼职-->
                 <div class="panel panel-default">
                     <div class="panel-heading">进行中的兼职</div>
-                    <div class="panel-body">
                         <ul class="list-group">
                             <if condition="$work_error_info">
                                 <li class="list-group-item">{$work_error_info}</li>
@@ -137,16 +136,19 @@
                             </volist>
                             </if>
                         </ul>
-                    </div>
                 </div>
                 <!--./进行中的兼职-->
                 <!--发布的兼职列表-->
                 <div class="panel panel-default">
                     <div class="panel-heading">发布的兼职</div>
                     <div class="list-group">
-                        <volist name="publicedJobs" id="jobs">
-                            <a href="{:U("JobsInfo/index")}?jid={$jobs.jid}" target="_blank" class="list-group-item">{$jobs.title}<span class="badge">{$jobs.current_peo}/{$jobs.want_peo}</span></a>
+                        <if condition="$pj_error_info">
+                            <li class="list-group-item">{$pj_error_info}</li>
+                        <else />
+                        <volist name="pj" id="jobs">
+                            <a href="{:U("JobsInfo/index")}?jid={$jobs.jid}" target="_blank" class="list-group-item">{$jobs.title}<span class="badge">{$jobs.ctime|date="m月d日 h:i",###}</span><span class="badge">{$jobs.current_peo}/{$jobs.want_peo}</span></a>
                         </volist>
+                        </if>
                     </div>
                 </div>
                 <!--./发布的兼职列表-->

@@ -210,7 +210,6 @@ THINK;
                 <!--进行中的兼职-->
                 <div class="panel panel-default">
                     <div class="panel-heading">进行中的兼职</div>
-                    <div class="panel-body">
                         <ul class="list-group">
                             <?php if($work_error_info): ?><li class="list-group-item"><?php echo ($work_error_info); ?></li>
                             <?php else: ?>
@@ -218,14 +217,15 @@ THINK;
                                 <?php echo ($info["title"]); ?><span class="pull-right badge"><?php echo (date('m/d h:i',$info["ctime"])); ?></span>
                             </a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                         </ul>
-                    </div>
                 </div>
                 <!--./进行中的兼职-->
                 <!--发布的兼职列表-->
                 <div class="panel panel-default">
                     <div class="panel-heading">发布的兼职</div>
                     <div class="list-group">
-                        <?php if(is_array($publicedJobs)): $i = 0; $__LIST__ = $publicedJobs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$jobs): $mod = ($i % 2 );++$i;?><a href="<?php echo U("JobsInfo/index");?>?jid=<?php echo ($jobs["jid"]); ?>" target="_blank" class="list-group-item"><?php echo ($jobs["title"]); ?><span class="badge"><?php echo ($jobs["current_peo"]); ?>/<?php echo ($jobs["want_peo"]); ?></span></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if($pj_error_info): ?><li class="list-group-item"><?php echo ($pj_error_info); ?></li>
+                        <?php else: ?>
+                        <?php if(is_array($pj)): $i = 0; $__LIST__ = $pj;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$jobs): $mod = ($i % 2 );++$i;?><a href="<?php echo U("JobsInfo/index");?>?jid=<?php echo ($jobs["jid"]); ?>" target="_blank" class="list-group-item"><?php echo ($jobs["title"]); ?><span class="badge"><?php echo (date("m月d日 h:i",$jobs["ctime"])); ?></span><span class="badge"><?php echo ($jobs["current_peo"]); ?>/<?php echo ($jobs["want_peo"]); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </div>
                 </div>
                 <!--./发布的兼职列表-->

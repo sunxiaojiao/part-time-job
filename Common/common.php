@@ -69,4 +69,37 @@ function array_2dTo1d($array_2d,$key){
 	}
 	return $arr1;
 }
+/**
+ * 
+ * 格式化时间戳，若范围包含在今天，则返回”今天“。否则，返回date后的时间
+ * @param int $timestamp
+ * @param string $fomate
+ */
+function ftime($timestamp,$fomate = 'm/d h:i'){
+	//$timestamp = trim($timestamp);
+	$diff = time() - $timestamp;
+	if($diff < 3600*0.5 ){
+		return '半小时内';
+	}elseif($diff < 3600*1){
+		return '一小时内';
+	}elseif($diff < 3600*2){
+		return '2小时内';
+	}elseif($diff < 3600*3){
+		return '3小时内';
+	}elseif($diff < 3600*4){
+		return '4小时内';
+	}elseif($diff < 3600*5){
+		return '5小时内';
+	}elseif($diff < 3600*6){
+		return '6小时内';
+	}elseif($diff < 3600*12){
+		return '12小时内';
+	}elseif($diff < 3600*24){
+		return '今天';
+	}elseif($diff <3600*48){
+		return '24小时之前';
+	}else{
+		return date($fomate,$timestamp);
+	}
+}
 ?>

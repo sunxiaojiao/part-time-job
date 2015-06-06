@@ -21,14 +21,14 @@ class OrgCenterAction extends Action{
 	private function showPublicedJob(){
 		$Jobs = M('Jobs');
 		$where = "pub_oid=".session('oid');
-		$field = "";
+		$field = "jid,title,current_peo,want_peo";
 		$arr2_jobs = $Jobs->where($where)->field($field)->select();
 		if($arr2_jobs){
-			$this->assign("publicedJobs",$publiced_jobs);
+			$this->assign("pj",$arr2_jobs);
 		}elseif(is_null($arr2_jobs)){
-			$this->assign('publicjob_error_info','还没有发布兼职');
+			$this->assign('pj_error_info','还没有发布兼职');
 		}else{
-			$this->assign('publicjob_error_info','读取错误');
+			$this->assign('pj_error_info','读取错误');
 		}
 	}
 	//显示企业信息

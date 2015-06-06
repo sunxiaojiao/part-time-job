@@ -14,39 +14,15 @@
 <script src="/__GROUP__/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
-    #banner {
-        height: 200px;
-        margin-bottom: 12px;
+    #banner{
+        margin-bottom:16px;
     }
-    
-    .my-explor {
-        position: absolute;
-        right: 20px;
+    #banner .right {
+        right:14px;
     }
-    
-    .my-explor>.glyphicon {
-        margin-right: 6px;
+    #banner .carousel-control{
+        left:auto;
     }
-    
-    .my-partjob-address,
-    .my-partjob-people,
-    .my-partjob-money,
-    .my-explor {
-        position: absolute;
-    }
-    
-    .my-partjob-people {
-        left: 330px;
-    }
-    
-    .my-partjob-money {
-        left: 450px;
-    }
-    
-    .my-partjob-address {
-        left: 200px;
-    }
-    
     .assort {
         overflow: hidden;
     }
@@ -54,6 +30,25 @@
     .assort>li>a {
         display: inline-block;
     }
+    .list-grid{
+        float:left;
+        margin-left: 16%;
+        display: block;
+    }
+    .list-grid-left{
+        float:left;
+        display: block;
+    }
+    .list-grid-right{
+        float:right;
+        display: block;
+    }
+    @media screen and (max-width: 600px){
+        .list-grid{
+            margin-left:6%;
+        }
+    }
+
     </style>
 </head>
 
@@ -145,13 +140,12 @@ THINK;
 <!--======导航条结束======--->
     <!--container-->
     <!--banner-->
-    <div class="container" id="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div id="banner" class="carousel slide container" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#banner" data-slide-to="0" class="active"></li>
+                <li data-target="#banner" data-slide-to="1"></li>
+                <li data-target="#banner" data-slide-to="2"></li>
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
@@ -175,16 +169,15 @@ THINK;
                 </div>
             </div>
             <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <a class="left carousel-control" href="#banner" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <a class="right carousel-control" href="#banner" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -201,29 +194,35 @@ THINK;
                             <div role="tabpanel" class="tab-pane active" id="newest">
                                 <!--分类选择-->
                                 <ul class="list-group assort">
-                                    <li class="list-group-item">
-                                        <a href="index.php?	sort=<?php echo ($arr_sort["ctime"]); ?>" class="my-partjob-time">默认<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["address"]); ?>" class="my-partjob-address">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["money"]); ?>" class="my-partjob-money">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["pv"]); ?>" class="my-explor">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                    <li class="list-group-item clearfix">
+                                        <a class="list-grid-left">&emsp;</a>
+                                        <a href="index.php?sort=<?php echo ($arr_sort["address"]); ?>" class="list-grid">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?sort=<?php echo ($arr_sort["money"]); ?>" class="list-grid">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php?sort=<?php echo ($arr_sort["pv"]); ?>" class="list-grid">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                        <a href="index.php? sort=<?php echo ($arr_sort["ctime"]); ?>" class="list-grid-right">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
                                     </li>
                                 </ul>
                                 <!--/分类选择-->
                                 <!-- 兼职列表 -->
                                 <ul class="list-group">
-                                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($job["jid"]); ?>" class="list-group-item"><?php echo ($job["title"]); ?>
-					    	
-					    	<?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
-						    <span class="my-partjob-address">
-						    	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["addressname"]); ?></span>
-						    <span class="my-partjob-money">
-						    	<span class="glyphicon glyphicon-yen" aria-hidden="true"></span><?php echo ($job["money"]); ?>
-						    </span>
-						    <span class="my-partjob-people"></span><?php echo ($job["current_peo"]); ?>/<?php echo ($job["want_peo"]); ?>
-						    <span class="my-explor">
-						    	<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><?php echo ($job["pv"]); ?>
-						    </span>
-					    </a><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($job["jid"]); ?>" class="list-group-item clearfix">
+                            <span class="list-grid-left" style="margin-left:0;">
+                            <?php echo ($job["title"]); ?>
+                            
+                            <?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
+                            </span>
+                            <span class="list-grid">
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["addressname"]); ?></span>
+                            <span class="list-grid">
+                                <span class="glyphicon glyphicon-yen" aria-hidden="true"></span><?php echo ($job["money"]); ?>
+                            </span>
+                            <span class="list-grid">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><?php echo ($job["pv"]); ?>
+                            </span>
+                            <span class="list-grid-right">
+                                <span class="glyphicon glyphicon-time"></span><?php echo (ftime($job["ctime"])); ?>
+                            </span>
+                        </a><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                                 <!--./兼职列表-->
                             </div>
