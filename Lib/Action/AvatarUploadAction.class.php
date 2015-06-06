@@ -20,7 +20,11 @@ class AvatarUploadAction extends Action {
 		$success_num = 0;
 		$msg = '';
 		//上传目录
-		$this->upload_url = $_SERVER['DOCUMENT_ROOT']."/Uploads";
+		$this->upload_url = $_SERVER['DOCUMENT_ROOT']."/Uploads/avatar";
+		$f = $this->generateSubDir($this->upload_url);
+		if($f){
+			$this->upload_url = $f;
+		}
 		// 取服务器时间+8位随机码作为部分文件名，确保文件名无重复。
 		$filename = date("YmdHis").'_'.floor(microtime() * 1000).'_'.$this->createRandomCode(8);
 		// 处理原始图片开始------------------------------------------------------------------------>
@@ -52,10 +56,8 @@ class AvatarUploadAction extends Action {
 		//<------------------------------------------------------------------------处理原始图片结束
 		// 处理头像图片开始------------------------------------------------------------------------>
 		//头像图片(file 域的名称：__avatar1,2,3...)。
-		$avatars = array("__avatar1", "__avatar2", "__avatar3");
-		$avatars_length = count($avatars);
-		for ( $i = 0; $i < $avatars_length; $i++ )
-		{
+			$i = 0;
+			$avatars = array("__avatar1", "__avatar2", "__avatar3");
 			$avatar = $_FILES[$avatars[$i]];
 			$avatar_number = $i + 1;
 			if ( $avatar['error'] > 0 )
@@ -73,7 +75,29 @@ class AvatarUploadAction extends Action {
 				}
 				$success_num++;
 			}
-		}
+		
+		//$avatars = array("__avatar1", "__avatar2", "__avatar3");
+		//$avatars_length = count($avatars);
+//		for ( $i = 0; $i < $avatars_length; $i++ )
+//		{
+//			$avatar = $_FILES[$avatars[$i]];
+//			$avatar_number = $i + 1;
+//			if ( $avatar['error'] > 0 )
+//			{
+//				$msg .= $avatar['error'];
+//			}
+//			else
+//			{
+//				$savePath = "{$this->upload_url}/xm_" . $avatar_number . "_$filename.jpg";
+//				$this->result['avatarUrls'][$i] = $this->toVirtualPath($savePath);
+//				if(move_uploaded_file($avatar["tmp_name"], $savePath)){
+//					$this->result['move'] = "true";
+//				}else{
+//					$this->result['move'] = "false";
+//				}
+//				$success_num++;
+//			}
+//		}
 		//<------------------------------------------------------------------------处理头像图片结束
 		//upload_url中传递的额外的参数，如果定义的method为get请换为$_GET
 		$this->result["userid"]	  = $_POST["userid"];
@@ -131,6 +155,20 @@ class AvatarUploadAction extends Action {
 			//$Org->save();
 			$this->sql = $Org->getLastSql();
 			return $f;
+		}
+	}
+	protected function generateSubDir($father_path){
+		$date = date('Ymd');
+		$path = $father_path . '/' . $date;
+		if(!is_dir($path)){
+			if(mkdir($path,0777)){
+				return $path;	
+			}else{
+				return false;
+			}
+			
+		}else{
+			return $path;
 		}
 	}
 }

@@ -1,8 +1,13 @@
 <?php
+/**
+ * 上传头像
+ * 
+ */
 session_start();
 header('Content-Type: text/html; charset=utf-8');
+//检测登录
 if(isset($_SESSION['uid'])){
-
+	
 }elseif(isset($_SESSION['oid'])){
 
 }else{

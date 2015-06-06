@@ -78,6 +78,9 @@ class OrgAuthAction extends Action {
 		return $ishave;
 	}
 	public function uploadFile(){
+		if(!session('oid')){
+			return ;
+		}
 		if($this->isApply()){
 			$this->ajaxReturn(1,"已经申请过了",1);
 			return ;
