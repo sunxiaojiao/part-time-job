@@ -160,6 +160,8 @@ THINK;
                             <?php if($list["is_validate"] == 0): ?><span class="glyphicon glyphicon-question-sign nvlded-color"></span><span class="nvlded-color">未认证</span>
                                 <?php else: ?>
                                 <span class="glyphicon glyphicon-ok-sign vlded-color"></span><span class="vlded-color">已认证</span><?php endif; ?>
+                            <div class="bdsharebuttonbox" style="float:right;"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"#小蜜蜂的兼职分享#","bdMini":"2","bdMiniList":false,"bdPic":"http://test.xiaomifengjob.com/Public/xmf_share.png","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
                         </div>
                         <!--基本信息-->
                         <div class="rows clearfix">
@@ -190,6 +192,7 @@ THINK;
                         </div>
                         <!--./基本信息-->
                         <button type="button" class="btn btn-primary btn-lg" id="goto-apply">申请此兼职</button>
+
                         <hr />
                         <div role="tabpanel">
                             <!-- Nav tabs -->

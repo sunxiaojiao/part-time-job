@@ -193,38 +193,28 @@ THINK;
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="newest">
                                 <!--分类选择-->
-                                <ul class="list-group assort">
-                                    <li class="list-group-item clearfix">
-                                        <a class="list-grid-left">&emsp;</a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["address"]); ?>" class="list-grid">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["money"]); ?>" class="list-grid">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort=<?php echo ($arr_sort["pv"]); ?>" class="list-grid">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php? sort=<?php echo ($arr_sort["ctime"]); ?>" class="list-grid-right">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                    </li>
-                                </ul>
+                                <table class="table">
+                                    <thead>
+                                            <td></td>
+                                            <td>
+                                        <a href="index.php?sort=<?php echo ($arr_sort["address"]); ?>">地点<span class="glyphicon glyphicon-chevron-down"></span></a></td>
+                                            <td><a href="index.php?sort=<?php echo ($arr_sort["money"]); ?>">工资<span class="glyphicon glyphicon-chevron-down"></span></a></td>
+                                            <td><a href="index.php?sort=<?php echo ($arr_sort["pv"]); ?>">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a></td>
+                                            <td><a href="index.php? sort=<?php echo ($arr_sort["ctime"]); ?>">时间<span class="glyphicon glyphicon-chevron-down"></span></a></td>
+                                    </thead>
                                 <!--/分类选择-->
                                 <!-- 兼职列表 -->
-                                <ul class="list-group">
-                                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($job["jid"]); ?>" class="list-group-item clearfix">
-                            <span class="list-grid-left" style="margin-left:0;">
-                            <?php echo ($job["title"]); ?>
+                                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><tr>
+                                        <td><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($job["jid"]); ?>"><?php echo ($job["title"]); ?>
                             
-                            <?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?>
-                            </span>
-                            <span class="list-grid">
-                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["addressname"]); ?></span>
-                            <span class="list-grid">
-                                <span class="glyphicon glyphicon-yen" aria-hidden="true"></span><?php echo ($job["money"]); ?>
-                            </span>
-                            <span class="list-grid">
-                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><?php echo ($job["pv"]); ?>
-                            </span>
-                            <span class="list-grid-right">
-                                <span class="glyphicon glyphicon-time"></span><?php echo (ftime($job["ctime"])); ?>
-                            </span>
-                        </a><?php endforeach; endif; else: echo "" ;endif; ?>
-                                </ul>
+                            <?php if(time()-$job['ctime'] <= 3600): ?><span class="label label-danger">New</span><?php endif; ?></a></td>
+                                        <td><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><?php echo ($job["addressname"]); ?></td>
+                                        <td><span class="glyphicon glyphicon-yen" aria-hidden="true"></span><?php echo ($job["money"]); ?></td>
+                                        <td><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><?php echo ($job["pv"]); ?></td>
+                                        <td><span class="glyphicon glyphicon-time"></span><?php echo (ftime($job["ctime"])); ?></td>
+                                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                                 <!--./兼职列表-->
+                                </table>
                             </div>
                             <nav>
                                 <ul class="pagination">

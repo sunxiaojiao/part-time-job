@@ -102,42 +102,32 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="newest">
                                 <!--分类选择-->
-                                <ul class="list-group assort">
-                                    <li class="list-group-item clearfix">
-                                        <a class="list-grid-left">&emsp;</a>
-                                        <a href="index.php?sort={$arr_sort.address}" class="list-grid">地点<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort={$arr_sort.money}" class="list-grid">工资<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php?sort={$arr_sort.pv}" class="list-grid">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                        <a href="index.php? sort={$arr_sort.ctime}" class="list-grid-right">时间<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                    </li>
-                                </ul>
+                                <table class="table">
+                                    <thead>
+                                            <td></td>
+                                            <td>
+                                        <a href="index.php?sort={$arr_sort.address}">地点<span class="glyphicon glyphicon-chevron-down"></span></a></td>
+                                            <td><a href="index.php?sort={$arr_sort.money}">工资<span class="glyphicon glyphicon-chevron-down"></span></a></td>
+                                            <td><a href="index.php?sort={$arr_sort.pv}">浏览量<span class="glyphicon glyphicon-chevron-down"></span></a></td>
+                                            <td><a href="index.php? sort={$arr_sort.ctime}">时间<span class="glyphicon glyphicon-chevron-down"></span></a></td>
+                                    </thead>
                                 <!--/分类选择-->
                                 <!-- 兼职列表 -->
-                                <ul class="list-group">
-                                    <volist name="list" id="job">
-                        <a href="{:U('JobsInfo/index')}?jid={$job.jid}" class="list-group-item clearfix">
-                            <span class="list-grid-left" style="margin-left:0;">
-                            {$job.title}
+                                <volist name="list" id="job">
+                                    <tr>
+                                        <td><a href="{:U('JobsInfo/index')}?jid={$job.jid}">{$job.title}
                             {//新增的一个小时内，显示new，3600为一个小时}
                             <if condition="time()-$job['ctime'] elt 3600">
                             <span class="label label-danger">New</span>
-                            </if>
-                            </span>
-                            <span class="list-grid">
-                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{$job.addressname}</span>
-                            <span class="list-grid">
-                                <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>{$job.money}
-                            </span>
-                            <span class="list-grid">
-                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{$job.pv}
-                            </span>
-                            <span class="list-grid-right">
-                                <span class="glyphicon glyphicon-time"></span>{$job.ctime|ftime}
-                            </span>
-                        </a>
+                            </if></a></td>
+                                        <td><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{$job.addressname}</td>
+                                        <td><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>{$job.money}</td>
+                                        <td><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{$job.pv}</td>
+                                        <td><span class="glyphicon glyphicon-time"></span>{$job.ctime|ftime}</td>
+                                    </tr>
                                     </volist>
-                                </ul>
                                 <!--./兼职列表-->
+                                </table>
                             </div>
                             <nav>
                                 <ul class="pagination">
