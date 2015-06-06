@@ -71,7 +71,7 @@
                                 <span class="my-title">地点：</span>
                                 <ul class="list-options">
                                     <volist name="address" id="address">
-                                        <li class="my-options"><a href="{$now_url_address}&address={$address.aid}" class="">{$address.area}</a></li>
+                                        <li class="my-options"><a href="{$now_url_address}&address={$address.city}" class="">{$address.city}</a></li>
                                     </volist>
                                 </ul>
                             </li>
@@ -140,7 +140,7 @@
                             <volist name="job_list" id="job">
                                 <tr>{:C('URL_MODEL',1)}<assign name="jid" value="$job.jid"/>
                                     <td><a href="{:U("JobsInfo/index","jid=$jid")}">{$job.title}</a></td>
-                                    <td>{$job.address}</td>
+                                    <td>{$job.addressname}</td>
                                     <td>{$job.money}</td>
                                     <td>{$job.begin_time}</td>
                                     <td>{$job.wktime}</td>

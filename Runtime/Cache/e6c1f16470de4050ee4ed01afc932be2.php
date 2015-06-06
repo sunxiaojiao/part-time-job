@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>分类查找|更快捷的兼职搜索</title>
-    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
-<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
+<link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
@@ -54,7 +54,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
@@ -159,7 +159,7 @@ THINK;
                             <li class="list-group-item">
                                 <span class="my-title">地点：</span>
                                 <ul class="list-options">
-                                    <?php if(is_array($address)): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$address): $mod = ($i % 2 );++$i;?><li class="my-options"><a href="<?php echo ($now_url_address); ?>&address=<?php echo ($address["aid"]); ?>" class=""><?php echo ($address["area"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    <?php if(is_array($address)): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$address): $mod = ($i % 2 );++$i;?><li class="my-options"><a href="<?php echo ($now_url_address); ?>&address=<?php echo ($address["city"]); ?>" class=""><?php echo ($address["city"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                             </li>
                             <li class="list-group-item">
@@ -223,7 +223,7 @@ THINK;
                         </thead>
                             <?php if(is_array($job_list)): $i = 0; $__LIST__ = $job_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><tr><?php echo C('URL_MODEL',1); $jid = $job["jid"]; ?>
                                     <td><a href="<?php echo U("JobsInfo/index","jid=$jid");?>"><?php echo ($job["title"]); ?></a></td>
-                                    <td><?php echo ($job["address"]); ?></td>
+                                    <td><?php echo ($job["addressname"]); ?></td>
                                     <td><?php echo ($job["money"]); ?></td>
                                     <td><?php echo ($job["begin_time"]); ?></td>
                                     <td><?php echo ($job["wktime"]); ?></td>

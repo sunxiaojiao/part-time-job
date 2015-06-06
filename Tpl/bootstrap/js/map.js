@@ -153,10 +153,16 @@ function search(obj) {
                 //获取位置字符串（城市+区）
                 addressname = result.city + result.district;
                 addresscity = result.city;
-                console.log(result);
+                if($.inArray(addresscity,allowAddress) === -1){
+                    alert('小蜜蜂，此城市未开放服务');
+                    address     = new Object();
+                    addressname = '';
+                    marker.hide();
+                    return;
+                   }
+
+
             })
-            console.log(address);
-			console.log(addressname);
             //关闭modal
             setTimeout(function(){$(".modal").modal('toggle');},1000);
 		},3);

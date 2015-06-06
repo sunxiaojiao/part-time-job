@@ -5,7 +5,7 @@
 class SortSearchAction extends Action{
 	protected $all_fields = array(
 							'style'   =>  '类型',
-							'wage'   =>  '工资',
+							'wage'    =>  '工资',
 							'address' =>  '地点',
 							'isvld'   =>  '公司验证',
 							'peonum'  =>  '需求人数',
@@ -66,10 +66,10 @@ class SortSearchAction extends Action{
 		//xm_jobs表中搜索
 		$Job = M('jobs');
 		$Job->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
-		$where = //"(" . time() . "- expire_time)<0" . " AND " . "is_pass=0" 	. " AND "			 .
+		$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0" 	. " AND "			 .
 				$this->strongWhere($arr_get['style'],"mold_id","AND")          .
 				$this->strongWhere($arr_get['wage'],"money","AND",'',":")      .
-				$this->strongWhere($arr_get['address'],"address","AND")        .
+				$this->strongWhere($arr_get['address'],"city","AND")        .
 				$this->strongWhere($arr_get['peonum'],"want_peo","AND",'',':') .
 				$this->strongWhere($arr_get['py'], 'pay_way', 'AND')           .
 				$this->strongWhere($arr_get['wt'],"work_time","AND",'',":")    .
@@ -82,7 +82,8 @@ class SortSearchAction extends Action{
 				  xm_jobs.money AS money,
 				  xm_jobs.begin_time AS begin_time,
 				  xm_jobs.work_time AS wktime,
-				  xm_jobs.pv AS pv";
+				  xm_jobs.pv AS pv,
+				  addressname";
 		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid" . $this->strongWhere($arr_get['isvld'], 'xm_orgs.is_validate', 'AND', true);
 		import('ORG.Util.Page');
 		$count = $Job->where($where)->join($join)->count();
@@ -118,7 +119,7 @@ class SortSearchAction extends Action{
 	protected function showAddress() {
 		$Address      = M('Address');
 		$where        = "";
-		$field        = "aid,area";
+		$field        = "aid,city";
 		$arr2_address = $Address->where($where)->field($field)->select();
 		if($arr2_address){
 			$this->assign("address",$arr2_address);

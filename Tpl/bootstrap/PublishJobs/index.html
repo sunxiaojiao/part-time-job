@@ -236,15 +236,20 @@
     <!--footer-->
     <include file="./Tpl/bootstrap/public/footer.html" />
     <!--./footer-->
+    <script>
+        var allowAddress = new Array('烟台市','青岛');
+    </script>
     <script type="text/javascript" src="/__GROUP__/js/map.js"></script>
     <script type="text/javascript">
     //Modal
     $("#addressname").on('focus',function(){
-      $(".modal").modal('toggle');
+      $(".modal").modal('show');
     });
     $('.modal').on('hidden.bs.modal', function (e) {
-      $("#address").val(address.x + "," +address.y);
-      $("#addressname").val(addressname);  
+        if(addressname){
+            $("#address").val(address.x + "," +address.y);
+            $("#addressname").val(addressname);  
+        }
     })
     
     //时间控件

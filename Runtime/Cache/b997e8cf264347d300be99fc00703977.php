@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>兼职平台</title>
-    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
-<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
+<link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
@@ -80,7 +80,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
@@ -330,15 +330,20 @@ THINK;
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
 </div>
     <!--./footer-->
+    <script>
+        var allowAddress = new Array('烟台市','青岛');
+    </script>
     <script type="text/javascript" src="/__GROUP__/js/map.js"></script>
     <script type="text/javascript">
     //Modal
     $("#addressname").on('focus',function(){
-      $(".modal").modal('toggle');
+      $(".modal").modal('show');
     });
     $('.modal').on('hidden.bs.modal', function (e) {
-      $("#address").val(address.x + "," +address.y);
-      $("#addressname").val(addressname);  
+        if(addressname){
+            $("#address").val(address.x + "," +address.y);
+            $("#addressname").val(addressname);  
+        }
     })
     
     //时间控件
