@@ -169,6 +169,7 @@ THINK;
         </div>
         <div class="row">
             <div class="col-md-8">
+                <?php if($org_info["email"] == ''): ?><div class="alert alert-danger"><a href="<?php echo U("AttachEmail/index");?>">你还未绑定邮箱，请立刻绑定邮箱，方便找回密码等业务</a></div><?php endif; ?>
                 <!--基本信息-->
                 <div class="panel panel-default">
                     <div class="panel-heading">

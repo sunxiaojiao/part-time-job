@@ -128,15 +128,7 @@ THINK;
         <div class="form-group">
           <label for="username">所在地：</label>
           <div class="my-select-address">
-            <select name="province" id="" class="form-control">
-              <option>山东</option>
-            </select>
-            <select name="city" id="" class="form-control">
-              <option>烟台</option>
-            </select>
-            <select name="area" id="" class="form-control">
-              <option>芝罘区</option>
-            </select>
+            <input type="text" class="form-control" name="address" value="<?php echo ($orgInfo["org_address"]); ?>" />
           </div>
         </div>
 
@@ -155,13 +147,15 @@ THINK;
         <div class="form-group">
           <label for="intent">招聘意向:</label>
           <div>
-         <?php if(is_array($molds)): $i = 0; $__LIST__ = $molds;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array($molds['mid'],unserialize($userinfo['intent']))): ?><label class="checkbox-inline">
+          <?php if($mold_error_info): echo ($mold_error_info); ?>
+          <?php else: ?>
+         <?php if(is_array($mold_info)): $i = 0; $__LIST__ = $mold_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$molds): $mod = ($i % 2 );++$i; if(in_array($molds['mid'],unserialize($orgInfo['intent']))): ?><label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>" checked="true"><?php echo ($molds["name"]); ?>
             </label>
             <?php else: ?>
             <label class="checkbox-inline">
               <input type="checkbox" id="" name="intent" value="<?php echo ($molds["mid"]); ?>"><?php echo ($molds["name"]); ?>
-            </label><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+            </label><?php endif; endforeach; endif; else: echo "" ;endif; endif; ?>
           </div>
         </div>
         <button type="button" class="btn btn-primary"id="goto-info">修改</button>
@@ -238,10 +232,11 @@ $("#goto-info").click(function(){
 	var intent = new Array();
 	for(var i=0;i<checkboxs.length;i++){
 		if(checkboxs.eq(i).is(":checked")){
-			intent[i] = checkboxs.eq(i).val();
+			intent.push(checkboxs.eq(i).val());
 		}
 	}
 	info.intent = intent;
+  console.log(info.intent);
 	//ajax
 	$.ajax({
 		url:'<?php echo U('OrgCenter/updateInfo');?>',

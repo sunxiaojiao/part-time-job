@@ -14,7 +14,7 @@ class OrgCenterAction extends Action{
 		$this->showPublicedJob();
 		//进行中的兼职
 		$this->showIngJob();
-		
+
 		$this->display();
 	}
 	//显示发布的兼职
@@ -57,26 +57,38 @@ class OrgCenterAction extends Action{
 		}else{
 			$this->ajaxReturn(0,"获取信息失败",0);
 		}
+		//输出招聘意向
+		$this->showMold();
 		$this->display();
+	}
+	//显示招聘意向
+	protected function showMold(){
+		$Mold = M('Mold');
+		$where = "1";
+		$field = "mid,name";
+		$arr2_mold = $Mold->where($where)->field($field)->select();
+		if($arr2_mold){
+			$this->assign('mold_info',$arr2_mold);
+		}elseif(is_null($arr2_mold)){
+			$this->assign('mold_error_info','空');
+		}else{
+			$this->assign('mold_error_info','读取错误');
+		}
 	}
 	//更新企业信息
 	public function updateInfo(){
 		$Org = D('Orgs');
 		$where = "oid=".session('oid');
-		if(!$Org->create()){
+		if(!$Org->create($this->_post(),2)){
 			$this->ajaxReturn(0,$Org->getError(),0);
 			return;
 		}
-
-		if($flag = $Org->where($where)->save()){
+		$Org->intent = serialize($this->_post('intent'));
+		$flag = $Org->where($where)->save();
+		if($flag || $flag === 0){
 			$this->ajaxReturn(1,"更新成功",1);
 		}else{
-			if($flag == 0){
-				//dump($Org->getLastSql());
-				$this->ajaxReturn(1,"数据未更新",2);
-			}else{
-				$this->ajaxReturn(1,"更新失败",0);
-			}
+			$this->ajaxReturn(1,"更新失败",0);
 		}
 	}
 	//列出申请列表
