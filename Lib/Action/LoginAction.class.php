@@ -52,7 +52,7 @@ class LoginAction extends Action{
 			session('orgname',null);
 			session('uid',$arr1['uid']);
 			session('username',$arr1['username']);
-			$this->loginKeeping($arr1['phone'],$arr1['passwd'],'user');
+			$this->loginKeeping($arr1['phone'],md5($passwd),'user');
 			return true;
 		}else{
 			return false;
@@ -70,7 +70,7 @@ class LoginAction extends Action{
 			session('username',null);
 			session('oid',$arr1['oid']);
 			session('orgname',$arr1['orgname']);
-			$this->loginKeeping($arr1['phone'],$arr1['passwd'],'org');
+			$this->loginKeeping($arr1['phone'],md5($passwd),'org');
 			return true;
 		}else{
 			return false;
@@ -87,6 +87,10 @@ class LoginAction extends Action{
 				cookie('userphone',$uname,$expire);
 				cookie('xmf',$passwd,$expire);
 				cookie('utype',$utype,$expire);
+			}else{
+				cookie('userphone',null);
+				cookie('xmf',null);
+				cookie('utype',null);
 			}
 	}
 

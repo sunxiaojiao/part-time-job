@@ -73,14 +73,31 @@ class IndexAction extends Action{
 	protected function autoLogin() {
 		//判断客户端是否设置了cookie
 		if(cookie('userphone') && cookie('utype') && cookie('xmf')){
+			$phone  = cookie('userphone');
+			$passwd = cookie('xmf');
+			$arr;
 			//判断
-			import('@.Action.LoginAction');
-			$Login = new LoginAction();
 			if(cookie('utype') == 'user'){
-				$Login->userLogin();
+				$User = M('Users');
+				$arr = $User->where('phone=' . $phone)->field('passwd,uid,username')->find();
+				if($passwd == md5($arr['passwd'] . 'xiaomifeng')){
+					session('oid',null);
+					session('orgname',null);
+					session('uid',$arr['uid']);
+					session('username',$arr['username']);
+				}
 			}elseif(cookie('utype') == 'org'){
-				$Login->orgLogin();	
+				$Org = M('Orgs');
+				$arr = $Org->where('phone=' . $phone)->field('passwd,oid,orgname')->find();
+				if($passwd == md5($arr['passwd'] . 'xiaomifeng')){
+					session('oid',$arr['oid']);
+					session('orgname',$arr['orgname']);
+					session('uid',null);
+					session('username',null);
+				}
+				
 			}
+			
 		}
 	}
 }
