@@ -17,8 +17,15 @@ class ApplyJobAction extends Action{
 			$this->ajaxReturn(3,"你已经申请过了",1);
 			return;
 		}
-		//判断用户是否已经添加企业要求的支付方式
+		//判断申请次数
 		$User = M('Users');
+		$arr_apply = $User->field('apply_count,apply_time')->find(session('uid'));
+		//只有当申请机会为0 且 为时间为今天时 组织申请
+		if($arr_apply['apply_count']<=0 && date('Ymd',$arr_apply['apply_time']) === date('Ymd')){
+			$this->ajaxReturn(5,'你今天已经申请过3次了，不能再申请兼职了',1);
+			return;
+		}
+		//判断用户是否已经添加企业要求的支付方式
 		$Job  = M('Jobs');
 		$pay_field = 'default_payway';
 		$warning_info;
@@ -44,17 +51,34 @@ class ApplyJobAction extends Action{
 		$data['app_oid'] = $oid['pub_oid'];
 		$data['ctime'] = time();
 		if($Apply->add($data)){
-			$this->ajaxReturn(4,"申请成功",1);
+			//更新用户申请次数
+			if(!$this->updateApplyCount($arr_apply)){
+				//
+				$this->ajaxReturn(2,'申请失败',1);
+				return;
+			}
+			$leave_count = $arr_apply['apply_count']-1;
+			$this->ajaxReturn(4,"申请成功，今日还可以申请". $leave_count ."次",1);
 		}else{
 			$this->ajaxReturn(2,"申请失败",1);
 		}
 		
 	}
-	public function showPayWay() {
-		if(!session('?uid')){
-			$this->ajaxReturn(0,'未登录',1);
+	protected function updateApplyCount($arr){
+		$User = M('Users');
+		//获取
+		$apply_count = $arr['apply_count'];
+		$apply_time  = $arr['apply_time'];
+		//处理
+		$where = 'uid=' . session('uid');
+		if(date('Ymd',$apply_time) === date('Ymd')){
+			if($apply_count>0){
+				$User->where($where)->setDec('apply_count',1);	
+			}
+		}else{
+			$User->where($where)->setField('apply_count',2);
 		}
-		//
+		return $User->where($where)->setField('apply_time', time());
 	}
 }
 ?>
