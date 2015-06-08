@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">我的兼职</div>
+                    <div class="panel-heading">正在进行中的兼职</div>
                     <div class="panel-body">
                         <table class="table">
                             <thead>
@@ -150,7 +150,13 @@
                 <switch name="list.work_status">
                 <case value="0">待做<a class="operator" data-toggle="modal" data-target=".modal" data-wid="{$list.work_id}">操作</a></case>
                 <case value="1">正在进行<a class="operator" data-toggle="modal" data-target=".modal" data-wid="{$list.work_id}">操作</a></case>
-                <case value="2">做完了（{$list.begin_time|date='m/d',###}&nbsp;{$list.begin_time|date='h:i',###}-{$list.end_time|date='h:i',###}）</case>
+                <case value="2">
+                    <switch name="list.is_pass">
+                        <case value="1">做完了（{$list.begin_time|date='m/d',###}&nbsp;{$list.begin_time|date='h:i',###}-{$list.end_time|date='h:i',###}）</case>
+                        <case value="2">正在审核</case>
+                        <case value="0">未通过审核</case>
+                    </switch>
+                </case>
                 </switch>
                                         </td>
                                         <td>{$list.ctime|date='m/d',###}</td>

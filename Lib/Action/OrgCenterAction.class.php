@@ -176,26 +176,27 @@ class OrgCenterAction extends Action{
 			$this->error("企业用户未登录",U('Login/index'));
 			return;
 		}
-		if($this->_get('ispass') == 'yes'){
+		if($this->_get('ispass') == 'yes'){	//通过
 			$uid = $this->_get('uid');
 			$jid = $this->_get('jid');
 			$app_id = $this->_get('app_id');
-			$where = "jid=".$jid;
+			$where = "jid=" . $jid;
 			$Job = M('jobs');
-			//xm_jobs表 current_peo +1
-			if(!$Job->where($where)->setInc("current_peo",1)){
-				echo $Job->getError();
+//			//xm_jobs表 current_peo +1
+//			if(!$Job->where($where)->setInc("current_peo",1)){
+//				echo $Job->getError();
+//				return;
+//			}
+			//working表添加记录
+			$Work = M('Working');
+			$w_data = array('work_uid'  =>  $uid,
+							'work_jid'  =>  $jid,
+							'ctime'     =>  time()
+							); 
+			if(!$Work->add($w_data)){
+				$this->ajaxReturn(0,'操作失败',0);
 				return;
 			}
-			//xm_jobs表 crowd_uids新增申请人uid
-			$uids = $Job->field("crowd_uids")->where($where)->find();
-			if(!$uids){
-				echo $Job->getError();
-			}
-			$uids = unserialize($uids);
-			$uids[] = $uid;
-			$uids = serialize($uids);
-			$Job->where($where)->setField("crowd_uids",$uids);
 			//xm_apply表中 is_pass 改为2
 			$Apply = M('apply');
 			$flag = $Apply->where("app_id=".$app_id)->setField("is_pass", 2);
@@ -211,8 +212,7 @@ class OrgCenterAction extends Action{
 			if($flag){
 				$this->ajaxReturn(1,"操作成功",1);
 			}else{
-				echo $Apply->getLastSql();
-				$this->ajaxReturn(0,"删除失败".$Apply->getError(),0);
+				$this->ajaxReturn(0,"操作失败".$Apply->getError(),0);
 			}
 		}
 	}

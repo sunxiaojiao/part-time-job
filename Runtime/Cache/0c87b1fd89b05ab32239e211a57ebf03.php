@@ -207,7 +207,7 @@ THINK;
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">我的兼职</div>
+                    <div class="panel-heading">正在进行中的兼职</div>
                     <div class="panel-body">
                         <table class="table">
                             <thead>
@@ -226,7 +226,9 @@ THINK;
               <td>
                 <?php switch($list["work_status"]): case "0": ?>待做<a class="operator" data-toggle="modal" data-target=".modal" data-wid="<?php echo ($list["work_id"]); ?>">操作</a><?php break;?>
                 <?php case "1": ?>正在进行<a class="operator" data-toggle="modal" data-target=".modal" data-wid="<?php echo ($list["work_id"]); ?>">操作</a><?php break;?>
-                <?php case "2": ?>做完了（<?php echo (date('m/d',$list["begin_time"])); ?>&nbsp;<?php echo (date('h:i',$list["begin_time"])); ?>-<?php echo (date('h:i',$list["end_time"])); ?>）<?php break; endswitch;?>
+                <?php case "2": switch($list["is_pass"]): case "1": ?>做完了（<?php echo (date('m/d',$list["begin_time"])); ?>&nbsp;<?php echo (date('h:i',$list["begin_time"])); ?>-<?php echo (date('h:i',$list["end_time"])); ?>）<?php break;?>
+                        <?php case "2": ?>正在审核<?php break;?>
+                        <?php case "0": ?>未通过审核<?php break; endswitch; break; endswitch;?>
                                         </td>
                                         <td><?php echo (date('m/d',$list["ctime"])); ?></td>
                                     </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>

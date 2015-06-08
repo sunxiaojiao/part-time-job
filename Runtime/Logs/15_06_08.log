@@ -656,3 +656,222 @@ SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ Run
 NOTIC: 建议使用I方法替代_get
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-06-08T12:59:53+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=60
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T22:55:24+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:23:52+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:23:55+08:00 ] 127.0.0.1 /Index/index.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:24:04+08:00 ] 127.0.0.1 /Index/index.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:24:22+08:00 ] 127.0.0.1 /Login/login.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.011001s ]
+SQL: SELECT `oid`,`orgname`,`phone` FROM `xm_orgs` WHERE ( phone='13256929238' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_post
+
+[ 2015-06-08T23:24:26+08:00 ] 127.0.0.1 /OrgCenter/isPass.html?ispass=yes&uid=1&app_id=35&jid=60
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `xm_working` [ RunTime:0.010001s ]
+SQL: INSERT INTO `xm_working` (`work_uid`,`work_jid`,`ctime`) VALUES (1,60,1433777066) [ RunTime:0.078004s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007001s ]
+SQL: UPDATE `xm_apply` SET `is_pass`=2 WHERE ( app_id=35 ) [ RunTime:0.101006s ]
+
+[ 2015-06-08T23:24:33+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=60
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:24:47+08:00 ] 127.0.0.1 /UserCenter/MyJobHandler.html?wid=2&f=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_working` [ RunTime:0.007000s ]
+SQL: SELECT `work_status` FROM `xm_working` WHERE ( work_id=2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `xm_working` SET `work_status`=1,`begin_time`=1433777087 WHERE ( work_id=2 ) [ RunTime:0.141008s ]
+
+[ 2015-06-08T23:24:54+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=60
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:25:02+08:00 ] 127.0.0.1 /UserCenter/MyJobHandler.html?wid=2&f=2
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_working` [ RunTime:0.008001s ]
+SQL: SELECT `work_status` FROM `xm_working` WHERE ( work_id=2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `xm_working` SET `work_status`=2,`end_time`=1433777102 WHERE ( work_id=2 ) [ RunTime:0.094005s ]
+
+[ 2015-06-08T23:25:13+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=60
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:27:07+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=60
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:27:11+08:00 ] 127.0.0.1 /OrgCenter/statusHandler.html?wid=2&f=0
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_working` [ RunTime:0.007000s ]
+SQL: UPDATE `xm_working` SET `is_pass`=1,`work_status`=2 WHERE ( work_id=2 ) [ RunTime:0.104006s ]
+
+[ 2015-06-08T23:27:22+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=60
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:54:59+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=60
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:55:11+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=60
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:55:28+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:55:32+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=54
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:55:37+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=54 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.005001s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.005000s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=54 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pay_ccard_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=54 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`app_uid`,`app_jid`,`ctime`) VALUES (1,1,54,1433778936) [ RunTime:0.082005s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.100005s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433778936 WHERE ( uid=1 ) [ RunTime:0.089006s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=54 ) [ RunTime:0.111006s ]
+
+[ 2015-06-08T23:55:54+08:00 ] 127.0.0.1 /OrgCenter/isPass.html?ispass=yes&uid=1&app_id=36&jid=54
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `xm_working` [ RunTime:0.005000s ]
+SQL: INSERT INTO `xm_working` (`work_uid`,`work_jid`,`ctime`) VALUES (1,54,1433778954) [ RunTime:0.111007s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.004000s ]
+SQL: UPDATE `xm_apply` SET `is_pass`=2 WHERE ( app_id=36 ) [ RunTime:0.053003s ]
+
+[ 2015-06-08T23:56:00+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=54
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:56:27+08:00 ] 127.0.0.1 /UserCenter/MyJobHandler.html?wid=3&f=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_working` [ RunTime:0.004000s ]
+SQL: SELECT `work_status` FROM `xm_working` WHERE ( work_id=3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `xm_working` SET `work_status`=1,`begin_time`=1433778987 WHERE ( work_id=3 ) [ RunTime:0.105006s ]
+
+[ 2015-06-08T23:56:37+08:00 ] 127.0.0.1 /UserCenter/MyJobHandler.html?wid=3&f=2
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_working` [ RunTime:0.004000s ]
+SQL: SELECT `work_status` FROM `xm_working` WHERE ( work_id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `xm_working` SET `end_time`=1433778997 WHERE ( work_id=3 ) [ RunTime:0.101006s ]
+
+[ 2015-06-08T23:58:04+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=54
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:58:57+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=54
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:58:59+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=54
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:59:01+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=54
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T23:59:02+08:00 ] 127.0.0.1 /OrgCenter/showIngJobDetail.html?jid=54
+NOTIC: 建议使用I方法替代_get
+

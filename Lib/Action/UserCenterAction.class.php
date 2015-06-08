@@ -14,11 +14,15 @@ class UserCenterAction extends Action{
 		if(!session("?uid")){
 			$this->error('您还未登录',U("Login/index"),3);
 		}
+		//显示基本信息
 		$this->showInfo();
 		//显示工作申请信息
 		$this->jobApplyed();
+		//显示申请列表
 		$this->evalList();
+		//显示正在进行的兼职
 		$this->showMyJobList();
+		
 		$this->display();
 	}
 	public function editInfo(){
@@ -172,17 +176,17 @@ class UserCenterAction extends Action{
 			$this->assign('eval_error_info','查询错误');
 		}
 	}
-	//我的兼职
+	//进行中兼职
 	protected function showMyJobList() {
 		$Work  = M('Working');
-		$field = "title,work_id,jid,work_status,xm_working.begin_time,end_time,xm_working.ctime";
+		$field = "title,work_id,jid,work_status,xm_working.begin_time,end_time,xm_working.is_pass,xm_working.ctime";
 		$where = "work_uid=" . session('uid');
 		$join  = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
 		$arr2  = $Work->field($field)->join($join)->where($where)->select();
 		if($arr2){
 			$this->assign('work_info',$arr2);
 		}elseif(is_null($arr2)){
-			$this->assign('work_error_info','还没有兼职可以做');
+			$this->assign('work_error_info','还没有兼职可以做'.$Work->getLastSql());
 		}else{
 			$this->assign('work_error_info','读取错误'.$Work->getLastSql());
 		}
@@ -201,7 +205,8 @@ class UserCenterAction extends Action{
 		}
 		$Work  = M('Working');
 		$where = "work_id=" . $wid;
-		//开始兼职
+		
+		//开始兼职-----------------------------------------------------------
 		if($flag == '1'){
 			//检测是否为status=0
 			$status = $Work->where($where)->getField('work_status');
@@ -216,7 +221,8 @@ class UserCenterAction extends Action{
 				$this->ajaxReturn(0,'操作失败',1);
 			}
 		}
-		//结束兼职
+		
+		//完成兼职------------------------------------------------------------
 		if($flag == '2'){
 		//检测是否为status=0
 			$status = $Work->where($where)->getField('work_status');
@@ -232,8 +238,9 @@ class UserCenterAction extends Action{
 			}
 		}	
 	}
+	//显示正在进行的兼职的细节
 	public function showMyJobDetail() {
-	$Work  = M('Working');
+		$Work  = M('Working');
 		$field = "title,work_id,work_status,xm_working.ctime";
 		$where = "work_uid=" . session('uid');
 		$join  = "INNER JOIN xm_jobs ON xm_jobs.pub_oid=xm_working.work_oid";
