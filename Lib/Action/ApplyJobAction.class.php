@@ -20,7 +20,7 @@ class ApplyJobAction extends Action{
 		//判断申请次数
 		$User = M('Users');
 		$arr_apply = $User->field('apply_count,apply_time')->find(session('uid'));
-		//只有当申请机会为0 且 为时间为今天时 组织申请
+		//只有当申请机会为0 且 为时间为今天时 阻止申请
 		if($arr_apply['apply_count']<=0 && date('Ymd',$arr_apply['apply_time']) === date('Ymd')){
 			$this->ajaxReturn(5,'你今天已经申请过3次了，不能再申请兼职了',1);
 			return;
@@ -46,10 +46,11 @@ class ApplyJobAction extends Action{
 			return ;
 		}
 		//添加申请记录
-		$Job = M('jobs');
+		$Job = M('Jobs');
 		$oid = $Job->where("jid=".session('jid'))->field("pub_oid")->find();
-		$data_apply = array('app_oid'=>$oid['pub_oid'],'ctime'=>time());
+		$data_apply = array('app_oid'=>$oid['pub_oid'],'app_uid'=>session('uid'),'app_jid'=>session('jid'),'ctime'=>time());
 		if($Apply->add($data_apply)){
+//			dump($Apply->getlastSql());
 			//更新用户可申请次数
 			if(!$this->updateApplyCount($arr_apply)){
 				//

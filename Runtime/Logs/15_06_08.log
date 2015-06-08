@@ -387,3 +387,272 @@ NOTIC: 建议使用I方法替代_get
 NOTIC: 建议使用I方法替代_get
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-06-08T12:36:52+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T12:37:37+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=60
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T12:37:40+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.011000s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `pay_alipay_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`ctime`) VALUES (1,1433738260) [ RunTime:0.083005s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.044002s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433738260 WHERE ( uid=1 ) [ RunTime:0.076005s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=60 ) [ RunTime:0.035002s ]
+
+[ 2015-06-08T12:37:43+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007000s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `pay_alipay_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`ctime`) VALUES (1,1433738263) [ RunTime:0.050002s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.055004s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433738263 WHERE ( uid=1 ) [ RunTime:0.045002s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=60 ) [ RunTime:0.044003s ]
+
+[ 2015-06-08T12:42:07+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.009001s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.008000s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2015-06-08T12:42:21+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007001s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-08T12:43:32+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.008001s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-08T12:45:57+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.009000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.009000s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `pay_alipay_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`ctime`) VALUES (1,1433738757) [ RunTime:0.049003s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.044002s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433738757 WHERE ( uid=1 ) [ RunTime:0.056003s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=60 ) [ RunTime:0.044003s ]
+
+[ 2015-06-08T12:46:09+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.008001s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pay_alipay_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`ctime`) VALUES (1,1433738769) [ RunTime:0.051002s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.044003s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433738769 WHERE ( uid=1 ) [ RunTime:0.044003s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=60 ) [ RunTime:0.044002s ]
+
+[ 2015-06-08T12:47:43+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=60
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T12:47:47+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.016001s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.012000s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.016001s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.002001s ]
+SQL: SELECT `pay_alipay_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`app_uid`,`ctime`) VALUES (1,1,1433738866) [ RunTime:0.057003s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.055003s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433738866 WHERE ( uid=1 ) [ RunTime:0.066004s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=60 ) [ RunTime:0.044002s ]
+
+[ 2015-06-08T12:47:55+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007001s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-08T12:48:16+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007001s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007000s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `pay_alipay_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`app_uid`,`ctime`) VALUES (1,1,1433738896) [ RunTime:0.059004s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.044002s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433738896 WHERE ( uid=1 ) [ RunTime:0.044003s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=60 ) [ RunTime:0.055003s ]
+
+[ 2015-06-08T12:48:20+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.008000s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007000s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `pay_alipay_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`app_uid`,`ctime`) VALUES (1,1,1433738900) [ RunTime:0.048003s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.044002s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433738900 WHERE ( uid=1 ) [ RunTime:0.055003s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=60 ) [ RunTime:0.044002s ]
+
+[ 2015-06-08T12:48:25+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.008001s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-08T12:49:30+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_users` [ RunTime:0.007001s ]
+SQL: SELECT `apply_count`,`apply_time` FROM `xm_users` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SELECT `pay_way` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `pay_alipay_id` FROM `xm_users` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `pub_oid` FROM `xm_jobs` WHERE ( jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `xm_apply` (`app_oid`,`app_uid`,`app_jid`,`ctime`) VALUES (1,1,60,1433738970) [ RunTime:0.059004s ]
+SQL: UPDATE `xm_users` SET `apply_count`=apply_count-1 WHERE ( uid=1 ) [ RunTime:0.055003s ]
+SQL: UPDATE `xm_users` SET `apply_time`=1433738970 WHERE ( uid=1 ) [ RunTime:0.044003s ]
+SQL: UPDATE `xm_jobs` SET `current_peo`=current_peo+1 WHERE ( jid=60 ) [ RunTime:0.067003s ]
+
+[ 2015-06-08T12:49:32+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-08T12:56:50+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-08T12:56:53+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=60
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-08T12:56:56+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `xm_apply` WHERE ( app_uid=1 AND app_jid=60 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-08T12:56:59+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=60
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
