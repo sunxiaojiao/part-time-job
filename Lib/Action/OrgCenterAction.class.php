@@ -97,16 +97,16 @@ class OrgCenterAction extends Action{
 			$this->error("未登录",U('Login/index'));
 			return;
 		}
-		$Apply = M('apply');
-		$where = "app_oid=".session('oid')." AND is_pass =1";
+		$Apply = M('Apply');
+		$where = "app_oid=" . session('oid') . " AND xm_apply.is_pass =1";
 		$field = "xm_apply.app_id AS app_id,xm_users.uid AS uid,xm_users.username AS username,xm_apply.ctime AS ctime,xm_apply.app_jid AS jid,xm_jobs.title AS title";
-		$join_user = "INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid";
-		$join_job = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_apply.app_jid";
+		$join_user  = "INNER JOIN xm_users ON xm_users.uid = xm_apply.app_uid";
+		$join_job   = "INNER JOIN xm_jobs  ON xm_jobs.jid  = xm_apply.app_jid";
 		$arr2_apply = $Apply->where($where)->join($join_user)->join($join_job)->field($field)->select();
-		//dump($Apply->getLastSql());
+		
 		if($arr2_apply){
 			$this->assign("apply_list",$arr2_apply);
-		}elseif (is_null($apply_list)){
+		}elseif (is_null($arr2_apply)){
 			$this->assign("apply_error_info","无申请人");
 		}else{
 			$this->assign("apply_error_info","查询失败");

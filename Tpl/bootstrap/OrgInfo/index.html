@@ -101,7 +101,7 @@
                             <li class="list-group-item">{$job_error_info}</li>
                             <else />
                             <volist name="job_info" id="job_info">
-                                <a class="list-group-item" href="{:U(" JobInfo/index ")}?jid={$job_info.jid}">{$job_info.title} <span class="time pull-right">{$job_info.ctime}</span></a>
+                                <a class="list-group-item" href="{:U("JobsInfo/index")}?jid={$job_info.jid}">{$job_info.title} <span class="badge">{$job_info.ctime|ftime}</span></a>
                             </volist>
                         </if>
                     </ul>

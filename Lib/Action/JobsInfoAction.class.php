@@ -15,10 +15,14 @@ class JobsInfoAction extends Action{
 		$Job = M('Jobs');
 		$field = "jid,oid,address,title,pay_way,org_intro,addressname,detail,xm_mold.name,xm_orgs.orgname,is_validate,pub_oid,money,money_style,work_time,begin_time,want_peo,peo_style,current_peo,leader,xm_jobs.ctime,leader_phone,pv";
 		$where = "jid=".$this->jid;// . " AND " . 'is_pass=1';
-		$join1 = "INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id";
-		$join2 = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid";
-		$arr1 = $Job->where($where)->join($join1)->join($join2)->field($field)->find();
-		$arr1['address'] = explode(",", $arr1['address']);
+		//,count(app_id) AS app_count
+		$join_mold   = "INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id";
+		$join_orgs   = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid";
+//		$join_apply  = "INNER JOIN xm_apply ON xm_apply.app_jid = xm.jobs.jid";
+		$arr1 = $Job->where($where)->join($join_mold)->join($join_orgs)/*->join($join_apply)*/->field($field)->find();
+		if(isset($arr1['address'])){
+			$arr1['address'] = explode(",", $arr1['address']);
+		}
 		session('pub_oid',$arr1['pub_oid']);
 		session('phone',$arr1['leader_phone']);
 		//dump($arr1['address']);
@@ -26,9 +30,9 @@ class JobsInfoAction extends Action{
 			$this->assign("list",$arr1);
 			return;
 		}else if(is_null($arr1)){
-			$this->assign('error_info','没有此兼职');
+			$this->assign('job_error_info','没有此兼职');
 		}else{
-			$this->assign('error_info','查询错误，请稍后再试');
+			$this->assign('job_error_info','查询错误，请稍后再试'.$Job->getlastSql());
 		}
 	}
 	//记录浏览量

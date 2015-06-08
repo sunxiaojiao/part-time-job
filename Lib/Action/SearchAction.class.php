@@ -55,8 +55,8 @@ class SearchAction extends Action {
 		$where2 = "`username` LIKE BINARY '%" .$wd . "%'";
 		//先不考虑中英文混合
 		//$sql  = "SELECT jid,title,address,money FROM `xm_jobs` WHERE `title` LIKE BINARY CONCAT('%',UPPER('" . $this->word . "'),'%')";
-		$sql1  = "SELECT jid,title,address,money FROM `xm_jobs` WHERE ( ". $where1 ." )";
-		$sql2  = "SELECT username,uid FROM `xm_users` WHERE (" . $where2. ")";
+		$sql1  = "SELECT jid,title,addressname,money,ctime FROM `xm_jobs` WHERE ( ". $where1 ." )";
+		$sql2  = "SELECT username,sex,uid FROM `xm_users` WHERE (" . $where2. ")";
 		$data;
 		if($sf == 'job'){
 			$data = $M->query($sql1);

@@ -48,16 +48,22 @@ class ApplyJobAction extends Action{
 		//添加申请记录
 		$Job = M('jobs');
 		$oid = $Job->where("jid=".session('jid'))->field("pub_oid")->find();
-		$data['app_oid'] = $oid['pub_oid'];
-		$data['ctime'] = time();
-		if($Apply->add($data)){
-			//更新用户申请次数
+		$data_apply = array('app_oid'=>$oid['pub_oid'],'ctime'=>time());
+		if($Apply->add($data_apply)){
+			//更新用户可申请次数
 			if(!$this->updateApplyCount($arr_apply)){
 				//
 				$this->ajaxReturn(2,'申请失败',1);
 				return;
 			}
-			$leave_count = $arr_apply['apply_count']-1;
+			//更新jobs中，当前申请人数
+			$Job->where("jid=".session('jid'))->setInc('current_peo',1);
+			//计算可申请次数
+			if($arr_apply['apply_count'] == 0){
+				$leave_count = 2;
+			}else{
+				$leave_count = $arr_apply['apply_count']-1;
+			}
 			$this->ajaxReturn(4,"申请成功，今日还可以申请". $leave_count ."次",1);
 		}else{
 			$this->ajaxReturn(2,"申请失败",1);

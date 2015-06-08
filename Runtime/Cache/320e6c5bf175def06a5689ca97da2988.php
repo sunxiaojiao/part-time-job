@@ -141,7 +141,7 @@ THINK;
             <div class="col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <?php if($error_info): ?><h3><?php echo ($error_info); ?></h3>
+                        <?php if($job_error_info): ?><h3><?php echo ($job_error_info); ?></h3>
                             <?php else: ?>
                             <h3><?php echo ($list["title"]); ?></h3><?php endif; ?>
                         <div class="row">
@@ -191,7 +191,7 @@ THINK;
                             <div class="col-md-6"><div id="mapContainer" style="width:100%;height:350px;" class="pull-right"></div></div>
                         </div>
                         <!--./基本信息-->
-                        <button type="button" class="btn btn-primary btn-lg" id="goto-apply">申请此兼职</button>
+                        <button type="button" class="btn btn-primary btn-lg" id="goto-apply">申请此兼职</button>&nbsp;(同时投递简历)
 
                         <hr />
                         <div role="tabpanel">

@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>搜索结果</title>
-    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
-<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
+<link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
@@ -51,7 +51,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
@@ -129,7 +129,7 @@ THINK;
                     <ul class="list-group">
                         <?php if(isset($error_info)): ?><li class="list-group-item"><?php echo ($error_info); ?></li>
                             <?php else: ?>
-                            <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$result): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U('UserInfo/index');?>?uid=<?php echo ($result["uid"]); ?>"><?php echo ($result["username"]); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                            <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$result): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U('UserInfo/index');?>?uid=<?php echo ($result["uid"]); ?>"><?php echo ($result["username"]); ?>&emsp;|&emsp;<?php switch($result["sex"]): case "2": break;?>女<?php case "1": ?>男<?php break; default: ?>保密<?php endswitch;?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </ul>
                 </div>
             </div>

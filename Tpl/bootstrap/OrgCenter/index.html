@@ -119,7 +119,7 @@
                         <if condition="isset($apply_error_info)">
                             <li class="list-group-item">{$apply_error_info}</li>
                             <else />
-                            <volist name="applylist" id="applylist">
+                            <volist name="apply_list" id="applylist">
                                 <li href="#" class="list-group-item"><a target="_blank" href="{:U('UserInfo/index')}?uid={$applylist.uid}">{$applylist.username}</a>申请了<a href="{:U('JobsInfo/index')}?jid={$applylist.jid}">{$applylist.title}</a><span class="btn-content"><button class="btn btn-success" data-app_id="{$applylist.app_id}" data-jid="{$applylist.jid}" data-uid="{$applylist.uid}">通过</button><button class="btn btn-danger" data-app_id="{$applylist.app_id}">拒绝</button></span></li>
                             </volist>
                         </if>

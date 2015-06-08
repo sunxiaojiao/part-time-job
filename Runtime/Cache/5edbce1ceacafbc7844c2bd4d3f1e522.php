@@ -129,7 +129,7 @@ THINK;
                     <ul class="list-group">
                         <?php if(isset($error_info)): ?><li class="list-group-item"><?php echo ($error_info); ?></li>
                             <?php else: ?>
-                            <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$result): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($result["jid"]); ?>"><?php echo ($result["title"]); ?>/<?php echo ($result["money"]); ?>/<?php echo ($result["address"]); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                            <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$result): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($result["jid"]); ?>"><?php echo ($result["title"]); ?>&emsp;|&emsp;报酬：<?php echo ($result["money"]); ?>元&emsp;|&emsp;<?php echo ($result["addressname"]); ?>&emsp;|&emsp;<?php echo (ftime($result["ctime"])); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </ul>
                 </div>
             </div>

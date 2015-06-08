@@ -40,7 +40,7 @@
                             <li class="list-group-item">{$error_info}</li>
                             <else />
                             <volist name="result" id="result">
-                                <a class="list-group-item" href="{:U('JobsInfo/index')}?jid={$result.jid}">{$result.title}/{$result.money}/{$result.address}</a>
+                                <a class="list-group-item" href="{:U('JobsInfo/index')}?jid={$result.jid}">{$result.title}&emsp;|&emsp;报酬：{$result.money}元&emsp;|&emsp;{$result.addressname}&emsp;|&emsp;{$result.ctime|ftime}</a>
                             </volist>
                         </if>
                     </ul>

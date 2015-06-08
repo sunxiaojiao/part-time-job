@@ -2261,3 +2261,181 @@ NOTIC: 建议使用I方法替代_post
 [ 2015-06-07T22:46:12+08:00 ] 127.0.0.1 /Index/index.html
 NOTIC: 建议使用I方法替代_get
 
+[ 2015-06-07T23:04:57+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=60
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:04:59+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:09:02+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:10:00+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:10:45+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:11:15+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:11:32+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:11:42+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:11:53+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:12:04+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:13:20+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:14:03+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:14:17+08:00 ] 127.0.0.1 /Search/s.html?sf=job&wd=%E6%96%AF
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:14:37+08:00 ] 127.0.0.1 /Search/s.html?sf=user&wd=s
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:15:31+08:00 ] 127.0.0.1 /Search/s.html?sf=user&wd=s
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:17:33+08:00 ] 127.0.0.1 /Search/s.html?sf=user&wd=s
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:18:15+08:00 ] 127.0.0.1 /UserInfo/index.html?uid=16
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:18:15+08:00 ] 127.0.0.1 /UserInfo/generatePhoneImage/t/qq.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:18:16+08:00 ] 127.0.0.1 /UserInfo/generatePhoneImage/t/phone.html
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:18:24+08:00 ] 127.0.0.1 /UserInfo/evalMe.html
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_user_evalute` [ RunTime:0.007000s ]
+NOTIC: [8] Use of undefined constant length - assumed 'length' D:\wamp\www\ThinkPHP3.1\Lib\Action\UserInfoAction.class.php 第 54 行.
+
+[ 2015-06-07T23:18:32+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:18:37+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=53
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:18:39+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:18:43+08:00 ] 127.0.0.1 /%20JobInfo/index%20.html?jid=46
+ERR: 无法加载模块: JobInfo
+
+[ 2015-06-07T23:19:06+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:19:07+08:00 ] 127.0.0.1 /JobInfo/index.html?jid=43
+ERR: 无法加载模块:JobInfo
+
+[ 2015-06-07T23:19:13+08:00 ] 127.0.0.1 /JobInfo/index.html?jid=51
+ERR: 无法加载模块:JobInfo
+
+[ 2015-06-07T23:19:26+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:19:27+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=44
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:20:18+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:20:20+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=60
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:20:27+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=59
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:20:33+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=58
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:22:40+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=58
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:22:58+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=58
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:23:57+08:00 ] 127.0.0.1 /ChangeCity/ChangeCity.html?aid=1
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.008001s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `city` FROM `xm_address` WHERE ( aid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-07T23:24:00+08:00 ] 127.0.0.1 /
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:45:46+08:00 ] 127.0.0.1 /index.php?sort=10
+NOTIC: 建议使用I方法替代_get
+
+[ 2015-06-07T23:46:05+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=43
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+

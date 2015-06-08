@@ -187,7 +187,7 @@ THINK;
                     <ul class="list-group">
                         <?php if($job_error_info): ?><li class="list-group-item"><?php echo ($job_error_info); ?></li>
                             <?php else: ?>
-                            <?php if(is_array($job_info)): $i = 0; $__LIST__ = $job_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job_info): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U(" JobInfo/index ");?>?jid=<?php echo ($job_info["jid"]); ?>"><?php echo ($job_info["title"]); ?> <span class="time pull-right"><?php echo ($job_info["ctime"]); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                            <?php if(is_array($job_info)): $i = 0; $__LIST__ = $job_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job_info): $mod = ($i % 2 );++$i;?><a class="list-group-item" href="<?php echo U("JobsInfo/index");?>?jid=<?php echo ($job_info["jid"]); ?>"><?php echo ($job_info["title"]); ?> <span class="badge"><?php echo (ftime($job_info["ctime"])); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </ul>
                   </div>
                 </div>

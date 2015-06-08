@@ -40,7 +40,7 @@
                             <li class="list-group-item">{$error_info}</li>
                             <else />
                             <volist name="result" id="result">
-                                <a class="list-group-item" href="{:U('UserInfo/index')}?uid={$result.uid}">{$result.username}</a>
+                                <a class="list-group-item" href="{:U('UserInfo/index')}?uid={$result.uid}">{$result.username}&emsp;|&emsp;<switch name="result.sex"><case value="2"></case>女<case value="1">男</case><default />保密</switch></a>
                             </volist>
                         </if>
                     </ul>
