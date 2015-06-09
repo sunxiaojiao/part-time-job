@@ -186,7 +186,7 @@ class UserCenterAction extends Action{
 		if($arr2){
 			$this->assign('work_info',$arr2);
 		}elseif(is_null($arr2)){
-			$this->assign('work_error_info','还没有兼职可以做'.$Work->getLastSql());
+			$this->assign('work_error_info','还没有兼职可以做');
 		}else{
 			$this->assign('work_error_info','读取错误'.$Work->getLastSql());
 		}
@@ -238,22 +238,6 @@ class UserCenterAction extends Action{
 			}
 		}	
 	}
-	//显示正在进行的兼职的细节
-	public function showMyJobDetail() {
-		$Work  = M('Working');
-		$field = "title,work_id,work_status,xm_working.ctime";
-		$where = "work_uid=" . session('uid');
-		$join  = "INNER JOIN xm_jobs ON xm_jobs.pub_oid=xm_working.work_oid";
-		$arr2  = $Work->field($field)->join($join)->where($where)->select();
-		if($arr2){
-			$this->assign('work_info',$arr2);
-		}elseif(is_null($arr2)){
-			$this->assign('work_error_info','还没有兼职可以做哦');
-		}else{
-			$this->assign('work_error_info','读取错误');
-		}
-	}
-	
 	
 }
 
