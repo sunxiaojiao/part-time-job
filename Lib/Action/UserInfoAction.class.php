@@ -10,20 +10,23 @@ class UserInfoAction extends Action{
 		$this->display();
 	}
 	protected  function showInfo(){
-		$Users = M('Users');
-		$field = "uid,username,age,sex,avatar,phone,address,qq,school,exp,intent";
-		$list = $Users->where("uid=".$this->uid)->field($field)->find();
+		$Users   = M('Users');
+		$field   = "uid,username,age,sex,avatar,phone,address,qq,school,exp,intent";
+		$list    = $Users->where("uid=".$this->uid)->field($field)->find();
 		session('user_qq',$list['qq']);
 		session('user_phone',$list['phone']);
+		//unserialize地址
+		$address = unserialize($list['address']);
+		$list['address'] = $address['province'] . $address['city'] . $address['area'];
 		//查询mold表
-		$intent = unserialize($list['intent']);
-		$Mold = M('Mold');
-		$where = "";
+		$intent  = unserialize($list['intent']);
+		$Mold    = M('Mold');
+		$where   = "";
 		foreach ($intent as $key => $value){
 			$where .= "mid=".$value." OR ";
 		}
-		$where = substr($where,0,strlen($where)-4);
-		$intent = $Mold->where($where)->field("name")->select();
+		$where   = substr($where,0,strlen($where)-4);
+		$intent  = $Mold->where($where)->field("name")->select();
 		$this->assign("user_info",$list);
 		$this->assign("intent",$intent);
 	}

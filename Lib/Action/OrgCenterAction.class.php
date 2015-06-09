@@ -133,7 +133,7 @@ class OrgCenterAction extends Action{
 		$jid = $this->_get('jid');
 		$Work   = M('Working');
 		$where  = "work_jid=" . $jid;
-		$field  = "work_uid,work_id,work_status,xm_working.ctime,username,title,xm_working.is_pass";
+		$field  = "work_uid,work_id,work_status,xm_working.ctime,username,pay_way,pay_alipay_id,pay_ccard_id,title,xm_working.is_pass";
 		$join1  = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
 		$join2  = "INNER JOIN xm_users ON xm_users.uid=xm_working.work_uid";
 		$arr2   = $Work->where($where)->join($join1)->join($join2)->field($field)->select();

@@ -182,6 +182,11 @@ THINK;
                                 <td>用户</td>
                                 <td>状态</td>
                                 <td>时间</td>
+                                <td>
+                                    <?php switch($work_info[0]["pay_way"]): case "1": ?>支付宝<?php break;?>
+                                        <?php case "2": ?>银行卡<?php break;?>
+                                        <?php default: ?>现金<?php endswitch;?>
+                                </td>
                             </thead>
                             <?php if($work_error_info): echo ($work_error_info); ?>
                             <?php else: ?>
@@ -197,6 +202,11 @@ THINK;
                                         )<?php break; endswitch;?>
                                 </td>
                                 <td><?php echo (date('m/d h:i',$info["ctime"])); ?></td>
+                                <td>
+                                    <?php switch($info["pay_way"]): case "1": echo ($info["pay_alipay_id"]); break;?>
+                                        <?php case "2": echo ($info["pay_ccard_id"]); break;?>
+                                        <?php default: ?>/<?php endswitch;?>
+                                </td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                         </table>
                     </div>
@@ -206,7 +216,7 @@ THINK;
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img src="<?php echo ($orgInfo["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
                     </div>
                 </div>
             </div>

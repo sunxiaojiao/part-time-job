@@ -91,6 +91,13 @@
                                 <td>用户</td>
                                 <td>状态</td>
                                 <td>时间</td>
+                                <td>
+                                    <switch name="work_info[0].pay_way">
+                                        <case value="1">支付宝</case>
+                                        <case value="2">银行卡</case>
+                                        <default />现金
+                                    </switch>
+                                </td>
                             </thead>
                             <if condition="$work_error_info">
                                 {$work_error_info}
@@ -114,6 +121,13 @@
                                 </switch>
                                 </td>
                                 <td>{$info.ctime|date='m/d h:i',###}</td>
+                                <td>
+                                    <switch name="info.pay_way">
+                                        <case value="1">{$info.pay_alipay_id}</case>
+                                        <case value="2">{$info.pay_ccard_id}</case>
+                                        <default />/
+                                    </switch>
+                                </td>
                             </tr>
                             </volist>
                             </if>
@@ -125,7 +139,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img src="{$orgInfo.avatar}" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
+                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
                     </div>
                 </div>
             </div>
