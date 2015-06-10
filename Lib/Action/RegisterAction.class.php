@@ -28,15 +28,14 @@ class RegisterAction extends Action{
 		$data['phone']  = $this->_post('phone_num');
 		$data['passwd'] = md5($this->_post('passwd'));
 		$data['ctime']  = time();
-		if($this->_post('orgname') != '' && $this->_post('org_address') != ''){
-			$data['orgname']     = $this->_post('orgname');
-			$data['org_address'] = $this->_post('address');
-		}
-		if($this->_post('username') !== null){
-			$data['username'] = $this->_post('username');
+		if($this->isOrg()){
+			$data['orgname']     = $this->_post('org');
+			$data['address']     = $this->_post('address');
+		}else{
+			$data['username']    = $this->_post('username');
 		}
 		//验证，插入数据库
-		if($Reger->create($data)){
+		if($Reger->create($data,1)){
 			if($primary_id = $Reger->add()){
 				$f;
 				//设置session
@@ -51,6 +50,7 @@ class RegisterAction extends Action{
 				}
 				$this->ajaxReturn(0,"注册成功，等待跳转",$f);
 			}else{
+				//echo $Reger->getLastSql();
 				$this->ajaxReturn(2,"注册失败，请重试",1);
 			}
 		}else{
@@ -61,15 +61,11 @@ class RegisterAction extends Action{
 	//判断是否是为企业用户注册
 	private function isOrg(){
 		if($this->isPost()){
-			$flag = false;
-			//当前台的表单中有name=org_address和org的数据时为企业用户
-			if(!isset($_POST['org_address']) || !isset($_POST['org'])){
-				unset($_POST['org']);
-				unset($_POST['org_address']);
+			if($this->_post('reg_type') === 'org'){
+				return true;
 			}else{
-				$flag = true;
+				return false;
 			}
-			return $flag;
 		}
 	}
 	//设置验证码

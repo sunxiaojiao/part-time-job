@@ -77,6 +77,10 @@ class OrgCenterAction extends Action{
 	}
 	//更新企业信息
 	public function updateInfo(){
+		//过滤掉phone
+		if($this->_post('phone')){
+			return;
+		}
 		$Org = D('Orgs');
 		$where = "oid=".session('oid');
 		if(!$Org->create($this->_post(),2)){
