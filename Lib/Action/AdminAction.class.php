@@ -38,10 +38,10 @@ class AdminAction extends Action {
 	}
 	//列出认证申请列表
 	protected function authApply() {
-		$Model = M('Orgsauth');
-		$where = "is_pass = 1";
+		$Model = M('OrgsAuth');
+		$where = "is_pass = 3";
 		$field = "xm_orgs.oid AS oid,xm_orgs.orgname AS orgname";
-		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid";
+		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid";
 		$order = "xm_orgs.ctime";
 		$num   = 4;
 		$data_list  = "orgsauth_list";
@@ -76,7 +76,7 @@ class AdminAction extends Action {
 		if(!session('?admin_id')){
 			return ;
 		}
-		//接受参数
+		//接收参数
 		$is_pass = 0;
 		$is_validate = 0;
 		if($this->_post('pass') == 'yes') {//通过
@@ -118,7 +118,7 @@ class AdminAction extends Action {
 		}
 	}
 	//投诉建议详细
-	public function AdviceDetail() {
+	public function adviceDetail() {
 		//判断登录
 		if(!session('?admin_id')) {
 			$this->error("未登录",U('Index/index'));

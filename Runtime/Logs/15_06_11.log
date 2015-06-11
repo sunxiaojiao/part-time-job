@@ -4784,3 +4784,1702 @@ INFO: [ app_begin ] --START--
 INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
 
+[ 2015-06-11T16:34:41+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.036002s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.032002s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.011001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434011681- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434011681- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 0,5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: nav_route D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 206 行.
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:34:44+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.013001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.012001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.010000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.010000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434011684- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 1   [ RunTime:0.018001s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434011684- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.038003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038003s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:42:48+08:00 ] 127.0.0.1 /Admin/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.158009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.158009s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:42:49+08:00 ] 127.0.0.1 /Admin/loginHandler.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.033002s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.006000s ]
+
+[ 2015-06-11T16:42:51+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.045003s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xm_orgsauth`
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1  
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4  
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.019001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.015001s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434012171- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434012171- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008000s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 130 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:42:57+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.023002s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=1 ) LIMIT 1   [ RunTime:0.040002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 85 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001001s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:43:14+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008001s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=1 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:43:46+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008000s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=1 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:43:59+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008000s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=1 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:44:15+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.048003s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:44:21+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.028001s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:44:44+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.009000s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=3 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:45:20+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008000s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:45:30+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=3
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.009000s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=3 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:46:08+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=7
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.013001s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=7 ) LIMIT 1   [ RunTime:0.030002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:46:11+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.011000s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=9 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:46:16+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.010001s ]
+SQL: SELECT `content`,xm_advice.uid,xm_advice.oid,xm_advice.ctime,`username`,`orgname` FROM `xm_advice` LEFT JOIN xm_users ON xm_users.uid = xm_advice.uid LEFT JOIN xm_orgs ON xm_orgs.oid = xm_advice.oid WHERE ( advice_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\f7692d56c6a12701af8420b847d433a7.php 第 84 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:46:22+08:00 ] 127.0.0.1 /OrgInfo/index.html&oid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index.html&oid=1
+
+[ 2015-06-11T16:49:23+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.014001s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xm_orgsauth`
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1  
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4  
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.009001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434012563- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434012563- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:50:20+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.008000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xm_orgsauth`
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.001001s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1  
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.001000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4  
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.010001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434012620- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434012620- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.009000s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:50:40+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.008001s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xm_orgsauth`
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1  
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4  
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434012640- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434012640- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.007000s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:51:17+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.010000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xm_orgsauth`
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1  
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4  
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.014001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.011001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434012677- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434012677- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:51:19+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008001s ]
+SQL: SELECT `orgname`,`email`,xm_orgs.phone,`is_validate`,`avatar`,`org_address`,`website`,`fixed_phone`,`org_intro`,xm_orgs.ctime,xm_industry.name,`size`,`nature` FROM `xm_orgs` LEFT JOIN xm_orgs_auth ON xm_orgs_auth.auth_oid=xm_orgs.oid LEFT JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id WHERE ( oid=1 ) LIMIT 1   [ RunTime:0.126007s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `title`,`jid`,`ctime` FROM `xm_jobs` WHERE ( pub_oid=1 AND (1434012679- expire_time)<0 AND is_pass=0 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_org_evalute` [ RunTime:0.008001s ]
+SQL: SELECT `username`,`content`,xm_org_evalute.ctime FROM `xm_org_evalute` INNER JOIN xm_users ON xm_users.uid=xm_org_evalute.from_uid WHERE ( to_oid=1 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: job_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\c64b1f08fbbf6f6bba1c09602e048426.php 第 192 行.
+NOTIC: [8] Undefined variable: eval_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\c64b1f08fbbf6f6bba1c09602e048426.php 第 215 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:51:21+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=7
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008000s ]
+SQL: SELECT `orgname`,`email`,xm_orgs.phone,`is_validate`,`avatar`,`org_address`,`website`,`fixed_phone`,`org_intro`,xm_orgs.ctime,xm_industry.name,`size`,`nature` FROM `xm_orgs` LEFT JOIN xm_orgs_auth ON xm_orgs_auth.auth_oid=xm_orgs.oid LEFT JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id WHERE ( oid=7 ) LIMIT 1   [ RunTime:0.029002s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `title`,`jid`,`ctime` FROM `xm_jobs` WHERE ( pub_oid=7 AND (1434012681- expire_time)<0 AND is_pass=0 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_org_evalute` [ RunTime:0.007000s ]
+SQL: SELECT `username`,`content`,xm_org_evalute.ctime FROM `xm_org_evalute` INNER JOIN xm_users ON xm_users.uid=xm_org_evalute.from_uid WHERE ( to_oid=7 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:51:24+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008000s ]
+SQL: SELECT `orgname`,`email`,xm_orgs.phone,`is_validate`,`avatar`,`org_address`,`website`,`fixed_phone`,`org_intro`,xm_orgs.ctime,xm_industry.name,`size`,`nature` FROM `xm_orgs` LEFT JOIN xm_orgs_auth ON xm_orgs_auth.auth_oid=xm_orgs.oid LEFT JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id WHERE ( oid=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `title`,`jid`,`ctime` FROM `xm_jobs` WHERE ( pub_oid=1 AND (1434012684- expire_time)<0 AND is_pass=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_org_evalute` [ RunTime:0.008001s ]
+SQL: SELECT `username`,`content`,xm_org_evalute.ctime FROM `xm_org_evalute` INNER JOIN xm_users ON xm_users.uid=xm_org_evalute.from_uid WHERE ( to_oid=1 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: job_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\c64b1f08fbbf6f6bba1c09602e048426.php 第 192 行.
+NOTIC: [8] Undefined variable: eval_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\c64b1f08fbbf6f6bba1c09602e048426.php 第 215 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:51:26+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007001s ]
+SQL: SELECT `orgname`,`email`,xm_orgs.phone,`is_validate`,`avatar`,`org_address`,`website`,`fixed_phone`,`org_intro`,xm_orgs.ctime,xm_industry.name,`size`,`nature` FROM `xm_orgs` LEFT JOIN xm_orgs_auth ON xm_orgs_auth.auth_oid=xm_orgs.oid LEFT JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id WHERE ( oid=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.009000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `title`,`jid`,`ctime` FROM `xm_jobs` WHERE ( pub_oid=8 AND (1434012686- expire_time)<0 AND is_pass=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_org_evalute` [ RunTime:0.007001s ]
+SQL: SELECT `username`,`content`,xm_org_evalute.ctime FROM `xm_org_evalute` INNER JOIN xm_users ON xm_users.uid=xm_org_evalute.from_uid WHERE ( to_oid=8 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:51:28+08:00 ] 127.0.0.1 /OrgInfo/index.html?oid=6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008001s ]
+SQL: SELECT `orgname`,`email`,xm_orgs.phone,`is_validate`,`avatar`,`org_address`,`website`,`fixed_phone`,`org_intro`,xm_orgs.ctime,xm_industry.name,`size`,`nature` FROM `xm_orgs` LEFT JOIN xm_orgs_auth ON xm_orgs_auth.auth_oid=xm_orgs.oid LEFT JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id WHERE ( oid=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `title`,`jid`,`ctime` FROM `xm_jobs` WHERE ( pub_oid=6 AND (1434012688- expire_time)<0 AND is_pass=0 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_org_evalute` [ RunTime:0.007001s ]
+SQL: SELECT `username`,`content`,xm_org_evalute.ctime FROM `xm_org_evalute` INNER JOIN xm_users ON xm_users.uid=xm_org_evalute.from_uid WHERE ( to_oid=6 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:52:28+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.008000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xm_orgsauth`
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1  
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.001000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4  
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.009000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434012748- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434012748- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.007001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 108 行.
+NOTIC: [8] Undefined variable: orgsauth_list D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 108 行.
+NOTIC: [8] Undefined variable: orgsauth_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 109 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001001s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:57:16+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.009000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xm_orgsauth`
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime  [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime 
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1  
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.001000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4  
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 250 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 187 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 234 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 187 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 234 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 246 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 250 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 151 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 234 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 151 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 234 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013036- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 246 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434013036- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 250 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.007001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:57:38+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_orgsauth` [ RunTime:0.007000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xm_orgsauth`
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime  [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime 
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `xm_orgsauth` WHERE ( is_pass = 1 ) LIMIT 1  
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000000s ]
+ERR: 1146:Table 'think_job.xm_orgsauth' doesn't exist
+ [ SQL语句 ] : SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgsauth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgsauth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4  
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 188 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 188 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 247 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.021001s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 152 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 152 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013058- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 247 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434013058- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:58:54+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_orgs_auth` [ RunTime:0.009001s ]
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgs_auth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime  [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs_auth` WHERE ( is_pass = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgs_auth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid WHERE ( is_pass = 1 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.007000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 188 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 188 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 247 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 152 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 152 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013134- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 247 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434013134- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.007001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_page D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 113 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:59:37+08:00 ] 127.0.0.1 /Admin/logout.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.046002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:59:38+08:00 ] 127.0.0.1 /Admin/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:59:40+08:00 ] 127.0.0.1 /Login/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001001s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T16:59:40+08:00 ] 127.0.0.1 /Login/vCode.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T17:00:23+08:00 ] 127.0.0.1 /Admin/AdviceDetail.html?ai=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T17:00:26+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.039002s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013226- expire_time)<0 AND is_pass=0 AND city='烟台市' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`addressname`,`pv`,`ctime` FROM `xm_jobs` WHERE ( (1434013226- expire_time)<0 AND is_pass=0 AND city='烟台市' ) ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T17:00:28+08:00 ] 127.0.0.1 /Login/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T17:00:28+08:00 ] 127.0.0.1 /Login/vCode.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T17:00:33+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013233- expire_time)<0 AND is_pass=0 AND city='烟台市' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`addressname`,`pv`,`ctime` FROM `xm_jobs` WHERE ( (1434013233- expire_time)<0 AND is_pass=0 AND city='烟台市' ) ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T17:01:06+08:00 ] 127.0.0.1 /Admin/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T17:01:07+08:00 ] 127.0.0.1 /Admin/loginHandler.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `xm_admin` [ RunTime:0.008001s ]
+SQL: SELECT `admin_id` FROM `xm_admin` WHERE ( username='admin' AND passwd='21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-11T17:01:08+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_orgs_auth` [ RunTime:0.009001s ]
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgs_auth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid WHERE ( is_pass = 3 ) ORDER BY xm_orgs.ctime  [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs_auth` WHERE ( is_pass = 3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgs_auth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid WHERE ( is_pass = 3 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.010000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 188 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 188 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001001s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 247 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.011000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 152 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 152 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 235 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013268- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 247 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434013268- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.007001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 108 行.
+NOTIC: [8] Undefined variable: orgsauth_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 109 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T17:01:16+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_orgs_auth` [ RunTime:0.011001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs_auth` WHERE ( is_pass = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgs_auth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid WHERE ( is_pass = 3 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.010000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013276- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434013276- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 108 行.
+NOTIC: [8] Undefined variable: orgsauth_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 109 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 133 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T17:01:29+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_orgs_auth` [ RunTime:0.009001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs_auth` WHERE ( is_pass = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgs_auth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid WHERE ( is_pass = 3 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.056003s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013289- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434013289- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.010000s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 108 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 132 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T17:01:31+08:00 ] 127.0.0.1 /OrgInfo/index.html&oid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index.html&oid=1
+
+[ 2015-06-11T17:01:53+08:00 ] 127.0.0.1 /Admin/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_orgs_auth` [ RunTime:0.008001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs_auth` WHERE ( is_pass = 3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT xm_orgs.oid AS oid,xm_orgs.orgname AS orgname FROM `xm_orgs_auth` INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid WHERE ( is_pass = 3 ) ORDER BY xm_orgs.ctime LIMIT 0,4   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_orgs` [ RunTime:0.008001s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 186 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_orgs` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `oid`,`orgname`,from_unixtime(ctime,'%y/%m/%d') AS ctime,`is_validate` FROM `xm_orgs` ORDER BY ctime LIMIT 0,4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+NOTIC: [2] Missing argument 8 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+NOTIC: [2] Missing argument 9 for AdminAction::pagingList(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php on line 150 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 233 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434013313- expire_time)<0 AND is_pass=0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined variable: join D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 245 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT `jid`,`title`,from_unixtime(ctime) AS ctime FROM `xm_jobs` WHERE ( (1434013313- expire_time)<0 AND is_pass=0 ) ORDER BY ctime LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value D:\wamp\www\ThinkPHP3.1\Lib\Action\AdminAction.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `xm_advice` [ RunTime:0.008001s ]
+SQL: SELECT `advice_id`,`content`,`uid`,`oid`,`ctime` FROM `xm_advice`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: jobs_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 99 行.
+NOTIC: [8] Undefined variable: orgsauth_error D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 108 行.
+NOTIC: [8] Undefined variable: error_advice_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\189575c9625b4754cbcf5d47cdbf0241.php 第 132 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+

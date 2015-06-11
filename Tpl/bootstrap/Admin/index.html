@@ -45,7 +45,7 @@
                     <ul class="list-group">
                     <if condition="is_null($jobs_error)">
                             <volist name="jobs_list" id="list">
-                                <li class="list-group-item"><a href="{:U('JobsInfo/index')}&jid={$list.jid}">{$list.title}</a><span class="btn-content" data-jid="{$list.jid}"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li>
+                                <li class="list-group-item"><a href="{:U('JobsInfo/index')}?jid={$list.jid}">{$list.title}</a><span class="btn-content" data-jid="{$list.jid}"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li>
                             </volist>
                             <else/>
                             <li class="list-group-item">{$jobs_error}</li>
@@ -58,9 +58,8 @@
                     <ul class="list-group">
                         <if condition="is_null($orgsauth_error)">
                             <volist name="orgsauth_list" id="apply">
-                                <li class="list-group-item"><a href="{:U('OrgInfo/index')}&oid={$apply.oid}">{$apply.orgname}</a><span class="btn-content" data-oid="{$apply.oid}"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li>
+                                <li class="list-group-item"><a href="{:U('OrgInfo/index')}?oid={$apply.oid}">{$apply.orgname}</a><span class="btn-content" data-oid="{$apply.oid}"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li>
                             </volist>
-                            {:dump($orgsauth_error)}
                             <else/>
                             <li class="list-group-item">{$orgsauth_error}</li>
                         </if>
@@ -74,7 +73,12 @@
                             <li class="list-group-item">{$empty}</li>
                             <else />
                             <volist name="orgs_list" id="orglists">
-                                <a href="{:U('OrgInfo/index')}&oid={$orglists.oid}" class="list-group-item">{$orglists.orgname}/{$orglists.is_validate}/创建时间：{$orglists.ctime}</a>
+                                <a href="{:U('OrgInfo/index')}?oid={$orglists.oid}" class="list-group-item">{$orglists.orgname}/
+                                <switch name="orglists.is_validate">
+                                <case value="0"><span style="color:#F00">未认证</span></case>
+                                <case value="1"><span style="color:#0F0">已认证</span></case>
+                                </switch>
+                                /创建时间：{$orglists.ctime}</a>
                             </volist>
                         </if>
                     </ul>

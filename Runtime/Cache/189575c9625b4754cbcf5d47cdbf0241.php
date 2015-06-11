@@ -7,12 +7,14 @@
     <title>兼职平台</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
+
+<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
-<script src="/__GROUP__/js/jquery.min.js"></script>
-<script src="/__GROUP__/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
+<script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
     .scroll-content {
         position: relative;
@@ -94,7 +96,7 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading" id="publish-apply">兼职申请列表</div>
                     <ul class="list-group">
-                    <?php if(is_null($jobs_error)): if(is_array($jobs_list)): $i = 0; $__LIST__ = $jobs_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U('JobsInfo/index');?>&jid=<?php echo ($list["jid"]); ?>"><?php echo ($list["title"]); ?></a><span class="btn-content" data-jid="<?php echo ($list["jid"]); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <?php if(is_null($jobs_error)): if(is_array($jobs_list)): $i = 0; $__LIST__ = $jobs_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($list["jid"]); ?>"><?php echo ($list["title"]); ?></a><span class="btn-content" data-jid="<?php echo ($list["jid"]); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
                             <?php else: ?>
                             <li class="list-group-item"><?php echo ($jobs_error); ?></li><?php endif; ?>
                     </ul>
@@ -103,8 +105,7 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading" id="auth-apply">认证申请列表</div>
                     <ul class="list-group">
-                        <?php if(is_null($orgsauth_error)): if(is_array($orgsauth_list)): $i = 0; $__LIST__ = $orgsauth_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U('OrgInfo/index');?>&oid=<?php echo ($apply["oid"]); ?>"><?php echo ($apply["orgname"]); ?></a><span class="btn-content" data-oid="<?php echo ($apply["oid"]); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            <?php echo dump($orgsauth_error);?>
+                        <?php if(is_null($orgsauth_error)): if(is_array($orgsauth_list)): $i = 0; $__LIST__ = $orgsauth_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U('OrgInfo/index');?>?oid=<?php echo ($apply["oid"]); ?>"><?php echo ($apply["orgname"]); ?></a><span class="btn-content" data-oid="<?php echo ($apply["oid"]); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
                             <?php else: ?>
                             <li class="list-group-item"><?php echo ($orgsauth_error); ?></li><?php endif; ?>
                     </ul>
@@ -115,7 +116,10 @@
                     <ul class="list-group">
                         <?php if(isset($empty)): ?><li class="list-group-item"><?php echo ($empty); ?></li>
                             <?php else: ?>
-                            <?php if(is_array($orgs_list)): $i = 0; $__LIST__ = $orgs_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$orglists): $mod = ($i % 2 );++$i;?><a href="<?php echo U('OrgInfo/index');?>&oid=<?php echo ($orglists["oid"]); ?>" class="list-group-item"><?php echo ($orglists["orgname"]); ?>/<?php echo ($orglists["is_validate"]); ?>/创建时间：<?php echo ($orglists["ctime"]); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                            <?php if(is_array($orgs_list)): $i = 0; $__LIST__ = $orgs_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$orglists): $mod = ($i % 2 );++$i;?><a href="<?php echo U('OrgInfo/index');?>?oid=<?php echo ($orglists["oid"]); ?>" class="list-group-item"><?php echo ($orglists["orgname"]); ?>/
+                                <?php switch($orglists["is_validate"]): case "0": ?><span style="color:#F00">未认证</span><?php break;?>
+                                <?php case "1": ?><span style="color:#0F0">已认证</span><?php break; endswitch;?>
+                                /创建时间：<?php echo ($orglists["ctime"]); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </ul>
                     <nav>
                         <ul class="pagination"><?php echo ($orgs_page); ?></ul>

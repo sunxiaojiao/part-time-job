@@ -5,14 +5,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>兼职平台</title>
-    <link href="/Public/favicon.ico" type="image/x-icon" rel=icon />
-<link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" />
+    <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
+<link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
+
+<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
-<script src="/__GROUP__/js/jquery.min.js"></script>
-<script src="/__GROUP__/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
+<script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
     </style>
 </head>
@@ -71,7 +73,6 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">投诉建议详细</div>
                     <div class="panel-body">
-                    <?php echo dump($advice_info);?>
                     <div class="alert alert-info">
                         时间：<?php echo (date('m月d号 h:i',$advice_info["ctime"])); ?>
                         &emsp;&emsp;
@@ -79,7 +80,7 @@
                                 <?php elseif($advice_info["oid"] != '0'): ?><a href="<?php echo U("OrgInfo/index");?>?oid=<?php echo ($advice_info["oid"]); ?>" target="_blank"><?php echo ($advice_info["orgname"]); ?></a>
                                 <?php else: ?>未登录的用户<?php endif; ?>
                     </div>
-                    <div style="overflow:auto">
+                    <div style="overflow:auto;border-top:1px solid #c8c8c8;padding-top:10px;">
                     <?php if($error_advice_info): echo ($error_advice_info); ?>
                         <?php else: ?>
                     <?php echo (htmlspecialchars_decode($advice_info["content"])); endif; ?>
