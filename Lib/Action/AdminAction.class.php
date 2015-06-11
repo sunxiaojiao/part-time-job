@@ -3,20 +3,23 @@ class AdminAction extends Action {
 	public function index() {
 		//session('admin_id',1);
 		//检查用户登录
-		if(!session('?admin_id')) {
-			$this->error("未登录",U('Index/index'));
-			return;
-		}
-		$this->authApply();
-		$this->orgsList();
-		$this->publishApply();
-		$this->showAdvice();
+		$this->isLogined();
 		$this->display();
 	}
+	
+	//判断是否登录
+	protected function isLogined(){
+		if(!session('?admin_id')) {
+			$this->error("未登录",U('Index/index'));
+			exit();
+		}
+	}
+	
 	//登录页面
 	public function login() {
 		$this->display();
 	}
+	
 	//登录处理
 	public function loginHandler() {
 		if(!$this->isPost()){
@@ -36,8 +39,14 @@ class AdminAction extends Action {
 			$this->ajaxReturn(0,"登录失败",0);
 		}
 	}
+	//显示消息
+	public function showMessage() {
+		$this->isLogined();
+		$this->display();
+	}
 	//列出认证申请列表
-	protected function authApply() {
+	public function authApply() {
+		$this->isLogined();
 		$Model = M('OrgsAuth');
 		$where = "is_pass = 3";
 		$field = "xm_orgs.oid AS oid,xm_orgs.orgname AS orgname";
@@ -48,13 +57,12 @@ class AdminAction extends Action {
 		$show_list  = "orgsauth_page";
 		$error_info = "orgsauth_error";
 		$this->pagingList($Model, $num, $where, $field, $data_list, $show_list, $error_info, $join,$order);
-		
+		$this->display();	
 	}
 	//列出申请认证公司资料
 	public function authDetail() {
-		if(!session('?admin_id')){
-			return ;
-		}
+		$this->isLogined();
+		
 //		$oid = $this->_post('oid') = 1 ;
 		$oid =1;
 		$Org   = M('orgs');
@@ -71,11 +79,11 @@ class AdminAction extends Action {
 		dump($Org->getLastSql());
 		$this->display();
 	}
-	//处理认证申请列表
+	
+	//处理认证申请
 	public function authHandler() {
-		if(!session('?admin_id')){
-			return ;
-		}
+		$this->isLogined();
+		
 		//接收参数
 		$is_pass = 0;
 		$is_validate = 0;
@@ -87,9 +95,10 @@ class AdminAction extends Action {
 			$is_validate = 0;
 		}
 		//xm_orgsauth 修改is_pass
-		$OrgAuth = M('Orgsauth');
+		$OrgAuth = M('OrgsAuth');
 		$where1 = "auth_oid=" . $this->_post('oid');
-		if(!$OrgAuth->where($where1)->setField("is_pass",$is_pass)){
+		$f_1 = $OrgAuth->where($where1)->setField("is_pass",$is_pass);
+		if(!$f_1 && $f_1 !== 0){
 			echo $OrgAuth->getLastSql();
 			$this->ajaxReturn(1,"操作失败",0);
 			return;
@@ -97,33 +106,34 @@ class AdminAction extends Action {
 		//xm_orgs 修改 is_validate
 		$Org = M('orgs');
 		$where = "oid=" . $this->_post('oid');
-		if($Org->where($where)->setField("is_validate",$is_validate)) {
+		$f = $Org->where($where)->setField("is_validate",$is_validate);
+		if($f || $f === 0) {
 			$this->ajaxReturn(2,"操作成功",1);
 		}else{
 			$this->ajaxReturn(2,"操作失败",0);
 		}
 	}
+	
 	//列出投诉建议
-	protected function showAdvice() {
-		$Advice = M('Advice');
+	public function showAdvice() {
+		$this->isLogined();
+		
+		$Model = M('Advice');
 		$field  = "advice_id,content,uid,oid,ctime";
 		$where  = "";
-		$arr2   = $Advice->field($field)->where($where)->select();
-		if($arr2){
-			$this->assign('advice_info',$arr2);
-		}elseif(is_null($arr2)){
-			$this->assign('error_advice_info','还没有投诉建议');
-		}else{
-			$this->assign('error_advice_info','读取错误');
-		}
+		$num    = 10;
+		$data_list = 'advice_info';
+		$show_list = 'advice_page';
+		$error_info = 'error_advice_info';
+
+		$this->pagingList($Model, $num, $where, $field, $data_list, $show_list, $error_info);
+		$this->display();
 	}
 	//投诉建议详细
 	public function adviceDetail() {
 		//判断登录
-		if(!session('?admin_id')) {
-			$this->error("未登录",U('Index/index'));
-			return;
-		}
+		$this->isLogined();
+		
 		$advice_id = $this->_get('ai');
 		$Advice = M('Advice');
 		$field  = "content,xm_advice.uid,xm_advice.oid,xm_advice.ctime,username,orgname";
@@ -139,7 +149,9 @@ class AdminAction extends Action {
 		$this->display();
 	}
 	//列出兼职发布申请列表
-	protected function publishApply() {
+	public function publishApply() {
+		$this->isLogined();
+		
 		$Model = M('jobs');
 		$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
 		$num = 10;
@@ -148,10 +160,12 @@ class AdminAction extends Action {
 		$show_list  = "jobs_page";
 		$error_info = "jobs_error";
 		$this->pagingList($Model, $num, $where, $field, $data_list, $show_list,$error_info);
-		//dump($Model->getLastSql());
+		$this->display();
 	}
 	//处理兼职申请列表
 	public function jobHandler() {
+		$this->isLogined();
+		
 		$Job = M('jobs');
 		if(!$this->isPost()){
 			return ;
@@ -172,10 +186,13 @@ class AdminAction extends Action {
 	}
 	//删除任意兼职
 	public function deleteJob() {
+		$this->isLogined();
 		
 	}
 	//现有公司列表
 	public function orgsList() {
+		$this->isLogined();
+		
 		$Orgs  = M('Orgs');
 		$field = "oid,orgname,from_unixtime(ctime,'%y/%m/%d') AS ctime,is_validate";
 		$num        = 4;
@@ -184,14 +201,15 @@ class AdminAction extends Action {
 		$where      = "";
 		$error_info = "orgs_error";
 		$this->pagingList($Orgs, $num, $where, $field, $data_list, $show_list,$error_info);
+		$this->display();
 	}
 	//删除公司
 	public function deleteOrg() {
-		
+		$this->isLogined();
 	}
 	//记录上一次登录的时间和IP
 	protected function lastRecord() {
-		
+		$this->isLogined();
 	}
 	//注销
 	public function logout() {
@@ -201,10 +219,12 @@ class AdminAction extends Action {
 	}
 	//管理城市--显示城市
 	protected function showNowCity() {
-		
+		$this->isLogined();
 	}
 	//管理城市--处理
 	public function CityHandler() {
+		$this->isLogined();
+		
 		$type = $this->_get('type');
 		$Address = M('Address');
 		if($type == 'add'){			//添加

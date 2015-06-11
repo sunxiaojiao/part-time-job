@@ -16,6 +16,9 @@
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
+    .scroll-content {
+        position: relative;
+    }
     .panel-body {
         position: relative;
     }
@@ -89,12 +92,22 @@
                         <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
                     </ul>
                 </ul>
+                </ul>
             </div>
             <div class="col-md-9">
-                
+            <div class="panel panel-primary">
+                    <div class="panel-heading" id="advice">投诉建议</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                        <?php if($error_advice_info): ?><li class="list-group-item"><?php echo ($error_advice_info); ?></li>
+                        <?php else: ?>
+                            <?php if(is_array($advice_info)): $i = 0; $__LIST__ = $advice_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><a href="<?php echo U("Admin/AdviceDetail");?>?ai=<?php echo ($info["advice_id"]); ?>" target="_blank" class="list-group-item" style="overflow:hidden;height:50px;"><div class="pull-left" style="overflow:hidden;width:400px;"><?php echo (htmlspecialchars_decode($info["content"])); ?></div><span class="pull-right"><?php echo (date('m/d h:i',$info["ctime"])); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                        </ul>
+                        <ul class="pagination"><?php echo ($advice_page); ?></ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     <!--./container-->
     <!--footer-->
 <div class="container">
@@ -106,5 +119,4 @@
 </div>
     <!--./footer-->
 </body>
-
 </html>

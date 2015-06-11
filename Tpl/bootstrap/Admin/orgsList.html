@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .scroll-content {
+        position: relative;
+    }
+    .panel-body {
+        position: relative;
+    }
+    .list-group a.list-group-item {
+        cursor: pointer;
+    }
+    .btn-content {
+        position: absolute;
+        right: 10px;
+        margin-top: -8px;
+    }
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <include file="leftNav" />
+            </div>
+            <div class="col-md-9">
+                <div class="panel panel-primary">
+                        <div class="panel-heading" id="current-orgs">现有公司列表</div>
+                        <ul class="list-group">
+                            <if condition="isset($empty)">
+                                <li class="list-group-item">{$empty}</li>
+                                <else />
+                                <volist name="orgs_list" id="orglists">
+                                    <a href="{:U('OrgInfo/index')}?oid={$orglists.oid}" class="list-group-item">{$orglists.orgname}/
+                                    <switch name="orglists.is_validate">
+                                    <case value="0"><span style="color:#F00">未认证</span></case>
+                                    <case value="1"><span style="color:#0F0">已认证</span></case>
+                                    </switch>
+                                    /创建时间：{$orglists.ctime}</a>
+                                </volist>
+                            </if>
+                        </ul>
+                        <nav>
+                            <ul class="pagination">{$orgs_page}</ul>
+                        </nav>
+                </div>
+            </div>
+        </div>
+    <!--./container-->
+    <!--footer-->
+<include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+</body>
+</html>

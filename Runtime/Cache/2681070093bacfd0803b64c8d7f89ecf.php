@@ -16,6 +16,9 @@
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
+    .scroll-content {
+        position: relative;
+    }
     .panel-body {
         position: relative;
     }
@@ -91,10 +94,22 @@
                 </ul>
             </div>
             <div class="col-md-9">
-                
+                <div class="panel panel-primary">
+                        <div class="panel-heading" id="current-orgs">现有公司列表</div>
+                        <ul class="list-group">
+                            <?php if(isset($empty)): ?><li class="list-group-item"><?php echo ($empty); ?></li>
+                                <?php else: ?>
+                                <?php if(is_array($orgs_list)): $i = 0; $__LIST__ = $orgs_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$orglists): $mod = ($i % 2 );++$i;?><a href="<?php echo U('OrgInfo/index');?>?oid=<?php echo ($orglists["oid"]); ?>" class="list-group-item"><?php echo ($orglists["orgname"]); ?>/
+                                    <?php switch($orglists["is_validate"]): case "0": ?><span style="color:#F00">未认证</span><?php break;?>
+                                    <?php case "1": ?><span style="color:#0F0">已认证</span><?php break; endswitch;?>
+                                    /创建时间：<?php echo ($orglists["ctime"]); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                        </ul>
+                        <nav>
+                            <ul class="pagination"><?php echo ($orgs_page); ?></ul>
+                        </nav>
+                </div>
             </div>
         </div>
-    </div>
     <!--./container-->
     <!--footer-->
 <div class="container">
@@ -106,5 +121,4 @@
 </div>
     <!--./footer-->
 </body>
-
 </html>

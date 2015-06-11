@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .scroll-content {
+        position: relative;
+    }
+    .panel-body {
+        position: relative;
+    }
+    .list-group a.list-group-item {
+        cursor: pointer;
+    }
+    .btn-content {
+        position: absolute;
+        right: 10px;
+        margin-top: -8px;
+    }
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <include file="leftNav" />
+                </ul>
+            </div>
+            <div class="col-md-9">
+            <div class="panel panel-primary">
+                    <div class="panel-heading" id="publish-apply">兼职申请列表</div>
+                    <ul class="list-group">
+                    <if condition="is_null($jobs_error)">
+                            <volist name="jobs_list" id="list">
+                                <li class="list-group-item"><a href="{:U('JobsInfo/index')}?jid={$list.jid}">{$list.title}</a><span class="btn-content" data-jid="{$list.jid}"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li>
+                            </volist>
+                            <else/>
+                            <li class="list-group-item">{$jobs_error}</li>
+                        </if>
+                    </ul>
+                    <ul class="pagination">{$jobs_page}</ul>
+                </div>
+            </div>
+        </div>
+    <!--./container-->
+    <!--footer-->
+<include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+</body>
+</html>

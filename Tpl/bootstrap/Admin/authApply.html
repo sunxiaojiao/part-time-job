@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .scroll-content {
+        position: relative;
+    }
+    .panel-body {
+        position: relative;
+    }
+    .list-group a.list-group-item {
+        cursor: pointer;
+    }
+    .btn-content {
+        position: absolute;
+        right: 10px;
+        margin-top: -8px;
+    }
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <include file="leftNav" />
+                </ul>
+            </div>
+            <div class="col-md-9">
+            <div class="panel panel-primary">
+                    <div class="panel-heading" id="auth-apply">认证申请列表</div>
+                    <ul class="list-group">
+                        <if condition="is_null($orgsauth_error)">
+                            <volist name="orgsauth_list" id="apply">
+                                <li class="list-group-item"><a href="{:U('OrgInfo/index')}?oid={$apply.oid}">{$apply.orgname}</a><span class="btn-content" data-oid="{$apply.oid}"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li>
+                            </volist>
+                            <else/>
+                            <li class="list-group-item">{$orgsauth_error}</li>
+                        </if>
+                    </ul>
+                    <ul class="pagination">{$orgsauth_page}</ul>
+                </div>
+            </div>
+        </div>
+    <!--./container-->
+    <!--footer-->
+<include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+    <script>
+    $(".btn-content>button").on('click', function() {
+        var info = new Object();
+        info.pass = $(this).attr('data-pass');
+        info.oid = $(this).parent().attr('data-oid');
+        info.jid  = $(this).parent().attr('data-jid');
+        console.log(info);
+        if( info.oid ) {
+            $.ajax({
+                url: "{:U('Admin/authHandler')}",
+                data: info,
+                type: "POST",
+                success: function(data) {
+                    alert(data.info);
+                }
+            });    
+        }else if( info.jid ) {
+             $.ajax({
+                url : "{:U('Admin/jobHandler')}",
+                data: info,
+                type: "POST",
+                success:function(data) {
+                    alert(data.info);
+                }
+             });   
+        }
+
+        
+        
+    })
+    </script>
+</body>
+</html>

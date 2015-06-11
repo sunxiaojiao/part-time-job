@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>兼职平台</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <style type="text/css">
+    .scroll-content {
+        position: relative;
+    }
+    .panel-body {
+        position: relative;
+    }
+    .list-group a.list-group-item {
+        cursor: pointer;
+    }
+    .btn-content {
+        position: absolute;
+        right: 10px;
+        margin-top: -8px;
+    }
+    </style>
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <include file="leftNav" />
+                </ul>
+            </div>
+            <div class="col-md-9">
+            <div class="panel panel-primary">
+                    <div class="panel-heading" id="advice">投诉建议</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                        <if condition="$error_advice_info">
+                            <li class="list-group-item">{$error_advice_info}</li>
+                        <else />
+                            <volist name="advice_info" id="info">
+                                <a href="{:U("Admin/AdviceDetail")}?ai={$info.advice_id}" target="_blank" class="list-group-item" style="overflow:hidden;height:50px;"><div class="pull-left" style="overflow:hidden;width:400px;">{$info.content|htmlspecialchars_decode}</div><span class="pull-right">{$info.ctime|date='m/d h:i',###}</span></a>
+                            </volist>
+                        </if>
+                        </ul>
+                        <ul class="pagination">{$advice_page}</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--./container-->
+    <!--footer-->
+<include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+</body>
+</html>
