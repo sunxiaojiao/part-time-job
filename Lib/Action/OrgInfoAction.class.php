@@ -20,7 +20,7 @@ class OrgInfoAction extends Action{
 		$Org   = M('Orgs');
 		$field = "orgname,email,xm_orgs.phone,is_validate,avatar,org_address,website,fixed_phone,org_intro,xm_orgs.ctime,xm_industry.name,size,nature";
 		$join1  = "LEFT JOIN xm_orgs_auth ON xm_orgs_auth.auth_oid=xm_orgs.oid";
-		$join2 = "INNER JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id"; 
+		$join2 = "LEFT JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id"; 
 		$arr2  = $Org->field($field)->join($join1)->join($join2)->where("oid=".$this->oid)->find();
 		if($arr2){
 			$this->assign("org_info",$arr2);
