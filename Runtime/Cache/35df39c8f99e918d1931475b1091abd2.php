@@ -185,16 +185,23 @@ THINK;
                                 <?php if($org_info["is_validate"] == 1): ?>已验证
                                     <?php else: ?>未验证<?php endif; ?>
                             </td>
-                            <td class="table-field">登录邮箱：</td>
-                            <td><?php echo ($org_info["email"]); ?></td>
+                            <td class="table-field">注册手机号：</td>
+                            <td><?php echo ($org_info["login_phone"]); ?></td>
+                           
                         </tr>
                         <tr>
-                            <td class="table-field">客服电话：</td>
+                            <td class="table-field">邮箱：</td>
+                            <td>
+                            <?php if($org_info["email"] == ''): ?><a href="<?php echo U("AttachEmail/index");?>">绑定邮箱</a>
+                            <?php else: ?>
+                                <?php echo ($org_info["email"]); endif; ?>
+                            </td>
+                            <td>客服电话</td>
                             <td><?php echo ($org_info["phone"]); ?></td>
-                            <td class="table-field">公司网址：</td>
-                            <td><?php echo ($org_info["website"]); ?></td>
                         </tr>
                         </tr>
+                        <td class="table-field">公司网址：</td>
+                        <td><?php echo ($org_info["website"]); ?></td>
                         <td class="table-field">公司地址：</td>
                         <td><?php echo ($org_info["org_address"]); ?></td>
                         </tr>

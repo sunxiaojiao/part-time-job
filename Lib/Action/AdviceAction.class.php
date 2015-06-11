@@ -1,7 +1,6 @@
 <?php
 class AdviceAction extends Action {
 	public function index() {
-		dump(APP_PATH);
 		$this->display();
 	}
 	public function push() {

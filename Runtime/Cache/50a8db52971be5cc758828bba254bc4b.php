@@ -135,8 +135,8 @@ THINK;
         </div>
 
         <div class="form-group">
-          <label for="phone">联系电话：</label>
-          <input type="text" disabled class="form-control" value="<?php echo ($orgInfo["phone"]); ?>" placeholder="填写联系电话" />
+          <label for="phone">客服电话：</label>
+          <input type="text" name="phone" class="form-control" value="<?php echo ($orgInfo["phone"]); ?>" placeholder="填写联系电话" />
         </div>
         <div class="form-group">
           <label for="qq">公司网址：</label>

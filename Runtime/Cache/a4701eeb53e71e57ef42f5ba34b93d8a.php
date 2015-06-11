@@ -7,16 +7,13 @@
 
 <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
-<!-- <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" /> -->
+
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="/__GROUP__/css/common.css">
-<!-- <script src="/__GROUP__/js/jquery.min.js"></script>
-<script src="/__GROUP__/js/bootstrap.min.js"></script> -->
 <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script
+<link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script type="text/javascript" src="/__GROUP__/js/common.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/fullAvatarEditor.js"></script>
 <script type="text/javascript" src="/__GROUP__/js/swfobject.js"></script>

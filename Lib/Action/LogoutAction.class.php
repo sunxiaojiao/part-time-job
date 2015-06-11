@@ -8,7 +8,7 @@ class LogoutAction extends Action{
 		session_destroy();
 		cookie('xmf',null);
 		cookie('userphoone',null);
-		$this->success('注销成功',U('Index/index'),3);
+		$this->success('注销成功',U('Index/index'),0);
 	}
 }
 ?>

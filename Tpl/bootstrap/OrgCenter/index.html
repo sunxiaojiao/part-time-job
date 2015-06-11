@@ -96,16 +96,25 @@
                                 <if condition="$org_info.is_validate eq 1">已验证
                                     <else />未验证</if>
                             </td>
-                            <td class="table-field">登录邮箱：</td>
-                            <td>{$org_info.email}</td>
+                            <td class="table-field">注册手机号：</td>
+                            <td>{$org_info.login_phone}</td>
+                           
                         </tr>
                         <tr>
-                            <td class="table-field">客服电话：</td>
+                            <td class="table-field">邮箱：</td>
+                            <td>
+                            <if condition="$org_info.email eq ''">
+                                <a href="{:U("AttachEmail/index")}">绑定邮箱</a>
+                            <else />
+                                {$org_info.email}
+                            </if>
+                            </td>
+                            <td>客服电话</td>
                             <td>{$org_info.phone}</td>
-                            <td class="table-field">公司网址：</td>
-                            <td>{$org_info.website}</td>
                         </tr>
                         </tr>
+                        <td class="table-field">公司网址：</td>
+                        <td>{$org_info.website}</td>
                         <td class="table-field">公司地址：</td>
                         <td>{$org_info.org_address}</td>
                         </tr>

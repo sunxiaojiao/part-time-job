@@ -25,9 +25,10 @@ class RegisterAction extends Action{
 			$Reger = D('Users');//users表
 		}
 		//获取数据
-		$data['phone']  = $this->_post('phone_num');
+		$data['phone_num']  = $this->_post('phone_num');
 		$data['passwd'] = md5($this->_post('passwd'));
 		$data['ctime']  = time();
+		
 		if($this->isOrg()){
 			$data['orgname']     = $this->_post('org');
 			$data['address']     = $this->_post('address');

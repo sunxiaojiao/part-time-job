@@ -77,10 +77,6 @@ class OrgCenterAction extends Action{
 	}
 	//更新企业信息
 	public function updateInfo(){
-		//过滤掉phone
-		if($this->_post('phone')){
-			return;
-		}
 		$Org = D('Orgs');
 		$where = "oid=".session('oid');
 		if(!$Org->create($this->_post(),2)){
@@ -121,7 +117,7 @@ class OrgCenterAction extends Action{
 		$Work   = M('Working');
 		$where  = '';
 		$field  = "work_jid,title,xm_working.ctime";
-		$join   = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid";
+		$join   = "INNER JOIN xm_jobs ON xm_jobs.jid=xm_working.work_jid AND xm_jobs.pub_oid = " . session('oid');
 		$group  = "work_jid";
 		$arr2   = $Work->where($where)->join($join)->field($field)->group($group)->select();
 		if($arr2){
