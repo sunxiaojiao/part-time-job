@@ -138,7 +138,7 @@ class SortSearchAction extends Action{
 	//查询地址
 	protected function getAddress() {
 		$Address = M('Address');
-		$arr2 = $Address->field('aid,area')->select();
+		$arr2 = $Address->field('aid,city')->select();
 		if($arr2){
 			return array_2dTo1d($arr2, 'aid');
 		}

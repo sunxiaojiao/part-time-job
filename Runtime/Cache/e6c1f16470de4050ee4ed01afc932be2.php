@@ -7,31 +7,14 @@
     <title>分类查找|更快捷的兼职搜索</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
-<!-- <link rel="stylesheet" href="/__GROUP__/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/__GROUP__/css/bootstrap-theme.min.css" /> -->
-<!-- <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css"> -->
 
+<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-<!-- <script src="/__GROUP__/js/jquery.min.js"></script>
-<script src="/__GROUP__/js/bootstrap.min.js"></script> -->
-<!-- <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script -->
-
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-<!-- 可选的Bootstrap主题文件（一般不用引入） -->
-<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
+<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
-<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
+<script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
     .filter-alter>li+li:before {
         padding: 0 5px;
@@ -178,7 +161,7 @@ THINK;
                             <li class="list-group-item">
                                 <span class="my-title">地点：</span>
                                 <ul class="list-options">
-                                    <?php if(is_array($address)): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$address): $mod = ($i % 2 );++$i;?><li class="my-options"><a href="<?php echo ($now_url_address); ?>&address=<?php echo ($address["city"]); ?>" class=""><?php echo ($address["city"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    <?php if(is_array($address)): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$address): $mod = ($i % 2 );++$i;?><li class="my-options"><a href="<?php echo ($now_url_address); ?>&address=<?php echo ($address["aid"]); ?>" class=""><?php echo ($address["city"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                             </li>
                             <li class="list-group-item">

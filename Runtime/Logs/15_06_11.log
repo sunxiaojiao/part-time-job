@@ -3447,3 +3447,1340 @@ INFO: [ view_end ] --START--
 INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
 INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
 
+[ 2015-06-11T11:27:35+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.178010s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1433993255- expire_time)<0 AND is_pass=0 AND city='烟台市' ) LIMIT 1   [ RunTime:0.148009s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`addressname`,`pv`,`ctime` FROM `xm_jobs` WHERE ( (1433993255- expire_time)<0 AND is_pass=0 AND city='烟台市' ) ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T11:27:37+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.044003s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.068004s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.064003s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.010000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1433993257- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 1   [ RunTime:0.055003s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1433993257- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 0,5   [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: nav_route D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 206 行.
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T11:28:03+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.009001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.010000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.010001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1433993283- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1433993283- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 0,5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: nav_route D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 206 行.
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T11:45:14+08:00 ] 127.0.0.1 /JobsInfo/index/jid/41.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.057003s ]
+SQL: SELECT `jid`,`oid`,`address`,`title`,`pay_way`,`org_intro`,`addressname`,`detail`,xm_mold.name,xm_orgs.orgname,`is_validate`,`pub_oid`,`money`,`money_style`,`work_time`,`begin_time`,`want_peo`,`peo_style`,`current_peo`,`leader`,xm_jobs.ctime,`leader_phone`,`pv` FROM `xm_jobs` INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( jid=41 ) LIMIT 1   [ RunTime:0.028002s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.013001s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `username`,xm_apply.ctime,`is_pass` FROM `xm_apply` INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid WHERE ( app_jid=41 )  [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `xm_org_evalute` [ RunTime:0.017001s ]
+SQL: SELECT `username`,`content`,xm_org_evalute.ctime FROM `xm_org_evalute` INNER JOIN xm_users ON xm_org_evalute.from_uid=xm_users.uid WHERE ( to_oid=1 )  [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.013000s ]
+SQL: UPDATE `xm_jobs` SET `pv`=pv+1 WHERE ( jid=41 ) [ RunTime:0.139008s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: job_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\320e6c5bf175def06a5689ca97da2988.php 第 146 行.
+NOTIC: [8] Undefined variable: eval_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\320e6c5bf175def06a5689ca97da2988.php 第 218 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T11:45:14+08:00 ] 127.0.0.1 /JobsInfo/generatePhoneImage.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 317 行.
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 319 行.
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 320 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 321 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 323 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 324 行.
+
+[ 2015-06-11T11:45:20+08:00 ] 127.0.0.1 /JobsInfo/index/jid/37.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.009000s ]
+SQL: SELECT `jid`,`oid`,`address`,`title`,`pay_way`,`org_intro`,`addressname`,`detail`,xm_mold.name,xm_orgs.orgname,`is_validate`,`pub_oid`,`money`,`money_style`,`work_time`,`begin_time`,`want_peo`,`peo_style`,`current_peo`,`leader`,xm_jobs.ctime,`leader_phone`,`pv` FROM `xm_jobs` INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( jid=37 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.008001s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `username`,xm_apply.ctime,`is_pass` FROM `xm_apply` INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid WHERE ( app_jid=37 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_org_evalute` [ RunTime:0.009000s ]
+SQL: SELECT `username`,`content`,xm_org_evalute.ctime FROM `xm_org_evalute` INNER JOIN xm_users ON xm_org_evalute.from_uid=xm_users.uid WHERE ( to_oid=1 )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.013001s ]
+SQL: UPDATE `xm_jobs` SET `pv`=pv+1 WHERE ( jid=37 ) [ RunTime:0.093005s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: job_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\320e6c5bf175def06a5689ca97da2988.php 第 146 行.
+NOTIC: [8] Undefined variable: eval_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\320e6c5bf175def06a5689ca97da2988.php 第 218 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001001s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-06-11T11:45:20+08:00 ] 127.0.0.1 /JobsInfo/generatePhoneImage.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 317 行.
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 319 行.
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 320 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 321 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 323 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 324 行.
+
+[ 2015-06-11T14:29:36+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.083004s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004176- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004176- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 0,5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: nav_route D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 206 行.
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T14:29:38+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&time=22:6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.009000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.008001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`area` FROM `xm_address`  [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `aid`,`area` FROM `xm_address` 
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004178- expire_time)<0 AND is_pass=0 AND begin_time BETWEEN 22 AND 6 AND 1=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004178- expire_time)<0 AND is_pass=0 AND begin_time BETWEEN 22 AND 6 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001001s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T14:39:30+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.008000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.041003s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.080004s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004770- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004770- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 0,5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: nav_route D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 206 行.
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:39:57+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.007001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004797- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004797- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: nav_route D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 206 行.
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:40:55+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.010001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.010001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.010000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004855- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004855- expire_time)<0 AND is_pass=0 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: nav_route D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 206 行.
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:41:44+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=%E7%83%9F%E5%8F%B0%E5%B8%82
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.007000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.010001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.007000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`area` FROM `xm_address`  [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `aid`,`area` FROM `xm_address` 
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.009001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004904- expire_time)<0 AND is_pass=0 AND city='烟台市' AND 1=1 ) LIMIT 1   [ RunTime:0.030002s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434004904- expire_time)<0 AND is_pass=0 AND city='烟台市' AND 1=1 ) LIMIT 0,5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:45:48+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=%E7%83%9F%E5%8F%B0%E5%B8%82
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.009001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.011000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001001s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.010000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`area` FROM `xm_address`  [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `aid`,`area` FROM `xm_address` 
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.010001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005148- expire_time)<0 AND is_pass=0 AND city='烟台市' AND 1=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005148- expire_time)<0 AND is_pass=0 AND city='烟台市' AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T14:53:30+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=%E7%83%9F%E5%8F%B0%E5%B8%82
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.009000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.008001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.006000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`area` FROM `xm_address`  [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `aid`,`area` FROM `xm_address` 
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005610- expire_time)<0 AND is_pass=0 AND city='烟台市' AND 1=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005610- expire_time)<0 AND is_pass=0 AND city='烟台市' AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\e6c1f16470de4050ee4ed01afc932be2.php 第 212 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T14:53:34+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.017001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.012001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.011000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`area` FROM `xm_address`  [ RunTime:0.001001s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `aid`,`area` FROM `xm_address` 
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.014000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005614- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 1   [ RunTime:0.022002s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005614- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 0,5   [ RunTime:0.012000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:54:02+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.008000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.006001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.008000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`area` FROM `xm_address`  [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `aid`,`area` FROM `xm_address` 
+
+[ 2015-06-11T14:54:09+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.011000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.009001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.007000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`area` FROM `xm_address`  [ RunTime:0.001001s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `aid`,`area` FROM `xm_address` 
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.009000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001001s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005649- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005649- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T14:54:39+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.032001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 153 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.007000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`area` FROM `xm_address`  [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'area' in 'field list'
+ [ SQL语句 ] : SELECT `aid`,`area` FROM `xm_address` 
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 162 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 162 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 241 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 241 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 241 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 241 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 249 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 249 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 252 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 241 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 241 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 241 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005679- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 1   [ RunTime:0.021001s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005679- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:54:49+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.009000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.007000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.007000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005689- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005689- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:54:52+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.007001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.009000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.009001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.011001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005692- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 1   [ RunTime:0.037002s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005692- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 0,5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:55:07+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.008001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.008001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.007000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: time D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005707- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005707- expire_time)<0 AND is_pass=0 AND city=1 AND 1=1 ) LIMIT 0,5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T14:55:08+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&address=1&time=12:15
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.009000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.008001s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.008000s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.011001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: location D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 248 行.
+NOTIC: [8] Undefined variable: betweenAnd D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 251 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005708- expire_time)<0 AND is_pass=0 AND city=1 AND begin_time BETWEEN 12 AND 15 AND 1=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005708- expire_time)<0 AND is_pass=0 AND city=1 AND begin_time BETWEEN 12 AND 15 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:55:10+08:00 ] 127.0.0.1 /SortSearch/search.html?q=q&time=12:15
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.008001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xm_address` [ RunTime:0.007000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `xm_mold` [ RunTime:0.007001s ]
+SQL: SELECT `mid`,`name` FROM `xm_mold`  [ RunTime:0.001000s ]
+SQL: SELECT `aid`,`city` FROM `xm_address`  [ RunTime:0.000000s ]
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: [8192] Function split() is deprecated D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 161 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: style D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 70 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 70 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wage D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: address D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 72 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 72 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: peonum D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: py D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 74 行.
+NOTIC: [2] Missing argument 4 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 74 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [8] Undefined index: wt D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 75 行.
+NOTIC: [8] Undefined index: isvld D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 87 行.
+NOTIC: [2] Missing argument 5 for SortSearchAction::strongWhere(), called in D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php on line 87 and defined D:\wamp\www\ThinkPHP3.1\Lib\Action\SortSearchAction.class.php 第 240 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005710- expire_time)<0 AND is_pass=0 AND begin_time BETWEEN 12 AND 15 AND 1=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT xm_jobs.title AS title,xm_jobs.address AS address,xm_jobs.jid AS jid,xm_jobs.want_peo AS want_peo,xm_jobs.current_peo AS current_peo,xm_jobs.money AS money,xm_jobs.begin_time AS begin_time,xm_jobs.work_time AS wktime,xm_jobs.pv AS pv,`addressname` FROM `xm_jobs` INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( (1434005710- expire_time)<0 AND is_pass=0 AND begin_time BETWEEN 12 AND 15 AND 1=1 ) LIMIT 0,5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-11T14:55:20+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008001s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.000000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434005720- expire_time)<0 AND is_pass=0 AND city='烟台市' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`addressname`,`pv`,`ctime` FROM `xm_jobs` WHERE ( (1434005720- expire_time)<0 AND is_pass=0 AND city='烟台市' ) ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T16:30:25+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.060003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.062003s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.601035s ]
+SQL: SET sql_mode = 'NO_UNSIGNED_SUBTRACTION' [ RunTime:0.001000s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xm_jobs` WHERE ( (1434011424- expire_time)<0 AND is_pass=0 AND city='烟台市' ) LIMIT 1   [ RunTime:0.335019s ]
+SQL: SELECT `jid`,`title`,`money`,`want_peo`,`current_peo`,`addressname`,`pv`,`ctime` FROM `xm_jobs` WHERE ( (1434011424- expire_time)<0 AND is_pass=0 AND city='烟台市' ) ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.062004s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.379022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.379022s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.035002s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.031002s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.030001s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.028002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.124007s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.053004s ]
+INFO: [ view_end ] --END-- [ RunTime:0.053004s ]
+
+[ 2015-06-11T16:30:38+08:00 ] 127.0.0.1 /JobsInfo/index.html?jid=62
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.032002s ]
+INFO: [ route_check ] --END-- [ RunTime:0.033002s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.008000s ]
+SQL: SELECT `jid`,`oid`,`address`,`title`,`pay_way`,`org_intro`,`addressname`,`detail`,xm_mold.name,xm_orgs.orgname,`is_validate`,`pub_oid`,`money`,`money_style`,`work_time`,`begin_time`,`want_peo`,`peo_style`,`current_peo`,`leader`,xm_jobs.ctime,`leader_phone`,`pv` FROM `xm_jobs` INNER JOIN xm_mold ON xm_mold.mid=xm_jobs.mold_id INNER JOIN xm_orgs ON xm_orgs.oid=xm_jobs.pub_oid WHERE ( jid=62 ) LIMIT 1   [ RunTime:0.069004s ]
+SQL: SHOW COLUMNS FROM `xm_apply` [ RunTime:0.133008s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `username`,xm_apply.ctime,`is_pass` FROM `xm_apply` INNER JOIN xm_users ON xm_users.uid=xm_apply.app_uid WHERE ( app_jid=62 )  [ RunTime:0.065004s ]
+SQL: SHOW COLUMNS FROM `xm_org_evalute` [ RunTime:0.033002s ]
+SQL: SELECT `username`,`content`,xm_org_evalute.ctime FROM `xm_org_evalute` INNER JOIN xm_users ON xm_org_evalute.from_uid=xm_users.uid WHERE ( to_oid=21 )  [ RunTime:0.034002s ]
+SQL: SHOW COLUMNS FROM `xm_jobs` [ RunTime:0.047002s ]
+SQL: UPDATE `xm_jobs` SET `pv`=pv+1 WHERE ( jid=62 ) [ RunTime:0.379022s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: job_error_info D:\wamp\www\ThinkPHP3.1\Runtime\Cache\320e6c5bf175def06a5689ca97da2988.php 第 146 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.389023s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.389023s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.007000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2015-06-11T16:30:38+08:00 ] 127.0.0.1 /JobsInfo/generatePhoneImage.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 317 行.
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 319 行.
+NOTIC: [8] Undefined variable: size D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 320 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 321 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 323 行.
+NOTIC: [8] Undefined variable: font D:\wamp\www\ThinkPHP3.1\ThinkPHP\Extend\Library\ORG\Util\Image.class.php 第 324 行.
+
+[ 2015-06-11T16:32:38+08:00 ] 127.0.0.1 /ApplyJob/apply.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+NOTIC: [2] stripslashes() expects exactly 1 parameter, 2 given D:\wamp\www\ThinkPHP3.1\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
