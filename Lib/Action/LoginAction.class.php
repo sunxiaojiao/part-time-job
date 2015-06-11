@@ -62,7 +62,7 @@ class LoginAction extends Action{
 	//公司登录
 	public function orgLogin($name,$passwd){
 		$Org = M('Orgs');
-		$where = "phone='{$name}' AND passwd='" . md5($passwd) . "'";
+		$where = "login_phone='{$name}' AND passwd='" . md5($passwd) . "'";
 		$field = 'oid,orgname,phone';
 		$arr1 = $Org->field($field)->where($where)->find();
 		if($arr1){

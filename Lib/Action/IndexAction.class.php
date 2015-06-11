@@ -88,7 +88,7 @@ class IndexAction extends Action{
 				}
 			}elseif(cookie('utype') == 'org'){
 				$Org = M('Orgs');
-				$arr = $Org->where('phone=' . $phone)->field('passwd,oid,orgname')->find();
+				$arr = $Org->where('login_phone=' . $phone)->field('passwd,oid,orgname')->find();
 				if($passwd == md5($arr['passwd'] . 'xiaomifeng')){
 					session('oid',$arr['oid']);
 					session('orgname',$arr['orgname']);
