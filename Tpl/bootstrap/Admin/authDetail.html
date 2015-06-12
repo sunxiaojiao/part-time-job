@@ -7,6 +7,10 @@
     <title>兼职平台</title>
     <include file="./Tpl/bootstrap/public/static.html" />
     <style type="text/css">
+    .table img{
+        /*width:200px;*/
+        height:200px;
+    }
     </style>
 </head>
 
@@ -20,11 +24,49 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">公司认证信息</div>
                     <div class="panel-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <span></span>
-                            </li>
-                        </ul>
+                        <table class="table">
+                            <tr>
+                                <td>公司名称：</td>
+                                <td>{$orgname}</td>
+                            </tr>
+                            <tr>
+                                <td>执照编号：</td>
+                                <td>{$license_num}</td>
+                            </tr>
+                            <tr>
+                                <td>营业执照：</td>
+                                <td><img src="{$license_img}" /></td>
+                            </tr>
+                            <tr>
+                                <td>企业规模：</td>
+                                <td>{$size}</td>
+                            </tr>
+                            <tr>
+                                <td>企业性质：</td>
+                                <td>{$nature}</td>
+                            </tr>
+                            <tr>
+                                <td>联系人：</td>
+                                <td>{$contact}</td>
+                            </tr>
+                            <tr>
+                                <td>负责人身份证号：</td>
+                                <td>{$idcard_num}</td>
+                            </tr>
+                            <tr>
+                                <td>负责人身份证照片：</td>
+                                <td><img src="{$idcard_img1}" />
+                                <img src="{$idcard_img2}" /></td>
+                            </tr>
+                            <tr>
+                                <td>联系人电话：</td>
+                                <td>{$phone}</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

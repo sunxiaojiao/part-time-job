@@ -57,20 +57,20 @@ class AdminAction extends Action {
 		$show_list  = "orgsauth_page";
 		$error_info = "orgsauth_error";
 		$this->pagingList($Model, $num, $where, $field, $data_list, $show_list, $error_info, $join,$order);
-		$this->display();	
+		$this->display();
 	}
 	//列出申请认证公司资料
 	public function authDetail() {
 		$this->isLogined();
 		
-//		$oid = $this->_post('oid') = 1 ;
-		$oid =1;
-		$Org   = M('orgs');
-		$where = "oid=" . $oid;
-		$field = "email,orgname,license_num,industry,nature,size,contact,org_address,phone,fixed_phone,org_intro";
-		$arr2_data = $Org->where($where)->field($field)->find();
+		$oid = $this->_get('oid');
+		$Org   = M('OrgsAuth');
+		$where = "auth_oid=" . $oid;
+		$field = "email,orgname,license_num,idcard_img1,idcard_img2,license_img,idcard_num,industry,nature,size,contact,org_address,xm_orgs_auth.phone,fixed_phone,org_intro";
+		$join  = "INNER JOIN xm_orgs ON xm_orgs.oid = xm_orgs_auth.auth_oid";
+		$arr2_data = $Org->join($join)->where($where)->field($field)->find();
 		if($arr2_data){
-			$this->assign("org_info",$arr2_data);
+			$this->assign($arr2_data);
 		}elseif(is_null($arr2_data)){
 			$this->assign("error_info","无记录");
 		}else{
@@ -104,7 +104,7 @@ class AdminAction extends Action {
 			return;
 		}
 		//xm_orgs 修改 is_validate
-		$Org = M('orgs');
+		$Org = M('Orgs');
 		$where = "oid=" . $this->_post('oid');
 		$f = $Org->where($where)->setField("is_validate",$is_validate);
 		if($f || $f === 0) {
@@ -152,7 +152,7 @@ class AdminAction extends Action {
 	public function publishApply() {
 		$this->isLogined();
 		
-		$Model = M('jobs');
+		$Model = M('Jobs');
 		$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
 		$num = 10;
 		$field = "jid,title,from_unixtime(ctime) AS ctime";
@@ -166,7 +166,7 @@ class AdminAction extends Action {
 	public function jobHandler() {
 		$this->isLogined();
 		
-		$Job = M('jobs');
+		$Job = M('Jobs');
 		if(!$this->isPost()){
 			return ;
 		}

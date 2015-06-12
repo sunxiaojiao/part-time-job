@@ -16,20 +16,6 @@
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
-    .scroll-content {
-        position: relative;
-    }
-    .panel-body {
-        position: relative;
-    }
-    .list-group a.list-group-item {
-        cursor: pointer;
-    }
-    .btn-content {
-        position: absolute;
-        right: 10px;
-        margin-top: -8px;
-    }
     </style>
 </head>
 
@@ -82,30 +68,27 @@
     <!--container-->
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                				<ul class="list-group nav">
-                    <ul class="list-group nav">
-                        <a class="list-group-item" href="__URL__/index.html">消息</a>
-                        <a class="list-group-item" href="__URL__/publishApply.html">兼职申请列表</a>
-                        <a class="list-group-item" href="__URL__/authApply.html">认证申请列表</a>
-                        <a class="list-group-item" href="__URL__/orgsList.html">现有公司列表</a>
-                        <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
-                    </ul>
-                </ul>
-                </ul>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">管理员登录</div>
+                <div class="panel-body">
+                <form class="form" id="login-form">
+                    <div class="form-group">
+                    <label>用户名：</label>
+                        <input type="text" name="usernmae" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                    <label for>密码：</label>
+                        <input type="password" name="passwd" class="form-control" />
+                    </div>
+                    <button type="button" class="btn btn-default pull-right">登录</button>
+                </form></div>
             </div>
-            <div class="col-md-9">
-            <div class="panel panel-primary">
-                    <div class="panel-heading" id="auth-apply">认证申请列表</div>
-                    <ul class="list-group">
-                        <?php if(is_null($orgsauth_error)): if(is_array($orgsauth_list)): $i = 0; $__LIST__ = $orgsauth_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U("Admin/authDetail");?>?oid=<?php echo ($apply["oid"]); ?>"><?php echo ($apply["orgname"]); ?></a><span class="btn-content" data-oid="<?php echo ($apply["oid"]); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            <?php else: ?>
-                            <li class="list-group-item"><?php echo ($orgsauth_error); ?></li><?php endif; ?>
-                    </ul>
-                    <ul class="pagination"><?php echo ($orgsauth_page); ?></ul>
-                </div>
             </div>
+            <div class="col-md-4"></div>       
         </div>
+    </div>
     <!--./container-->
     <!--footer-->
 <div class="container">
@@ -117,35 +100,26 @@
 </div>
     <!--./footer-->
     <script>
-    $(".btn-content>button").on('click', function() {
+    $("#login-form button").on('click',function() {
+        //获取input值
         var info = new Object();
-        info.pass = $(this).attr('data-pass');
-        info.oid = $(this).parent().attr('data-oid');
-        info.jid  = $(this).parent().attr('data-jid');
+        info.username = $("#login-form input").eq(0).val();
+        info.passwd   = $("#login-form input").eq(1).val();
         console.log(info);
-        if( info.oid ) {
-            $.ajax({
-                url: "<?php echo U('Admin/authHandler');?>",
-                data: info,
-                type: "POST",
-                success: function(data) {
-                    alert(data.info);
+        //ajax
+        $.ajax({
+            url:"<?php echo U('Admin/loginHandler');?>",
+            data:info,
+            type:"POST",
+            success:function(data) {
+                alert(data.info);
+                if( data.status == 1 ) {
+                    location.href = "<?php echo U('Admin/index');?>";
                 }
-            });    
-        }else if( info.jid ) {
-             $.ajax({
-                url : "<?php echo U('Admin/jobHandler');?>",
-                data: info,
-                type: "POST",
-                success:function(data) {
-                    alert(data.info);
-                }
-             });   
-        }
-
-        
-        
+            }
+        });
     })
     </script>
 </body>
+
 </html>

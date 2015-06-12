@@ -39,7 +39,7 @@
                     <ul class="list-group">
                         <if condition="is_null($orgsauth_error)">
                             <volist name="orgsauth_list" id="apply">
-                                <li class="list-group-item"><a href="{:U('OrgInfo/index')}?oid={$apply.oid}">{$apply.orgname}</a><span class="btn-content" data-oid="{$apply.oid}"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li>
+                                <li class="list-group-item"><a href="{:U("Admin/authDetail")}?oid={$apply.oid}">{$apply.orgname}</a><span class="btn-content" data-oid="{$apply.oid}"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li>
                             </volist>
                             <else/>
                             <li class="list-group-item">{$orgsauth_error}</li>

@@ -45,6 +45,9 @@
         float:right;
         display: block;
     }
+    .carousel-inner>.item>img{
+        margin:0 auto;
+    }
     @media screen and (max-width: 600px){
         .list-grid{
             margin-left:6%;
