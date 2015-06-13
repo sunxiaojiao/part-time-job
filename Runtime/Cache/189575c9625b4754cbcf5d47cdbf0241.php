@@ -86,6 +86,7 @@
                         <a class="list-group-item" href="__URL__/publishApply.html">兼职申请列表</a>
                         <a class="list-group-item" href="__URL__/authApply.html">认证申请列表</a>
                         <a class="list-group-item" href="__URL__/orgsList.html">现有公司列表</a>
+                        <a class="list-group-item" href="__URL__/showNowCity.html">管理业务城市</a>
                         <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
                     </ul>
                 </ul>

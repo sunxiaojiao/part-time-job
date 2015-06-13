@@ -66,7 +66,7 @@ class AdminAction extends Action {
 		$oid = $this->_get('oid');
 		$Org   = M('OrgsAuth');
 		$where = "auth_oid=" . $oid;
-		$field = "email,orgname,license_num,idcard_img1,idcard_img2,license_img,idcard_num,industry,nature,size,contact,org_address,xm_orgs_auth.phone,fixed_phone,org_intro";
+		$field = "xm_orgs_auth.auth_oid,email,orgname,license_num,idcard_img1,idcard_img2,license_img,idcard_num,industry,nature,size,contact,org_address,xm_orgs_auth.phone,fixed_phone,org_intro,xm_orgs_auth.ctime";
 		$join  = "INNER JOIN xm_orgs ON xm_orgs.oid = xm_orgs_auth.auth_oid";
 		$arr2_data = $Org->join($join)->where($where)->field($field)->find();
 		if($arr2_data){
@@ -76,7 +76,6 @@ class AdminAction extends Action {
 		}else{
 			$this->assign("error_info","读取错误");
 		}
-		dump($Org->getLastSql());
 		$this->display();
 	}
 	
@@ -218,25 +217,55 @@ class AdminAction extends Action {
 		
 	}
 	//管理城市--显示城市
-	protected function showNowCity() {
+	public function showNowCity() {
 		$this->isLogined();
+		$Address = M('Address');
+		$where = "";
+		$field = "aid,province,city,ctime";
+		$arr2  = $Address->where($where)->field($field)->select();
+		if($arr2){
+			$this->assign('address_info',$arr2);
+		}elseif(is_null($arr2)){
+			$this->assign('address_error_info','暂无业务城市');
+		}else{
+			$this->assign('address_error_info','读取错误');	
+		}
+		$this->display();
 	}
 	//管理城市--处理
-	public function CityHandler() {
+	public function cityHandler() {
 		$this->isLogined();
-		
-		$type = $this->_get('type');
 		$Address = M('Address');
-		if($type == 'add'){			//添加
-			$this->_get('province');
-			$this->_get('city');
-			$this->_get('area');
-		}elseif($type == 'update'){	//修改
-			$this->_get('');
-		}elseif($type == 'del'){	//删除
-			
+		//删除
+		if($this->_post('aid')){
+			if($Address->delete($this->_post('aid'))){
+				$this->ajaxReturn(1,'删除成功',1);	
+			}else{
+				$this->ajaxReturn(0,'删除失败',1);
+			}
+		}elseif($this->_post('province') && $this->_post('city')){	//添加
+			$province = $this->_post('province');
+			$city     = $this->_post('city');
+			$Address  = M('Address');
+			//检测是否存在
+			$f = $Address->field('aid')->where("province='{$province}' AND city='{$city}'")->find();
+//			dump($f);
+			if($f){
+				$this->ajaxReturn(1,'当前城市已经存在',1);
+				return ;
+			}
+			//添加到表
+			$data_address  = array('province'=>$province,'city'=>$city,'ctime'=>time());
+			if($Address->add($data_address)){
+				$this->ajaxReturn(1,'添加成功',1);
+			}else{
+				$this->ajaxReturn(0,'添加失败',1);
+			}	
+		}else{
+			$this->ajaxReturn(1,'error',1);
 		}
 		
+		//没有修改	
 	}
 	/**
 	 * 

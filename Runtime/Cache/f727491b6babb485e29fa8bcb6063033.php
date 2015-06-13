@@ -75,9 +75,9 @@
             <div class="col-md-3"></div>
             <div class="col-md-9">
                 <div class="panel panel-default">
-                    <div class="panel-heading">公司认证信息</div>
+                    <div class="panel-heading">公司认证信息<span class="pull-right">申请时间：<?php echo (ftime($ctime)); ?></span></div>
                     <div class="panel-body">
-                        <table class="table">
+                        <table class="table-bordered table">
                             <tr>
                                 <td>公司名称：</td>
                                 <td><?php echo ($orgname); ?></td>
@@ -88,11 +88,15 @@
                             </tr>
                             <tr>
                                 <td>营业执照：</td>
-                                <td><img src="<?php echo ($license_img); ?>" /></td>
+                                <td><a href="<?php echo ($license_img); ?>" target="_blank"><img src="<?php echo ($license_img); ?>" /></a></td>
                             </tr>
                             <tr>
                                 <td>企业规模：</td>
                                 <td><?php echo ($size); ?></td>
+                            </tr>
+                            <tr>
+                                <td>企业性质：</td>
+                                <td><?php echo ($industry); ?></td>
                             </tr>
                             <tr>
                                 <td>企业性质：</td>
@@ -108,18 +112,15 @@
                             </tr>
                             <tr>
                                 <td>负责人身份证照片：</td>
-                                <td><img src="<?php echo ($idcard_img1); ?>" />
-                                <img src="<?php echo ($idcard_img2); ?>" /></td>
+                                <td><a href="<?php echo ($idcard_img1); ?>"><img src="<?php echo ($idcard_img1); ?>" /></a>
+                                <a href="<?php echo ($idcard_img2); ?>"><img src="<?php echo ($idcard_img2); ?>" /></a></td>
                             </tr>
                             <tr>
                                 <td>联系人电话：</td>
                                 <td><?php echo ($phone); ?></td>
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
                         </table>
+                        <div class="pull-right"><span class="btn-content" data-oid="<?php echo ($auth_oid); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></div>
                     </div>
                 </div>
             </div>
@@ -135,25 +136,21 @@
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
     <!--./footer-->
-    <script>
-    $("#login-form button").on('click', function() {
-        //获取input值
+     <script>
+    $(".btn-content>button").on('click', function() {
         var info = new Object();
-        info.username = $("#login-form input").eq(0).val();
-        info.passwd = $("#login-form input").eq(1).val();
-        console.log(info);
-        //ajax
-        $.ajax({
-            url: "<?php echo U('Admin/loginHandler');?>",
-            data: info,
-            type: "POST",
-            success: function(data) {
-                alert(data.info);
-                if (data.status == 1) {
-                    location.href = "<?php echo U('Admin/index');?>";
+        info.pass = $(this).attr('data-pass');
+        info.oid = $(this).parent().attr('data-oid');
+        if( info.oid ) {
+            $.ajax({
+                url: "<?php echo U('Admin/authHandler');?>",
+                data: info,
+                type: "POST",
+                success: function(data) {
+                    alert(data.info);
                 }
-            }
-        });
+            });    
+        }
     })
     </script>
 </body>

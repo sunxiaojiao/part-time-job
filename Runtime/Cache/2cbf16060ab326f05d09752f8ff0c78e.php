@@ -12,9 +12,9 @@
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
 <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script
+<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
-<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
+<script src="/__GROUP__/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="/__GROUP__/css/webuploader.css">
     <script type="text/javascript" src="/__GROUP__/js/webuploader.min.js"></script>
     <style type="text/css">
@@ -163,7 +163,7 @@ THINK;
                         <?php else: ?>
                         <select class="form-control" name="industry">
                             <option value="">请选择...</option>
-                            <?php if(is_array($indlist)): $i = 0; $__LIST__ = $indlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><option value="<?php echo ($list["ind_id"]); ?>"><?php echo ($list["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <?php if(is_array($indlist)): $i = 0; $__LIST__ = $indlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><option><?php echo ($list["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                         </select><?php endif; ?>
                     </div>
                     <div class="form-group">
@@ -245,6 +245,7 @@ THINK;
   <p class="text-center">小蜜蜂兼职</p>
   <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+  <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
     <!--./footer-->
     <script type="text/javascript">

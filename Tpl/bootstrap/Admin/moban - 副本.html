@@ -31,22 +31,8 @@
         <div class="row">
             <div class="col-md-3">
                 <include file="leftNav" />
-                </ul>
             </div>
             <div class="col-md-9">
-            <div class="panel panel-primary">
-                    <div class="panel-heading" id="auth-apply">认证申请列表</div>
-                    <ul class="list-group">
-                        <if condition="is_null($orgsauth_error)">
-                            <volist name="orgsauth_list" id="apply">
-                                <li class="list-group-item"><a href="{:U("Admin/authDetail")}?oid={$apply.oid}">{$apply.orgname}</a></li>
-                            </volist>
-                            <else/>
-                            <li class="list-group-item">{$orgsauth_error}</li>
-                        </if>
-                    </ul>
-                    <ul class="pagination">{$orgsauth_page}</ul>
-                </div>
             </div>
         </div>
     <!--./container-->

@@ -89,6 +89,7 @@
                         <a class="list-group-item" href="__URL__/publishApply.html">兼职申请列表</a>
                         <a class="list-group-item" href="__URL__/authApply.html">认证申请列表</a>
                         <a class="list-group-item" href="__URL__/orgsList.html">现有公司列表</a>
+                        <a class="list-group-item" href="__URL__/showNowCity.html">管理业务城市</a>
                         <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
                     </ul>
                 </ul>
@@ -98,7 +99,7 @@
             <div class="panel panel-primary">
                     <div class="panel-heading" id="auth-apply">认证申请列表</div>
                     <ul class="list-group">
-                        <?php if(is_null($orgsauth_error)): if(is_array($orgsauth_list)): $i = 0; $__LIST__ = $orgsauth_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U("Admin/authDetail");?>?oid=<?php echo ($apply["oid"]); ?>"><?php echo ($apply["orgname"]); ?></a><span class="btn-content" data-oid="<?php echo ($apply["oid"]); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_null($orgsauth_error)): if(is_array($orgsauth_list)): $i = 0; $__LIST__ = $orgsauth_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$apply): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U("Admin/authDetail");?>?oid=<?php echo ($apply["oid"]); ?>"><?php echo ($apply["orgname"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                             <?php else: ?>
                             <li class="list-group-item"><?php echo ($orgsauth_error); ?></li><?php endif; ?>
                     </ul>
@@ -116,36 +117,5 @@
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
     <!--./footer-->
-    <script>
-    $(".btn-content>button").on('click', function() {
-        var info = new Object();
-        info.pass = $(this).attr('data-pass');
-        info.oid = $(this).parent().attr('data-oid');
-        info.jid  = $(this).parent().attr('data-jid');
-        console.log(info);
-        if( info.oid ) {
-            $.ajax({
-                url: "<?php echo U('Admin/authHandler');?>",
-                data: info,
-                type: "POST",
-                success: function(data) {
-                    alert(data.info);
-                }
-            });    
-        }else if( info.jid ) {
-             $.ajax({
-                url : "<?php echo U('Admin/jobHandler');?>",
-                data: info,
-                type: "POST",
-                success:function(data) {
-                    alert(data.info);
-                }
-             });   
-        }
-
-        
-        
-    })
-    </script>
 </body>
 </html>
