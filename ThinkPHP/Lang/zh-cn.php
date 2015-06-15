@@ -46,7 +46,7 @@ return array(
 	'_OPERATION_SUCCESS_'   =>  '操作成功！',
 	'_SELECT_NOT_EXIST_'    =>  '记录不存在！',
     '_EXPRESS_ERROR_'       =>  '表达式错误',
-    '_TOKEN_ERROR_'         =>  '表单令牌错误',
+    '_TOKEN_ERROR_'         =>  '请勿重复提交',
     '_RECORD_HAS_UPDATE_'   =>  '记录已经更新',
     '_NOT_ALLOW_PHP_'       =>  '模板禁用PHP代码',
     '_PARAM_ERROR_'         =>  '参数错误或者未定义',

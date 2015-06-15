@@ -248,7 +248,7 @@ $("#goto-info").click(function(){
 		success:function(data){
 			alert(data.info);
       if(data.status == 1){
-        location.href="<?php echo U('OrgCenter/editInfo');?>";
+        location.href = '';
       }
 		}
 		});

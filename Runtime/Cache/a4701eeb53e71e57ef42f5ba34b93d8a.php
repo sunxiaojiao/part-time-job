@@ -165,10 +165,10 @@ THINK;
             <select name="province" id="province" class="form-control" onchange='search(this)'>
             </select>
             <select name="city" id="city" class="form-control" onchange='search(this)'>
-              <option value=""><?php echo ($arr_address["city"]); ?></option>
+              <option><?php echo ($arr_address["city"]); ?></option>
             </select>
             <select name="area" id="district" class="form-control" onchange='search(this)'>
-              <option value=""><?php echo ($arr_address["area"]); ?></option>
+              <option><?php echo ($arr_address["area"]); ?></option>
             </select>
           </div>
         </div>
@@ -281,6 +281,7 @@ $("#goto-info").click(function(){
 		success:function(data){
       if(data.data ===1){
         $(".alert").removeClass("alert-danger").addClass("alert-success");
+        setTimeout(function(){location.href = '';},1000);
       }else{
         $(".alert").removeClass("alert-success").addClass("alert-danger");
       }
