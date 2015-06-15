@@ -12,7 +12,7 @@ class UserInfoAction extends Action{
 	protected  function showInfo(){
 		$Users   = M('Users');
 		$field   = "uid,username,age,sex,avatar,phone,address,qq,school,exp,intent";
-		$list    = $Users->where("uid=".$this->uid)->field($field)->find();
+		$list    = $Users->where("uid=%d",$this->uid)->field($field)->find();
 		session('user_qq',$list['qq']);
 		session('user_phone',$list['phone']);
 		//unserialize地址
@@ -33,9 +33,9 @@ class UserInfoAction extends Action{
 	protected function showEval() {
 		$Eval  = M('UserEvalute');
 		$field = "orgname,content,xm_user_evalute.ctime";
-		$where = "to_uid=" . $this->uid;
+		$where = "to_uid=%d";
 		$join  = "INNER JOIN xm_orgs ON xm_orgs.oid=xm_user_evalute.from_oid";
-		$arr2  = $Eval->field($field)->join($join)->where($where)->select();
+		$arr2  = $Eval->field($field)->join($join)->where($where,$this->uid)->select();
 		if($arr2){
 			$this->assign("eval_info",$arr2);
 		}elseif(is_null($arr2)){

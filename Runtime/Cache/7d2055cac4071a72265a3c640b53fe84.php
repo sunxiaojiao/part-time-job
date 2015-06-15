@@ -17,39 +17,6 @@
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
-    #banner {
-        height: 200px;
-        margin-bottom: 12px;
-    }
-    
-    .my-explor {
-        position: absolute;
-        right: 20px;
-    }
-    
-    .my-explor>.glyphicon {
-        margin-right: 6px;
-    }
-    
-    .my-partjob-address,
-    .my-partjob-people,
-    .my-partjob-money,
-    .my-explor {
-        position: absolute;
-    }
-    
-    .my-partjob-people {
-        left: 330px;
-    }
-    
-    .my-partjob-money {
-        left: 450px;
-    }
-    
-    .my-partjob-address {
-        left: 200px;
-    }
-    
     .my-select-address {
         display: inline-block;
     }
@@ -71,10 +38,6 @@
         margin: 1px 20px 20px;
         outline: 1px solid #EEE;
         cursor: pointer;
-    }
-    
-    #map-container {
-        height: 500px;
     }
     </style>
 </head>
@@ -165,48 +128,6 @@ THINK;
   })();
 </script>
 <!--======导航条结束======--->
-    <!--container-->
-    <!--banner-->
-    <div class="container" id="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="/__GROUP__/images/1.jpg" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-            </div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
     <!--container-->
     <div class="container">
         <div class="panel panel-default">

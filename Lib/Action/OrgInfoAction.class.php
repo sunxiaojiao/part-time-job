@@ -21,7 +21,7 @@ class OrgInfoAction extends Action{
 		$field = "orgname,email,xm_orgs.phone,is_validate,avatar,org_address,website,fixed_phone,org_intro,xm_orgs.ctime,xm_industry.name,size,nature";
 		$join1  = "LEFT JOIN xm_orgs_auth ON xm_orgs_auth.auth_oid=xm_orgs.oid";
 		$join2 = "LEFT JOIN xm_industry ON xm_orgs_auth.industry=xm_industry.ind_id"; 
-		$arr2  = $Org->field($field)->join($join1)->join($join2)->where("oid=".$this->oid)->find();
+		$arr2  = $Org->field($field)->join($join1)->join($join2)->where("oid=%d",$this->oid)->find();
 		if($arr2){
 			$this->assign("org_info",$arr2);
 		}elseif(is_null($arr2)){
@@ -34,9 +34,9 @@ class OrgInfoAction extends Action{
 	protected function showJobs() {
 		$Job = M('jobs');
 		$Job->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
-		$where = "pub_oid=" . $this->oid . " AND " . "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
+		$where = "pub_oid=%d" . " AND " . "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
 		$field = "title,jid,ctime";
-		$arr2  = $Job->where($where)->field($field)->select();
+		$arr2  = $Job->where($where,$this->oid)->field($field)->select();
 		if($arr2){
 			$this->assign('job_info',$arr2);
 		}elseif(is_null($arr2)){
@@ -48,9 +48,9 @@ class OrgInfoAction extends Action{
 	protected function showEval() {
 		$Eval  = M('OrgEvalute');
 		$field = "username,content,xm_org_evalute.ctime";
-		$where = "to_oid=" . $this->oid;
+		$where = "to_oid=%d";
 		$join  = "INNER JOIN xm_users ON xm_users.uid=xm_org_evalute.from_uid"; 
-		$arr2  = $Eval->field($field)->where($where)->join($join)->select();
+		$arr2  = $Eval->field($field)->where($where,$this->oid)->join($join)->select();
 		if($arr2){
 			$this->assign("eval_info",$arr2);
 		}elseif(is_null($arr2)){

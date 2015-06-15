@@ -43,7 +43,7 @@ class UsersModel extends Model{
 	);
 
 	protected $_map = array(
-		
+		'phone_num' => 'phone',
 	); 
 }
 ?>

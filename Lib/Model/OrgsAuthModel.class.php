@@ -1,10 +1,10 @@
 <?php
 class OrgsAuthModel extends Model{
 	protected $_validate = array(
-		array('license_num','/^\d{15}$/','请输入正确的执照编号',1),//
-		array('industry','/^\d{1,2}$/',"请选择所属行业",1),
+		array('license_num','/^\d{15}$/','执照编号为15位',1),//
+		array('industry','/\d/',"请选择所属行业",1),
 		array('nature','require',"请选择企业性质",1),
-		array('size','/^\d{1}/',"请选择企业规模",1),
+		array('size','require',"请选择企业规模",1),
 		array('contact','require',"请输入法人或负责人姓名",1),
 		array('idcard_num','/^\d{14}[a-zA-Z0-9]{4}$/',"请输入正确的法人或负责人身份证号码",1),
 		array('phone','/^1\d{10}/',"请输入正确的法人或负责人手机号码",1),

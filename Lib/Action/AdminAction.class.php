@@ -87,10 +87,10 @@ class AdminAction extends Action {
 		$is_pass = 0;
 		$is_validate = 0;
 		if($this->_post('pass') == 'yes') {//通过
-			$is_pass = 2;
+			$is_pass = 1;
 			$is_validate = 1;
 		}elseif ($this->_post('pass') == 'no'){//拒绝
-			$is_pass = 3;
+			$is_pass = 2;
 			$is_validate = 0;
 		}
 		//xm_orgsauth 修改is_pass

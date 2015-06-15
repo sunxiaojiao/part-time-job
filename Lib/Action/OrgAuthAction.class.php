@@ -30,7 +30,9 @@ class OrgAuthAction extends Action {
 		$arr2  = $Org->where($where)->field($field)->join($join2)->join($join1)->find();
 		//dump($arr2);
 		if($arr2){
-			$arr2['idcard_num'] = substr_replace($arr2['idcard_num'], '****', 14);
+			if(!empty($arr2['idcard_num'])){
+				$arr2['idcard_num'] = substr_replace($arr2['idcard_num'], '****', 14);
+			}
 			$this->assign("org_info",$arr2);
 		}elseif(is_null($arr2)){
 			$this->assign("org_error_info","您还未认证");
@@ -44,6 +46,7 @@ class OrgAuthAction extends Action {
 		$arr2_ind = $Industry->field('ind_id,name')->select();
 		$this->assign("indlist",$arr2_ind);
 	}
+	//认证hanlder
 	public function auth() {
 		if(!session('?oid')){
 			$this->ajaxReturn(0,"企业用户未登录",0);
@@ -66,7 +69,7 @@ class OrgAuthAction extends Action {
 		$OrgsAuth->idcard_img1 = session('idcard1');
 		$OrgsAuth->idcard_img2 = session('idcard2');
 		if($OrgsAuth->add()){
-			$this->ajaxReturn(1,"申请成功",1);	
+			$this->ajaxReturn(3,"申请成功",1);	
 		}else{
 			$this->ajaxReturn(2,"申请异常".$OrgsAuth->getLastSql(),1);	
 		}
@@ -77,6 +80,7 @@ class OrgAuthAction extends Action {
 		$ishave  = $OrgAuth->where("auth_oid=".session('oid'))->field("auth_id")->find();
 		return $ishave;
 	}
+	//文件上传
 	public function uploadFile(){
 		if(!session('oid')){
 			return ;
@@ -97,7 +101,7 @@ class OrgAuthAction extends Action {
 			return;
 		}
 		$img_data = $photo->getUploadFileInfo();
-		$path = $img_data[0]['savepath'] . $img_data[0]['savename'];
+		$path = '/' . $img_data[0]['savepath'] . $img_data[0]['savename'];
 		$OrgAuth = M('OrgsAuth');
 		$where = "auth_oid=" . session('oid');
 		$flag = false;

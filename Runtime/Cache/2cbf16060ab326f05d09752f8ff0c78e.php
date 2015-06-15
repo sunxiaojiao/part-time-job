@@ -124,7 +124,7 @@ THINK;
                     <?php switch($org_info["is_pass"]): case "3": ?><div class="alert alert-warning">
                                 <p>等待认证结果中...</p>
                             </div><?php break;?>
-                        <?php case "1": ?><div class="alert alert-danger">
+                        <?php case "1": ?><div class="alert alert-success">
                                 <p>您已认证</p>
                             </div><?php break;?>
                         <?php case "2": ?><div class="alert alert-danger">
@@ -163,7 +163,7 @@ THINK;
                         <?php else: ?>
                         <select class="form-control" name="industry">
                             <option value="">请选择...</option>
-                            <?php if(is_array($indlist)): $i = 0; $__LIST__ = $indlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><option><?php echo ($list["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <?php if(is_array($indlist)): $i = 0; $__LIST__ = $indlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><option value="<?php echo ($list["ind_id"]); ?>"><?php echo ($list["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                         </select><?php endif; ?>
                     </div>
                     <div class="form-group">
@@ -227,10 +227,6 @@ THINK;
                         <label><span class="must-input">*</span>联系电话：</label>
                         <input class="form-control" name="phone" value="<?php echo ($org_info["phone"]); ?>" />
                     </div>
-                    <div class="form-group">
-                        <label><span class="must-input">*</span>机构联系邮箱：</label>
-                        <input class="form-control" disabled="true" value="<?php echo ($org_info["email"]); ?>" />
-                    </div>
                     <?php if($isApply): ?><button type="button" class="btn btn-primary" id="goto-submit" disabled>提交</button>
                     <?php else: ?>
                     <button type="button" class="btn btn-primary" id="goto-submit">提交</button><?php endif; ?>
@@ -258,6 +254,9 @@ THINK;
             type: "POST",
             success: function(data) {
                 alert(data.info);
+                if(data.data == 3){
+                    window.href = '';
+                }
             }
         });
     });
