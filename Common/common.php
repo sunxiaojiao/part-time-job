@@ -102,4 +102,25 @@ function ftime($timestamp,$fomate = 'm/d h:i'){
 		return date($fomate,$timestamp);
 	}
 }
+
+function check_sql_inject($value){
+    //非法字符正则
+    $notall='/select|insert|update|delete|and|or|\'|\/\*|\*|\.\.\/|\.\/|;|union|into|load_file|outfile/';
+	$str = '';
+    if(preg_match_all($notall,$value,$matches)){
+    	//构造正则
+    	$matches = $matches[0];
+    	if(count($matches)){
+    		$str = $matches[0];
+    	}else{
+    		foreach($matches as $v){
+    			$str = '|' . $v;
+    		}
+    		$str = substr($str, 1);
+    	}
+    	return preg_replace("/{$str}/", '' , $value);
+    }else{
+    	return $value;
+    }
+}
 ?>

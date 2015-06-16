@@ -12,9 +12,9 @@
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
 <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script
+<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
-<script type="text/javascript" src="/__GROUP__/js/common.js"></script>
+<script src="/__GROUP__/js/common.js"></script>
     <link rel="stylesheet" href="/__GROUP__/public/um/themes/default/css/umeditor.css">
     <script type="text/javascript" src="/__GROUP__/public/um/umeditor.config.js"></script>
     <script type="text/javascript" src="/__GROUP__/public/um/umeditor.min.js"></script>
@@ -122,49 +122,89 @@
 <body>
     <!--======导航条======-->
 <nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">小蜜蜂兼职</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?><strong>·</strong><?php echo session("?area") ? session("area") : "芝罘区" ?>]</a></li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="输入关键词">
-                </div>
-                <button type="submit" class="btn btn-default">搜索</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <?php if(session('?admin_id')): ?><!--dropdown-->
-                    <li class="dropdown">
-                        <a href="<?php echo U('Admin/index');?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo session('username');?><span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="<?php echo U("Admin/index");?>">管理中心</a></li>
-                            <li><a href="#">修改密码</a></li>
-                            <li class="divider"></li>
-                            <li><a href="<?php echo U('Admin/logout');?>">注销</a></li>
-                        </ul>
-                    </li>
-                    <!--/.dropdown-->
-                    <?php else: ?>
-                    <li><a href="<?php echo U('Register/index');?>">注册</a></li>
-                    <li><a href="<?php echo U('Login/index');?>">登录</a></li><?php endif; ?>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="" href="/"><img src="/Public/logo/logo.png" height="50" alt="小蜜蜂兼职logo" /></a>
     </div>
-    <!-- /.container-fluid -->
-</nav>
-<!--======导航条结束======--->
 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?>]</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
+        <div class="input-group">
+          <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span>兼职</span><span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" id="search-f">
+            <li><a href="javascript:void(0)">用户</a></li>
+          </ul>
+        </div>
+          <input class="hidden" type="test" name="sf" value="job" id="hidden-f"/>
+          <input type="text" class="form-control" name="wd" placeholder="兼职/用户...">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
+      <ul class="nav navbar-nav sort-search">
+        <li class=""><a href="/SortSearch/search.html?q=q">分类查找</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <?php $url = U("Index/index"); $logoutUrl = U("Logout/index"); $name = session("?username") ? session('username') : session('orgname'); $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>'; $dropdown1 = <<<THINK
+      	<li class="dropdown">
+          <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            $info
+            <li><a href="/PublishJobs">发布兼职</a></li>
+            <li><a href="/ChangePasswd">修改密码</a></li>
+            <li class="divider"></li>
+            <li><a href="$logoutUrl">注销</a></li>
+          </ul>
+        </li><!--/.dropdown-->
+THINK;
+ $dropdown2 = <<<THINK
+        <li class="dropdown">
+          <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            $info
+            <li><a href="/ChangePasswd">修改密码</a></li>
+            <li class="divider"></li>
+            <li><a href="$logoutUrl">注销</a></li>
+          </ul>
+        </li><!--/.dropdown-->
+THINK;
+ if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+        	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<script type="text/javascript">
+  (function(){
+    var sf_a   = $("#search-f>li a");
+    var sf_h   = $("#hidden-f");
+    var sf_a_b = $("#search-f").parent().find("button>span").eq(0);
+    var p;
+    sf_a.on('click',function(){
+      //切换字符串
+      p = sf_a_b.text();
+      sf_a_b.text(sf_a.text());
+      sf_a.text(p);
+      //改变表单数据
+      if(sf_h.val() == 'job'){
+        sf_h.val("user");
+      }else if(sf_h.val() == 'user'){
+        sf_h.val("job");
+      }
+    });
+  })();
+</script>
+<!--======导航条结束======--->
     <!--container-->
     <div class="container">
         <div class="rows">
@@ -184,6 +224,7 @@
   <p class="text-center">小蜜蜂兼职</p>
   <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
   <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+  <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
     <!--./footer-->
     <script>
@@ -197,6 +238,9 @@
                 type:"POST",
                 success:function(data){
                     alert(data.info);
+                    if(data.data ==1){
+                        location.href = '';
+                    }
                 }
             });
         }

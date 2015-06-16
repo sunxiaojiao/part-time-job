@@ -111,7 +111,7 @@
 </head>
 
 <body>
-    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <include file="./Tpl/bootstrap/public/header.html" />
     <!--container-->
     <div class="container">
         <div class="rows">
@@ -139,6 +139,9 @@
                 type:"POST",
                 success:function(data){
                     alert(data.info);
+                    if(data.data ==1){
+                        location.href = '';
+                    }
                 }
             });
         }

@@ -59,17 +59,21 @@ class SortSearchAction extends Action{
 			if($key == '_URL_'){
 				continue;
 			}
-			$arr_get[$key] = $this->_get($key);
+			
+			//检测sqlInjection
+			$value = check_sql_inject($value);
+			$arr_get[$key] = $value;
 		}
 		//转换范围为相应字段
-
+		$Address = M('Address');
+		$city_str     = $Address->field('city')->find($arr_get['address']);
 		//xm_jobs表中搜索
 		$Job = M('jobs');
 		$Job->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
 		$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0" 	. " AND "			 .
 				$this->strongWhere($arr_get['style'],"mold_id","AND")          .
 				$this->strongWhere($arr_get['wage'],"money","AND",'',":")      .
-				$this->strongWhere($arr_get['address'],"city","AND")        .
+				$this->strongWhere($city_str['city'],"city","AND")             .
 				$this->strongWhere($arr_get['peonum'],"want_peo","AND",'',':') .
 				$this->strongWhere($arr_get['py'], 'pay_way', 'AND')           .
 				$this->strongWhere($arr_get['wt'],"work_time","AND",'',":")    .
@@ -87,7 +91,7 @@ class SortSearchAction extends Action{
 		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid" . $this->strongWhere($arr_get['isvld'], 'xm_orgs.is_validate', 'AND', true);
 		import('ORG.Util.Page');
 		$count = $Job->where($where)->join($join)->count();
-		$Page  = new Page($count,5);
+		$Page  = new Page($count,15);
 		$show  = $Page->show();
 		$this->assign("page",$show);
 		$arr2 = $Job->field($field)
@@ -96,11 +100,12 @@ class SortSearchAction extends Action{
 					->where($where)
 					->select();
 		if($arr2){
+//			dump($Job->getLastSql());
 			$this->assign("job_list",$arr2);
 		}elseif(is_null($arr2)){
 			$this->assign("error_info","没有符合要求的结果");
 		}else{
-			$this->assign("error_info","检索出错".$Job->getLastSql());
+			$this->assign("error_info","检索出错");
 		}
 		$this->display('index');
 	}
