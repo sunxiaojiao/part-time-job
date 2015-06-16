@@ -10,6 +10,10 @@ class IndexAction extends Action{
 	 * 默认30分钟内添加的显示 NEW 徽章
 	 */
 	public function index(){
+		//设置城市
+		if(!session('?city')){
+			session('city','烟台市');
+		}
 		//自动登录
 		$this->autoLogin();
 		//设置分类排序

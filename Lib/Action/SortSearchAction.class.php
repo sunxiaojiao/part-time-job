@@ -65,8 +65,12 @@ class SortSearchAction extends Action{
 			$arr_get[$key] = $value;
 		}
 		//转换范围为相应字段
-		$Address = M('Address');
-		$city_str     = $Address->field('city')->find($arr_get['address']);
+		$city_str = '';
+		if($arr_get['address']){
+			$Address  = M('Address');
+			$city_str = $Address->field('city')->find($arr_get['address']);	
+		}
+		
 		//xm_jobs表中搜索
 		$Job = M('jobs');
 		$Job->query("SET sql_mode = 'NO_UNSIGNED_SUBTRACTION'");
@@ -99,8 +103,8 @@ class SortSearchAction extends Action{
 					->limit($Page->firstRow.','.$Page->listRows)
 					->where($where)
 					->select();
+					dump($Job->getLastSql());
 		if($arr2){
-//			dump($Job->getLastSql());
 			$this->assign("job_list",$arr2);
 		}elseif(is_null($arr2)){
 			$this->assign("error_info","没有符合要求的结果");
@@ -243,8 +247,8 @@ class SortSearchAction extends Action{
 	 * @param $betweenAnd 将传入值$variable分割，使用between and
 	 */
 	protected function strongWhere($variable,$field,$operator,$location,$betweenAnd) {
-		//若$variable === null 直接返回空字符，结束函数
-		if(is_null($variable)){
+		//若$variable === '' 直接返回空字符，结束函数
+		if($variable ==''){
 			return '';
 		}
 		if($operator != 'AND' && $operator != 'OR'){

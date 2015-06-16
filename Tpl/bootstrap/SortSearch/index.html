@@ -142,8 +142,8 @@
                                     <td><a href="{:U("JobsInfo/index","jid=$jid")}">{$job.title}</a></td>
                                     <td>{$job.addressname}</td>
                                     <td>{$job.money}</td>
-                                    <td>{$job.begin_time}</td>
-                                    <td>{$job.wktime}</td>
+                                    <td>{$job.begin_time|date='m/d h:i',###}</td>
+                                    <td>{$job.wktime}小时</td>
                                     <td>{$job.pv}</td>
                                 </tr>
                             </volist>

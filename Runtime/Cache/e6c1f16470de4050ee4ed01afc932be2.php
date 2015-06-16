@@ -56,7 +56,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台" ?>]</a></li>
+        <li class=""><a href="<?php echo U('ChangeCity/index');?>">切换城市 [<?php echo session("?city") ? session("city") : "烟台市" ?>]</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search" method="get" action="<?php echo U('Search/s');?>">
@@ -227,8 +227,8 @@ THINK;
                                     <td><a href="<?php echo U("JobsInfo/index","jid=$jid");?>"><?php echo ($job["title"]); ?></a></td>
                                     <td><?php echo ($job["addressname"]); ?></td>
                                     <td><?php echo ($job["money"]); ?></td>
-                                    <td><?php echo ($job["begin_time"]); ?></td>
-                                    <td><?php echo ($job["wktime"]); ?></td>
+                                    <td><?php echo (date('m/d h:i',$job["begin_time"])); ?></td>
+                                    <td><?php echo ($job["wktime"]); ?>小时</td>
                                     <td><?php echo ($job["pv"]); ?></td>
                                 </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </table>
