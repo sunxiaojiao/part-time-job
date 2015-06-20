@@ -1,1 +1,0 @@
-<?php	return array ( 0 => 'app_id', 1 => 'app_oid', 2 => 'app_jid', 3 => 'app_uid', 4 => 'is_pass', 5 => 'ctime', '_autoinc' => true, '_pk' => 'app_id', '_type' => array ( 'app_id' => 'bigint(255)', 'app_oid' => 'int(255)', 'app_jid' => 'int(255)', 'app_uid' => 'int(255)', 'is_pass' => 'int(3)', 'ctime' => 'int(10)', ), );?>

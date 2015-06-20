@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>兼职平台</title>
+    <title>{$org_info.org_name}-小蜜蜂兼职</title>
     <include file="./Tpl/bootstrap/public/static.html" />
     <style type="text/css">
     .panel-body {
@@ -50,11 +50,11 @@
                         <img src="{$org_info.avatar}" class="pull-left my-perimg" />
                         <div class="pull-left my-perinfo">
                             <h1 class="h3 org-name">{$org_info.orgname}
-            <!-- <if condition="$org_info.is_validate eq 1">
+            <if condition="$org_info.is_validate eq 1">
             <span class="label label-success">已认证</span>
             <else />
             <span class="label label-danger">未认证</span>
-            </if> -->
+            </if>
             </h1>
                         </div>
                     </div>

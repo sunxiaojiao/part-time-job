@@ -103,7 +103,7 @@ class SortSearchAction extends Action{
 					->limit($Page->firstRow.','.$Page->listRows)
 					->where($where)
 					->select();
-					dump($Job->getLastSql());
+		//dump($Job->getLastSql());
 		if($arr2){
 			$this->assign("job_list",$arr2);
 		}elseif(is_null($arr2)){

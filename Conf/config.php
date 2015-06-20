@@ -18,6 +18,10 @@ return array(
 	'TOKEN_TYPE'=>'md5',  //令牌哈希验证规则 默认为MD5
 	'TOKEN_RESET'=>true,  //令牌验证出错后是否重置令牌 默认为true
     
+    //页面压缩
+    'TMPL_STRIP_SPACE'      => false,
+    
+    'SHOW_ERROR_MAG' => false,
     
     //过滤和验证
     'VAR_FILTERS'=>'stripslashes,strip_tags',

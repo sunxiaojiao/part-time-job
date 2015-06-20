@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>分类查找|更快捷的兼职搜索</title>
+    <title>分类查找-小蜜蜂兼职</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 
@@ -87,6 +87,7 @@
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
         </li><!--/.dropdown-->
+
 THINK;
  $dropdown2 = <<<THINK
         <li class="dropdown">
@@ -98,6 +99,7 @@ THINK;
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
         </li><!--/.dropdown-->
+
 THINK;
  if(session('?uid')){ echo $dropdown2; }elseif(session('?oid')){ echo $dropdown1; }else{ echo "<li><a href=" . U('Register/index') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>"; } ?>

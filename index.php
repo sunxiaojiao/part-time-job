@@ -10,6 +10,8 @@ define('APP_NAME','兼职平台');
 
 //debug
 define('APP_DEBUG',true);
+define('SHOW_ERROR_MSG',false);
+
 define('BUILD_DIR_SECURE', true);
 require('./ThinkPHP/ThinkPHP.php');
 

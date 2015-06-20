@@ -39,7 +39,7 @@
 	    $name = session("?username") ? session('username') : session('orgname');
 	    $info = session("?uid") ? '<li><a href="/UserCenter">个人中心</a></li>' : '<li><a href="/OrgCenter">企业中心</a></li>';
       
-      $dropdown1 = <<<ETO
+      $dropdown1 = <<<THINK
       	<li class="dropdown">
           <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -50,7 +50,8 @@
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
         </li><!--/.dropdown-->
-ETO;
+
+THINK;
       $dropdown2 = <<<ETO
         <li class="dropdown">
           <a href="$url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$name<span class="caret"></span></a>
@@ -61,6 +62,7 @@ ETO;
             <li><a href="$logoutUrl">注销</a></li>
           </ul>
         </li><!--/.dropdown-->
+
 ETO;
 
 
@@ -69,9 +71,10 @@ ETO;
       	}elseif(session('?oid')){
 			echo $dropdown1;
       	}else{
-		echo "<li><a href=" . U('Register/index') . ">注册</a></li>
+		  echo "<li><a href=" . U('Register/index') . ">注册</a></li>
         	  <li><a href=" . U('Login/index') . ">登录</a></li>";
       	}
+
       </php>
       </ul>
     </div><!-- /.navbar-collapse -->
