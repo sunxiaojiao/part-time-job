@@ -87,12 +87,15 @@ class SortSearchAction extends Action{
 				  xm_jobs.jid AS jid,
 				  xm_jobs.want_peo AS want_peo,
 				  xm_jobs.current_peo AS current_peo,
-				  xm_jobs.money AS money,
+				  xm_jobs.money,
+				  money_style,
+				  xm_mold.name AS moldname,
 				  xm_jobs.begin_time AS begin_time,
 				  xm_jobs.work_time AS wktime,
 				  xm_jobs.pv AS pv,
 				  addressname";
 		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid=xm_jobs.pub_oid" . $this->strongWhere($arr_get['isvld'], 'xm_orgs.is_validate', 'AND', true);
+		$join_mold = "LEFT JOIN `xm_mold` ON xm_mold.mid = xm_jobs.mold_id";
 		import('ORG.Util.Page');
 		$count = $Job->where($where)->join($join)->count();
 		$Page  = new Page($count,15);
@@ -100,6 +103,7 @@ class SortSearchAction extends Action{
 		$this->assign("page",$show);
 		$arr2 = $Job->field($field)
 					->join($join)
+					->join($join_mold)
 					->limit($Page->firstRow.','.$Page->listRows)
 					->where($where)
 					->select();

@@ -73,12 +73,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">关于小蜜蜂</div>
-                    <div class="panel-body">
-                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-                    </div>
-                </div>
+                <include file="public:left_content" />
             </div>
         </div>
     </div>
@@ -88,36 +83,6 @@
     <!--footer-end-->
     <script>
     $(".assort a").on('click', function() {
-        //var cla  = $(this).attr('class');
-        link = $(this).attr('href');
-        // if(link.substr(link.length-1,1) == '0') {
-        //  $(this).attr('href',link.substr(0,link.length-1) + "1");
-        // }else if(link.substr(link.length-1,1) == '1') {
-        //  $(this).attr('href',link.substr(0,link.length-1) + "0")
-        // }
-        //var data = new Object();
-        // switch(cla){
-        //  case 'my-partjob-time':
-        //      if($(this).attr('h') = 10){
-
-        //      }
-        //      break;
-        //  case 'my-partjob-address':
-        //      data.order = 20;
-        //      break;
-        //  case 'my-partjob-money':
-        //      data.order = 30;
-        //      break;
-        //  case 'my-partjob-explor':
-        //      data.order = 40;
-        //      break;
-        // }
-
-        // $.ajax({
-        //  url:"U('Admin/index')",
-        // data:data,
-        // type:"POST"
-        // });
     });
     $(document).on('ready', function() {
         var list = $(".assort .glyphicon").parent();

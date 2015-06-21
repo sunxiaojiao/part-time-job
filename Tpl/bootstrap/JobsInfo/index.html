@@ -96,7 +96,13 @@
                                         <li class="list-group-item">到岗时间：{$list.begin_time|date="m月d日h:i",###}</li>
                                         <li class="list-group-item">工作时长：{$list.work_time}小时</li>
                                         <li class="list-group-item">联系人：{$list.leader}<small>（联系我时，请说是在小蜜蜂上看到的）</small></li>
-                                        <li class="list-group-item">联系电话：<img src="{:U("JobsInfo/generatePhoneImage")}" /></li>
+                                        <li class="list-group-item">联系电话：
+                                        <if condition="$a_tourist">
+                                            {$a_tourist}
+                                        <else />
+                                            <img src="{:U("JobsInfo/generatePhoneImage")}" />
+                                        </if>
+                                        </li>
                                         <li class="list-group-item">
                                         结算方式：
                                         <switch name="list.pay_way">
@@ -190,12 +196,7 @@
             </div>
             <!--right-->
             <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">关于小蜜蜂</div>
-                    <div class="panel-body">
-                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-                    </div>
-                </div>
+                <include file="public:left_content" />
             </div>
         </div>
     </div>

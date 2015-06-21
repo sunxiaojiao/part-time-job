@@ -88,7 +88,13 @@
                             <span class="label label-danger">New</span>
                             </if></a></td>
                                         <td><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{$job.addressname}</td>
-                                        <td><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>{$job.money}</td>
+                                        <td><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>{$job.money}元
+                                        <switch name="job.money_style">
+                                            <case value="1">/小时</case>
+                                            <case value="2">/天</case>
+                                            <case value="3">/次</case>
+                                        </switch>
+                                        </td>
                                         <td><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{$job.pv}</td>
                                         <td><span class="glyphicon glyphicon-time"></span>{$job.ctime|ftime}</td>
                                     </tr>
@@ -106,12 +112,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">关于小蜜蜂</div>
-                    <div class="panel-body">
-                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-                    </div>
-                </div>
+                <include file="public:left_content" />
             </div>
         </div>
     </div>

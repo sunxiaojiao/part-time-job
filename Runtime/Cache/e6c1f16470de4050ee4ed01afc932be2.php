@@ -218,19 +218,23 @@ THINK;
                             <thead>
                             <tr>
                                 <td>名称</td>
+                                <td>兼职类型</td>
                                 <td>工作地</td>
                                 <td>工资</td>
                                 <td>工作时间</td>
-                                <td>工作时长</td>
                                 <td>浏览量</td>
                             </tr>
                         </thead>
                             <?php if(is_array($job_list)): $i = 0; $__LIST__ = $job_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job): $mod = ($i % 2 );++$i;?><tr><?php echo C('URL_MODEL',1); $jid = $job["jid"]; ?>
                                     <td><a href="<?php echo U("JobsInfo/index","jid=$jid");?>"><?php echo ($job["title"]); ?></a></td>
+                                    <td><?php echo ($job["moldname"]); ?></td>
                                     <td><?php echo ($job["addressname"]); ?></td>
-                                    <td><?php echo ($job["money"]); ?></td>
-                                    <td><?php echo (date('m/d h:i',$job["begin_time"])); ?></td>
-                                    <td><?php echo ($job["wktime"]); ?>小时</td>
+                                    <td><?php echo ($job["money"]); ?>元
+                                    <?php switch($job["money_style"]): case "2": ?>/天<?php break;?>
+                                        <?php case "1": ?>/小时<?php break;?>
+                                        <?php case "3": ?>/次<?php break; endswitch;?>
+                                    </td>
+                                    <td><?php echo (ftime($job["begin_time"])); ?></td>
                                     <td><?php echo ($job["pv"]); ?></td>
                                 </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                     </table>

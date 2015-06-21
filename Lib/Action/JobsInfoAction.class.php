@@ -7,6 +7,7 @@ class JobsInfoAction extends Action{
 		$this->showEva();
 		$this->recordClickNum();
 		session("jid",$this->jid);
+		$this->isCanLookTel();
 		$this->display();
 	}
 	//显示兼职信息
@@ -80,6 +81,19 @@ class JobsInfoAction extends Action{
 			$this->assign("eval_error_info","暂无评价");
 		}else{
 			$this->assign("eval_error_info","查询错误");
+		}
+	}
+	//是否已经申请
+	protected function isCanLookTel (){
+		if(!session('uid')){
+			$this->assign('a_tourist','申请后查看');
+			return;
+		}
+		$Apply = M('Apply');
+		$f = $Apply->where('app_jid = %d AND app_uid= %d',session('jid'),session('uid'))->field('app_id')->find();
+		if(!$f){
+			$this->assign('a_tourist','申请后查看');
+			return;
 		}
 	}
 	//生成图片手机号

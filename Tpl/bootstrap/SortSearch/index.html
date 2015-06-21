@@ -130,20 +130,26 @@
                             <thead>
                             <tr>
                                 <td>名称</td>
+                                <td>兼职类型</td>
                                 <td>工作地</td>
                                 <td>工资</td>
                                 <td>工作时间</td>
-                                <td>工作时长</td>
                                 <td>浏览量</td>
                             </tr>
                         </thead>
                             <volist name="job_list" id="job">
                                 <tr>{:C('URL_MODEL',1)}<assign name="jid" value="$job.jid"/>
                                     <td><a href="{:U("JobsInfo/index","jid=$jid")}">{$job.title}</a></td>
+                                    <td>{$job.moldname}</td>
                                     <td>{$job.addressname}</td>
-                                    <td>{$job.money}</td>
-                                    <td>{$job.begin_time|date='m/d h:i',###}</td>
-                                    <td>{$job.wktime}小时</td>
+                                    <td>{$job.money}元
+                                    <switch name="job.money_style">
+                                        <case value="2">/天</case>
+                                        <case value="1">/小时</case>
+                                        <case value="3">/次</case>
+                                    </switch>
+                                    </td>
+                                    <td>{$job.begin_time|ftime}</td>
                                     <td>{$job.pv}</td>
                                 </tr>
                             </volist>

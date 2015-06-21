@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'eva_id', 1 => 'to_oid', 2 => 'content', 3 => 'from_uid', 4 => 'ctime', '_autoinc' => true, '_pk' => 'eva_id', '_type' => array ( 'eva_id' => 'int(255)', 'to_oid' => 'int(255)', 'content' => 'mediumtext', 'from_uid' => 'int(255)', 'ctime' => 'int(10)', ), );?>
