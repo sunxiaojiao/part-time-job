@@ -45,6 +45,14 @@ class UserCenterAction extends Action{
 		$address = unserialize($this->data['address']);
 		$this->assign('address',$address['province'].$address['city'].$address['area']);
 		$this->assign('arr_address',$address);
+		//可申请的次数
+		$apply_count = $this->data['apply_count'];
+		$apply_time  = $this->data['apply_time'];
+		$apply_num = 3;
+		if(date('Ymd') === date('Ymd',$apply_time)){
+			$apply_num = $apply_count;
+		}
+		$this->assign("apply_num",$apply_num);
 		session("userData",$this->data);
 	}
 	//更改用户信息

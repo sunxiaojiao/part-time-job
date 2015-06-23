@@ -184,7 +184,7 @@ THINK;
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">我的申请（今天还可以申请 <?php echo ($userinfo["apply_count"]); ?> 次）</div>
+                    <div class="panel-heading">我的申请（今天还可以申请 <?php echo ($apply_num); ?> 次）</div>
                     <div class="panel-body">
                         <table class="table">
                             <thead>

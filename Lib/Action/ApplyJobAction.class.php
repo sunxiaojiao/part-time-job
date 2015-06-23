@@ -60,10 +60,11 @@ class ApplyJobAction extends Action{
 			//更新jobs中，当前申请人数
 			$Job->where("jid=".session('jid'))->setInc('current_peo',1);
 			//计算可申请次数
-			if($arr_apply['apply_count'] == 0){
+			$leave_count = 2 ;
+			if(date('Ymd',$arr_apply['apply_time']) !== date('Ymd')){   //最后的申请时间是今天之前
 				$leave_count = 2;
-			}else{
-				$leave_count = $arr_apply['apply_count']-1;
+			}else{   							  //最后的申请时间为今天
+				$leave_count = $arr_apply['apply_count'] - 1;
 			}
 			$this->ajaxReturn(4,"申请成功，今日还可以申请". $leave_count ."次",1);
 		}else{
