@@ -267,6 +267,47 @@ class AdminAction extends Action {
 		
 		//没有修改	
 	}
+	//管理兼职类型-显示
+	public function showMolds() {
+		$Model       = M('Mold');
+		$num         = 10;
+		$where       = '';
+		$field       = 'mid,name';
+		$data_list   = 'mold_info';
+		$show_list   = 'mold_page';
+		$error_info  = 'mold_error_info';
+		$this->pagingList($Model, $num, $where, $field, $data_list, $show_list, $error_info, $join, $order);
+		$this->show();
+	}
+	//管理兼职类型-管理
+	public function moldsHandler() {
+		$mid   = $this->_post('mid');
+		$name  = $this->_post('mold_name');
+		//dump($name);
+		$Mold = M('Mold');
+		
+		if($name){
+			//添加
+			$data = array('name'=>$name);
+			if($Mold->add($data)){
+				$this->ajaxReturn(1,'添加成功',1);
+			}else{
+				$this->ajaxReturn(1,'添加失败',1);
+			}				
+		}else{
+			//删除
+			if(!is_numeric($mid)){
+				return;
+			}
+			
+			if($Mold->delete($mid)){
+				$this->ajaxReturn(1,'删除成功',1);
+			}else{
+				$this->ajaxReturn(1,'删除失败',1);
+			}
+		}
+
+	}
 	/**
 	 * 
 	 * 分页方法
@@ -281,7 +322,7 @@ class AdminAction extends Action {
 	 */
 	protected function pagingList(Model $Model,$num,$where,$field,$data_list,$show_list,$error_info,$join,$order) {
 		if(empty($order)){
-			$order="ctime";
+			//$order="ctime";
 		}
 		import('ORG.Util.Page');
 		$count      = $Model->where($where)->count();
@@ -299,13 +340,16 @@ class AdminAction extends Action {
 		if($list){
 			//dump($list);
 			//dump($show);
-				$this->assign($data_list,$list);// 赋值数据集
-				$this->assign($show_list,$show);// 赋值分页输出
-			}elseif(is_null($list)) {
-				$this->assign($error_info,"记录为空！");
-			}else{
-				$this->assign($error_info,"读取错误！");
-			}			  
+			dump($Model->getLastSql());
+			$this->assign($data_list,$list);// 赋值数据集
+			$this->assign($show_list,$show);// 赋值分页输出
+		}elseif(is_null($list)) {
+			dump($Model->getLastSql());
+			$this->assign($error_info,"记录为空！");
+		}else{
+			dump($Model->getLastSql());
+			$this->assign($error_info,"读取错误！");
+		}			  
 	
 	}
 }

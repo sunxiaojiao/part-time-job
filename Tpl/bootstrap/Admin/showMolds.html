@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>管理兼职类型</title>
+    <include file="./Tpl/bootstrap/public/static.html" />
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=8d8574dfcfd097659736c026a6921ca5"></script>
+    <style type="text/css">
+    .scroll-content {
+        position: relative;
+    }
+    .panel-body {
+        position: relative;
+    }
+    .list-group a.list-group-item {
+        cursor: pointer;
+    }
+    .btn-content {
+        position: absolute;
+        right: 10px;
+        margin-top: -8px;
+    }
+    </style>
+
+</head>
+
+<body>
+    <include file="./Tpl/bootstrap/public/header_admin.html" />
+    <!--container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <include file="leftNav" />
+            </div>
+            <div class="col-md-9">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        管理兼职类型
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group form-inline">
+                            <label for="">新增兼职类型</label>
+                            <input id="mold_name" type="text" class="form-control" placeholder="兼职类型"/>
+                            <button class="btn btn-success" id="btn-add">新增这个</button>
+                        </div>
+                        <hr />
+                        <h3>管理现有业务城市</h3>
+                        <div class="">
+                        <if condition="$mold_error_info">
+                        {$mold_error_info}
+                        <else />
+                            <table class="table">
+                            <thead>
+	                            <td>#序号</td>
+	                            <td>名称</td>
+	                            <td>操作</td>
+	                        </thead>
+                            <volist name="mold_info" id="mold_info">
+                            <tr>
+                            	<td>{$mold_info.mid}</td>
+                            	<td>
+                            		{$mold_info.name}
+                            	</td>
+                            	<td>
+                                <button type="button" class="btn btn-danger btn-del" data-mid="{$mold_info.mid}">删除</button>
+                            	</td>
+                            </tr>
+                            </volist>
+                            </table>
+                        </if>
+                        <ul class="pagination">{$mold_page}</ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--./container-->
+    <!--footer-->
+<include file="./Tpl/bootstrap/public/footer.html" />
+    <!--./footer-->
+    <script>
+    (function(){
+        var btn_del = $(".btn-del");
+        var url     = "{:U("Admin/moldsHandler")}";
+        btn_del.on('click',function(){
+            var mid = btn_del.attr('data-mid');
+            var info = new Object();
+            info.mid = mid;
+            $.ajax({
+                url:url,
+                data:info,
+                type:"POST",
+                success:function(data){
+                    alert(data.info);
+                    location.href = "";
+                },
+                error:function(){
+                    alert('网络错误，请重试');
+                }
+            });
+        })    
+    })();
+    (function(){
+        var btn_add    = $('#btn-add'),
+            url        = "{:U("Admin/moldsHandler")}",
+        	mold_name  = $("#mold_name");
+        btn_add.on('click',function(){
+            var info   = new Object();
+            info.mold_name  = mold_name.val();
+            $.ajax({
+                url:url,
+                data:info,
+                type:"POST",
+                success:function(data){
+                    alert(data.info);
+                    location.href = "";
+                },
+                error:function(){
+                    alert('网络错误，请重试');
+                }
+            });
+        });
+    })();
+</script>
+</body>
+</html>

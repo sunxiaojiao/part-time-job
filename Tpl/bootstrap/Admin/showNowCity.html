@@ -84,6 +84,7 @@
                 data:info,
                 type:"POST",
                 success:function(data){
+                    location.href = "";
                     alert(data.info);
                 },
                 error:function(){
@@ -108,6 +109,7 @@
                 type:"POST",
                 success:function(data){
                     alert(data.info);
+                    location.href = "";
                 },
                 error:function(){
                     alert('网络错误，请重试');

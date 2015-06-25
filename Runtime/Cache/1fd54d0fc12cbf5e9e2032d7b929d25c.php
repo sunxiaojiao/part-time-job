@@ -90,7 +90,6 @@
                         <a class="list-group-item" href="__URL__/authApply.html">认证申请列表</a>
                         <a class="list-group-item" href="__URL__/orgsList.html">现有公司列表</a>
                         <a class="list-group-item" href="__URL__/showNowCity.html">管理业务城市</a>
-                        <a class="list-group-item" href="__URL__/showMolds.html">管理兼职类型</a>
                         <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
                     </ul>
                 </ul>
@@ -98,13 +97,15 @@
             </div>
             <div class="col-md-9">
             <div class="panel panel-primary">
-                    <div class="panel-heading" id="publish-apply">兼职申请列表</div>
-                    <ul class="list-group">
-                    <?php if(is_null($jobs_error)): if(is_array($jobs_list)): $i = 0; $__LIST__ = $jobs_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($list["jid"]); ?>"><?php echo ($list["title"]); ?></a><span class="btn-content" data-jid="<?php echo ($list["jid"]); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            <?php else: ?>
-                            <li class="list-group-item"><?php echo ($jobs_error); ?></li><?php endif; ?>
-                    </ul>
-                    <ul class="pagination"><?php echo ($jobs_page); ?></ul>
+                    <div class="panel-heading" id="advice">投诉建议</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                        <?php if($error_advice_info): ?><li class="list-group-item"><?php echo ($error_advice_info); ?></li>
+                        <?php else: ?>
+                            <?php if(is_array($advice_info)): $i = 0; $__LIST__ = $advice_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><a href="<?php echo U("Admin/AdviceDetail");?>?ai=<?php echo ($info["advice_id"]); ?>" target="_blank" class="list-group-item" style="overflow:hidden;height:50px;"><div class="pull-left" style="overflow:hidden;width:400px;"><?php echo (htmlspecialchars_decode($info["content"])); ?></div><span class="pull-right"><?php echo (date('m/d h:i',$info["ctime"])); ?></span></a><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                        </ul>
+                        <ul class="pagination"><?php echo ($advice_page); ?></ul>
+                    </div>
                 </div>
             </div>
         </div>

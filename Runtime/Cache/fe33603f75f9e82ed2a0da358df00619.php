@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>兼职平台</title>
+    <title>管理兼职类型</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 
@@ -15,6 +15,7 @@
 <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=8d8574dfcfd097659736c026a6921ca5"></script>
     <style type="text/css">
     .scroll-content {
         position: relative;
@@ -31,6 +32,7 @@
         margin-top: -8px;
     }
     </style>
+
 </head>
 
 <body>
@@ -94,17 +96,43 @@
                         <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
                     </ul>
                 </ul>
-                </ul>
             </div>
             <div class="col-md-9">
-            <div class="panel panel-primary">
-                    <div class="panel-heading" id="publish-apply">兼职申请列表</div>
-                    <ul class="list-group">
-                    <?php if(is_null($jobs_error)): if(is_array($jobs_list)): $i = 0; $__LIST__ = $jobs_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="<?php echo U('JobsInfo/index');?>?jid=<?php echo ($list["jid"]); ?>"><?php echo ($list["title"]); ?></a><span class="btn-content" data-jid="<?php echo ($list["jid"]); ?>"><button type="button" class="btn btn-success" data-pass="yes">通过</button><button type="button" class="btn btn-danger" data-pass="no">拒绝</button></span></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            <?php else: ?>
-                            <li class="list-group-item"><?php echo ($jobs_error); ?></li><?php endif; ?>
-                    </ul>
-                    <ul class="pagination"><?php echo ($jobs_page); ?></ul>
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        管理兼职类型
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group form-inline">
+                            <label for="">新增兼职类型</label>
+                            <input id="mold_name" type="text" class="form-control" placeholder="兼职类型"/>
+                            <button class="btn btn-success" id="btn-add">新增这个</button>
+                        </div>
+                        <hr />
+                        <h3>管理现有业务城市</h3>
+                        <div class="">
+                        <?php if($mold_error_info): echo ($mold_error_info); ?>
+                        <?php else: ?>
+                            <table class="table">
+                            <thead>
+	                            <td>#序号</td>
+	                            <td>名称</td>
+	                            <td>操作</td>
+	                        </thead>
+                            <?php if(is_array($mold_info)): $i = 0; $__LIST__ = $mold_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mold_info): $mod = ($i % 2 );++$i;?><tr>
+                            	<td><?php echo ($mold_info["mid"]); ?></td>
+                            	<td>
+                            		<?php echo ($mold_info["name"]); ?>
+                            	</td>
+                            	<td>
+                                <button type="button" class="btn btn-danger btn-del" data-mid="<?php echo ($mold_info["mid"]); ?>">删除</button>
+                            	</td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </table><?php endif; ?>
+                        <ul class="pagination"><?php echo ($mold_page); ?></ul>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,5 +146,49 @@
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
     <!--./footer-->
+    <script>
+    (function(){
+        var btn_del = $(".btn-del");
+        var url     = "<?php echo U("Admin/moldsHandler");?>";
+        btn_del.on('click',function(){
+            var mid = btn_del.attr('data-mid');
+            var info = new Object();
+            info.mid = mid;
+            $.ajax({
+                url:url,
+                data:info,
+                type:"POST",
+                success:function(data){
+                    alert(data.info);
+                    location.href = "";
+                },
+                error:function(){
+                    alert('网络错误，请重试');
+                }
+            });
+        })    
+    })();
+    (function(){
+        var btn_add    = $('#btn-add'),
+            url        = "<?php echo U("Admin/moldsHandler");?>",
+        	mold_name  = $("#mold_name");
+        btn_add.on('click',function(){
+            var info   = new Object();
+            info.mold_name  = mold_name.val();
+            $.ajax({
+                url:url,
+                data:info,
+                type:"POST",
+                success:function(data){
+                    alert(data.info);
+                    location.href = "";
+                },
+                error:function(){
+                    alert('网络错误，请重试');
+                }
+            });
+        });
+    })();
+</script>
 </body>
 </html>

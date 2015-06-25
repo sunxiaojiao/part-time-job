@@ -92,6 +92,7 @@
                         <a class="list-group-item" href="__URL__/authApply.html">认证申请列表</a>
                         <a class="list-group-item" href="__URL__/orgsList.html">现有公司列表</a>
                         <a class="list-group-item" href="__URL__/showNowCity.html">管理业务城市</a>
+                        <a class="list-group-item" href="__URL__/showMolds.html">管理兼职类型</a>
                         <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
                     </ul>
                 </ul>
@@ -130,7 +131,7 @@
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
   <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
-  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+  <p class="copyright text-center">Copyright © 梦海网络 / 备案号：/ 地址：烟台市红旗中路</p>
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
     <!--./footer-->

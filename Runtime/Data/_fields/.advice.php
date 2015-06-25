@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'advice_id', 1 => 'content', 2 => 'uid', 3 => 'oid', 4 => 'ctime', '_autoinc' => true, '_pk' => 'advice_id', '_type' => array ( 'advice_id' => 'int(255)', 'content' => 'mediumtext', 'uid' => 'bigint(255)', 'oid' => 'int(255)', 'ctime' => 'int(10)', ), );?>
