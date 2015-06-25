@@ -340,7 +340,7 @@ class AdminAction extends Action {
 		if($list){
 			//dump($list);
 			//dump($show);
-			dump($Model->getLastSql());
+			//dump($Model->getLastSql());
 			$this->assign($data_list,$list);// 赋值数据集
 			$this->assign($show_list,$show);// 赋值分页输出
 		}elseif(is_null($list)) {
