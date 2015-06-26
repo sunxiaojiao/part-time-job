@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>登录-小蜜蜂兼职</title>
+    <title>登录-小蜜蜂job</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 
@@ -19,7 +19,7 @@
     .panel-body {
         position: relative;
     }
-    
+        
     #verify>input {
         display: inline;
         width: 216px;
@@ -27,6 +27,14 @@
     
     .alert-sm {
         padding: 10px;
+    }
+    .bg-img{
+        background: #cfdee3 url('/Public/bg_img.jpg') repeat-x;
+        padding:10px 0 10px;
+        margin-top:-20px;
+    }
+    .login{
+        box-shadow:6px 6px 2px rgba(1,1,1,.3);
     }
     </style>
 </head>
@@ -119,12 +127,13 @@ THINK;
   })();
 </script>
 <!--======导航条结束======--->
+    <div class="bg-img">
     <div class="container">
         <div class="row">
             <div class="col-md-8"></div>
             <div class="col-md-4">
             
-              <div class="panel panel-default">
+              <div class="panel panel-default login">
                     <div class="panel-heading">登录</div>
                     <div role="tabpanel">
               <ul class="nav nav-tabs" role="tablist">
@@ -167,6 +176,7 @@ THINK;
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!--./container-->
     <!--footer-->

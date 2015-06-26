@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>注册-小蜜蜂兼职</title>
+    <title>注册-小蜜蜂job</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 
@@ -199,11 +199,11 @@ THINK;
             <div class="col-md-1"></div>
             <div class="col-md-4">
                 <div class="panel panel-default">
-                    <div class="panel-heading">关于小蜜蜂</div>
-                    <div class="panel-body">
-                        <img src="/__GROUP__/images/erweima.png" class="img-thumbnail center-block" />
-                    </div>
-                </div>
+    <div class="panel-heading">关于小蜜蜂</div>
+	<div class="panel-body">
+		<img src="/__GROUP__/images/erweima.png" width="190" style="width:190px" class="img-thumbnail center-block" />
+	</div>
+</div>
             </div>
         </div>
         <!--end container-->
