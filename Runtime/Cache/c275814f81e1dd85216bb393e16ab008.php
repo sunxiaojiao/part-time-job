@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>注册-小蜜蜂job</title>
+    <title>注册-梦海网络</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 
@@ -199,9 +199,21 @@ THINK;
             <div class="col-md-1"></div>
             <div class="col-md-4">
                 <div class="panel panel-default">
-    <div class="panel-heading">关于小蜜蜂</div>
+    <div class="panel-heading">梦海网络</div>
 	<div class="panel-body">
 		<img src="/__GROUP__/images/erweima.png" width="190" style="width:190px" class="img-thumbnail center-block" />
+	</div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">平台介绍</div>
+	<div class="panel-body">
+		<pre>&emsp;&emsp;小蜜蜂job烟台梦海网络打造的一款大学生生活服务平台，我们通过考察企业，附近兼职，互相评论，星级评价四大环节，为大学生校园工作保驾护航，打造安全靠谱的大学生生活服务平台。</pre>
+	</div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">公司介绍</div>
+	<div class="panel-body">
+		<pre>&emsp;&emsp;烟台梦海网络是由烟台大学生创办的新一代互联网公司，我们来自烟台各大高校，全部由90后组成，致力于打造全国大学生生活服务第一平台，我们会用饱满热情的态度服务广大大学生</pre>
 	</div>
 </div>
             </div>
@@ -209,11 +221,12 @@ THINK;
         <!--end container-->
         <!--footer-->
         <div class="container">
-            <hr />
-            <p class="text-center">小蜜蜂兼职</p>
-            <p class="my-info text-center"><a href="#">首页</a>/<a href="#">申请入住</a>/<a href="#">关于小蜜蜂</a>/<a href="#">联系我们</a></p>
-            <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
-        </div>
+  <hr />
+  <p class="text-center">梦海网络</p>
+  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于梦海网络</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
+  <p class="copyright text-center">Copyright © 梦海网络 / 备案号：/ 地址：烟台市红旗中路</p>
+  <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
+</div>
         <!--end footer-->
         <script type="text/javascript">
         function tabShow(arg) {
