@@ -19,8 +19,9 @@
 <script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
     #banner{
-
+        width:778px;
         margin-bottom:16px;
+        margin-left:-14px;
     }
     #banner .right {
         right:14px;
@@ -150,7 +151,12 @@ THINK;
 <!--======导航条结束======--->
     <!--container-->
     <!--banner-->
-    <div id="banner" class="carousel slide container" style="overflow:hidden;" data-ride="carousel">
+    
+    <!--./banner-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8" style="overflow:hidden;">
+                <div id="banner" class="carousel slide container" style="overflow:hidden;" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#banner" data-slide-to="0" class="active"></li>
@@ -188,11 +194,6 @@ THINK;
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    <!--./banner-->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8" style="overflow:hidden;">
-            
                 <div class="panel panel-default">
                     <div class="panel-heading">兼职</div>
                     <div class="panel-body">
