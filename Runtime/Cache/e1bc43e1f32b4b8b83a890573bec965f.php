@@ -83,8 +83,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                				<ul class="list-group nav">
-                    <ul class="list-group nav">
+                				    <ul class="list-group nav">
                         <a class="list-group-item" href="__URL__/index.html">消息</a>
                         <a class="list-group-item" href="__URL__/publishApply.html">兼职申请列表</a>
                         <a class="list-group-item" href="__URL__/authApply.html">认证申请列表</a>
@@ -93,7 +92,6 @@
                         <a class="list-group-item" href="__URL__/showMolds.html">管理兼职类型</a>
                         <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
                     </ul>
-                </ul>
                 </ul>
             </div>
             <div class="col-md-9">

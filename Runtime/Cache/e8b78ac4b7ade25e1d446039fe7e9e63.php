@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>小蜜蜂job-大学生找兼职必备神器</title>
+    <title>小蜜蜂job梦海网络-大学生找兼职必备神器</title>
     <meta type="keywords" content="小蜜蜂job,小蜜蜂,大学生兼职神器,大学生兼职,鲁东大学,找兼职,大学生创业" />
     <meta type="descripton" content="小蜜蜂job是大学生自主创业项目，为在校大学生提供优质可靠的兼职">
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
@@ -19,6 +19,7 @@
 <script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
     #banner{
+
         margin-bottom:16px;
     }
     #banner .right {
@@ -70,7 +71,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="" href="/"><img src="/Public/logo/logo.png" height="50" alt="小蜜蜂兼职logo" /></a>
+      <a class="" href="/"><img src="/Public/logo/logo.jpg" height="50" alt="小蜜蜂兼职logo" /></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -149,7 +150,7 @@ THINK;
 <!--======导航条结束======--->
     <!--container-->
     <!--banner-->
-    <div id="banner" class="carousel slide container" style="height:230px;overflow:hidden;" data-ride="carousel">
+    <div id="banner" class="carousel slide container" style="overflow:hidden;" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#banner" data-slide-to="0" class="active"></li>
@@ -190,7 +191,8 @@ THINK;
     <!--./banner-->
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8" style="overflow:hidden;">
+            
                 <div class="panel panel-default">
                     <div class="panel-heading">兼职</div>
                     <div class="panel-body">
@@ -241,9 +243,21 @@ THINK;
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
-    <div class="panel-heading">关于小蜜蜂</div>
+    <div class="panel-heading">小蜜蜂</div>
 	<div class="panel-body">
 		<img src="/__GROUP__/images/erweima.png" width="190" style="width:190px" class="img-thumbnail center-block" />
+	</div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">平台介绍</div>
+	<div class="panel-body">
+		<pre>&emsp;&emsp;小蜜蜂job烟台梦海网络打造的一款大学生生活服务平台，我们通过考察企业，附近兼职，互相评论，星级评价四大环节，为大学生校园工作保驾护航，打造安全靠谱的大学生生活服务平台。</pre>
+	</div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">公司介绍</div>
+	<div class="panel-body">
+		<pre>&emsp;&emsp;烟台梦海网络是由烟台大学生创办的新一代互联网公司，我们来自烟台各大高校，全部由90后组成，致力于打造全国大学生生活服务第一平台，我们会用饱满热情的态度服务广大大学生</pre>
 	</div>
 </div>
             </div>

@@ -16,17 +16,6 @@
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
-    .panel-body {
-        position: relative;
-    }
-    .list-group a.list-group-item {
-        cursor: pointer;
-    }
-    .btn-content {
-        position: absolute;
-        right: 10px;
-        margin-top: -8px;
-    }
     </style>
 </head>
 
@@ -79,25 +68,31 @@
     <!--container-->
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                				    <ul class="list-group nav">
-                        <a class="list-group-item" href="__URL__/index.html">消息</a>
-                        <a class="list-group-item" href="__URL__/publishApply.html">兼职申请列表</a>
-                        <a class="list-group-item" href="__URL__/authApply.html">认证申请列表</a>
-                        <a class="list-group-item" href="__URL__/orgsList.html">现有公司列表</a>
-                        <a class="list-group-item" href="__URL__/showNowCity.html">管理业务城市</a>
-                        <a class="list-group-item" href="__URL__/showMolds.html">管理兼职类型</a>
-                        <a class="list-group-item" href="__URL__/showAdvice.html">投诉建议</a>
-                    </ul>
-            </div>
+            <div class="col-md-3"></div>
             <div class="col-md-9">
-                
+                <div class="panel panel-default">
+                    <div class="panel-heading">投诉建议详细</div>
+                    <div class="panel-body">
+                    <div class="alert alert-info">
+                        时间：<?php echo (date('m月d号 h:i',$advice_info["ctime"])); ?>
+                        &emsp;&emsp;
+                        用户：<?php if($advice_info["uid"] != '0'): ?><a href="<?php echo U("UserInfo/index");?>?uid=<?php echo ($advice_info["uid"]); ?>" target="_blank"><?php echo ($advice_info["username"]); ?></a>
+                                <?php elseif($advice_info["oid"] != '0'): ?><a href="<?php echo U("OrgInfo/index");?>?oid=<?php echo ($advice_info["oid"]); ?>" target="_blank"><?php echo ($advice_info["orgname"]); ?></a>
+                                <?php else: ?>未登录的用户<?php endif; ?>
+                    </div>
+                    <div style="overflow:auto;border-top:1px solid #c8c8c8;padding-top:10px;">
+                    <?php if($error_advice_info): echo ($error_advice_info); ?>
+                        <?php else: ?>
+                    <?php echo (htmlspecialchars_decode($advice_info["content"])); endif; ?>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!--./container-->
     <!--footer-->
-<div class="container">
+    <div class="container">
   <hr />
   <p class="text-center">小蜜蜂兼职</p>
   <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
@@ -105,6 +100,8 @@
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
     <!--./footer-->
+    <script>
+    </script>
 </body>
 
 </html>
