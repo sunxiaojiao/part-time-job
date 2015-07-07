@@ -12,10 +12,9 @@ class UsersModel extends Model{
 		
 		array('email','email','邮箱已占用',1,'unique',2),
 		array('email','email','请输入正确的邮箱地址',0,'regex',2),
+		array('school','require','请输入学校',1,'regex',3),
 		//非必需字段
 		array('qq','/^[1-9]\d{4,9}$/','请输入正确的qq号',0,'regex',2),
-		array('school','require','请输入学校',0,'regex',2),
-		
 		array('sex','1,3','请选择性别',1,'between','regex',2),
 		array('age','1,150','请输入正确的年龄',1,'between',2),
 		array('area','require','请选择居住地',1,'regex',2),

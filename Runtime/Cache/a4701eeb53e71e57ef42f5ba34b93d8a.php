@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
@@ -175,7 +175,7 @@ THINK;
           </div>
         </div>
         <div class="form-group">
-          <label for="school">学校：</label>
+          <label for="school"><span class="must-input">*</span>学校：</label>
           <input type="text" id="school" name="school" class="form-control" value="<?php echo ($userinfo["school"]); ?>" placeholder="填写所在学校" />
         </div>
         <div class="form-group">

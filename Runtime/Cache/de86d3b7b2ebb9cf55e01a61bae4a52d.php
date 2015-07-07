@@ -1,11 +1,10 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<!doctype html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>选择城市-梦海网络</title>
+    <title>修改密码-小蜜蜂job</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 
@@ -17,28 +16,6 @@
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
     <style type="text/css">
-    .my-select-address {
-        display: inline-block;
-    }
-    
-    .my-select-address>select {
-        width: 130px;
-        display: inline-block;
-    }
-    
-    .my-zimu {
-        display: block;
-        padding: 4px 6px 4px 32px;
-        margin-bottom: 6px;
-    }
-    
-    .my-addr-list a {
-        display: inline-block;
-        padding: 4px 6px;
-        margin: 1px 20px 20px;
-        outline: 1px solid #EEE;
-        cursor: pointer;
-    }
     </style>
 </head>
 
@@ -132,43 +109,81 @@ THINK;
 <!--======导航条结束======--->
     <!--container-->
     <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                选择城市
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1">
+                        <form class="form-horizontal" action="">
+                            <label>旧密码：</label>
+                            <input class="form-control" name="old_passwd" />
+                            <label>新密码：</label>
+                            <input class="form-control" type="password" name="new_passwd" />
+                            <label>再输一遍新密码：</label>
+                            <input class="form-control" type="password" name="re_passwd" />
+                            <label>输入验证码：</label>
+                            <div class="" id="verify">
+                                <img src="<?php echo U('ChangePasswd/vCode');?>" />
+                                <button class="btn btn-primary" type="button">换一个</button>
+                            </div>
+                            <input class="form-control" name="vcode" />
+                            <button type="button" class="btn btn-primary" id="goto-submit">修改密码</button>
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
             </div>
-            <ul class="list-group addr-list">
-                <li class="list-group-item my-addr-list">
-                    <span class="bg-primary my-zimu"></span>
-                    <ul>
-                        <?php if(is_array($addr)): $i = 0; $__LIST__ = $addr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$addr): $mod = ($i % 2 );++$i;?><a data-aid="<?php echo ($addr["aid"]); ?>"><?php echo ($addr["city"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
-                    </ul>
-                </li>
-            </ul>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+    <div class="panel-heading">梦海网络</div>
+	<div class="panel-body">
+		<img src="/__GROUP__/images/erweima.png" width="190" style="width:190px" class="img-thumbnail center-block" />
+	</div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">平台介绍</div>
+	<div class="panel-body">
+		<pre>&emsp;&emsp;小蜜蜂job烟台梦海网络打造的一款大学生生活服务平台，我们通过考察企业，附近兼职，互相评论，星级评价四大环节，为大学生校园工作保驾护航，打造安全靠谱的大学生生活服务平台。</pre>
+	</div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">公司介绍</div>
+	<div class="panel-body">
+		<pre>&emsp;&emsp;烟台梦海网络是由烟台大学生创办的新一代互联网公司，我们来自烟台各大高校，全部由90后组成，致力于打造全国大学生生活服务第一平台，我们会用饱满热情的态度服务广大大学生</pre>
+	</div>
+</div>
+            </div>
         </div>
     </div>
     <!--./container-->
     <!--footer-->
-    <div class="container">
+<div class="container">
   <hr />
   <p class="text-center">梦海网络</p>
   <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于梦海网络</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
   <p class="copyright text-center">Copyright © 梦海网络 / 备案号：/ 地址：烟台市红旗中路</p>
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
-    <!--footer-end-->
+    <!--./footer-->
     <script type="text/javascript">
-    $(".addr-list a").click(function() {
-        var aid = $(this).attr("data-aid");
-        //ajax
+    //刷新验证码
+    $("#verify>button").click(function() {
+        var ver_img = $("#verify>img");
+        ver_img.attr("src", "__APP__/Login/vCode?" + new Date().getTime());
+    });
+    $("#verify>img").click(function() {
+        $(this).attr("src", "__APP__/Login/vCode?" + new Date().getTime());
+    });
+
+
+    $("#goto-submit").on('click', function() {
+        var info = getFromInput(".form-horizontal");
+        console.log(info);
         $.ajax({
-            url: "<?php echo U('ChangeCity/ChangeCity');?>",
-            data: {
-                aid: aid
-            },
-            contentType: 'text/json',
+            url: "<?php echo U('ChangePasswd/change');?>",
+            data: info,
+            type: "POST",
             success: function(data) {
                 alert(data.info);
-                location.href = "<?php echo U('ChangeCity/index');?>";
             }
         });
     });

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
@@ -163,19 +163,26 @@ THINK;
 	                        	<input id="username" type="text" name="username" class="form-control" placeholder="用户名" />
 	                        </div>
 	                    </div>
+                        <div class="form-group">
+                        <label for="school" class="col-sm-2">学校：</label>
+                        <div class="col-sm-8">
+                            <input id="school" type="text" name="school" class="form-control" placeholder="你的学校" />
+                        </div>
+                    </div>
                     </div>
                     <div class="form-group">
                         <label for="passwd" class="col-sm-2">密码：</label>
                         <div class="col-sm-8">
-                        	<input id="passwd" type="password" name="passwd" class="form-control" placeholder="请输入密码" />
+                        	<input id="passwd" type="password" name="passwd" class="form-control" placeholder="密码" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="repasswd" class="col-sm-2">确认密码：</label>
                         <div class="col-sm-8">
-                        	<input id="repasswd" type="password" name="repasswd" class="form-control" placeholder="再次输入密码" />
+                        	<input id="repasswd" type="password" name="repasswd" class="form-control" placeholder="验证密码" />
                         </div>
                     </div>
+                    
                     <div class="form-group" id="verify">
                     		<label for="" class="col-sm-2 col-xs-12">验证码：</label>
                             <div class="col-sm-5 col-xs-6">
@@ -238,7 +245,7 @@ THINK;
         }
         function showChange(arg) {
                 var strorg = new String('<div class="form-group input-org"><label for="org" class="col-sm-2">组织名称：</label><div class="col-sm-8"><input id="org" type="text" name="org" class="form-control" placeholder="组织机构名称" /><input name="reg_type" value="org" class="hidden"/></div></div><div class="form-group input-org"><label for="org_address" class="col-sm-2">所在地：</label><div class="col-sm-8"><input id="org_address" type="text" name="address" class="form-control" placeholder="组织机构所在地" /></div></div>');
-                var struser = new String('<div class="form-group"><label for="username" class="col-sm-2">用户名：</label><div class="col-sm-8"><input id="username" type="text" name="username" class="form-control" placeholder="用户名" /></div></div>');
+                var struser = new String('<div class="form-group"><label for="username" class="col-sm-2">用户名：</label><div class="col-sm-8"><input id="username" type="text" name="username" class="form-control" placeholder="用户名" /></div></div><div class="form-group"><label for="school" class="col-sm-2">学校：</label><div class="col-sm-8"><input id="school" type="text" name="school" class="form-control" placeholder="你的学校" /></div>');
                 if(arg == 0){
                 	//求职者注册
                     if($(".input-org")){

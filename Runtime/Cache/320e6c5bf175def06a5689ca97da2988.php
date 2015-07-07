@@ -4,14 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title><?php echo ($list["title"]); ?>-小蜜蜂job</title>
+    <title><?php echo ($list["title"]); ?>-梦海网络</title>
     <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
@@ -268,7 +268,7 @@ THINK;
             <!--right-->
             <div class="col-md-4">
                 <div class="panel panel-default">
-    <div class="panel-heading">小蜜蜂</div>
+    <div class="panel-heading">梦海网络</div>
 	<div class="panel-body">
 		<img src="/__GROUP__/images/erweima.png" width="190" style="width:190px" class="img-thumbnail center-block" />
 	</div>
@@ -310,8 +310,8 @@ THINK;
     <!--footer-->
     <div class="container">
   <hr />
-  <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
+  <p class="text-center">梦海网络</p>
+  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于梦海网络</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
   <p class="copyright text-center">Copyright © 梦海网络 / 备案号：/ 地址：烟台市红旗中路</p>
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>

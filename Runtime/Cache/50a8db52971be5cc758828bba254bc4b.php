@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>编辑企业信息-小蜜蜂兼职</title>
+  <title>编辑企业信息-小蜜蜂job</title>
 <link href="/Public/xmf32.ico" type="image/x-icon" rel=icon />
 <link href="/Public/xmf32.ico" type="image/x-icon" rel="shortcut icon" />
 
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
@@ -26,7 +26,11 @@
   .my-select-address>select{width:auto;display: inline-block;}
   .my-personimg{width:200px; cursor: pointer;}
   #swfwrapper{width:630px;}
-
+  .must-input {
+        color: #F00;
+        padding: 0 8px;
+        font: 18px/18px "";
+    }
 </style>
 </head>
 <body>
@@ -40,7 +44,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="" href="/"><img src="/Public/logo/logo.png" height="50" alt="小蜜蜂兼职logo" /></a>
+      <a class="" href="/"><img src="/Public/logo/logo.jpg" height="50" alt="小蜜蜂兼职logo" /></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -130,26 +134,26 @@ THINK;
           <a class="btn-primary btn" href="<?php echo U('OrgAuth/index');?>">认证</a>
         </div>
         <div class="form-group">
-          <label for="username">所在地：</label>
+          <label for="username"><span class="must-input">*</span>所在地：</label>
           <div class="my-select-address">
             <input type="text" class="form-control" name="address" value="<?php echo ($orgInfo["org_address"]); ?>" />
           </div>
         </div>
 
         <div class="form-group">
-          <label for="phone">客服电话：</label>
+          <label for="phone"><span class="must-input">*</span>客服电话：</label>
           <input type="text" name="phone" class="form-control" value="<?php echo ($orgInfo["phone"]); ?>" placeholder="填写联系电话" />
         </div>
         <div class="form-group">
-          <label for="qq">公司网址：</label>
+          <label for="qq"><span class="must-input">*</span>公司网址：</label>
           <input type="text" id="website" name="website" class="form-control" value="<?php echo ($orgInfo["website"]); ?>" placeholder="公司网址" />
         </div>
           <div class="form-group">
-            <label for="exp">公司或机构介绍:</label>
+            <label for="exp"><span class="must-input">*</span>公司或机构介绍:</label>
             <textarea class="form-control" rows="3" id="exp" name="org_intro" placeholder="简要介绍"><?php echo ($orgInfo["org_intro"]); ?></textarea>
           </div>
         <div class="form-group">
-          <label for="intent">招聘意向:</label>
+          <label for="intent"><span class="must-input">*</span>招聘意向:</label>
           <div>
           <?php if($mold_error_info): echo ($mold_error_info); ?>
           <?php else: ?>
@@ -172,7 +176,7 @@ THINK;
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading">修改头像</div>
+        <div class="panel-heading">修改LOGO</div>
         <div class="panel-body">
           <img src="<?php echo ($orgInfo["avatar"]); ?>" class="img-thumbnail center-block my-personimg" data-toggle="modal" data-target="#headimg" />
         </div>
@@ -205,9 +209,9 @@ THINK;
 <!--footer-->
 <div class="container">
   <hr />
-  <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
-  <p class="copyright text-center">Copyright ©小蜜蜂网络 / 备案号：ICP备13008243号-1 / 地址：烟台市红旗中路</p>
+  <p class="text-center">梦海网络</p>
+  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于梦海网络</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
+  <p class="copyright text-center">Copyright © 梦海网络 / 备案号：/ 地址：烟台市红旗中路</p>
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>
 <!--./footer-->

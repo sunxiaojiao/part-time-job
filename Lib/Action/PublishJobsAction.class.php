@@ -21,7 +21,7 @@ class PublishJobsAction extends Action{
 				$expire_time = 30; 
 			}
 			//将过期日期转换为时间戳
-			$Job->expire_time = $Job->ctime + $expire_time*3600;
+			$Job->expire_time = $Job->ctime + $expire_time*3600*24;
 			$Job->begin_time  = strtotime($Job->begin_time);
 			if($Job->add()){
 				$this->ajaxReturn(0,"发布成功",1);

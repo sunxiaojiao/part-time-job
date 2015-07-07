@@ -34,6 +34,7 @@ class RegisterAction extends Action{
 			$data['address']     = $this->_post('address');
 		}else{
 			$data['username']    = $this->_post('username');
+			$data['school']      = $this->_post('school');
 		}
 		//验证，插入数据库
 		if($Reger->create($data,1)){
