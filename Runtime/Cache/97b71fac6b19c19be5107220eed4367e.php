@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/__GROUP__/css/common.css">
 <script src="/__GROUP__/js/common.js"></script>
@@ -86,7 +86,7 @@
         <div class="row">
             <div class="col-md-3">
                 				    <ul class="list-group nav">
-                        <a class="list-group-item" href="__URL__/index.html">消息</a>
+                        <a class="list-group-item" href="__URL__/index.html">数据统计</a>
                         <a class="list-group-item" href="__URL__/publishApply.html">兼职申请列表</a>
                         <a class="list-group-item" href="__URL__/authApply.html">认证申请列表</a>
                         <a class="list-group-item" href="__URL__/orgsList.html">现有公司列表</a>
@@ -127,8 +127,8 @@
     <!--footer-->
 <div class="container">
   <hr />
-  <p class="text-center">小蜜蜂兼职</p>
-  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于小蜜蜂</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
+  <p class="text-center">梦海网络</p>
+  <p class="my-info text-center"><a href="http://www.xiaomifengjob.com">首页</a>/<a href="<?php echo U("Advice/index");?>">投诉建议</a>/<a href="http://www.xiaomifengjob.com">关于梦海网络</a>/<a href="http://www.xiaomifengjob.com">联系我们</a></p>
   <p class="copyright text-center">Copyright © 梦海网络 / 备案号：/ 地址：烟台市红旗中路</p>
   <p class="hidden"><script src="http://s11.cnzz.com/z_stat.php?id=1255390287&web_id=1255390287" language="JavaScript"></script></p>
 </div>

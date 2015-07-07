@@ -4,7 +4,9 @@ class AdminAction extends Action {
 		//session('admin_id',1);
 		//检查用户登录
 		$this->isLogined();
+		$this->showStatistics();
 		$this->display();
+		
 	}
 	
 	//判断是否登录
@@ -19,7 +21,7 @@ class AdminAction extends Action {
 	public function login() {
 		$this->display();
 	}
-	
+
 	//登录处理
 	public function loginHandler() {
 		if(!$this->isPost()){
@@ -39,6 +41,31 @@ class AdminAction extends Action {
 			$this->ajaxReturn(0,"登录失败",0);
 		}
 	}
+	//数据统计
+	public function showStatistics(){
+		$this->isLogined();
+		$stat = array();
+		//今天的时间戳
+		$today = date('Ymd');
+//		dump($today);
+		$todayUp   = strtotime($today);
+		$todayDown = (int)strtotime($today)+3600*24-1;
+		$todayTimestamp = array(
+							'up'    => $toudayUp,
+							'down'  => $todayDown
+							);
+							
+		//普通用户
+		$User = M('Users');
+		$stat['userTotal'] = $User->count('uid');
+		$stat['userToday'] = $User->where("ctime BETWEEN $todayUp AND $todayDown")->count('uid');
+		//企业用户
+		$Org = M('Orgs');
+		$stat['orgTotal'] = $Org->count('oid');
+		$stat['orgToday'] = $Org->where("ctime BETWEEN $todayUp AND $todayDown")->count('oid');
+		$this->assign($stat);
+		//$this->display('index');
+	}
 	//显示消息
 	public function showMessage() {
 		$this->isLogined();
@@ -52,7 +79,7 @@ class AdminAction extends Action {
 		$field = "xm_orgs.oid AS oid,xm_orgs.orgname AS orgname";
 		$join  = "INNER JOIN `xm_orgs` ON xm_orgs.oid = xm_orgs_auth.auth_oid";
 		$order = "xm_orgs.ctime";
-		$num   = 4;
+		$num   = 15;
 		$data_list  = "orgsauth_list";
 		$show_list  = "orgsauth_page";
 		$error_info = "orgsauth_error";
@@ -120,7 +147,7 @@ class AdminAction extends Action {
 		$Model = M('Advice');
 		$field  = "advice_id,content,uid,oid,ctime";
 		$where  = "";
-		$num    = 10;
+		$num    = 15;
 		$data_list = 'advice_info';
 		$show_list = 'advice_page';
 		$error_info = 'error_advice_info';
@@ -153,7 +180,7 @@ class AdminAction extends Action {
 		
 		$Model = M('Jobs');
 		$where = "(" . time() . "- expire_time)<0" . " AND " . "is_pass=0";
-		$num = 10;
+		$num = 15;
 		$field = "jid,title,from_unixtime(ctime) AS ctime";
 		$data_list  = "jobs_list";
 		$show_list  = "jobs_page";
@@ -194,7 +221,7 @@ class AdminAction extends Action {
 		
 		$Orgs  = M('Orgs');
 		$field = "oid,orgname,from_unixtime(ctime,'%y/%m/%d') AS ctime,is_validate";
-		$num        = 4;
+		$num        = 15;
 		$data_list  = "orgs_list";
 		$show_list  = "orgs_page";
 		$where      = "";
@@ -270,7 +297,7 @@ class AdminAction extends Action {
 	//管理兼职类型-显示
 	public function showMolds() {
 		$Model       = M('Mold');
-		$num         = 10;
+		$num         = 15;
 		$where       = '';
 		$field       = 'mid,name';
 		$data_list   = 'mold_info';
@@ -344,10 +371,10 @@ class AdminAction extends Action {
 			$this->assign($data_list,$list);// 赋值数据集
 			$this->assign($show_list,$show);// 赋值分页输出
 		}elseif(is_null($list)) {
-			dump($Model->getLastSql());
+			//dump($Model->getLastSql());
 			$this->assign($error_info,"记录为空！");
 		}else{
-			dump($Model->getLastSql());
+			//dump($Model->getLastSql());
 			$this->assign($error_info,"读取错误！");
 		}			  
 	
