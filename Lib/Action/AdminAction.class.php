@@ -172,7 +172,7 @@ class AdminAction extends Action {
 		}else{
 			$this->assign('error_advice_info','错误');
 		}
-		$this->display();
+		$this->display('adviceDetail');
 	}
 	//列出兼职发布申请列表
 	public function publishApply() {
